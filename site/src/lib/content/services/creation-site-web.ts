@@ -2,100 +2,100 @@ import type { ServicePage } from "./types";
 
 export const creationSiteWeb: ServicePage = {
   slug: "creation-site-web",
-  metaTitle: "Creation Site Web | P-XEL Studio - Belgique",
+  metaTitle: "Création Site Web | P-XEL Studio - Belgique",
   metaDescription:
-    "Sites web performants, e-commerce et landing pages. Design sur mesure, SEO integre, Core Web Vitals optimises. Reservez un appel. Studio a Liege.",
+    "Sites web performants, e-commerce et landing pages. Design sur mesure, SEO intégré, Core Web Vitals optimisés. Réservez un appel. Studio à Liège.",
 
   hero: {
     label: "Sites Web & Landing Pages",
     heading: "Des sites web qui convertissent. Pas juste qui existent.",
     subheadline:
-      "Sites vitrines, e-commerce, landing pages. Concus pour le SEO, la performance et la generation de leads. De la strategie au deploiement.",
+      "Sites vitrines, e-commerce, landing pages. Conçus pour le SEO, la performance et la génération de leads. De la stratégie au déploiement.",
   },
 
   problem: {
-    label: "Le probleme",
-    heading: "La plupart des sites web ne servent a rien.",
+    label: "Le problème",
+    heading: "La plupart des sites web ne servent à rien.",
     intro:
-      "Votre site est en ligne. Il est joli. Mais il ne genere aucun lead. Il ne remonte pas sur Google. Il met 6 seconds a charger sur mobile. Les visiteurs partent avant de comprendre ce que vous faites.\n\nC'est le resultat previsible d'un site construit sans strategie. Un design sans reflexion UX. Un developpement sans optimisation SEO. Un lancement sans suivi de performance.",
+      "Votre site est en ligne. Il est joli. Mais il ne génère aucun lead. Il ne remonte pas sur Google. Il met 6 seconds à charger sur mobile. Les visiteurs partent avant de comprendre ce que vous faites.\n\nC'est le résultat prévisible d'un site construit sans stratégie. Un design sans réflexion UX. Un développement sans optimisation SEO. Un lancement sans suivi de performance.",
     points: [
       "Temps de chargement excessif sur mobile",
-      "Aucune visibilite sur Google pour les recherches cles",
-      "Taux de rebond superieur a 70%",
-      "Zero appels ou demandes de devis generes par le site",
-      "Un design date qui ne reflete plus la valeur de l'entreprise",
+      "Aucune visibilité sur Google pour les recherches clés",
+      "Taux de rebond supérieur à 70%",
+      "Zéro appels ou demandes de devis générés par le site",
+      "Un design daté qui ne reflète plus la valeur de l'entreprise",
     ],
   },
 
   whatWeBuild: {
     label: "Ce qu'on construit",
-    heading: "Chaque site est concu pour un objectif precis.",
+    heading: "Chaque site est conçu pour un objectif précis.",
     intro:
-      "On ne construit pas des sites generiques. Chaque projet demarre par une question : qu'est-ce que ce site doit accomplir pour votre business ?",
+      "On ne construit pas des sites génériques. Chaque projet démarre par une question : qu'est-ce que ce site doit accomplir pour votre business ?",
     items: [
       {
         title: "Site vitrine professionnel",
-        body: "Pour les entreprises qui veulent une presence en ligne credible, claire et optimisee. Structure pensee pour le SEO, design aligne sur votre positionnement, contenu oriente conversion.",
+        body: "Pour les entreprises qui veulent une présence en ligne crédible, claire et optimisée. Structure pensée pour le SEO, design aligné sur votre positionnement, contenu orienté conversion.",
       },
       {
         title: "Site e-commerce",
-        body: "Boutiques en ligne concues pour vendre. Architecture produit, tunnel d'achat optimise, integration paiement, gestion de stock. On construit des e-commerces qui performent, pas juste des catalogues en ligne.",
+        body: "Boutiques en ligne conçues pour vendre. Architecture produit, tunnel d'achat optimisé, intégration paiement, gestion de stock. On construit des e-commerces qui performent, pas juste des catalogues en ligne.",
       },
       {
         title: "Landing pages",
-        body: "Pages de conversion uniques, concues pour des campagnes specifiques. Chaque element est teste et optimise : titre, structure, CTA, preuve sociale, vitesse de chargement.",
+        body: "Pages de conversion uniques, conçues pour des campagnes spécifiques. Chaque élément est testé et optimisé : titre, structure, CTA, preuve sociale, vitesse de chargement.",
       },
       {
         title: "Refonte de site web",
-        body: "Votre site actuel ne performe plus ? On audite, on identifie les problemes, on reconstruit sur des bases solides. Migration SEO incluse pour proteger votre trafic existant.",
+        body: "Votre site actuel ne performe plus ? On audite, on identifie les problèmes, on reconstruit sur des bases solides. Migration SEO incluse pour protéger votre trafic existant.",
       },
       {
         title: "Sites multi-pages et corporate",
-        body: "Pour les entreprises avec des besoins complexes. Architecture d'information structuree, multiple entrees SEO, pages de service, contenu editorial, integration CRM.",
+        body: "Pour les entreprises avec des besoins complexes. Architecture d'information structurée, multiple entrées SEO, pages de service, contenu éditorial, intégration CRM.",
       },
     ],
   },
 
   approach: {
-    label: "Notre methode",
-    heading: "Strategie d'abord. Design ensuite. Performance toujours.",
+    label: "Notre méthode",
+    heading: "Stratégie d'abord. Design ensuite. Performance toujours.",
     intro:
-      "On ne commence jamais par ouvrir Figma. On commence par comprendre votre marche, vos concurrents et vos objectifs business. Le design vient apres. Et chaque decision de design sert un objectif mesurable.",
+      "On ne commence jamais par ouvrir Figma. On commence par comprendre votre marché, vos concurrents et vos objectifs business. Le design vient après. Et chaque décision de design sert un objectif mesurable.",
     steps: [
       {
         number: "01",
-        title: "Strategie et recherche",
-        body: "Analyse de votre marche, de vos concurrents et de votre audience. Definition des mots-cles cibles, de la structure du site et des objectifs de conversion.",
+        title: "Stratégie et recherche",
+        body: "Analyse de votre marché, de vos concurrents et de votre audience. Définition des mots-clés cibles, de la structure du site et des objectifs de conversion.",
       },
       {
         number: "02",
         title: "Architecture UX",
-        body: "Structure des pages, hierarchie de l'information, parcours utilisateur. On definit comment chaque visiteur va naviguer et ou il va convertir.",
+        body: "Structure des pages, hiérarchie de l'information, parcours utilisateur. On définit comment chaque visiteur va naviguer et où il va convertir.",
       },
       {
         number: "03",
         title: "Design sur mesure",
-        body: "Direction artistique alignee sur votre marque. Typographie distinctive, systeme visuel coherent, composants reutilisables.",
+        body: "Direction artistique alignée sur votre marque. Typographie distinctive, système visuel cohérent, composants réutilisables.",
       },
       {
         number: "04",
-        title: "Developpement Next.js",
-        body: "Rendu cote serveur, chargement optimise des images, code propre et maintenable. Pas de builders lents ou de templates modifies.",
+        title: "Développement Next.js",
+        body: "Rendu côté serveur, chargement optimisé des images, code propre et maintenable. Pas de builders lents ou de templates modifiés.",
       },
       {
         number: "05",
         title: "SEO technique et contenu",
-        body: "Balisage semantique, schema markup, meta donnees, sitemap, robots.txt, structure des URLs, maillage interne. Le SEO est integre dans le code.",
+        body: "Balisage sémantique, schema markup, méta données, sitemap, robots.txt, structure des URLs, maillage interne. Le SEO est intégré dans le code.",
       },
       {
         number: "06",
         title: "Tests et optimisation",
-        body: "Audit Core Web Vitals, tests cross-browser, validation mobile, verification des temps de chargement. On ne livre que quand les metriques sont au vert.",
+        body: "Audit Core Web Vitals, tests cross-browser, validation mobile, vérification des temps de chargement. On ne livre que quand les métriques sont au vert.",
       },
       {
         number: "07",
         title: "Lancement et suivi",
-        body: "Mise en ligne, configuration analytics, soumission Search Console, verification du bon fonctionnement. On reste disponible apres le lancement.",
+        body: "Mise en ligne, configuration analytics, soumission Search Console, vérification du bon fonctionnement. On reste disponible après le lancement.",
       },
     ],
   },
@@ -103,31 +103,31 @@ export const creationSiteWeb: ServicePage = {
   deliverables: {
     label: "Ce que vous recevez",
     heading: "Des livrables concrets. Pas des promesses.",
-    intro: "Chaque projet de creation de site web inclut :",
+    intro: "Chaque projet de création de site web inclut :",
     items: [
       "Audit de l'existant (si refonte)",
-      "Strategie SEO et mots-cles cibles",
+      "Stratégie SEO et mots-clés cibles",
       "Architecture du site et wireframes UX",
-      "Design haute fidelite (Figma)",
-      "Developpement front-end et back-end",
+      "Design haute fidélité (Figma)",
+      "Développement front-end et back-end",
       "Optimisation des images et des assets",
-      "Integration du contenu",
-      "Configuration SEO technique (balisage, schema, meta, sitemap)",
-      "Tests de performance et compatibilite",
-      "Formation a l'utilisation du CMS (si applicable)",
+      "Intégration du contenu",
+      "Configuration SEO technique (balisage, schema, méta, sitemap)",
+      "Tests de performance et compatibilité",
+      "Formation à l'utilisation du CMS (si applicable)",
       "Mise en ligne et configuration analytics",
       "Support post-lancement (30 jours inclus)",
     ],
   },
 
   caseStudies: {
-    label: "Resultats",
-    heading: "Des projets. Des chiffres. Des resultats reels.",
+    label: "Résultats",
+    heading: "Des projets. Des chiffres. Des résultats réels.",
     studies: [
       {
         name: "Arduenna Gin",
         tags: ["E-commerce", "Marketing Digital", "Campagnes Ads"],
-        body: "Conception et developpement de deux sites e-commerce. Strategie d'acquisition digitale. 103 campagnes Facebook Ads. Resultat : 2 ans de chiffre d'affaires realises en 2 mois.",
+        body: "Conception et développement de deux sites e-commerce. Stratégie d'acquisition digitale. 103 campagnes Facebook Ads. Résultat : 2 ans de chiffre d'affaires réalisés en 2 mois.",
         href: "/work/arduenna-gin/",
       },
     ],
@@ -136,44 +136,44 @@ export const creationSiteWeb: ServicePage = {
   investment: {
     label: "Investissement",
     heading: "Chaque projet est sur mesure. Le budget aussi.",
-    body: "On ne travaille pas avec des packages. Chaque site est concu en fonction de vos objectifs, de votre marche et de votre ambition. Le budget est defini ensemble apres un premier echange, sur la base d'un perimetre clair : nombre de pages, complexite des fonctionnalites, volume de contenu, niveau d'optimisation SEO.\n\nLa plupart de nos projets de creation de site web demarrent a partir de 5 000 EUR. Ce budget inclut la strategie, le design, le developpement, le SEO technique et le lancement.",
-    anchor: "A partir de 5 000 EUR",
-    note: "On fournit une estimation detaillee et gratuite avant de demarrer. Pas d'engagement, pas de surprise.",
+    body: "On ne travaille pas avec des packages. Chaque site est conçu en fonction de vos objectifs, de votre marché et de votre ambition. Le budget est défini ensemble après un premier échange, sur la base d'un périmètre clair : nombre de pages, complexité des fonctionnalités, volume de contenu, niveau d'optimisation SEO.\n\nLa plupart de nos projets de création de site web démarrent à partir de 5 000 EUR. Ce budget inclut la stratégie, le design, le développement, le SEO technique et le lancement.",
+    anchor: "À partir de 5 000 EUR",
+    note: "On fournit une estimation détaillée et gratuite avant de démarrer. Pas d'engagement, pas de surprise.",
   },
 
   faq: {
-    label: "Questions frequentes",
+    label: "Questions fréquentes",
     items: [
       {
-        question: "Combien de temps faut-il pour creer un site web ?",
+        question: "Combien de temps faut-il pour créer un site web ?",
         answer:
-          "Une landing page prend 1 a 2 semaines. Un site vitrine professionnel entre 3 et 6 semaines. Un site e-commerce entre 6 et 10 semaines. Le planning exact depend de la complexite du projet et de la rapidite des retours.",
+          "Une landing page prend 1 à 2 semaines. Un site vitrine professionnel entre 3 et 6 semaines. Un site e-commerce entre 6 et 10 semaines. Le planning exact dépend de la complexité du projet et de la rapidité des retours.",
       },
       {
         question: "Quel CMS utilisez-vous ?",
         answer:
-          "On developpe principalement avec Next.js couple a un CMS headless (Sanity, Strapi ou Contentful selon les besoins). Pour les projets e-commerce, on travaille aussi avec Shopify.",
+          "On développe principalement avec Next.js couplé à un CMS headless (Sanity, Strapi ou Contentful selon les besoins). Pour les projets e-commerce, on travaille aussi avec Shopify.",
       },
       {
-        question: "Le SEO est-il inclus dans la creation du site ?",
+        question: "Le SEO est-il inclus dans la création du site ?",
         answer:
-          "Oui. Le SEO technique est integre dans chaque projet : structure des URLs, balisage semantique, schema markup, meta donnees, sitemap, performance. Le SEO n'est pas un supplement : c'est une fondation.",
+          "Oui. Le SEO technique est intégré dans chaque projet : structure des URLs, balisage sémantique, schema markup, méta données, sitemap, performance. Le SEO n'est pas un supplément : c'est une fondation.",
       },
       {
         question:
-          "Proposez-vous de la maintenance apres le lancement ?",
+          "Proposez-vous de la maintenance après le lancement ?",
         answer:
-          "On inclut 30 jours de support post-lancement dans chaque projet. Au-dela, on propose des contrats de maintenance mensuels pour les mises a jour de contenu, les correctifs et le suivi de performance.",
+          "On inclut 30 jours de support post-lancement dans chaque projet. Au-delà, on propose des contrats de maintenance mensuels pour les mises à jour de contenu, les correctifs et le suivi de performance.",
       },
       {
-        question: "Les sites sont-ils responsive et adaptes au mobile ?",
+        question: "Les sites sont-ils responsive et adaptés au mobile ?",
         answer:
-          "Chaque site est concu et developpe en mobile-first. Le design part du mobile et s'enrichit vers le desktop. On teste sur les principaux appareils et navigateurs avant la mise en ligne.",
+          "Chaque site est conçu et développé en mobile-first. Le design part du mobile et s'enrichit vers le desktop. On teste sur les principaux appareils et navigateurs avant la mise en ligne.",
       },
       {
         question: "Comment se passe une refonte de site existant ?",
         answer:
-          "On commence par un audit complet : performance, SEO, UX, contenu, analytics. On planifie la migration SEO pour preserver votre trafic et vos positions existantes. Puis on reconstruit sur des bases solides.",
+          "On commence par un audit complet : performance, SEO, UX, contenu, analytics. On planifie la migration SEO pour préserver votre trafic et vos positions existantes. Puis on reconstruit sur des bases solides.",
       },
     ],
   },

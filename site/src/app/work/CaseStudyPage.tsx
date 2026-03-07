@@ -122,7 +122,7 @@ export function CaseStudyPage({ study }: CaseStudyPageProps) {
           </p>
           <div className={styles.ctaActions}>
             <Button variant="primary" href={CONTACT.calendlyUrl}>
-              Reserver un appel
+              Réserver un appel
             </Button>
             <Button variant="ghost" href="/contact/">
               Lancer mon projet

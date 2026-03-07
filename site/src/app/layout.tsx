@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     template: "%s | P-XEL Studio",
-    default: `${SITE_NAME} | Studio Digital a Liege`,
+    default: `${SITE_NAME} | Studio Digital à Liège`,
   },
   description: SITE_DESCRIPTION,
   icons: {

@@ -29,14 +29,14 @@ import {
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Agence Web a Liege | P-XEL Studio",
+  title: "Agence Web à Liège | P-XEL Studio",
   description:
-    "Studio digital base a Liege. Sites web, applications, MVP, branding et UX/UI. Du concept au produit livre. 16+ ans d'expertise. Reservez un appel.",
+    "Studio digital basé à Liège. Sites web, applications, MVP, branding et UX/UI. Du concept au produit livré. 16+ ans d'expertise. Réservez un appel.",
   alternates: { canonical: "/liege/" },
   openGraph: {
-    title: "Agence Web a Liege | P-XEL Studio",
+    title: "Agence Web à Liège | P-XEL Studio",
     description:
-      "Studio digital base a Liege. Sites web, applications, MVP, branding et UX/UI. Du concept au produit livre.",
+      "Studio digital basé à Liège. Sites web, applications, MVP, branding et UX/UI. Du concept au produit livré.",
     url: "/liege/",
   },
 };
@@ -48,7 +48,7 @@ export default function LiegePage() {
         schema={[
           breadcrumbSchema([
             { name: "Accueil", url: "/" },
-            { name: "Liege", url: "/liege/" },
+            { name: "Liège", url: "/liege/" },
           ]),
           localBusinessSchema(),
           faqSchema(liegeFaq),
@@ -65,7 +65,7 @@ export default function LiegePage() {
           />
           <div className={styles.heroCta}>
             <Button variant="primary" href={CONTACT.calendlyUrl}>
-              Reserver un appel
+              Réserver un appel
             </Button>
             <Button variant="ghost" href="/work/">
               Voir nos projets
@@ -166,7 +166,7 @@ export default function LiegePage() {
       {/* FAQ */}
       <Section>
         <FadeInUp>
-          <Label>Questions frequentes</Label>
+          <Label>Questions fréquentes</Label>
           <FAQ items={liegeFaq} />
         </FadeInUp>
       </Section>
@@ -184,7 +184,7 @@ export default function LiegePage() {
         <CTA
           heading={liegeCta.heading}
           subtext={liegeCta.subtext}
-          primaryLabel="Reserver un appel"
+          primaryLabel="Réserver un appel"
           primaryHref={CONTACT.calendlyUrl}
           secondaryLabel="Lancer mon projet"
           secondaryHref="/contact/"

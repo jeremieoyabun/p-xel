@@ -4,7 +4,7 @@ export const workIntro = {
   label: "Work",
   heading: "Ce qu'on a construit.",
   subtext:
-    "Cinq projets. Cinq preuves. Chaque produit concu, construit et livre par notre studio.",
+    "Cinq projets. Cinq preuves. Chaque produit conçu, construit et livré par notre studio.",
 };
 
 export const workProjects: WorkProject[] = [
@@ -13,17 +13,17 @@ export const workProjects: WorkProject[] = [
     slug: "billycheck",
     tags: ["Application Web", "SaaS", "Intelligence Artificielle", "Fintech"],
     description:
-      "Application SaaS d'optimisation de factures energetiques. Upload, analyse IA via GPT-4o Vision, comparaison de 15+ fournisseurs. De l'idee au produit en production.",
-    result: "30 secondes pour trouver des economies",
+      "Application SaaS d'optimisation de factures énergétiques. Upload, analyse IA via GPT-4o Vision, comparaison de 15+ fournisseurs. De l'idée au produit en production.",
+    result: "30 secondes pour trouver des économies",
     image: "/images/case-studies/billycheck-hero.webp",
     tier: "featured",
   },
   {
     name: "ChairSplit",
     slug: "chairsplit",
-    tags: ["SaaS", "Plateforme Metier", "PWA", "Multi-Tenant"],
+    tags: ["SaaS", "Plateforme Métier", "PWA", "Multi-Tenant"],
     description:
-      "Plateforme SaaS de gestion pour barbershops. Revenus, commissions, equipes, fiches de paie. Multi-tenant, mobile-first, modele d'abonnement Stripe.",
+      "Plateforme SaaS de gestion pour barbershops. Revenus, commissions, équipes, fiches de paie. Multi-tenant, mobile-first, modèle d'abonnement Stripe.",
     result: "Produit SaaS complet en production",
     image: "/images/case-studies/chairsplit-hero.webp",
     tier: "featured",
@@ -33,7 +33,7 @@ export const workProjects: WorkProject[] = [
     slug: "greenmood",
     tags: ["UX/UI", "Plateforme B2B", "Configurateur produit", "Design System"],
     description:
-      "Plateforme B2B pour le leader europeen du design acoustique et biophilique. Architecture d'information, UX/UI et configurateurs produit.",
+      "Plateforme B2B pour le leader européen du design acoustique et biophilique. Architecture d'information, UX/UI et configurateurs produit.",
     image: "/images/case-studies/greenmood-hero.webp",
     tier: "featured",
   },
@@ -42,7 +42,7 @@ export const workProjects: WorkProject[] = [
     slug: "oyabun",
     tags: ["Product Design", "Gaming", "Web3", "Telegram"],
     description:
-      "Application gaming Web3 avec economie de tokens, systeme de clans et integration Telegram. Un univers complet concu, du concept au produit pret a deployer.",
+      "Application gaming Web3 avec économie de tokens, système de clans et intégration Telegram. Un univers complet conçu, du concept au produit prêt à déployer.",
     result: "Produit gaming complet, du concept au lancement",
     image: "/images/case-studies/oyabun-hero.webp",
     tier: "secondary",
@@ -50,9 +50,9 @@ export const workProjects: WorkProject[] = [
   {
     name: "Arduenna Gin",
     slug: "arduenna-gin",
-    tags: ["E-commerce", "Strategie d'acquisition", "Facebook Ads"],
+    tags: ["E-commerce", "Stratégie d'acquisition", "Facebook Ads"],
     description:
-      "Deux sites e-commerce et 103 campagnes d'acquisition. Une strategie qui a genere deux ans de chiffre d'affaires en deux mois.",
+      "Deux sites e-commerce et 103 campagnes d'acquisition. Une stratégie qui a généré deux ans de chiffre d'affaires en deux mois.",
     result: "2 ans de CA en 2 mois",
     image: "/images/case-studies/arduenna-hero.webp",
     tier: "secondary",
@@ -60,6 +60,6 @@ export const workProjects: WorkProject[] = [
 ];
 
 export const workCta = {
-  heading: "Un projet en tete ?",
-  subtext: "On vous dit en 15 minutes si on est le bon partenaire.",
+  heading: "Un projet en tête ?",
+  subtext: "30 minutes pour cadrer votre projet et poser les bases.",
 };

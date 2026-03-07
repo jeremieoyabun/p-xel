@@ -45,7 +45,7 @@ export function ServicePage({ service }: ServicePageProps) {
           />
           <div className={styles.heroCta}>
             <Button variant="primary" href={CONTACT.calendlyUrl}>
-              Reserver un appel
+              Réserver un appel
             </Button>
             <Button variant="ghost" href="/contact/">
               Lancer mon projet
@@ -198,7 +198,7 @@ export function ServicePage({ service }: ServicePageProps) {
         <CTA
           heading={service.cta.heading}
           subtext={service.cta.subtext}
-          primaryLabel="Reserver un appel"
+          primaryLabel="Réserver un appel"
           primaryHref={CONTACT.calendlyUrl}
           secondaryLabel="Lancer mon projet"
           secondaryHref="/contact/"

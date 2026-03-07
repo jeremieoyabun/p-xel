@@ -131,7 +131,7 @@ export function ContactForm() {
           required
         >
           <option value="" disabled>
-            Selectionnez
+            Sélectionnez
           </option>
           {projectTypes.map((type) => (
             <option key={type} value={type}>
@@ -154,7 +154,7 @@ export function ContactForm() {
           className={styles.select}
           defaultValue=""
         >
-          <option value="">Non precise</option>
+          <option value="">Non précisé</option>
           {budgetRanges.map((range) => (
             <option key={range} value={range}>
               {range}
@@ -165,7 +165,7 @@ export function ContactForm() {
 
       <div className={styles.field}>
         <label htmlFor="timeline" className={styles.label}>
-          Delai souhaite
+          Délai souhaité
         </label>
         <select
           id="timeline"
@@ -173,7 +173,7 @@ export function ContactForm() {
           className={styles.select}
           defaultValue=""
         >
-          <option value="">Non precise</option>
+          <option value="">Non précisé</option>
           {timelineOptions.map((option) => (
             <option key={option} value={option}>
               {option}
@@ -189,7 +189,7 @@ export function ContactForm() {
         <textarea
           id="message"
           name="message"
-          placeholder="Decrivez votre projet, vos objectifs et vos contraintes principales."
+          placeholder="Décrivez votre projet, vos objectifs et vos contraintes principales."
           className={`${styles.textarea} ${errors.message ? styles.invalid : ""}`}
           required
         />

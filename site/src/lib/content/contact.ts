@@ -2,27 +2,27 @@ export const contactIntro = {
   label: "Contact",
   heading: "Parlons de votre projet.",
   subtext:
-    "Reservez un appel de 30 minutes ou decrivez votre projet ci-dessous. On repond sous 24h.",
+    "Réservez un appel de 30 minutes ou décrivez votre projet ci-dessous. On répond sous 24h.",
 };
 
 export const contactCalendly = {
-  heading: "Reserver un appel",
-  body: "30 minutes pour decouvrir votre projet, vos objectifs et vos contraintes. Sans engagement.",
+  heading: "Réserver un appel",
+  body: "30 minutes pour découvrir votre projet, vos objectifs et vos contraintes. Sans engagement.",
 };
 
 export const contactForm = {
-  heading: "Decrire mon projet",
-  body: "Pas encore pret pour un appel ? Decrivez votre projet en quelques lignes. On revient vers vous sous 24h.",
+  heading: "Décrire mon projet",
+  body: "Pas encore prêt pour un appel ? Décrivez votre projet en quelques lignes. On revient vers vous sous 24h.",
   submitLabel: "Envoyer mon brief",
   successMessage: "Merci. On revient vers vous sous 24 heures.",
-  errorMessage: "Une erreur est survenue. Veuillez reessayer.",
+  errorMessage: "Une erreur est survenue. Veuillez réessayer.",
 };
 
 export const projectTypes = [
   "Site web",
   "Application web / SaaS",
   "Landing page",
-  "Branding / Identite",
+  "Branding / Identité",
   "UX/UI Design",
   "Autre",
 ] as const;
@@ -33,7 +33,7 @@ export const budgetRanges = [
   "15 000 - 30 000 EUR",
   "30 000 - 50 000 EUR",
   "> 50 000 EUR",
-  "Pas encore defini",
+  "Pas encore défini",
 ] as const;
 
 export const timelineOptions = [

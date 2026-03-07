@@ -37,7 +37,7 @@ export function localBusinessSchema() {
     email: CONTACT.email,
     address: {
       "@type": "PostalAddress" as const,
-      addressLocality: "Liege",
+      addressLocality: "Liège",
       addressCountry: "BE",
     },
     priceRange: "$$",
@@ -80,7 +80,7 @@ export function serviceSchema(name: string, description: string) {
       email: CONTACT.email,
       address: {
         "@type": "PostalAddress" as const,
-        addressLocality: "Liege",
+        addressLocality: "Liège",
         addressCountry: "BE",
       },
     },

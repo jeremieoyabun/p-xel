@@ -14,12 +14,12 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Applications web, plateformes SaaS, identites de marque. Cinq produits digitaux concus, construits et livres par P-XEL Studio. Voir les projets.",
+    "Applications web, plateformes SaaS, identités de marque. Cinq produits digitaux conçus, construits et livrés par P-XEL Studio. Voir les projets.",
   alternates: { canonical: "/work/" },
   openGraph: {
     title: "Work | P-XEL Studio",
     description:
-      "Cinq produits digitaux concus, construits et livres par P-XEL Studio.",
+      "Cinq produits digitaux conçus, construits et livrés par P-XEL Studio.",
     url: "/work/",
   },
 };
@@ -130,7 +130,7 @@ export default function WorkPage() {
         <CTA
           heading={workCta.heading}
           subtext={workCta.subtext}
-          primaryLabel="Reserver un appel"
+          primaryLabel="Réserver un appel"
           primaryHref={CONTACT.calendlyUrl}
           secondaryLabel="Lancer mon projet"
           secondaryHref="/contact/"

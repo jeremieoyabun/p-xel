@@ -24,12 +24,12 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Studio",
   description:
-    "Un studio. Un fondateur. 16 ans d'expertise produit. On concoit, construit et livre des produits digitaux premium. Decouvrez comment on travaille.",
+    "Un studio. Un fondateur. 16 ans d'expertise produit. On conçoit, construit et livre des produits digitaux premium. Découvrez comment on travaille.",
   alternates: { canonical: "/studio/" },
   openGraph: {
     title: "Studio | P-XEL Studio",
     description:
-      "Un studio. Un fondateur. 16 ans d'expertise produit. On concoit, construit et livre des produits digitaux premium.",
+      "Un studio. Un fondateur. 16 ans d'expertise produit. On conçoit, construit et livre des produits digitaux premium.",
     url: "/studio/",
   },
 };
@@ -163,7 +163,7 @@ export default function StudioPage() {
         <CTA
           heading={studioCta.heading}
           subtext={studioCta.subtext}
-          primaryLabel="Reserver un appel"
+          primaryLabel="Réserver un appel"
           primaryHref={CONTACT.calendlyUrl}
           secondaryLabel="Lancer mon projet"
           secondaryHref="/contact/"

@@ -14,12 +14,12 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Reservez un appel de 30 minutes ou decrivez votre projet. On repond sous 24h. P-XEL Studio, Liege, Belgique.",
+    "Réservez un appel de 30 minutes ou décrivez votre projet. On répond sous 24h. P-XEL Studio, Liège, Belgique.",
   alternates: { canonical: "/contact/" },
   openGraph: {
     title: "Contact | P-XEL Studio",
     description:
-      "Reservez un appel de 30 minutes ou decrivez votre projet. On repond sous 24h.",
+      "Réservez un appel de 30 minutes ou décrivez votre projet. On répond sous 24h.",
     url: "/contact/",
   },
 };
@@ -76,7 +76,7 @@ export default function ContactPage() {
       {/* Direct Contact */}
       <Section>
         <FadeInUp>
-          <Label>Coordonnees</Label>
+          <Label>Coordonnées</Label>
           <div className={styles.directContact}>
             <div className={styles.contactItem}>
               <span className={styles.contactLabel}>Email</span>
@@ -88,7 +88,7 @@ export default function ContactPage() {
               </a>
             </div>
             <div className={styles.contactItem}>
-              <span className={styles.contactLabel}>Telephone</span>
+              <span className={styles.contactLabel}>Téléphone</span>
               <a
                 href={`tel:${CONTACT.phoneRaw}`}
                 className={styles.contactLink}

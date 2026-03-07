@@ -30,15 +30,15 @@ export const footerNav = {
     ],
   },
   local: {
-    title: "Liege",
-    links: [{ label: "Agence web Liege", href: "/liege/" }],
+    title: "Liège",
+    links: [{ label: "Agence web Liège", href: "/liege/" }],
   },
   legal: {
     title: "Legal",
     links: [
-      { label: "Mentions legales", href: "/mentions-legales/" },
+      { label: "Mentions légales", href: "/mentions-legales/" },
       {
-        label: "Politique de confidentialite",
+        label: "Politique de confidentialité",
         href: "/politique-confidentialite/",
       },
     ],

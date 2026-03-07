@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "P-XEL Studio - Studio Digital a Liege";
+export const alt = "P-XEL Studio - Studio Digital à Liège";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -58,7 +58,7 @@ export default function OgImage() {
             margin: 0,
           }}
         >
-          Studio Digital a Liege
+          Studio Digital à Liège
         </h1>
         <p
           style={{
@@ -70,7 +70,7 @@ export default function OgImage() {
           }}
         >
           Sites web, applications, MVP, branding et UX/UI. Du concept au
-          produit livre.
+          produit livré.
         </p>
         <div
           style={{

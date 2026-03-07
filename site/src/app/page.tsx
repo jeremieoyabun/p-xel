@@ -37,12 +37,12 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "P-XEL Studio | Design, Code & Lancement de Produits Digitaux",
   description:
-    "Studio digital a Liege. On conçoit, construit et livre des produits digitaux premium. Sites, applications, MVP, branding. Reservez un appel.",
+    "Studio digital à Liège. On conçoit, construit et livre des produits digitaux premium. Sites, applications, MVP, branding. Réservez un appel.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "P-XEL Studio | Design, Code & Lancement de Produits Digitaux",
     description:
-      "Studio digital a Liege. On conçoit, construit et livre des produits digitaux premium.",
+      "Studio digital à Liège. On conçoit, construit et livre des produits digitaux premium.",
     url: "/",
   },
 };
@@ -75,15 +75,15 @@ export default function HomePage() {
             <PXelButton
               label={hero.ctaPrimary.label}
               href={hero.ctaPrimary.href}
-              variant="dark"
+              variant="light"
             />
-            <Button variant="secondary" href={hero.ctaSecondary.href}>
+            <Button variant="secondaryLight" href={hero.ctaSecondary.href}>
               {hero.ctaSecondary.label}
             </Button>
           </div>
         </div>
         <div className={styles.heroBottom}>
-          <span className={styles.heroAnchor}>Liege, BE</span>
+          <span className={styles.heroAnchor}>Liège, BE</span>
           <span className={styles.heroAnchorSep} aria-hidden="true" />
           <span className={styles.heroAnchor}>Since 2008</span>
         </div>
@@ -218,7 +218,7 @@ export default function HomePage() {
         <FadeInUp>
           <div className={styles.processCta}>
             <Button variant="primary" href={CONTACT.calendlyUrl}>
-              Reserver un appel
+              Réserver un appel
             </Button>
           </div>
         </FadeInUp>

@@ -1,15 +1,15 @@
 export const hero = {
-  label: "Product Design Studio / Liege, BE",
+  label: "Product Design Studio / Liège, BE",
   headline: "On conçoit. On construit. On livre.",
   subheadline:
-    "Produits digitaux premium. Sites, applications, identites de marque. De la strategie au deploiement.",
-  ctaPrimary: { label: "Reserver un appel", href: "https://calendly.com/p-xel" },
+    "Produits digitaux premium. Sites, applications, identités de marque. De la stratégie au déploiement.",
+  ctaPrimary: { label: "Réserver un appel", href: "https://calendly.com/p-xel" },
   ctaSecondary: { label: "Voir nos projets", href: "/work/" },
 };
 
 export const proofStrip = [
-  { value: 16, suffix: "+", label: "annees d'expertise" },
-  { value: 49, suffix: "+", label: "projets livres" },
+  { value: 16, suffix: "+", label: "années d'expertise" },
+  { value: 49, suffix: "+", label: "projets livrés" },
   { value: 98, suffix: "%", label: "clients satisfaits" },
 ];
 
@@ -32,51 +32,51 @@ export const capability = {
   label: "Ce qu'on construit",
   heading: "Du produit. Pas des livrables.",
   subtext:
-    "On ne vend pas des heures. On conçoit des produits digitaux complets, de l'idee au lancement. Un seul studio. Zero intermediaire.",
+    "On ne vend pas des heures. On conçoit des produits digitaux complets, de l'idée au lancement. Un seul studio. Zéro intermédiaire.",
   items: [
     {
       title: "Sites web",
       description:
-        "Sites vitrines, e-commerce, plateformes corporate. Rapides, optimises SEO, construits pour convertir.",
+        "Sites vitrines, e-commerce, plateformes corporate. Rapides, optimisés SEO, construits pour convertir.",
       href: "/services/creation-site-web/",
     },
     {
       title: "Applications web et MVP",
       description:
-        "Outils metier, plateformes SaaS, prototypes fonctionnels. Du concept au produit qui tourne en production.",
+        "Outils métier, plateformes SaaS, prototypes fonctionnels. Du concept au produit qui tourne en production.",
       href: "/services/application-web-mvp/",
     },
     {
       title: "Design d'interface",
       description:
-        "UX research, UI design, design systems, prototypage. Des interfaces pensees pour l'usage, pas pour la decoration.",
+        "UX research, UI design, design systems, prototypage. Des interfaces pensées pour l'usage, pas pour la décoration.",
     },
     {
-      title: "Identite de marque",
+      title: "Identité de marque",
       description:
-        "Logo, direction artistique, systemes visuels. Des marques construites pour durer et pour scaler.",
+        "Logo, direction artistique, systèmes visuels. Des marques construites pour durer et pour scaler.",
     },
   ],
 };
 
 export const selectedWork = {
-  label: "Ce qu'on a livre",
+  label: "Ce qu'on a livré",
   heading: "Trois projets. Trois preuves.",
   projects: [
     {
       name: "BillyCheck",
       tags: ["Application Web", "SaaS", "Intelligence Artificielle", "Fintech"],
       description:
-        "Application SaaS d'optimisation de factures energetiques. Upload, analyse IA, comparaison de 15+ fournisseurs. De l'idee au produit en production.",
-      result: "30 secondes pour trouver des economies",
+        "Application SaaS d'optimisation de factures énergétiques. Upload, analyse IA, comparaison de 15+ fournisseurs. De l'idée au produit en production.",
+      result: "30 secondes pour trouver des économies",
       href: "/work/billycheck/",
       image: "/images/case-studies/billycheck-hero.webp",
     },
     {
       name: "ChairSplit",
-      tags: ["SaaS", "Plateforme Metier", "PWA", "Multi-Tenant"],
+      tags: ["SaaS", "Plateforme Métier", "PWA", "Multi-Tenant"],
       description:
-        "Plateforme SaaS de gestion pour barbershops. Revenus, commissions, equipes, fiches de paie. Multi-tenant, mobile-first.",
+        "Plateforme SaaS de gestion pour barbershops. Revenus, commissions, équipes, fiches de paie. Multi-tenant, mobile-first.",
       result: "Produit SaaS complet en production",
       href: "/work/chairsplit/",
       image: "/images/case-studies/chairsplit-hero.webp",
@@ -85,7 +85,7 @@ export const selectedWork = {
       name: "Greenmood",
       tags: ["UX/UI", "Plateforme B2B", "Configurateur produit", "Design System"],
       description:
-        "Plateforme B2B pour le leader europeen du design acoustique et biophilique. Architecture d'information, UX/UI et configurateurs produit.",
+        "Plateforme B2B pour le leader européen du design acoustique et biophilique. Architecture d'information, UX/UI et configurateurs produit.",
       href: "/work/greenmood/",
       image: "/images/case-studies/greenmood-hero.webp",
     },
@@ -99,18 +99,18 @@ export const whyPxel = {
   points: [
     {
       number: "01",
-      title: "On conçoit et on execute",
-      body: "La plupart des studios s'arretent a la maquette Figma. On va jusqu'au deploiement. Design, code, mise en ligne. Votre produit est fonctionnel, pas juste beau sur un ecran de presentation.",
+      title: "On conçoit et on exécute",
+      body: "La plupart des studios s'arrêtent à la maquette Figma. On va jusqu'au déploiement. Design, code, mise en ligne. Votre produit est fonctionnel, pas juste beau sur un écran de présentation.",
     },
     {
       number: "02",
       title: "Un seul interlocuteur",
-      body: "Pas de compte manager. Pas de couche intermediaire. Un studio senior qui travaille directement avec les decideurs. On comprend votre projet parce qu'on le porte du debut a la fin.",
+      body: "Pas de compte manager. Pas de couche intermédiaire. Un studio senior qui travaille directement avec les décideurs. On comprend votre projet parce qu'on le porte du début à la fin.",
     },
     {
       number: "03",
-      title: "Rapide et precis",
-      body: "2 ans de CA en 2 mois pour Arduenna Gin. Un SaaS complet en production pour BillyCheck. On ne promet pas la vitesse. On la demontre.",
+      title: "Rapide et précis",
+      body: "2 ans de CA en 2 mois pour Arduenna Gin. Un SaaS complet en production pour BillyCheck. On ne promet pas la vitesse. On la démontre.",
     },
   ],
 };
@@ -122,11 +122,11 @@ export const process = {
     {
       number: "01",
       title: "Premier contact",
-      description: "Decrivez votre projet en quelques lignes. On repond sous 24h.",
+      description: "Décrivez votre projet en quelques lignes. On répond sous 24h.",
     },
     {
       number: "02",
-      title: "Appel decouverte",
+      title: "Appel découverte",
       description:
         "30 minutes pour comprendre vos objectifs, vos contraintes et vos attentes.",
     },
@@ -134,53 +134,53 @@ export const process = {
       number: "03",
       title: "Proposition claire",
       description:
-        "Perimetre, livrables, planning, budget. Tout est pose. Pas de surprises.",
+        "Périmètre, livrables, planning, budget. Tout est posé. Pas de surprises.",
     },
     {
       number: "04",
       title: "On construit",
       description:
-        "Design, developpement, iterations. Vous suivez l'avancement en temps reel.",
+        "Design, développement, itérations. Vous suivez l'avancement en temps réel.",
     },
   ],
 };
 
 export const faq = {
-  label: "Questions frequentes",
+  label: "Questions fréquentes",
   items: [
     {
       question: "Quels types de projets prenez-vous en charge ?",
       answer:
-        "Sites web, applications web, MVP, landing pages, e-commerce, branding et identites visuelles. On travaille avec des startups, des PME et des marques ambitieuses en Belgique, au Luxembourg et en Europe.",
+        "Sites web, applications web, MVP, landing pages, e-commerce, branding et identités visuelles. On travaille avec des startups, des PME et des marques ambitieuses en Belgique, au Luxembourg et en Europe.",
     },
     {
-      question: "Combien coute un projet avec P-XEL ?",
+      question: "Combien coûte un projet avec P-XEL ?",
       answer:
-        "Chaque projet est unique. On travaille a partir de 75 EUR/h ou sur devis forfaitaire. Une landing page demarre autour de 1 500 EUR. Un site complet entre 5 000 et 15 000 EUR. Une application web entre 10 000 et 50 000 EUR.",
+        "Chaque projet est unique. On travaille à partir de 75 EUR/h ou sur devis forfaitaire. Une landing page démarre autour de 1 500 EUR. Un site complet entre 5 000 et 15 000 EUR. Une application web entre 10 000 et 50 000 EUR.",
     },
     {
-      question: "Quelle est la duree moyenne d'un projet ?",
+      question: "Quelle est la durée moyenne d'un projet ?",
       answer:
-        "Landing page : 1 a 2 semaines. Site vitrine : 3 a 6 semaines. Application web : 6 a 12 semaines. On adapte le planning a vos contraintes.",
+        "Landing page : 1 à 2 semaines. Site vitrine : 3 à 6 semaines. Application web : 6 à 12 semaines. On adapte le planning à vos contraintes.",
     },
     {
       question:
-        "Est-ce que vous developpez aussi ou uniquement du design ?",
+        "Est-ce que vous développez aussi ou uniquement du design ?",
       answer:
-        "On conçoit et on developpe. Design, code et deploiement. Vous recevez un produit fonctionnel, pas une maquette.",
+        "On conçoit et on développe. Design, code et déploiement. Vous recevez un produit fonctionnel, pas une maquette.",
     },
     {
-      question: "Ou etes-vous bases ?",
+      question: "Où êtes-vous basés ?",
       answer:
-        "A Liege, en Belgique. On travaille avec des clients en Wallonie, a Bruxelles, au Luxembourg et partout en Europe en remote.",
+        "À Liège, en Belgique. On travaille avec des clients en Wallonie, à Bruxelles, au Luxembourg et partout en Europe en remote.",
     },
   ],
 };
 
 export const finalCta = {
-  heading: "Votre projet merite mieux qu'un template.",
+  heading: "Votre projet mérite mieux qu'un template.",
   subtext:
-    "Parlez-nous de votre idee. On vous dit en 15 minutes si on est le bon partenaire.",
-  ctaPrimary: { label: "Reserver un appel", href: "https://calendly.com/p-xel" },
+    "Parlez-nous de votre idée. 30 minutes pour cadrer votre projet et poser les bases.",
+  ctaPrimary: { label: "Réserver un appel", href: "https://calendly.com/p-xel" },
   ctaSecondary: { label: "Lancer mon projet", href: "/contact/" },
 };
