@@ -169,20 +169,30 @@
   justify-content: center;
   gap: var(--space-10);
   flex-wrap: wrap;
-  padding: var(--space-4) 0;
+  padding: var(--space-6) 0;
 }
 
 .logoItem {
-  font-family: var(--font-body);
-  font-size: var(--text-sm);
-  color: var(--text-dark-muted);
-  letter-spacing: var(--tracking-wide);
-  opacity: 0.4;
-  transition: opacity var(--duration-base) var(--ease-in-out);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2);
 }
 
-.logoItem:hover {
-  opacity: 0.8;
+.logoImage {
+  width: auto;
+  height: 28px;
+  object-fit: contain;
+  filter: grayscale(1) brightness(0.6) invert(1);
+  opacity: 0.35;
+  transition:
+    filter 400ms ease,
+    opacity 400ms ease;
+}
+
+.logoItem:hover .logoImage {
+  filter: grayscale(0) brightness(1) invert(0);
+  opacity: 1;
 }
 
 /* ================================================================

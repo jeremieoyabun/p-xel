@@ -3,7 +3,7 @@ import styles from "./Button.module.css";
 
 interface ButtonProps {
   children: ReactNode;
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary" | "secondaryLight" | "ghost";
   href?: string;
   onClick?: () => void;
   type?: "button" | "submit";

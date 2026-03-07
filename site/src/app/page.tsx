@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section } from "@/components/Section/Section";
 import { Label } from "@/components/Label/Label";
 import { SectionHeading } from "@/components/SectionHeading/SectionHeading";
 import { Button } from "@/components/Button/Button";
-import { SlideButton } from "@/components/SlideButton/SlideButton";
+import { PXelButton } from "@/components/PXelButton/PXelButton";
 import { StatBlock } from "@/components/StatBlock/StatBlock";
 import { ProjectCard } from "@/components/ProjectCard/ProjectCard";
 import { ProcessStep } from "@/components/ProcessStep/ProcessStep";
@@ -71,9 +72,8 @@ export default function HomePage() {
           </h1>
           <p className={styles.heroSub}>{hero.subheadline}</p>
           <div className={styles.heroActions}>
-            <SlideButton
+            <PXelButton
               label={hero.ctaPrimary.label}
-              hoverLabel="C'est parti"
               href={hero.ctaPrimary.href}
               variant="dark"
             />
@@ -106,10 +106,16 @@ export default function HomePage() {
       {/* Beat 3: Client Logos */}
       <Section>
         <div className={styles.logos}>
-          {clientLogos.map((name) => (
-            <span key={name} className={styles.logoItem}>
-              {name}
-            </span>
+          {clientLogos.map((logo) => (
+            <div key={logo.name} className={styles.logoItem}>
+              <Image
+                src={logo.src}
+                alt={logo.name}
+                width={120}
+                height={40}
+                className={styles.logoImage}
+              />
+            </div>
           ))}
         </div>
       </Section>

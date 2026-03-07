@@ -1,5 +1,5 @@
 import { Button } from "../Button/Button";
-import { SlideButton } from "../SlideButton/SlideButton";
+import { PXelButton } from "../PXelButton/PXelButton";
 import styles from "./CTA.module.css";
 
 interface CTAProps {
@@ -7,7 +7,6 @@ interface CTAProps {
   subtext?: string;
   primaryLabel: string;
   primaryHref: string;
-  primaryHoverLabel?: string;
   secondaryLabel?: string;
   secondaryHref?: string;
 }
@@ -17,7 +16,6 @@ export function CTA({
   subtext,
   primaryLabel,
   primaryHref,
-  primaryHoverLabel = "C'est parti",
   secondaryLabel,
   secondaryHref,
 }: CTAProps) {
@@ -26,14 +24,13 @@ export function CTA({
       <h2 className={styles.heading}>{heading}</h2>
       {subtext && <p className={styles.subtext}>{subtext}</p>}
       <div className={styles.actions}>
-        <SlideButton
+        <PXelButton
           label={primaryLabel}
-          hoverLabel={primaryHoverLabel}
           href={primaryHref}
           variant="dark"
         />
         {secondaryLabel && secondaryHref && (
-          <Button variant="ghost" href={secondaryHref}>
+          <Button variant="secondary" href={secondaryHref}>
             {secondaryLabel}
           </Button>
         )}

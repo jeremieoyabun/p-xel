@@ -1,0 +1,179 @@
+/* ================================================================
+   PXelButton - Signature ink-fill CTA
+   Pill shape, ink circle expands from the right on hover.
+   ================================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 6px 0 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  gap: var(--space-4);
+  min-width: 240px;
+  transition:
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+/* --- Dark variant (on dark/video backgrounds) --- */
+.dark {
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+}
+
+.dark .label {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.dark .circle {
+  background: var(--accent);
+}
+
+.dark .icon {
+  color: #ffffff;
+}
+
+.dark:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 40px rgba(102, 8, 249, 0.15);
+}
+
+.dark:hover .label {
+  color: #ffffff;
+}
+
+/* --- Light variant (on light backgrounds) --- */
+.light {
+  background: transparent;
+  border: 1.5px solid #191d28;
+}
+
+.light .label {
+  color: #191d28;
+}
+
+.light .circle {
+  background: var(--accent);
+}
+
+.light .icon {
+  color: #ffffff;
+}
+
+.light:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 30px rgba(102, 8, 249, 0.1);
+}
+
+.light:hover .label {
+  color: #ffffff;
+}
+
+/* --- Ink fill (expands from right on hover) --- */
+.ink {
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translate(50%, -50%);
+  transition:
+    width 500ms cubic-bezier(0.19, 1, 0.22, 1),
+    height 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 0;
+}
+
+.btn:hover .ink {
+  width: 600px;
+  height: 600px;
+}
+
+/* --- Label --- */
+.label {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  transition: color 300ms ease;
+}
+
+/* --- Circle with arrow --- */
+.circle {
+  position: relative;
+  z-index: 1;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition:
+    background-color 300ms ease,
+    transform 300ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn:hover .circle {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+/* --- Arrow icon --- */
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 300ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn:hover .icon {
+  transform: translateX(2px);
+}
+
+/* --- Focus --- */
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 767px) {
+  .btn {
+    width: 100%;
+    min-width: unset;
+    height: 52px;
+    padding: 0 5px 0 24px;
+  }
+
+  .circle {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* --- Reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .ink {
+    transition: none;
+  }
+
+  .btn:hover .ink {
+    width: 600px;
+    height: 600px;
+  }
+}

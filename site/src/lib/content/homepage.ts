@@ -14,15 +14,18 @@ export const proofStrip = [
 ];
 
 export const clientLogos = [
-  "Greenmood",
-  "Arduenna",
-  "Kokoro",
-  "Globodai",
-  "DO",
-  "PN3DLG",
-  "Kalibre",
-  "Modular",
-  "ND",
+  { name: "Greenmood", src: "/legacy-assets/logos/Logo_Greenmood.png" },
+  { name: "Kokoro", src: "/legacy-assets/logos/Kokoro-logo.webp" },
+  { name: "Globodai", src: "/legacy-assets/logos/Globodai-b.webp" },
+  { name: "DO", src: "/legacy-assets/logos/Logo_DODS.png" },
+  { name: "PN3DLG", src: "/legacy-assets/logos/PN3DLG-Logo.webp" },
+  { name: "Kalibre", src: "/legacy-assets/logos/KALIBRE_logo.webp" },
+  { name: "Modular", src: "/legacy-assets/logos/Modular-logo.webp" },
+  { name: "ND", src: "/legacy-assets/logos/ND_Logo.webp" },
+  { name: "Hopscotch", src: "/legacy-assets/logos/Hopscotch-Logo.webp" },
+  { name: "Entourage", src: "/legacy-assets/logos/Entourage-logo.webp" },
+  { name: "Oyabun", src: "/legacy-assets/logos/OYABUN_New-Logo_black.webp" },
+  { name: "Naturovape", src: "/legacy-assets/logos/Naturovape-logo.webp" },
 ];
 
 export const capability = {
