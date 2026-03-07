@@ -1,0 +1,172 @@
+/* Services grid */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.serviceItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.serviceTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+}
+
+.serviceBody {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+}
+
+.serviceLink {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  transition: color var(--duration-fast) var(--ease-in-out);
+}
+
+.serviceLink:hover {
+  color: var(--accent-hover);
+}
+
+/* Why points */
+.whyGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.whyPoint {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.whyTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+}
+
+.whyBody {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+}
+
+/* Local context */
+.contextBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: var(--content-narrow);
+}
+
+.contextBody p {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.7;
+}
+
+/* Projects */
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.projectCard {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--border-dark);
+  padding: var(--space-6);
+  transition: border-color var(--duration-fast) var(--ease-in-out),
+    transform var(--duration-base) var(--ease-out);
+}
+
+.projectCard:hover {
+  border-color: var(--border-dark-hover);
+  transform: translateY(-4px);
+}
+
+.projectName {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: var(--space-3);
+}
+
+.projectBody {
+  font-size: var(--text-sm);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+
+.projectLink {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-dark-muted);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  transition: color var(--duration-fast) var(--ease-in-out);
+}
+
+.projectCard:hover .projectLink {
+  color: var(--accent);
+}
+
+/* Process */
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+/* Other cities */
+.otherCities {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+  margin-top: var(--space-4);
+  max-width: var(--content-narrow);
+}
+
+/* Hero CTA row */
+.heroCta {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+@media (max-width: 767px) {
+  .servicesGrid,
+  .whyGrid,
+  .processGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroCta {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,192 @@
+/* Beat 1: Hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-6);
+  max-width: 800px;
+}
+
+.heroHeadline {
+  font-size: var(--text-6xl);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: var(--tracking-tight);
+}
+
+.heroSub {
+  font-size: var(--text-lg);
+  color: var(--text-dark-secondary);
+  line-height: 1.5;
+  max-width: 560px;
+}
+
+.heroActions {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+@media (max-width: 767px) {
+  .heroHeadline {
+    font-size: var(--text-4xl);
+  }
+
+  .heroSub {
+    font-size: var(--text-md);
+  }
+
+  .heroActions {
+    flex-direction: column;
+  }
+}
+
+/* Beat 2: Proof Strip */
+.proofStrip {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-16);
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+@media (max-width: 639px) {
+  .proofStrip {
+    gap: var(--space-8);
+  }
+}
+
+/* Beat 3: Client Logos */
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+  padding: var(--space-4) 0;
+}
+
+.logoItem {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-dark-muted);
+  letter-spacing: var(--tracking-wide);
+  opacity: 0.5;
+}
+
+/* Beat 4: Capabilities */
+.capabilities {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+}
+
+.capabilityItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  border: 1px solid var(--border-dark);
+  transition: border-color var(--duration-fast) var(--ease-in-out);
+}
+
+.capabilityItem:hover {
+  border-color: var(--border-dark-hover);
+}
+
+.capabilityTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 500;
+}
+
+.capabilityDesc {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+}
+
+.capabilityLink {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: var(--space-2);
+  transition: color var(--duration-fast) var(--ease-in-out);
+}
+
+.capabilityLink:hover {
+  color: var(--accent-hover);
+}
+
+@media (max-width: 767px) {
+  .capabilities {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Beat 5: Projects */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.workCta {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-12);
+}
+
+/* Beat 6: Differentiators */
+.differentiators {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.diffPoint {
+  display: flex;
+  gap: var(--space-6);
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.diffPoint:first-child {
+  border-top: 1px solid var(--border-dark);
+}
+
+.diffNumber {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--accent);
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.diffTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  margin-bottom: var(--space-2);
+}
+
+.diffBody {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+}
+
+/* Beat 7: Process */
+.processSteps {
+  max-width: var(--content-narrow);
+}
+
+.processCta {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-12);
+}

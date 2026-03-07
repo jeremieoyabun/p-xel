@@ -1,0 +1,256 @@
+/* Problem */
+.problemIntro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: var(--content-narrow);
+}
+
+.problemIntro p {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.7;
+}
+
+.problemPoints {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  max-width: var(--content-narrow);
+}
+
+.problemPoint {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+  padding-left: var(--space-5);
+  position: relative;
+}
+
+.problemPoint::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 1px;
+  background-color: var(--accent);
+}
+
+/* What We Build */
+.offerIntro {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.7;
+  max-width: var(--content-narrow);
+}
+
+.offerGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.offerItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.offerTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+}
+
+.offerBody {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+}
+
+/* Approach */
+.approachIntro {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.7;
+  max-width: var(--content-narrow);
+  margin-bottom: var(--space-4);
+}
+
+.approachGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+/* Deliverables */
+.deliverablesIntro {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.7;
+  max-width: var(--content-narrow);
+}
+
+.deliverablesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  max-width: var(--content-narrow);
+}
+
+.deliverableItem {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+  padding-left: var(--space-5);
+  position: relative;
+}
+
+.deliverableItem::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 1px;
+  background-color: var(--accent);
+}
+
+.deliverablesNote {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--accent);
+  letter-spacing: var(--tracking-wide);
+  margin-top: var(--space-6);
+}
+
+/* Case Studies */
+.studyGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.studyCard {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--border-dark);
+  padding: var(--space-8);
+  transition: border-color var(--duration-fast) var(--ease-in-out),
+    transform var(--duration-base) var(--ease-out);
+}
+
+.studyCard:hover {
+  border-color: var(--border-dark-hover);
+  transform: translateY(-4px);
+}
+
+.studyName {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: var(--space-3);
+}
+
+.studyTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.studyTag {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  color: var(--text-dark-muted);
+  text-transform: uppercase;
+}
+
+.studyTag:not(:last-child)::after {
+  content: " /";
+}
+
+.studyBody {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+
+.studyLink {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-dark-muted);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  transition: color var(--duration-fast) var(--ease-in-out);
+}
+
+.studyCard:hover .studyLink {
+  color: var(--accent);
+}
+
+/* Investment */
+.investmentBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: var(--content-narrow);
+}
+
+.investmentBody p {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.7;
+}
+
+.investmentAnchor {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: var(--tracking-wide);
+  margin-top: var(--space-6);
+}
+
+.investmentNote {
+  font-size: var(--text-sm);
+  color: var(--text-dark-muted);
+  line-height: 1.6;
+  margin-top: var(--space-4);
+  max-width: var(--content-narrow);
+}
+
+.investmentCta {
+  margin-top: var(--space-6);
+}
+
+/* Hero CTA row */
+.heroCta {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+@media (max-width: 767px) {
+  .offerGrid,
+  .approachGrid,
+  .studyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroCta {
+    flex-direction: column;
+  }
+}

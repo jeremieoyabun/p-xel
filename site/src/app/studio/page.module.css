@@ -1,0 +1,161 @@
+/* Founder */
+.founder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+.founderText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.founderBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.founderBody p {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.7;
+}
+
+.founderImage {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-color: var(--surface-secondary);
+  border: 1px solid var(--border-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.founderImageText {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-dark-muted);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+}
+
+/* Philosophy */
+.principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.principle {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.principleNumber {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent);
+  letter-spacing: var(--tracking-wider);
+}
+
+.principleTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.2;
+}
+
+.principleBody {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+}
+
+/* Capabilities */
+.capabilities {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.capability {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.capabilityTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+}
+
+.capabilityBody {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+}
+
+.capabilityLink {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  transition: color var(--duration-fast) var(--ease-in-out);
+}
+
+.capabilityLink:hover {
+  color: var(--accent-hover);
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-8);
+}
+
+/* Process */
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+@media (max-width: 767px) {
+  .founder {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .founderImage {
+    order: -1;
+  }
+
+  .principles {
+    grid-template-columns: 1fr;
+  }
+
+  .capabilities {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .processGrid {
+    grid-template-columns: 1fr;
+  }
+}

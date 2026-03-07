@@ -1,0 +1,18 @@
+.wrapper {
+  margin-bottom: var(--space-12);
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: var(--tracking-tight);
+}
+
+.subtext {
+  margin-top: var(--space-4);
+  font-size: var(--text-md);
+  line-height: 1.6;
+  color: var(--text-dark-secondary);
+  max-width: var(--content-narrow);
+}

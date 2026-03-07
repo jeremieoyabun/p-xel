@@ -7,3 +7,95 @@
 - Core positioning includes AI Product Designer + Full-Stack + Brand
 - Local SEO is a major project pillar
 - Main geographic focus starts with Liège and Belgium
+- Recommended headline: "On conçoit. On construit. On livre."
+- Voice uses "on" (informal we) consistently, "vous" for the audience, no "tu"
+- 4 offer pillars: Web Apps & MVPs, Sites Web & Landing Pages, UI/UX Design, Branding & Identite
+- AI is transversal across pillars, not a standalone pillar
+- 3 audience segments: Startup founders, PME directors, Agencies (white-label)
+- 3 CTA types: Direct booking (primary), Project starter form (secondary), Case study link (tertiary)
+- Creative direction: Architect Noir (precision, restraint, dark luxury)
+- Typography: Space Grotesk (headings) + Satoshi (body) + JetBrains Mono (accents)
+- Dark-mode-first, no user toggle, light sections used strategically for readability
+- Color foundation: #0A0A0F primary surface, #6608F9 accent, #F8F7F4 light sections
+- Sharp edges by default (radius-none on cards/sections, radius-md on buttons)
+- Motion: restrained, scroll-triggered fade-in-up, no parallax, no particles
+- Icons: Lucide, outline only, 1.5px stroke
+- Site philosophy: fully custom experience, not a redesign or template assembly. The site IS the portfolio.
+- No standard agency website patterns. No service-tier template pages. Experience-first design.
+- Service pages exist for SEO but are designed as capability narratives, not templated grids
+- Homepage is a narrative scroll, not an information dump. One idea per viewport.
+- Conversion through quality, not pressure. No sticky CTAs, no popups, no artificial scarcity.
+- AI-native means invisible intelligence, not AI-themed graphics
+- Performance target: < 1s perceived load, LCP < 1.5s
+- The site must feel 2030-level: premium, futuristic, elegant, product-driven
+- Old site structure is not preserved. Only conceptual brand DNA carries forward.
+- Revised sitemap: 25 pages (down from 28). 3 layers: experience, SEO, editorial.
+- Removed: /services/ hub, /projets/ hub, /a-propos/ (all replaced by better alternatives)
+- /projets/ renamed to /work/ (sharper, product-studio feel)
+- /a-propos/ merged into /studio/ (story + philosophy + process in one page)
+- Service pages stay for SEO but are not in primary navigation
+- Header nav: Work, Studio, Contact (3 items, no dropdowns, no "Services" menu)
+- Footer carries full internal link mesh (all services, cities, case studies, key blog posts)
+- 10 experience pages (homepage, work, 6 case studies, studio, contact)
+- 9 SEO pages (5 services, 4 cities)
+- 8 editorial pages (blog index + 7 posts)
+- Every journey converges on /contact/ within 2-3 clicks
+- Phase 1 V1: 14 pages only. Excellence over completeness.
+- Phase 1 experience: homepage, /work/, 3 case studies (Greenmood, Arduenna, Hopscotch), /studio/, /contact/
+- Phase 1 SEO: 2 service pages (creation-site-web, application-web-mvp) + /liege/ city page
+- Phase 1 legal: mentions-legales, politique-confidentialite
+- Blog deferred to Phase 2 (weeks 2-6 post-launch). No blog at V1.
+- 3 remaining service pages deferred to Phase 2
+- 3 remaining city pages deferred to Phase 2-3
+- 3 remaining case studies deferred to Phase 2
+- Build sequence: design system + homepage first, then case studies, then studio/contact, then SEO pages
+- If scope must be cut further: absolute minimum is 6 pages (homepage, 1 case study, studio, contact, 2 legal)
+- Phase 1 case studies (final): BillyCheck, ChairSplit, Greenmood (homepage featured) + Oyabun, Arduenna (work page secondary)
+- BillyCheck and ChairSplit are homepage highlights (strongest proof of "we ship products")
+- Oyabun promoted to Phase 1: actual product, tech-forward (Web3/gaming/Telegram), adds range beyond SaaS. Replaces Hopscotch.
+- Hopscotch deferred to Phase 2: design document, not a shipped product. Speed claim used as text proof point on homepage and studio page.
+- Case study navigation loop: BillyCheck -> ChairSplit -> Greenmood -> Oyabun -> Arduenna -> BillyCheck
+- Work page has 2-tier hierarchy: 3 featured (full viewport each) + 2 secondary (compact, side by side)
+- Phase 1 has 5 case studies: BillyCheck, ChairSplit, Greenmood, Oyabun, Arduenna
+- Studio page: 7 beats (opening, founder, philosophy, capabilities, proof, process, CTA). Not an about page. Credibility + connection.
+- Studio page uses "je" (I) only in the founder section. Rest stays "on" (we). Deliberate voice shift for human touch.
+- Studio H1: "Un studio. Pas une agence." Immediately positions against agencies.
+- 4th stat added: "5 produits en production" (differentiator: we ship, things are running)
+- Contact page: two paths side by side. Calendly (primary, left) + intake form (secondary, right).
+- Contact form: 6 fields (3 required: nom, email, message; 3 optional: type, budget, delai). Qualifies without interrogating.
+- No live chat at V1. Conflicts with solo studio and premium positioning. Reconsider WhatsApp in Phase 2.
+- No Google Maps embed on contact. Remote-first studio, map adds nothing.
+- Contact H1: "Parlons de votre projet." Warm, direct, human.
+- Lead capture: Calendly is the primary conversion tool. Intake form is secondary. Both converge on a 30-min discovery call.
+- Tawk.to removed. Premium conflict, solo studio cannot staff live chat, competes with Calendly for attention.
+- No popups, no sticky CTA bars, no exit-intent modals, no lead magnets, no urgency tactics, no pricing calculator.
+- CTA pattern consistent site-wide: "Reserver un appel" (primary, violet, Calendly) + "Lancer mon projet" (secondary, ghost, /contact/).
+- Homepage has exactly 3 primary CTAs: hero, after process, final viewport. Never more than 30s of scroll between CTAs.
+- Form is custom-built in Next.js (not WordPress/Elementor logic). API route + Resend + honeypot. No database for Phase 1.
+- WhatsApp Business deferred to Phase 2, data-dependent. Only if /contact/ shows high bounce without conversion.
+- Phase 1 KPIs: 8-12 Calendly bookings + 4-8 form submissions in first 30 days.
+- Expertise pages renamed from /content/services/ to /content/expertise/ for Phase 1 rewrites. URLs stay /services/[slug]/. Content upgraded from template SEO pages to capability narratives with the same beat structure as experience pages.
+- Expertise pages use BillyCheck + ChairSplit as primary proof for application-web-mvp (shipped SaaS products, not client platform work). Arduenna + Greenmood as proof for creation-site-web.
+- Liege city page: ~1,500 words, richest city page. Local trust angles: physically based, ecosystem knowledge (VentureLab, Leansquare, SPI, Noshaq), cheques-entreprises guidance, in-person meetings.
+- Liege CTA angle: "On se retrouve autour d'un cafe ou on s'appelle." Personal, local, low-friction.
+- Stack: Next.js 15 (App Router), TypeScript, CSS Modules + CSS custom properties, Vercel hosting
+- No Tailwind. Custom design system with CSS Modules and tokens via custom properties.
+- No Framer Motion. CSS keyframes + Intersection Observer for scroll animations. Saves ~30KB.
+- No CMS for Phase 1. Content stored as TypeScript data objects. CMS deferred to Phase 2+ if needed.
+- React Server Components by default. Client components only for 6 interactive elements (FadeInUp, FAQ, ContactForm, CalendlyEmbed, Header mobile menu, StatBlock).
+- Single root layout. No nested layouts for Phase 1.
+- CSS strategy: globals.css (reset/base), tokens.css (custom properties), animations.css (keyframes). No utility classes.
+- Dependencies kept minimal: next, react, lucide-react, resend, zod, schema-dts. No state management library.
+- Schema generated from typed helper functions in lib/schema.ts, not manual JSON strings.
+- OG images: static, pre-generated, dark background, Space Grotesk heading, 1200x630px, stored in public/og/.
+- Build sequence: 5 sprints. Foundation (design system + homepage) -> Proof (case studies + work) -> Conversion (studio + contact) -> SEO (services + city) -> Polish + Launch.
+- Default Vercel deployment (not static export). API route requires server-side runtime. All pages still SSG.
+- Header: sticky, blurred background, 64px height. Logo left, nav right. Mobile hamburger with slide-in panel.
+- Footer: full link mesh columns (services, projects, studio, contact, legal). Bottom row: legal, copyright, social.
+- GA4 event tracking kept minimal at launch: cta_click, form_submit, calendly_open. Built-in GA4 metrics cover the rest.
+- GBP optimization is a post-launch marketing operation, not a website build task.
+- Contact form "Type de projet": required. 4 required fields (nom, email, type, message), 2 optional (budget, delai). Type helps qualify the lead instantly without being burdensome.
+- Phase 1 strict page count: 16 pages. No additions.
+- Source of truth hierarchy: decisions.md > phase-1-architecture.md > phase-1-sitemap.md > individual content files.
+- Outdated files that should not be treated as authoritative: /strategy/custom-sitemap.md (superseded by phase-1-sitemap.md), /content/services/*.md (superseded by /content/expertise/*.md), /seo/keyword-map.md case study URLs still use /projets/ (should be /work/). homepage-structure.md Beat 5 design notes were outdated (now fixed).
+- Oyabun case study content needs to be written before Sprint 2. Same beat structure as other case studies.
