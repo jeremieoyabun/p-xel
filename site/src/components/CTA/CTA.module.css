@@ -4,30 +4,49 @@
   align-items: center;
   text-align: center;
   gap: var(--space-6);
-  padding: var(--space-16) 0;
+  padding: var(--space-20) 0;
+  position: relative;
+}
+
+.cta::before,
+.cta::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent),
+    transparent
+  );
 }
 
 .heading {
-  font-size: var(--text-4xl);
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tighter);
   max-width: 700px;
+  line-height: 1.0;
 }
 
 .subtext {
   font-size: var(--text-lg);
   color: var(--text-dark-secondary);
-  max-width: 540px;
-  line-height: 1.5;
+  max-width: 480px;
+  line-height: 1.6;
 }
 
 .actions {
   display: flex;
-  gap: var(--space-4);
-  margin-top: var(--space-4);
+  align-items: center;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
 }
 
 @media (max-width: 767px) {
   .heading {
-    font-size: var(--text-2xl);
+    font-size: var(--text-3xl);
   }
 
   .actions {

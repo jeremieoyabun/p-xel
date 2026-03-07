@@ -62,7 +62,7 @@ export function StatBlock({ value, suffix = "", label }: StatBlockProps) {
     <div ref={ref} className={styles.stat}>
       <span className={styles.value}>
         {count}
-        {suffix}
+        {suffix && <span className={styles.suffix}>{suffix}</span>}
       </span>
       <span className={styles.label}>{label}</span>
     </div>

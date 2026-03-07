@@ -1,6 +1,7 @@
 .section {
   width: 100%;
   padding: var(--space-20) var(--grid-margin);
+  position: relative;
 }
 
 .fullHeight {
@@ -40,6 +41,11 @@
   color: var(--text-light-secondary);
 }
 
+/* Override label color in light sections */
+.light span[class*="label"] {
+  color: var(--accent);
+}
+
 .accent {
   background-color: var(--surface-secondary);
   color: var(--text-dark-primary);
@@ -47,6 +53,6 @@
 
 @media (min-width: 1024px) {
   .section {
-    padding: var(--space-24) var(--grid-margin);
+    padding: var(--space-32) var(--grid-margin);
   }
 }

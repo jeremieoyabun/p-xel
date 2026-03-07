@@ -1,24 +1,74 @@
-/* Beat 1: Hero */
-.hero {
+/* ================================================================
+   Beat 1: Video Hero
+   Full-viewport cinematic hero with video background
+   ================================================================ */
+
+.heroSection {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--content-wide);
+  margin: 0 auto;
+  padding: 0 var(--grid-margin) var(--space-24);
+  display: flex;
+  flex-direction: column;
   gap: var(--space-6);
-  max-width: 800px;
+}
+
+.heroLabel {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.heroLabel::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background-color: var(--accent);
 }
 
 .heroHeadline {
-  font-size: var(--text-6xl);
+  font-size: var(--text-7xl);
   font-weight: 700;
-  line-height: 1.0;
-  letter-spacing: var(--tracking-tight);
+  line-height: 0.95;
+  letter-spacing: var(--tracking-tighter);
+  color: var(--text-dark-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+.heroLine {
+  display: block;
+}
+
+.heroDot {
+  color: var(--accent);
 }
 
 .heroSub {
   font-size: var(--text-lg);
   color: var(--text-dark-secondary);
-  line-height: 1.5;
-  max-width: 560px;
+  line-height: 1.6;
+  max-width: 480px;
+  margin-top: var(--space-2);
 }
 
 .heroActions {
@@ -27,9 +77,44 @@
   margin-top: var(--space-4);
 }
 
-@media (max-width: 767px) {
+.heroBottom {
+  position: absolute;
+  bottom: var(--space-8);
+  right: var(--grid-margin);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.heroAnchor {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--text-dark-muted);
+}
+
+.heroAnchorSep {
+  width: 24px;
+  height: 1px;
+  background-color: var(--text-dark-muted);
+  opacity: 0.4;
+}
+
+@media (max-width: 1023px) {
   .heroHeadline {
-    font-size: var(--text-4xl);
+    font-size: var(--text-6xl);
+  }
+}
+
+@media (max-width: 767px) {
+  .heroContent {
+    padding-bottom: var(--space-32);
+  }
+
+  .heroHeadline {
+    font-size: var(--text-5xl);
   }
 
   .heroSub {
@@ -39,14 +124,23 @@
   .heroActions {
     flex-direction: column;
   }
+
+  .heroBottom {
+    bottom: var(--space-6);
+    left: var(--grid-margin);
+    right: auto;
+  }
 }
 
-/* Beat 2: Proof Strip */
+/* ================================================================
+   Beat 2: Proof Strip
+   ================================================================ */
+
 .proofStrip {
   display: flex;
   justify-content: center;
   gap: var(--space-16);
-  padding: var(--space-4) 0;
+  padding: var(--space-6) 0;
   border-top: 1px solid var(--border-dark);
   border-bottom: 1px solid var(--border-dark);
 }
@@ -57,12 +151,15 @@
   }
 }
 
-/* Beat 3: Client Logos */
+/* ================================================================
+   Beat 3: Client Logos
+   ================================================================ */
+
 .logos {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-8);
+  gap: var(--space-10);
   flex-wrap: wrap;
   padding: var(--space-4) 0;
 }
@@ -72,38 +169,66 @@
   font-size: var(--text-sm);
   color: var(--text-dark-muted);
   letter-spacing: var(--tracking-wide);
-  opacity: 0.5;
+  opacity: 0.4;
+  transition: opacity var(--duration-base) var(--ease-in-out);
 }
 
-/* Beat 4: Capabilities */
+.logoItem:hover {
+  opacity: 0.8;
+}
+
+/* ================================================================
+   Beat 4: Capabilities (Light Section)
+   ================================================================ */
+
 .capabilities {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-8);
+  gap: var(--space-6);
 }
 
 .capabilityItem {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
-  padding: var(--space-6);
-  border: 1px solid var(--border-dark);
-  transition: border-color var(--duration-fast) var(--ease-in-out);
+  padding: var(--space-8);
+  background: var(--surface-white);
+  border: 1px solid var(--border-light);
+  position: relative;
+  transition:
+    border-color var(--duration-base) var(--ease-in-out),
+    box-shadow var(--duration-base) var(--ease-in-out),
+    transform var(--duration-base) var(--ease-out);
+}
+
+.capabilityAccent {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent);
+  transition: transform var(--duration-base) var(--ease-spring);
 }
 
 .capabilityItem:hover {
-  border-color: var(--border-dark-hover);
+  border-color: var(--border-light-hover);
+  box-shadow: var(--shadow-light-md);
+  transform: translateY(-2px);
+}
+
+.capabilityItem:hover .capabilityAccent {
+  transform: scale(1.5);
 }
 
 .capabilityTitle {
   font-family: var(--font-heading);
   font-size: var(--text-xl);
-  font-weight: 500;
+  font-weight: 700;
+  color: var(--text-light-primary);
+  letter-spacing: var(--tracking-tight);
 }
 
 .capabilityDesc {
   font-size: var(--text-base);
-  color: var(--text-dark-secondary);
+  color: var(--text-light-secondary);
   line-height: 1.6;
 }
 
@@ -114,12 +239,13 @@
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
   text-decoration: none;
-  margin-top: var(--space-2);
-  transition: color var(--duration-fast) var(--ease-in-out);
+  margin-top: auto;
+  padding-top: var(--space-2);
+  transition: letter-spacing var(--duration-base) var(--ease-out);
 }
 
 .capabilityLink:hover {
-  color: var(--accent-hover);
+  letter-spacing: var(--tracking-widest);
 }
 
 @media (max-width: 767px) {
@@ -128,7 +254,10 @@
   }
 }
 
-/* Beat 5: Projects */
+/* ================================================================
+   Beat 5: Projects
+   ================================================================ */
+
 .projects {
   display: flex;
   flex-direction: column;
@@ -141,46 +270,72 @@
   margin-top: var(--space-12);
 }
 
-/* Beat 6: Differentiators */
+/* ================================================================
+   Beat 6: Differentiators
+   ================================================================ */
+
 .differentiators {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
 }
 
 .diffPoint {
   display: flex;
-  gap: var(--space-6);
-  padding: var(--space-6) 0;
+  gap: var(--space-8);
+  padding: var(--space-8) 0;
   border-bottom: 1px solid var(--border-dark);
+  transition: transform var(--duration-base) var(--ease-out);
 }
 
 .diffPoint:first-child {
   border-top: 1px solid var(--border-dark);
 }
 
+.diffPoint:hover {
+  transform: translateX(8px);
+}
+
 .diffNumber {
   font-family: var(--font-mono);
-  font-size: var(--text-sm);
+  font-size: var(--text-4xl);
+  font-weight: 700;
   color: var(--accent);
+  opacity: 0.3;
   flex-shrink: 0;
+  line-height: 1;
   padding-top: 4px;
+  min-width: 60px;
 }
 
 .diffTitle {
   font-family: var(--font-heading);
   font-size: var(--text-xl);
-  font-weight: 500;
-  margin-bottom: var(--space-2);
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+  letter-spacing: var(--tracking-tight);
 }
 
 .diffBody {
   font-size: var(--text-base);
   color: var(--text-dark-secondary);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* Beat 7: Process */
+@media (max-width: 767px) {
+  .diffNumber {
+    font-size: var(--text-2xl);
+    min-width: 40px;
+  }
+
+  .diffPoint {
+    gap: var(--space-5);
+  }
+}
+
+/* ================================================================
+   Beat 7: Process
+   ================================================================ */
+
 .processSteps {
   max-width: var(--content-narrow);
 }

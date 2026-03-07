@@ -9,6 +9,7 @@ import { ProcessStep } from "@/components/ProcessStep/ProcessStep";
 import { FAQ } from "@/components/FAQ/FAQ";
 import { CTA } from "@/components/CTA/CTA";
 import { FadeInUp } from "@/components/FadeInUp/FadeInUp";
+import { HeroVideo } from "@/components/HeroVideo/HeroVideo";
 import { SchemaScript } from "@/components/SchemaScript/SchemaScript";
 import {
   organizationSchema,
@@ -57,22 +58,32 @@ export default function HomePage() {
         ]}
       />
 
-      {/* Beat 1: Hero */}
-      <Section fullHeight>
-        <div className={styles.hero}>
-          <Label>{hero.label}</Label>
-          <h1 className={styles.heroHeadline}>{hero.headline}</h1>
+      {/* Beat 1: Video Hero */}
+      <section className={styles.heroSection}>
+        <HeroVideo />
+        <div className={styles.heroContent}>
+          <span className={styles.heroLabel}>{hero.label}</span>
+          <h1 className={styles.heroHeadline}>
+            <span className={styles.heroLine}>On conçoit<span className={styles.heroDot}>.</span></span>
+            <span className={styles.heroLine}>On construit<span className={styles.heroDot}>.</span></span>
+            <span className={styles.heroLine}>On livre<span className={styles.heroDot}>.</span></span>
+          </h1>
           <p className={styles.heroSub}>{hero.subheadline}</p>
           <div className={styles.heroActions}>
             <Button variant="primary" href={hero.ctaPrimary.href}>
               {hero.ctaPrimary.label}
             </Button>
-            <Button variant="ghost" href={hero.ctaSecondary.href}>
+            <Button variant="secondary" href={hero.ctaSecondary.href}>
               {hero.ctaSecondary.label}
             </Button>
           </div>
         </div>
-      </Section>
+        <div className={styles.heroBottom}>
+          <span className={styles.heroAnchor}>Liege, BE</span>
+          <span className={styles.heroAnchorSep} aria-hidden="true" />
+          <span className={styles.heroAnchor}>Since 2008</span>
+        </div>
+      </section>
 
       {/* Beat 2: Proof Strip */}
       <Section>
@@ -99,8 +110,8 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Beat 4: Capability */}
-      <Section>
+      {/* Beat 4: Capability - Light section for contrast */}
+      <Section variant="light">
         <FadeInUp>
           <Label>{capability.label}</Label>
           <SectionHeading
@@ -112,6 +123,7 @@ export default function HomePage() {
           {capability.items.map((item) => (
             <FadeInUp key={item.title}>
               <div className={styles.capabilityItem}>
+                <div className={styles.capabilityAccent} aria-hidden="true" />
                 <h3 className={styles.capabilityTitle}>{item.title}</h3>
                 <p className={styles.capabilityDesc}>{item.description}</p>
                 {item.href && (
@@ -164,7 +176,7 @@ export default function HomePage() {
           {whyPxel.points.map((point) => (
             <FadeInUp key={point.number}>
               <div className={styles.diffPoint}>
-                <span className={styles.diffNumber}>{point.number}.</span>
+                <span className={styles.diffNumber}>{point.number}</span>
                 <div>
                   <h3 className={styles.diffTitle}>{point.title}</h3>
                   <p className={styles.diffBody}>{point.body}</p>

@@ -24,12 +24,14 @@
 }
 
 .logo {
-  font-family: var(--font-heading);
-  font-size: var(--text-lg);
-  font-weight: 700;
-  color: var(--text-dark-primary);
+  display: inline-flex;
   text-decoration: none;
-  letter-spacing: var(--tracking-wide);
+  color: var(--text-dark-primary);
+}
+
+.logoSvg {
+  height: 24px;
+  width: auto;
 }
 
 .tagline {
