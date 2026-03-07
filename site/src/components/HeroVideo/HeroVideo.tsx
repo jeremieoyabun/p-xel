@@ -36,6 +36,8 @@ export function HeroVideo() {
         />
       </video>
       <div className={styles.overlay} />
+      <div className={styles.bloom} />
+      <div className={styles.bloomSecondary} />
       <div className={styles.grain} />
     </div>
   );

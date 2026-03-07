@@ -3,6 +3,7 @@ import { Section } from "@/components/Section/Section";
 import { Label } from "@/components/Label/Label";
 import { SectionHeading } from "@/components/SectionHeading/SectionHeading";
 import { Button } from "@/components/Button/Button";
+import { SlideButton } from "@/components/SlideButton/SlideButton";
 import { StatBlock } from "@/components/StatBlock/StatBlock";
 import { ProjectCard } from "@/components/ProjectCard/ProjectCard";
 import { ProcessStep } from "@/components/ProcessStep/ProcessStep";
@@ -70,9 +71,12 @@ export default function HomePage() {
           </h1>
           <p className={styles.heroSub}>{hero.subheadline}</p>
           <div className={styles.heroActions}>
-            <Button variant="primary" href={hero.ctaPrimary.href}>
-              {hero.ctaPrimary.label}
-            </Button>
+            <SlideButton
+              label={hero.ctaPrimary.label}
+              hoverLabel="C'est parti"
+              href={hero.ctaPrimary.href}
+              variant="dark"
+            />
             <Button variant="secondary" href={hero.ctaSecondary.href}>
               {hero.ctaSecondary.label}
             </Button>
