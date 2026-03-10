@@ -136,8 +136,8 @@ export const creationSiteWeb: ServicePage = {
   investment: {
     label: "Investissement",
     heading: "Chaque projet est sur mesure. Le budget aussi.",
-    body: "On ne travaille pas avec des packages. Chaque site est conçu en fonction de vos objectifs, de votre marché et de votre ambition. Le budget est défini ensemble après un premier échange, sur la base d'un périmètre clair : nombre de pages, complexité des fonctionnalités, volume de contenu, niveau d'optimisation SEO.\n\nLa plupart de nos projets de création de site web démarrent à partir de 5 000 EUR. Ce budget inclut la stratégie, le design, le développement, le SEO technique et le lancement.",
-    anchor: "À partir de 5 000 EUR",
+    body: "On ne travaille pas avec des packages. Chaque site est conçu en fonction de vos objectifs, de votre marché et de votre ambition. Le budget est défini ensemble après un premier échange, sur la base d'un périmètre clair : nombre de pages, complexité des fonctionnalités, volume de contenu, niveau d'optimisation SEO.\n\nLe budget inclut la stratégie, le design, le développement, le SEO technique et le lancement.",
+    anchor: "Estimation gratuite sous 24h",
     note: "On fournit une estimation détaillée et gratuite avant de démarrer. Pas d'engagement, pas de surprise.",
   },
 

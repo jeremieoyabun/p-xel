@@ -7,7 +7,7 @@ export const CONTACT = {
   email: "hello@p-xel.be",
   phone: "+32 497 38 29 54",
   phoneRaw: "+32497382954",
-  calendlyUrl: "https://calendly.com/p-xel",
+  calendlyUrl: "https://calendly.com/p-xel-studio/30min",
   location: "Liège, Belgique",
 } as const;
 

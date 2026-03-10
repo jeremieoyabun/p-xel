@@ -131,7 +131,6 @@ export default function WorkPage() {
           subtext={workCta.subtext}
           primaryLabel="Réserver un appel"
           secondaryLabel="Lancer mon projet"
-          secondaryHref="/contact/"
         />
       </Section>
     </>

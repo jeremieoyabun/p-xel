@@ -9,22 +9,44 @@ interface CalendlyEmbedProps {
 
 export function CalendlyEmbed({ url }: CalendlyEmbedProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [loaded, setLoaded] = useState(false);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
+    // Load CSS if not already present
+    if (!document.querySelector('link[href*="calendly.com/assets/external/widget.css"]')) {
+      const link = document.createElement("link");
+      link.href = "https://assets.calendly.com/assets/external/widget.css";
+      link.rel = "stylesheet";
+      document.head.appendChild(link);
+    }
+
+    // Check if script already loaded
+    const existing = document.querySelector(
+      'script[src*="calendly.com/assets/external/widget.js"]'
+    );
+    if (existing) {
+      // Script exists, check if Calendly is available
+      const check = () => {
+        const c = (window as unknown as Record<string, unknown>).Calendly;
+        if (c) {
+          setReady(true);
+        } else {
+          setTimeout(check, 100);
+        }
+      };
+      check();
+      return;
+    }
+
     const script = document.createElement("script");
     script.src = "https://assets.calendly.com/assets/external/widget.js";
     script.async = true;
-    script.onload = () => setLoaded(true);
+    script.onload = () => setReady(true);
     document.head.appendChild(script);
-
-    return () => {
-      script.remove();
-    };
   }, []);
 
   useEffect(() => {
-    if (!loaded || !containerRef.current) return;
+    if (!ready || !containerRef.current) return;
 
     const calendly = (window as unknown as Record<string, unknown>).Calendly as
       | { initInlineWidget?: (opts: Record<string, unknown>) => void }
@@ -36,12 +58,12 @@ export function CalendlyEmbed({ url }: CalendlyEmbedProps) {
         parentElement: containerRef.current,
       });
     }
-  }, [loaded, url]);
+  }, [ready, url]);
 
   return (
     <div className={styles.wrapper}>
       <div ref={containerRef} style={{ width: "100%", minHeight: "660px" }}>
-        {!loaded && (
+        {!ready && (
           <div className={styles.placeholder}>
             <span className={styles.placeholderText}>
               Chargement du calendrier...

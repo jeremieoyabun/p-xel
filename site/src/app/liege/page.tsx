@@ -184,7 +184,6 @@ export default function LiegePage() {
           subtext={liegeCta.subtext}
           primaryLabel="Réserver un appel"
           secondaryLabel="Lancer mon projet"
-          secondaryHref="/contact/"
         />
       </Section>
     </>

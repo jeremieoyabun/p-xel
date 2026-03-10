@@ -1,14 +1,12 @@
-import { Button } from "../Button/Button";
 import { CalendlyPopup } from "../CalendlyPopup/CalendlyPopup";
+import { TallyPopup } from "../TallyPopup/TallyPopup";
 import styles from "./CTA.module.css";
 
 interface CTAProps {
   heading: string;
   subtext?: string;
   primaryLabel: string;
-  primaryHref?: string;
   secondaryLabel?: string;
-  secondaryHref?: string;
 }
 
 export function CTA({
@@ -16,7 +14,6 @@ export function CTA({
   subtext,
   primaryLabel,
   secondaryLabel,
-  secondaryHref,
 }: CTAProps) {
   return (
     <div className={styles.cta}>
@@ -24,10 +21,8 @@ export function CTA({
       {subtext && <p className={styles.subtext}>{subtext}</p>}
       <div className={styles.actions}>
         <CalendlyPopup label={primaryLabel} variant="dark" />
-        {secondaryLabel && secondaryHref && (
-          <Button variant="secondary" href={secondaryHref}>
-            {secondaryLabel}
-          </Button>
+        {secondaryLabel && (
+          <TallyPopup label={secondaryLabel} variant="dark" />
         )}
       </div>
     </div>

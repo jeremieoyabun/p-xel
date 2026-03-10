@@ -2,12 +2,12 @@ import Link from "next/link";
 import { Section } from "@/components/Section/Section";
 import { Label } from "@/components/Label/Label";
 import { SectionHeading } from "@/components/SectionHeading/SectionHeading";
-import { Button } from "@/components/Button/Button";
 import { CaseStudyNav } from "@/components/CaseStudyNav/CaseStudyNav";
+import { CalendlyPopup } from "@/components/CalendlyPopup/CalendlyPopup";
+import { TallyPopup } from "@/components/TallyPopup/TallyPopup";
 import { FadeInUp } from "@/components/FadeInUp/FadeInUp";
 import { SchemaScript } from "@/components/SchemaScript/SchemaScript";
 import { breadcrumbSchema } from "@/lib/schema";
-import { CONTACT } from "@/lib/constants";
 import type { CaseStudy } from "@/lib/content/case-studies";
 import styles from "./CaseStudyPage.module.css";
 
@@ -121,12 +121,8 @@ export function CaseStudyPage({ study }: CaseStudyPageProps) {
             </Link>
           </p>
           <div className={styles.ctaActions}>
-            <Button variant="primary" href={CONTACT.calendlyUrl}>
-              Réserver un appel
-            </Button>
-            <Button variant="ghost" href="/contact/">
-              Lancer mon projet
-            </Button>
+            <CalendlyPopup label="Réserver un appel" variant="dark" />
+            <TallyPopup label="Lancer mon projet" variant="dark" />
           </div>
         </div>
       </Section>

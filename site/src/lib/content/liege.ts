@@ -117,7 +117,7 @@ export const liegeFaq = [
   {
     question: "Combien coûte un site web professionnel à Liège ?",
     answer:
-      "Le budget dépend du type de projet. Une landing page démarre autour de 1 500 EUR. Un site vitrine entre 5 000 et 15 000 EUR. Une application web entre 10 000 et 50 000 EUR. On fournit une estimation gratuite et détaillée avant de démarrer.",
+      "Chaque projet est chiffré sur mesure. Le budget dépend du type de projet, de la complexité et de vos objectifs. On fournit une estimation gratuite et détaillée après un premier échange. Pas de surprise, pas d'engagement.",
   },
   {
     question: "P-XEL travaille-t-il avec des startups liégeoises ?",

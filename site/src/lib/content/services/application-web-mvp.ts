@@ -134,8 +134,8 @@ export const applicationWebMvp: ServicePage = {
   investment: {
     label: "Investissement",
     heading: "Un budget adapté à votre ambition produit.",
-    body: "Le coût d'une application web dépend de ce qu'elle doit accomplir. Un MVP de validation marché et une plateforme SaaS complète ne demandent pas le même investissement. On définit le budget avec vous, sur la base d'un périmètre validé : fonctionnalités prioritaires, complexité technique, nombre d'interfaces, intégrations tierces.\n\nOn travaille en forfait ou en régie selon la nature du projet. La plupart de nos projets d'applications web démarrent à partir de 8 000 EUR pour un MVP et montent en fonction de la complexité.",
-    anchor: "À partir de 8 000 EUR",
+    body: "Le coût d'une application web dépend de ce qu'elle doit accomplir. Un MVP de validation marché et une plateforme SaaS complète ne demandent pas le même investissement. On définit le budget avec vous, sur la base d'un périmètre validé : fonctionnalités prioritaires, complexité technique, nombre d'interfaces, intégrations tierces.\n\nOn travaille en forfait ou en régie selon la nature du projet. Chaque estimation est gratuite et détaillée.",
+    anchor: "Estimation gratuite sous 24h",
     note: "Chaque projet commence par une estimation gratuite et détaillée. Périmètre, planning et budget sont validés ensemble avant de démarrer.",
   },
 

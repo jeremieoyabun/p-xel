@@ -162,7 +162,6 @@ export default function StudioPage() {
           subtext={studioCta.subtext}
           primaryLabel="Réserver un appel"
           secondaryLabel="Lancer mon projet"
-          secondaryHref="/contact/"
         />
       </Section>
     </>

@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/SectionHeading/SectionHeading";
 import { ProcessStep } from "@/components/ProcessStep/ProcessStep";
 import { Button } from "@/components/Button/Button";
 import { CalendlyPopup } from "@/components/CalendlyPopup/CalendlyPopup";
+import { TallyPopup } from "@/components/TallyPopup/TallyPopup";
 import { FAQ } from "@/components/FAQ/FAQ";
 import { CTA } from "@/components/CTA/CTA";
 import { FadeInUp } from "@/components/FadeInUp/FadeInUp";
@@ -45,9 +46,7 @@ export function ServicePage({ service }: ServicePageProps) {
           />
           <div className={styles.heroCta}>
             <CalendlyPopup label="Réserver un appel" variant="dark" />
-            <Button variant="ghost" href="/contact/">
-              Lancer mon projet
-            </Button>
+            <TallyPopup label="Lancer mon projet" variant="dark" />
           </div>
         </FadeInUp>
       </Section>
@@ -198,7 +197,6 @@ export function ServicePage({ service }: ServicePageProps) {
           subtext={service.cta.subtext}
           primaryLabel="Réserver un appel"
           secondaryLabel="Lancer mon projet"
-          secondaryHref="/contact/"
         />
       </Section>
     </>

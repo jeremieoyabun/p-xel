@@ -135,7 +135,7 @@ export const brandingIdentite: ServicePage = {
     label: "Investissement",
     heading: "Un investissement qui structure votre image pour des années.",
     body: "Le coût d'un projet de branding dépend de l'étendue du travail : logo seul, identité visuelle complète ou système de marque global avec guidelines et design system.\n\nUn projet de logo et identité de base peut démarrer à un budget accessible. Un système de marque complet avec charte, guidelines et design system représente un investissement plus conséquent. On définit le périmètre ensemble après un premier échange.",
-    anchor: "À partir de 3 000 EUR",
+    anchor: "Estimation gratuite sous 24h",
     note: "On fournit une estimation détaillée et gratuite avant de démarrer. Pas d'engagement, pas de surprise.",
   },
 

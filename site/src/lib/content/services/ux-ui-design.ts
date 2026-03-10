@@ -134,7 +134,7 @@ export const uxUiDesign: ServicePage = {
     label: "Investissement",
     heading: "Un budget adapté à la complexité de votre produit.",
     body: "Le coût d'un projet UX/UI dépend de plusieurs facteurs : nombre d'écrans, complexité des parcours, besoin d'un design system, niveau de recherche utilisateur requis.\n\nUn audit UX ciblé peut démarrer à un budget accessible. Un projet de design complet avec design system et prototypage représente un investissement plus conséquent. On définit le périmètre ensemble après un premier échange.",
-    anchor: "À partir de 5 000 EUR",
+    anchor: "Estimation gratuite sous 24h",
     note: "On fournit une estimation détaillée et gratuite avant de démarrer. Pas d'engagement, pas de surprise.",
   },
 

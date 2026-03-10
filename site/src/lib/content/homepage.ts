@@ -158,7 +158,7 @@ export const faq = {
     {
       question: "Combien coûte un projet avec P-XEL ?",
       answer:
-        "Chaque projet est unique. On travaille à partir de 75 EUR/h ou sur devis forfaitaire. Une landing page démarre autour de 1 500 EUR. Un site complet entre 5 000 et 15 000 EUR. Une application web entre 10 000 et 50 000 EUR.",
+        "Chaque projet est chiffré sur mesure en fonction du périmètre, de la complexité et de vos objectifs. On fournit une estimation détaillée et gratuite après un premier échange. Pas de surprise, pas d'engagement.",
     },
     {
       question: "Quelle est la durée moyenne d'un projet ?",

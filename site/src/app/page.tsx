@@ -248,13 +248,12 @@ export default function HomePage() {
       </Section>
 
       {/* Beat 9: Final CTA */}
-      <Section fullHeight>
+      <Section>
         <CTA
           heading={finalCta.heading}
           subtext={finalCta.subtext}
           primaryLabel={finalCta.ctaPrimary.label}
           secondaryLabel={finalCta.ctaSecondary.label}
-          secondaryHref={finalCta.ctaSecondary.href}
         />
       </Section>
     </>
