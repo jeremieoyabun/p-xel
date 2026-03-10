@@ -1,15 +1,17 @@
 /* ================================================================
    Beat 1: Video Hero
-   Full-viewport cinematic hero with video background
+   Light editorial hero with atmospheric video texture
    ================================================================ */
 
 .heroSection {
   position: relative;
   width: 100%;
   min-height: 100dvh;
+  margin-top: -72px;    /* pull behind sticky header */
+  padding-top: 72px;    /* keep content below header */
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -19,10 +21,24 @@
   width: 100%;
   max-width: var(--content-wide);
   margin: 0 auto;
-  padding: 0 var(--grid-margin) var(--space-24);
+  padding: 0 var(--grid-margin);
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
+}
+
+/* --- Hero text reveal animation --- */
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
 }
 
 .heroLabel {
@@ -35,6 +51,8 @@
   display: flex;
   align-items: center;
   gap: var(--space-4);
+  opacity: 0;
+  animation: heroReveal 700ms cubic-bezier(0.16, 1, 0.3, 1) 100ms forwards;
 }
 
 .heroLabel::before {
@@ -50,14 +68,20 @@
   font-weight: 700;
   line-height: 0.95;
   letter-spacing: var(--tracking-tighter);
-  color: var(--text-dark-primary);
+  color: var(--text-light-primary);
   display: flex;
   flex-direction: column;
 }
 
 .heroLine {
   display: block;
+  opacity: 0;
+  animation: heroReveal 700ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+.heroLine:nth-child(1) { animation-delay: 250ms; }
+.heroLine:nth-child(2) { animation-delay: 400ms; }
+.heroLine:nth-child(3) { animation-delay: 550ms; }
 
 .heroDot {
   color: var(--accent);
@@ -65,10 +89,12 @@
 
 .heroSub {
   font-size: var(--text-lg);
-  color: var(--text-dark-secondary);
+  color: var(--text-light-secondary);
   line-height: 1.6;
   max-width: 480px;
   margin-top: var(--space-2);
+  opacity: 0;
+  animation: heroReveal 700ms cubic-bezier(0.16, 1, 0.3, 1) 750ms forwards;
 }
 
 .heroActions {
@@ -76,6 +102,8 @@
   align-items: center;
   gap: var(--space-5);
   margin-top: var(--space-6);
+  opacity: 0;
+  animation: heroReveal 700ms cubic-bezier(0.16, 1, 0.3, 1) 900ms forwards;
 }
 
 .heroBottom {
@@ -86,6 +114,8 @@
   display: flex;
   align-items: center;
   gap: var(--space-4);
+  opacity: 0;
+  animation: heroReveal 700ms cubic-bezier(0.16, 1, 0.3, 1) 1100ms forwards;
 }
 
 .heroAnchor {
@@ -93,7 +123,7 @@
   font-size: var(--text-xs);
   letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
-  color: var(--text-dark-muted);
+  color: var(--text-light-muted);
 }
 
 .heroAnchorSep {
@@ -101,13 +131,6 @@
   height: 6px;
   border-radius: 50%;
   background-color: var(--accent);
-  box-shadow: 0 0 8px var(--accent-glow);
-  animation: anchorPulse 3s ease-in-out infinite;
-}
-
-@keyframes anchorPulse {
-  0%, 100% { opacity: 0.6; box-shadow: 0 0 8px var(--accent-glow); }
-  50% { opacity: 1; box-shadow: 0 0 16px var(--accent-glow), 0 0 32px rgba(102, 8, 249, 0.15); }
 }
 
 @media (max-width: 1023px) {
@@ -117,8 +140,13 @@
 }
 
 @media (max-width: 767px) {
+  .heroSection {
+    margin-top: -64px;
+    padding-top: 64px;
+  }
+
   .heroContent {
-    padding-bottom: var(--space-32);
+    padding-top: var(--space-16);
   }
 
   .heroHeadline {
@@ -131,12 +159,26 @@
 
   .heroActions {
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .heroBottom {
     bottom: var(--space-6);
     left: var(--grid-margin);
     right: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroLabel,
+  .heroLine,
+  .heroSub,
+  .heroActions,
+  .heroBottom {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    animation: none;
   }
 }
 
