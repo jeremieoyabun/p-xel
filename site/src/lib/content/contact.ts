@@ -2,7 +2,7 @@ export const contactIntro = {
   label: "Contact",
   heading: "Parlons de votre projet.",
   subtext:
-    "Réservez un appel de 30 minutes ou décrivez votre projet ci-dessous. On répond sous 24h.",
+    "Réservez un appel de 30\u00a0minutes ou décrivez votre projet ci-dessous. On répond sous\u00a024h.",
 };
 
 export const contactCalendly = {

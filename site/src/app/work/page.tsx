@@ -38,20 +38,18 @@ export default function WorkPage() {
         ]}
       />
 
-      {/* Intro */}
-      <Section>
-        <FadeInUp>
-          <Label>{workIntro.label}</Label>
-          <SectionHeading
-            heading={workIntro.heading}
-            subtext={workIntro.subtext}
-          />
-        </FadeInUp>
-      </Section>
-
-      {/* Featured Projects - Full viewport each */}
-      {featured.map((project) => (
+      {/* Intro + Featured Projects */}
+      {featured.map((project, i) => (
         <Section key={project.slug}>
+          {i === 0 && (
+            <FadeInUp>
+              <Label>{workIntro.label}</Label>
+              <SectionHeading
+                heading={workIntro.heading}
+                subtext={workIntro.subtext}
+              />
+            </FadeInUp>
+          )}
           <FadeInUp>
             <Link
               href={`/work/${project.slug}/`}
@@ -125,7 +123,7 @@ export default function WorkPage() {
       </Section>
 
       {/* CTA */}
-      <Section fullHeight>
+      <Section>
         <CTA
           heading={workCta.heading}
           subtext={workCta.subtext}
