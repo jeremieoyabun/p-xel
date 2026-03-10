@@ -1,65 +1,78 @@
-# /perspectives/ - Index Page Content
+# /perspectives/ - Index Page Content (v2)
 
-## Page purpose
-Entry point for all editorial content. Grid of article cards with clear hierarchy. Supports SEO (hub page for internal linking) and conversion (each card leads to a high-intent article).
+Updated to reflect v2 article audit. 4 articles. Design system and tendances UX/UI cut.
 
 ## SEO
 
 - **H1**: Perspectives
-- **Meta title**: Perspectives - Insights design, tech et strategie digitale - P-XEL
-- **Meta description**: Articles et guides par P-XEL Studio. Couts, aides, IA, choix technologiques. Des perspectives concretes pour vos projets digitaux.
+- **Meta title**: Perspectives - Prix, aides, technologie et strategie digitale - P-XEL
+- **Meta description**: Guides concrets par P-XEL Studio. Couts, subsides, choix technologiques, IA. Des analyses pour prendre les bonnes decisions sur vos projets digitaux.
 - **URL**: /perspectives/
+- **Canonical**: https://p-xel.be/perspectives/
 
 ## Page structure
 
 ### Hero section
 - H1: "Perspectives"
-- Subline: "Nos points de vue sur le design, la technologie et la strategie digitale. Des analyses concretes pour prendre les bonnes decisions."
-- No hero image - clean typographic intro
+- Subline: "Nos analyses sur les couts, les technologies et les strategies qui comptent. Des points de vue concrets pour vos projets digitaux."
+- Clean typographic intro on dark background. No hero image.
+- Label above H1: "Editorial" (mono, uppercase, violet accent line)
 
 ### Article grid
-- 2 columns desktop, 1 column mobile
-- Card structure per article:
-  - Thumbnail image (WebP, lazy loaded)
-  - Category label (small, uppercase)
-  - Article title (H2, linked)
-  - Excerpt (2 lines max)
-  - Reading time
-- Cards ordered by priority (see article-priority-list.md)
 
-### Card content
+2 columns desktop, 1 column mobile. Cards ordered by priority.
 
-**Card 1**
+**Card 1 (Featured - larger card, spans full width on desktop)**
 - Category: Budget
 - Title: Combien coute un site web en 2026 ?
-- Excerpt: De la landing page a l'application web : les vrais couts, les variables, et comment optimiser votre budget.
+- Excerpt: Landing page, site vitrine, e-commerce, refonte. Les vrais prix du marche et les variables qui font la difference.
 - Reading time: 8 min
+- Hero image: Article-large_Web-design.webp
+- Slug: /perspectives/combien-coute-un-site-web
 
 **Card 2**
 - Category: Aides
 - Title: Aides a la digitalisation en Belgique
-- Excerpt: Primes Bruxelles, cheques Wallonie. Les subsides disponibles pour financer votre projet digital.
+- Excerpt: Primes Bruxelles, cheques Wallonie. Les subsides pour financer votre projet digital en 2026.
 - Reading time: 6 min
+- Thumbnail: Articles-Digitalisation.webp
+- Slug: /perspectives/aides-digitalisation-belgique
 
 **Card 3**
-- Category: IA
-- Title: Comment l'IA accelere la creation de votre produit digital
-- Excerpt: Prototypage rapide, generation de contenu, automatisation. Ce que l'IA change concretement dans un projet.
-- Reading time: 7 min
-
-**Card 4**
 - Category: Technologie
 - Title: No-code, low-code ou full-code : comment choisir
-- Excerpt: Webflow, Bubble ou sur mesure ? Les criteres concrets pour faire le bon choix selon votre projet.
+- Excerpt: Webflow, Bubble ou sur mesure ? Les criteres concrets pour choisir selon votre projet, budget et ambition.
 - Reading time: 7 min
+- Thumbnail: Articles-No-code.webp
+- Slug: /perspectives/no-code-vs-code
 
-**Card 5**
-- Category: Design
-- Title: Pourquoi un design system est essentiel pour votre marque
-- Excerpt: Coherence, rapidite, economies. L'investissement strategique que les marques serieuses ne sautent pas.
-- Reading time: 5 min
+**Card 4**
+- Category: IA
+- Title: Comment l'IA accelere la creation de votre produit digital
+- Excerpt: Prototypage rapide, generation d'assets, automatisation. Ce que l'IA change concretement dans la livraison d'un produit.
+- Reading time: 7 min
+- Thumbnail: Articles-AI.webp
+- Slug: /perspectives/ia-creation-produit-digital
 
 ### Bottom CTA
 - Heading: "Un projet en tete ?"
-- Text: "Nos perspectives sont la pour eclairer. Pour passer a l'action, parlons-en."
-- Button: "Reserver un appel" -> Calendly
+- Subtext: "Nos perspectives sont la pour eclairer. Pour passer a l'action, parlons-en."
+- Primary CTA: "Reserver un appel" -> Calendly (PXelButton, dark variant)
+- Secondary CTA: "Lancer mon projet" -> /contact/ (Button, secondary variant)
+
+## Structured data
+
+BreadcrumbList: Accueil > Perspectives
+CollectionPage schema for the index page.
+
+## Internal linking
+
+The index page links to:
+- Each article (via cards)
+- /contact/ (via CTA)
+- Calendly (via CTA)
+
+Other pages link TO the index:
+- Homepage footer nav
+- Header nav
+- Service pages ("Lire nos perspectives" contextual links)

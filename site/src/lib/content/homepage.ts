@@ -50,11 +50,13 @@ export const capability = {
       title: "Design d'interface",
       description:
         "UX research, UI design, design systems, prototypage. Des interfaces pensées pour l'usage, pas pour la décoration.",
+      href: "/services/ux-ui-design/",
     },
     {
       title: "Identité de marque",
       description:
         "Logo, direction artistique, systèmes visuels. Des marques construites pour durer et pour scaler.",
+      href: "/services/branding-identite/",
     },
   ],
 };

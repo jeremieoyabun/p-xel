@@ -12,6 +12,7 @@ import { FAQ } from "@/components/FAQ/FAQ";
 import { CTA } from "@/components/CTA/CTA";
 import { FadeInUp } from "@/components/FadeInUp/FadeInUp";
 import { HeroVideo } from "@/components/HeroVideo/HeroVideo";
+import { ScrollReveal } from "@/components/ScrollReveal/ScrollReveal";
 import { SchemaScript } from "@/components/SchemaScript/SchemaScript";
 import {
   organizationSchema,
@@ -87,6 +88,13 @@ export default function HomePage() {
           <span className={styles.heroAnchorSep} aria-hidden="true" />
           <span className={styles.heroAnchor}>Since 2008</span>
         </div>
+      </section>
+
+      {/* Beat 1b: Scroll Reveal Text */}
+      <section className={styles.scrollRevealSection}>
+        <ScrollReveal
+          text={"Basé à Liège et 100% remote, P-XEL collabore avec des équipes en Europe et à l'international.\n\nLe studio associe direction artistique, conception produit et UX avancée pour créer des expériences digitales solides, cohérentes et faciles à faire évoluer."}
+        />
       </section>
 
       {/* Beat 2: Proof Strip */}
@@ -198,31 +206,47 @@ export default function HomePage() {
       </Section>
 
       {/* Beat 7: Process */}
-      <Section>
-        <FadeInUp>
-          <Label>{process.label}</Label>
-          <SectionHeading heading={process.heading} />
-        </FadeInUp>
-        <FadeInUp stagger>
-          <div className={styles.processSteps}>
-            {process.steps.map((step) => (
-              <ProcessStep
-                key={step.number}
-                number={step.number}
-                title={step.title}
-                description={step.description}
-              />
-            ))}
-          </div>
-        </FadeInUp>
-        <FadeInUp>
-          <div className={styles.processCta}>
-            <Button variant="primary" href={CONTACT.calendlyUrl}>
-              Réserver un appel
-            </Button>
-          </div>
-        </FadeInUp>
-      </Section>
+      <div className={styles.processWrapper}>
+        <video
+          className={styles.processVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        >
+          <source
+            src="/legacy-assets/videos/Digital.webm"
+            type="video/webm"
+          />
+        </video>
+        <div className={styles.processOverlay} />
+        <Section className={styles.processSection}>
+          <FadeInUp>
+            <Label>{process.label}</Label>
+            <SectionHeading heading={process.heading} />
+          </FadeInUp>
+          <FadeInUp stagger>
+            <div className={styles.processSteps}>
+              {process.steps.map((step) => (
+                <ProcessStep
+                  key={step.number}
+                  number={step.number}
+                  title={step.title}
+                  description={step.description}
+                />
+              ))}
+            </div>
+          </FadeInUp>
+          <FadeInUp>
+            <div className={styles.processCta}>
+              <Button variant="primary" href={CONTACT.calendlyUrl}>
+                Réserver un appel
+              </Button>
+            </div>
+          </FadeInUp>
+        </Section>
+      </div>
 
       {/* Beat 8: FAQ */}
       <Section>

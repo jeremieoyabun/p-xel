@@ -1,5 +1,6 @@
 export const headerNav = [
   { label: "Work", href: "/work/" },
+  { label: "Perspectives", href: "/perspectives/" },
   { label: "Studio", href: "/studio/" },
   { label: "Contact", href: "/contact/" },
 ] as const;
@@ -20,6 +21,17 @@ export const footerNav = {
     links: [
       { label: "Sites web", href: "/services/creation-site-web/" },
       { label: "Applications & MVP", href: "/services/application-web-mvp/" },
+      { label: "UX/UI Design", href: "/services/ux-ui-design/" },
+      { label: "Branding & Identité", href: "/services/branding-identite/" },
+    ],
+  },
+  perspectives: {
+    title: "Perspectives",
+    links: [
+      { label: "Tous les articles", href: "/perspectives/" },
+      { label: "Combien coûte un site web", href: "/perspectives/combien-coute-un-site-web/" },
+      { label: "Aides à la digitalisation", href: "/perspectives/aides-digitalisation-belgique/" },
+      { label: "No-code vs full-code", href: "/perspectives/no-code-vs-code/" },
     ],
   },
   studio: {
