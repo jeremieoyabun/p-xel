@@ -4,7 +4,7 @@ import { Label } from "@/components/Label/Label";
 import { SectionHeading } from "@/components/SectionHeading/SectionHeading";
 import { ProcessStep } from "@/components/ProcessStep/ProcessStep";
 import { Button } from "@/components/Button/Button";
-import { PXelButton } from "@/components/PXelButton/PXelButton";
+import { CalendlyPopup } from "@/components/CalendlyPopup/CalendlyPopup";
 import { FAQ } from "@/components/FAQ/FAQ";
 import { CTA } from "@/components/CTA/CTA";
 import { FadeInUp } from "@/components/FadeInUp/FadeInUp";
@@ -14,7 +14,6 @@ import {
   serviceSchema,
   faqSchema,
 } from "@/lib/schema";
-import { CONTACT } from "@/lib/constants";
 import type { ServicePage as ServicePageData } from "@/lib/content/services/types";
 import styles from "./ServicePage.module.css";
 
@@ -45,11 +44,7 @@ export function ServicePage({ service }: ServicePageProps) {
             subtext={service.hero.subheadline}
           />
           <div className={styles.heroCta}>
-            <PXelButton
-              label="Réserver un appel"
-              href={CONTACT.calendlyUrl}
-              variant="dark"
-            />
+            <CalendlyPopup label="Réserver un appel" variant="dark" />
             <Button variant="ghost" href="/contact/">
               Lancer mon projet
             </Button>
@@ -202,7 +197,6 @@ export function ServicePage({ service }: ServicePageProps) {
           heading={service.cta.heading}
           subtext={service.cta.subtext}
           primaryLabel="Réserver un appel"
-          primaryHref={CONTACT.calendlyUrl}
           secondaryLabel="Lancer mon projet"
           secondaryHref="/contact/"
         />

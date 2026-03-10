@@ -7,7 +7,6 @@ import { SectionHeading } from "@/components/SectionHeading/SectionHeading";
 import { FadeInUp } from "@/components/FadeInUp/FadeInUp";
 import { CTA } from "@/components/CTA/CTA";
 import { SchemaScript } from "@/components/SchemaScript/SchemaScript";
-import { CONTACT } from "@/lib/constants";
 import { breadcrumbSchema } from "@/lib/schema";
 import styles from "./page.module.css";
 
@@ -123,7 +122,6 @@ export default function PerspectivesPage() {
             heading="Un projet en tête ?"
             subtext="Discutons de votre projet digital. Premier appel gratuit, sans engagement."
             primaryLabel="Réserver un appel"
-            primaryHref={CONTACT.calendlyUrl}
           />
         </FadeInUp>
       </Section>

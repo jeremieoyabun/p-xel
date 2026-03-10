@@ -4,7 +4,6 @@ import { Section } from "@/components/Section/Section";
 import { Label } from "@/components/Label/Label";
 import { SectionHeading } from "@/components/SectionHeading/SectionHeading";
 import { Button } from "@/components/Button/Button";
-import { PXelButton } from "@/components/PXelButton/PXelButton";
 import { StatBlock } from "@/components/StatBlock/StatBlock";
 import { ProjectCard } from "@/components/ProjectCard/ProjectCard";
 import { ProcessStep } from "@/components/ProcessStep/ProcessStep";
@@ -12,7 +11,10 @@ import { FAQ } from "@/components/FAQ/FAQ";
 import { CTA } from "@/components/CTA/CTA";
 import { FadeInUp } from "@/components/FadeInUp/FadeInUp";
 import { HeroVideo } from "@/components/HeroVideo/HeroVideo";
+import { BackgroundVideo } from "@/components/BackgroundVideo/BackgroundVideo";
 import { ScrollReveal } from "@/components/ScrollReveal/ScrollReveal";
+import { CalendlyPopup } from "@/components/CalendlyPopup/CalendlyPopup";
+import { TallyPopup } from "@/components/TallyPopup/TallyPopup";
 import { SchemaScript } from "@/components/SchemaScript/SchemaScript";
 import {
   organizationSchema,
@@ -21,7 +23,6 @@ import {
   breadcrumbSchema,
   faqSchema,
 } from "@/lib/schema";
-import { CONTACT } from "@/lib/constants";
 import {
   hero,
   proofStrip,
@@ -73,11 +74,7 @@ export default function HomePage() {
           </h1>
           <p className={styles.heroSub}>{hero.subheadline}</p>
           <div className={styles.heroActions}>
-            <PXelButton
-              label={hero.ctaPrimary.label}
-              href={hero.ctaPrimary.href}
-              variant="light"
-            />
+            <CalendlyPopup label={hero.ctaPrimary.label} variant="light" />
             <Button variant="secondaryLight" href={hero.ctaSecondary.href}>
               {hero.ctaSecondary.label}
             </Button>
@@ -204,46 +201,39 @@ export default function HomePage() {
 
       {/* Beat 7: Process */}
       <div className={styles.processWrapper}>
-        <video
-          className={styles.processVideo}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-        >
-          <source
-            src="/legacy-assets/videos/Digital.webm"
-            type="video/webm"
-          />
-        </video>
+        <BackgroundVideo src="/legacy-assets/videos/Digital.webm" />
         <div className={styles.processOverlay} />
         <Section className={styles.processSection}>
           <FadeInUp>
             <Label>{process.label}</Label>
             <SectionHeading heading={process.heading} />
           </FadeInUp>
-          <FadeInUp stagger>
-            <div className={styles.processSteps}>
-              {process.steps.map((step) => (
-                <ProcessStep
-                  key={step.number}
-                  number={step.number}
-                  title={step.title}
-                  description={step.description}
-                />
-              ))}
-            </div>
-          </FadeInUp>
-          <FadeInUp>
-            <div className={styles.processCta}>
-              <PXelButton
-                label="Réserver un appel"
-                href={CONTACT.calendlyUrl}
-                variant="dark"
-              />
-            </div>
-          </FadeInUp>
+          <div className={styles.processLayout}>
+            <FadeInUp stagger>
+              <div className={styles.processSteps}>
+                {process.steps.map((step) => (
+                  <ProcessStep
+                    key={step.number}
+                    number={step.number}
+                    title={step.title}
+                    description={step.description}
+                  />
+                ))}
+              </div>
+            </FadeInUp>
+            <FadeInUp>
+              <div className={styles.processCta}>
+                <h3 className={styles.processCtaHeading}>
+                  Prêt à démarrer ?
+                </h3>
+                <p className={styles.processCtaText}>
+                  Décrivez votre projet en quelques lignes. On revient vers vous sous 24h.
+                </p>
+                <TallyPopup label="Lancer mon projet" variant="dark" />
+                <CalendlyPopup label="Réserver un appel" variant="dark" />
+              </div>
+            </FadeInUp>
+          </div>
         </Section>
       </div>
 
@@ -263,7 +253,6 @@ export default function HomePage() {
           heading={finalCta.heading}
           subtext={finalCta.subtext}
           primaryLabel={finalCta.ctaPrimary.label}
-          primaryHref={finalCta.ctaPrimary.href}
           secondaryLabel={finalCta.ctaSecondary.label}
           secondaryHref={finalCta.ctaSecondary.href}
         />

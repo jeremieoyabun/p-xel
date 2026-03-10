@@ -5,6 +5,7 @@ import { Label } from "@/components/Label/Label";
 import { SectionHeading } from "@/components/SectionHeading/SectionHeading";
 import { ProcessStep } from "@/components/ProcessStep/ProcessStep";
 import { Button } from "@/components/Button/Button";
+import { CalendlyPopup } from "@/components/CalendlyPopup/CalendlyPopup";
 import { FAQ } from "@/components/FAQ/FAQ";
 import { CTA } from "@/components/CTA/CTA";
 import { FadeInUp } from "@/components/FadeInUp/FadeInUp";
@@ -14,7 +15,6 @@ import {
   localBusinessSchema,
   faqSchema,
 } from "@/lib/schema";
-import { CONTACT } from "@/lib/constants";
 import {
   liegeIntro,
   liegeServices,
@@ -64,9 +64,7 @@ export default function LiegePage() {
             subtext={liegeIntro.subtext}
           />
           <div className={styles.heroCta}>
-            <Button variant="primary" href={CONTACT.calendlyUrl}>
-              Réserver un appel
-            </Button>
+            <CalendlyPopup label="Réserver un appel" variant="dark" />
             <Button variant="ghost" href="/work/">
               Voir nos projets
             </Button>
@@ -185,7 +183,6 @@ export default function LiegePage() {
           heading={liegeCta.heading}
           subtext={liegeCta.subtext}
           primaryLabel="Réserver un appel"
-          primaryHref={CONTACT.calendlyUrl}
           secondaryLabel="Lancer mon projet"
           secondaryHref="/contact/"
         />

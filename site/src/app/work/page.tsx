@@ -7,7 +7,6 @@ import { CTA } from "@/components/CTA/CTA";
 import { FadeInUp } from "@/components/FadeInUp/FadeInUp";
 import { SchemaScript } from "@/components/SchemaScript/SchemaScript";
 import { breadcrumbSchema } from "@/lib/schema";
-import { CONTACT } from "@/lib/constants";
 import { workIntro, workProjects, workCta } from "@/lib/content/work";
 import styles from "./page.module.css";
 
@@ -131,7 +130,6 @@ export default function WorkPage() {
           heading={workCta.heading}
           subtext={workCta.subtext}
           primaryLabel="Réserver un appel"
-          primaryHref={CONTACT.calendlyUrl}
           secondaryLabel="Lancer mon projet"
           secondaryHref="/contact/"
         />

@@ -9,7 +9,6 @@ import { CTA } from "@/components/CTA/CTA";
 import { FadeInUp } from "@/components/FadeInUp/FadeInUp";
 import { SchemaScript } from "@/components/SchemaScript/SchemaScript";
 import { breadcrumbSchema, organizationSchema } from "@/lib/schema";
-import { CONTACT } from "@/lib/constants";
 import {
   studioIntro,
   studioFounder,
@@ -162,7 +161,6 @@ export default function StudioPage() {
           heading={studioCta.heading}
           subtext={studioCta.subtext}
           primaryLabel="Réserver un appel"
-          primaryHref={CONTACT.calendlyUrl}
           secondaryLabel="Lancer mon projet"
           secondaryHref="/contact/"
         />
