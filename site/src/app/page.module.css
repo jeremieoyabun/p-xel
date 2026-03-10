@@ -196,7 +196,7 @@
 }
 
 /* ================================================================
-   Beat 2: Proof Strip
+   Beat 2: Proof Strip + Client Logos
    ================================================================ */
 
 .proofStrip {
@@ -214,17 +214,13 @@
   }
 }
 
-/* ================================================================
-   Beat 3: Client Logos
-   ================================================================ */
-
 .logos {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   align-items: center;
   justify-items: center;
   gap: var(--space-8) var(--space-10);
-  padding: var(--space-10) 0;
+  margin-top: var(--space-12);
 }
 
 .logoItem {
@@ -293,10 +289,11 @@
 }
 
 .capabilityAccent {
-  width: 8px;
-  height: 8px;
+  width: 40px;
+  height: 3px;
+  border-radius: 2px;
   background-color: var(--accent);
-  transition: transform var(--duration-base) var(--ease-spring);
+  transition: width var(--duration-base) var(--ease-spring);
 }
 
 .capabilityItem:hover {
@@ -306,7 +303,7 @@
 }
 
 .capabilityItem:hover .capabilityAccent {
-  transform: scale(1.5);
+  width: 60px;
 }
 
 .capabilityTitle {
@@ -349,10 +346,22 @@
    Beat 5: Projects
    ================================================================ */
 
-.projects {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-16);
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+
+@media (max-width: 1023px) {
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 639px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .workCta {
@@ -439,13 +448,15 @@
   height: 100%;
   object-fit: cover;
   pointer-events: none;
+  z-index: 0;
 }
 
 .processOverlay {
   position: absolute;
   inset: 0;
-  background: rgba(10, 10, 15, 0.7);
+  background: rgba(10, 10, 15, 0.65);
   pointer-events: none;
+  z-index: 0;
 }
 
 .processSection {

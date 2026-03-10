@@ -2,7 +2,9 @@ export const studioIntro = {
   label: "Studio",
   heading: "Un studio. Pas une agence.",
   subtext:
-    "P-XEL est un studio produit fondé et dirigé par un designer-développeur senior. On ne vend pas des heures. On livre des produits.",
+    "P-XEL est un studio produit fondé et dirigé par un designer-développeur senior avec plus de 16 ans d'expérience.",
+  manifesto:
+    "On ne vend pas des heures. On ne livre pas des maquettes. On conçoit, construit et déploie des produits digitaux complets. Un seul interlocuteur, du premier brief au dernier deploy.",
 };
 
 export const studioFounder = {

@@ -31,7 +31,7 @@ export function HeroVideo() {
         preload="metadata"
       >
         <source
-          src="/legacy-assets/videos/P-xel_Hero.webm"
+          src="/legacy-assets/videos/P-xel_Hero.webm?v=2"
           type="video/webm"
         />
       </video>

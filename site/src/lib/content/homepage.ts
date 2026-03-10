@@ -63,7 +63,7 @@ export const capability = {
 
 export const selectedWork = {
   label: "Ce qu'on a livré",
-  heading: "Trois projets. Trois preuves.",
+  heading: "Derniers projets",
   projects: [
     {
       name: "BillyCheck",

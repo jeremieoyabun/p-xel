@@ -93,11 +93,11 @@ export default function HomePage() {
       {/* Beat 1b: Scroll Reveal Text */}
       <section className={styles.scrollRevealSection}>
         <ScrollReveal
-          text={"Basé à Liège et 100% remote, P-XEL collabore avec des équipes en Europe et à l'international.\n\nLe studio associe direction artistique, conception produit et UX avancée pour créer des expériences digitales solides, cohérentes et faciles à faire évoluer."}
+          text={"On conçoit, construit et livre des produits digitaux complets. Un seul studio. Zéro intermédiaire.\n\nSites, applications, MVP, identités de marque. De la stratégie au déploiement, chaque projet est pensé pour performer."}
         />
       </section>
 
-      {/* Beat 2: Proof Strip */}
+      {/* Beat 2: Proof Strip + Client Logos */}
       <Section>
         <div className={styles.proofStrip}>
           {proofStrip.map((stat) => (
@@ -109,10 +109,6 @@ export default function HomePage() {
             />
           ))}
         </div>
-      </Section>
-
-      {/* Beat 3: Client Logos */}
-      <Section>
         <div className={styles.logos}>
           {clientLogos.map((logo) => (
             <div key={logo.name} className={styles.logoItem}>
@@ -161,10 +157,11 @@ export default function HomePage() {
           <Label>{selectedWork.label}</Label>
           <SectionHeading heading={selectedWork.heading} />
         </FadeInUp>
-        <div className={styles.projects}>
-          {selectedWork.projects.map((project) => (
-            <FadeInUp key={project.name}>
+        <FadeInUp>
+          <div className={styles.projectsGrid}>
+            {selectedWork.projects.map((project) => (
               <ProjectCard
+                key={project.name}
                 name={project.name}
                 tags={project.tags}
                 description={project.description}
@@ -172,9 +169,9 @@ export default function HomePage() {
                 href={project.href}
                 image={project.image}
               />
-            </FadeInUp>
-          ))}
-        </div>
+            ))}
+          </div>
+        </FadeInUp>
         <FadeInUp>
           <div className={styles.workCta}>
             <Button variant="ghost" href={selectedWork.cta.href}>
@@ -240,9 +237,11 @@ export default function HomePage() {
           </FadeInUp>
           <FadeInUp>
             <div className={styles.processCta}>
-              <Button variant="primary" href={CONTACT.calendlyUrl}>
-                Réserver un appel
-              </Button>
+              <PXelButton
+                label="Réserver un appel"
+                href={CONTACT.calendlyUrl}
+                variant="dark"
+              />
             </div>
           </FadeInUp>
         </Section>

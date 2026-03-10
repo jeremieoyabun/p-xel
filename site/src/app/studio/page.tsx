@@ -56,6 +56,21 @@ export default function StudioPage() {
             subtext={studioIntro.subtext}
           />
         </FadeInUp>
+        <FadeInUp>
+          <div className={styles.introGrid}>
+            <p className={styles.manifesto}>{studioIntro.manifesto}</p>
+            <div className={styles.introStats}>
+              {studioStats.map((stat) => (
+                <StatBlock
+                  key={stat.label}
+                  value={stat.value}
+                  suffix={stat.suffix}
+                  label={stat.label}
+                />
+              ))}
+            </div>
+          </div>
+        </FadeInUp>
       </Section>
 
       {/* Founder */}
@@ -123,23 +138,6 @@ export default function StudioPage() {
         </FadeInUp>
       </Section>
 
-      {/* Proof / Stats */}
-      <Section>
-        <FadeInUp>
-          <Label>En chiffres</Label>
-          <div className={styles.stats}>
-            {studioStats.map((stat) => (
-              <StatBlock
-                key={stat.label}
-                value={stat.value}
-                suffix={stat.suffix}
-                label={stat.label}
-              />
-            ))}
-          </div>
-        </FadeInUp>
-      </Section>
-
       {/* Process */}
       <Section>
         <FadeInUp>
@@ -159,7 +157,7 @@ export default function StudioPage() {
       </Section>
 
       {/* CTA */}
-      <Section fullHeight>
+      <Section>
         <CTA
           heading={studioCta.heading}
           subtext={studioCta.subtext}

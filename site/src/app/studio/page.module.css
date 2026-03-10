@@ -1,3 +1,26 @@
+/* Intro */
+.introGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: start;
+  margin-top: var(--space-10);
+}
+
+.manifesto {
+  font-size: var(--text-lg);
+  color: var(--text-dark-secondary);
+  line-height: 1.7;
+  border-left: 3px solid var(--accent);
+  padding-left: var(--space-6);
+}
+
+.introStats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+}
+
 /* Founder */
 .founder {
   display: grid;
@@ -134,6 +157,11 @@
 }
 
 @media (max-width: 767px) {
+  .introGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
   .founder {
     grid-template-columns: 1fr;
     gap: var(--space-8);

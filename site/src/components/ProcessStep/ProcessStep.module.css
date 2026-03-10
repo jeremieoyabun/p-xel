@@ -24,6 +24,16 @@
   line-height: 1;
   min-width: 48px;
   padding-top: 4px;
+  transition:
+    opacity 300ms ease,
+    text-shadow 300ms ease;
+}
+
+.step:hover .number {
+  opacity: 1;
+  text-shadow:
+    0 0 20px rgba(102, 8, 249, 0.6),
+    0 0 40px rgba(102, 8, 249, 0.3);
 }
 
 .content {

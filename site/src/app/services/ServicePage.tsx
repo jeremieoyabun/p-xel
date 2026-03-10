@@ -4,6 +4,7 @@ import { Label } from "@/components/Label/Label";
 import { SectionHeading } from "@/components/SectionHeading/SectionHeading";
 import { ProcessStep } from "@/components/ProcessStep/ProcessStep";
 import { Button } from "@/components/Button/Button";
+import { PXelButton } from "@/components/PXelButton/PXelButton";
 import { FAQ } from "@/components/FAQ/FAQ";
 import { CTA } from "@/components/CTA/CTA";
 import { FadeInUp } from "@/components/FadeInUp/FadeInUp";
@@ -44,9 +45,11 @@ export function ServicePage({ service }: ServicePageProps) {
             subtext={service.hero.subheadline}
           />
           <div className={styles.heroCta}>
-            <Button variant="primary" href={CONTACT.calendlyUrl}>
-              Réserver un appel
-            </Button>
+            <PXelButton
+              label="Réserver un appel"
+              href={CONTACT.calendlyUrl}
+              variant="dark"
+            />
             <Button variant="ghost" href="/contact/">
               Lancer mon projet
             </Button>
