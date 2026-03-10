@@ -1,14 +1,19 @@
 .wrapper {
   width: 100%;
-  min-height: 660px;
+  min-height: 700px;
   border: 1px solid var(--border-dark);
   background-color: var(--surface-secondary);
   overflow: hidden;
 }
 
+/* Ensure Calendly iframe fills the container */
+.wrapper iframe {
+  min-height: 700px !important;
+}
+
 .placeholder {
   width: 100%;
-  min-height: 660px;
+  min-height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;

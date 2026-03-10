@@ -37,7 +37,7 @@ export default function ContactPage() {
         ]}
       />
 
-      {/* Opening */}
+      {/* Opening + Two Paths */}
       <Section>
         <FadeInUp>
           <Label>{contactIntro.label}</Label>
@@ -46,10 +46,6 @@ export default function ContactPage() {
             subtext={contactIntro.subtext}
           />
         </FadeInUp>
-      </Section>
-
-      {/* Two Paths */}
-      <Section>
         <FadeInUp>
           <div className={styles.paths}>
             {/* Path A: Calendly */}

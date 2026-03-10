@@ -1,6 +1,6 @@
 .section {
   width: 100%;
-  padding: var(--space-20) var(--grid-margin);
+  padding: var(--space-16) var(--grid-margin);
   position: relative;
 }
 
@@ -53,6 +53,6 @@
 
 @media (min-width: 1024px) {
   .section {
-    padding: var(--space-32) var(--grid-margin);
+    padding: var(--space-20) var(--grid-margin);
   }
 }

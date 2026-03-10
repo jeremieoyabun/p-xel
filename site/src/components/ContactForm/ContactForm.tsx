@@ -207,7 +207,16 @@ export function ContactForm() {
         className={styles.submit}
         disabled={status === "submitting"}
       >
-        {status === "submitting" ? "Envoi..." : contactForm.submitLabel}
+        <span className={styles.submitInk} aria-hidden="true" />
+        <span className={styles.submitLabel}>
+          {status === "submitting" ? "Envoi..." : contactForm.submitLabel}
+        </span>
+        <span className={styles.submitCircle} aria-hidden="true">
+          <svg className={styles.submitIcon} viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 12h10" />
+            <path d="M13 8l4 4-4 4" />
+          </svg>
+        </span>
       </button>
     </form>
   );

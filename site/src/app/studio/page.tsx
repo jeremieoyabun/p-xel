@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Section } from "@/components/Section/Section";
 import { Label } from "@/components/Label/Label";
@@ -86,9 +87,14 @@ export default function StudioPage() {
               </div>
             </div>
             <div className={styles.founderImage}>
-              <span className={styles.founderImageText}>
-                Photo fondateur
-              </span>
+              <Image
+                src="/legacy-assets/images/Fondateur.webp"
+                alt="Fondateur de P-XEL Studio"
+                width={400}
+                height={533}
+                sizes="(max-width: 767px) 100vw, 400px"
+                className={styles.founderImg}
+              />
             </div>
           </div>
         </FadeInUp>

@@ -10,7 +10,7 @@ export const studioIntro = {
 export const studioFounder = {
   label: "Le fondateur",
   heading: "16 ans à concevoir des produits qui tournent en production.",
-  body: `J'ai commencé par le design graphique, puis le web, puis le code. Au fil des années, la frontière entre ces disciplines a disparu. Ce qui est resté, c'est la conviction qu'un bon produit digital ne peut pas être conçu par quelqu'un qui ne sait pas le construire, et ne peut pas être construit par quelqu'un qui ne sait pas le penser.
+  body: `J'ai commencé par le design produit, puis le web, puis le code. Au fil des années, la frontière entre ces disciplines a disparu. Ce qui est resté, c'est la conviction qu'un bon produit digital ne peut pas être conçu par quelqu'un qui ne sait pas le construire, et ne peut pas être construit par quelqu'un qui ne sait pas le penser.
 
 P-XEL existe parce que trop de projets meurent entre le Figma et la mise en production. Les agences livrent des maquettes. Les freelances livrent du code. Les clients se retrouvent à coordonner trois prestataires qui ne se parlent pas. Ici, c'est un seul studio. Un seul interlocuteur. Du premier brief au dernier deploy.
 
@@ -62,11 +62,13 @@ export const studioCapabilities = {
       title: "Design d'interface",
       body: "UX research, UI design, design systems. Des interfaces pensées pour l'usage, pas pour la décoration.",
       links: [],
+      serviceHref: "/services/ux-ui-design/",
     },
     {
       title: "Identité de marque",
       body: "Logo, direction artistique, systèmes visuels. Des marques construites pour durer.",
       links: [],
+      serviceHref: "/services/branding-identite/",
     },
   ],
 };

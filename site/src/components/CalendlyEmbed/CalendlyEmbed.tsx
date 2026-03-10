@@ -20,28 +20,29 @@ export function CalendlyEmbed({ url }: CalendlyEmbedProps) {
       document.head.appendChild(link);
     }
 
+    // Poll until window.Calendly is available
+    const waitForCalendly = () => {
+      const c = (window as unknown as Record<string, unknown>).Calendly;
+      if (c) {
+        setReady(true);
+      } else {
+        setTimeout(waitForCalendly, 150);
+      }
+    };
+
     // Check if script already loaded
     const existing = document.querySelector(
       'script[src*="calendly.com/assets/external/widget.js"]'
     );
     if (existing) {
-      // Script exists, check if Calendly is available
-      const check = () => {
-        const c = (window as unknown as Record<string, unknown>).Calendly;
-        if (c) {
-          setReady(true);
-        } else {
-          setTimeout(check, 100);
-        }
-      };
-      check();
+      waitForCalendly();
       return;
     }
 
     const script = document.createElement("script");
     script.src = "https://assets.calendly.com/assets/external/widget.js";
     script.async = true;
-    script.onload = () => setReady(true);
+    script.onload = () => waitForCalendly();
     document.head.appendChild(script);
   }, []);
 
@@ -62,7 +63,7 @@ export function CalendlyEmbed({ url }: CalendlyEmbedProps) {
 
   return (
     <div className={styles.wrapper}>
-      <div ref={containerRef} style={{ width: "100%", minHeight: "660px" }}>
+      <div ref={containerRef} style={{ width: "100%", minHeight: "700px" }}>
         {!ready && (
           <div className={styles.placeholder}>
             <span className={styles.placeholderText}>

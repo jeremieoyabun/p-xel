@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { SchemaScript } from "@/components/SchemaScript/SchemaScript";
 import s from "./ArticlePage.module.css";
 
@@ -51,6 +52,14 @@ export function ArticlePage({
   return (
     <section className={s.page}>
       <SchemaScript schema={breadcrumbSchema} />
+
+      <Link href="/perspectives" className={s.backButton} aria-label="Retour aux articles">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M19 12H5" />
+          <path d="M12 19l-7-7 7-7" />
+        </svg>
+        <span>Retour</span>
+      </Link>
 
       <div className={s.shell}>
         {/* Editorial hero row */}

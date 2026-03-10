@@ -55,6 +55,15 @@ const articles = [
     readingTime: "9 min",
     image: "/legacy-assets/images/Articles-AI.webp",
   },
+  {
+    slug: "tendances-ux-ui-2026",
+    category: "UX/UI",
+    title: "Tendances UX/UI 2026",
+    excerpt:
+      "Interfaces prédictives, IA intégrée, accessibilité universelle, design durable. Les évolutions à anticiper.",
+    readingTime: "7 min",
+    image: "/legacy-assets/images/Article-large_UI.webp",
+  },
 ];
 
 export default function PerspectivesPage() {

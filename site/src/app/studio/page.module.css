@@ -24,7 +24,7 @@
 /* Founder */
 .founder {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.4fr 0.6fr;
   gap: var(--space-12);
   align-items: start;
 }
@@ -48,21 +48,15 @@
 }
 
 .founderImage {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  background-color: var(--surface-secondary);
-  border: 1px solid var(--border-dark);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width: 320px;
+  overflow: hidden;
 }
 
-.founderImageText {
-  font-family: var(--font-mono);
-  font-size: var(--text-sm);
-  color: var(--text-dark-muted);
-  letter-spacing: var(--tracking-wider);
-  text-transform: uppercase;
+.founderImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(0.2);
 }
 
 /* Philosophy */
