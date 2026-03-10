@@ -103,3 +103,21 @@ ul, ol {
 main {
   min-height: 100dvh;
 }
+
+/* Calendly widget overrides - hide phantom spinner and match dark theme */
+.calendly-spinner {
+  display: none !important;
+}
+
+.calendly-inline-widget {
+  background: transparent !important;
+}
+
+/* Hide Calendly popup overlay when not triggered */
+.calendly-overlay {
+  display: none !important;
+}
+
+.calendly-popup-close {
+  display: none !important;
+}
