@@ -206,27 +206,29 @@
    ================================================================ */
 
 .logos {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   align-items: center;
-  justify-content: center;
-  gap: var(--space-10);
-  flex-wrap: wrap;
-  padding: var(--space-6) 0;
+  justify-items: center;
+  gap: var(--space-8) var(--space-10);
+  padding: var(--space-10) 0;
 }
 
 .logoItem {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-2);
+  width: 100%;
+  padding: var(--space-3);
 }
 
 .logoImage {
   width: auto;
-  height: 28px;
+  height: 36px;
+  max-width: 100%;
   object-fit: contain;
   filter: grayscale(1) brightness(0.6) invert(1);
-  opacity: 0.35;
+  opacity: 0.45;
   transition:
     filter 400ms ease,
     opacity 400ms ease;
@@ -235,6 +237,22 @@
 .logoItem:hover .logoImage {
   filter: grayscale(0) brightness(1) invert(0);
   opacity: 1;
+}
+
+@media (max-width: 1023px) {
+  .logos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 639px) {
+  .logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .logoImage {
+    height: 28px;
+  }
 }
 
 /* ================================================================

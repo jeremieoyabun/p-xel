@@ -35,10 +35,6 @@ export function HeroVideo() {
           type="video/webm"
         />
       </video>
-      <div className={styles.overlay} />
-      <div className={styles.bloom} />
-      <div className={styles.bloomSecondary} />
-      <div className={styles.grain} />
     </div>
   );
 }

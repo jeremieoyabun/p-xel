@@ -50,12 +50,12 @@
 
 /* --- Light variant (on light backgrounds) --- */
 .light {
-  background: transparent;
-  border: 1.5px solid #191d28;
+  background: #2a2d35;
+  border: 1.5px solid #2a2d35;
 }
 
 .light .label {
-  color: #191d28;
+  color: #ffffff;
 }
 
 .light .circle {
@@ -68,7 +68,7 @@
 
 .light:hover {
   border-color: var(--accent);
-  box-shadow: 0 0 30px rgba(102, 8, 249, 0.1);
+  box-shadow: 0 0 30px rgba(102, 8, 249, 0.15);
 }
 
 .light:hover .label {
