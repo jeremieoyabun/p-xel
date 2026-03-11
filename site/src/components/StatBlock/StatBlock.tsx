@@ -51,7 +51,7 @@ export function StatBlock({ value, suffix = "", label }: StatBlockProps) {
           requestAnimationFrame(animate);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.1 }
     );
 
     observer.observe(el);

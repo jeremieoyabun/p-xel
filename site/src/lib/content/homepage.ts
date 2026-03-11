@@ -43,7 +43,7 @@ export const capability = {
     {
       title: "Applications web et MVP",
       description:
-        "Outils métier, plateformes SaaS, prototypes fonctionnels. Du concept au produit qui tourne en production.",
+        "Outils métier, plateformes SaaS, prototypes fonctionnels, intégrations IA. Du concept au produit qui tourne en production.",
       href: "/services/application-web-mvp/",
     },
     {
@@ -112,7 +112,7 @@ export const whyPxel = {
     {
       number: "03",
       title: "Rapide et précis",
-      body: "2 ans de CA en 2 mois pour Arduenna Gin. Un SaaS complet en production pour BillyCheck. On ne promet pas la vitesse. On la démontre.",
+      body: "On utilise l'IA comme levier d'exécution. Ce qui prend 3 semaines en agence classique, on le livre en 5 jours. 2 ans de CA en 2 mois pour Arduenna Gin. Un SaaS complet en production pour BillyCheck. On ne promet pas la vitesse. On la démontre.",
     },
   ],
 };
@@ -158,7 +158,7 @@ export const faq = {
     {
       question: "Combien coûte un projet avec P-XEL ?",
       answer:
-        "Chaque projet est chiffré sur mesure en fonction du périmètre, de la complexité et de vos objectifs. On fournit une estimation détaillée et gratuite après un premier échange. Pas de surprise, pas d'engagement.",
+        "Chaque projet est chiffré sur mesure en fonction du périmètre, de la complexité et de vos objectifs. À titre indicatif : landing page à partir de 1\u00a0500\u00a0€, site vitrine à partir de 3\u00a0500\u00a0€, MVP à partir de 5\u00a0000\u00a0€. On fournit une estimation détaillée et gratuite après un premier échange. Pas de surprise, pas d'engagement.",
     },
     {
       question: "Quelle est la durée moyenne d'un projet ?",

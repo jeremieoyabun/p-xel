@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/liege/", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/services/ux-ui-design/", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/services/branding-identite/", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/services/ai-studio/", priority: 0.9, changeFrequency: "monthly" as const },
     { url: "/perspectives/", priority: 0.7, changeFrequency: "weekly" as const },
     { url: "/perspectives/combien-coute-un-site-web/", priority: 0.7, changeFrequency: "monthly" as const },
     { url: "/perspectives/aides-digitalisation-belgique/", priority: 0.7, changeFrequency: "monthly" as const },

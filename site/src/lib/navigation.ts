@@ -19,6 +19,7 @@ export const footerNav = {
   services: {
     title: "Services",
     links: [
+      { label: "AI Studio", href: "/services/ai-studio/" },
       { label: "Sites web", href: "/services/creation-site-web/" },
       { label: "Applications & MVP", href: "/services/application-web-mvp/" },
       { label: "UX/UI Design", href: "/services/ux-ui-design/" },
