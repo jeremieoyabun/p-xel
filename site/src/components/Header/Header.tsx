@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useLayoutEffect } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { headerNav } from "@/lib/navigation";
@@ -29,9 +30,10 @@ function Logo() {
 }
 
 export function Header() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [overDark, setOverDark] = useState(false);
+  const [overDark, setOverDark] = useState(() => pathname === "/");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
