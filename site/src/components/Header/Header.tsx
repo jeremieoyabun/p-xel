@@ -31,7 +31,7 @@ function Logo() {
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [overDark, setOverDark] = useState(false);
+  const [overDark, setOverDark] = useState(true);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
