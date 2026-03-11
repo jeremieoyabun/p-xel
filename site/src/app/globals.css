@@ -27,6 +27,13 @@ body {
   min-height: 100dvh;
 }
 
+/* Custom cursor: hide default on pointer-fine devices */
+@media (pointer: fine) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}
+
 /* Typography defaults */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);

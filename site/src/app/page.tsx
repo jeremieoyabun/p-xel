@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { Magnetic } from "@/components/Magnetic/Magnetic";
 import { Section } from "@/components/Section/Section";
 import { Label } from "@/components/Label/Label";
 import { SectionHeading } from "@/components/SectionHeading/SectionHeading";
@@ -65,6 +66,7 @@ export default function HomePage() {
       {/* Beat 1: Video Hero */}
       <section className={styles.heroSection} data-theme="dark">
         <HeroVideo />
+        <div className={styles.heroGrain} aria-hidden="true" />
         <div className={styles.heroContent}>
           <span className={styles.heroLabel}>{hero.label}</span>
           <h1 className={styles.heroHeadline}>
@@ -74,10 +76,12 @@ export default function HomePage() {
           </h1>
           <p className={styles.heroSub}>{hero.subheadline}</p>
           <div className={styles.heroActions}>
-            <CalendlyPopup label={hero.ctaPrimary.label} variant="light" />
-            <Button variant="secondaryLight" href={hero.ctaSecondary.href}>
-              {hero.ctaSecondary.label}
-            </Button>
+            <Magnetic><CalendlyPopup label={hero.ctaPrimary.label} variant="light" /></Magnetic>
+            <Magnetic>
+              <Button variant="secondaryLight" href={hero.ctaSecondary.href}>
+                {hero.ctaSecondary.label}
+              </Button>
+            </Magnetic>
           </div>
         </div>
         <div className={styles.heroBottom}>

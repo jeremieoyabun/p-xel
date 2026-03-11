@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
+import { CustomCursor } from "@/components/CustomCursor/CustomCursor";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/lib/constants";
 import "./globals.css";
 
@@ -90,6 +91,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body>
+        <CustomCursor />
         <Header />
         <main>{children}</main>
         <Footer />
