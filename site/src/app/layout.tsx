@@ -47,8 +47,8 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   icons: {
-    icon: "/icon.svg",
-    apple: "/icon.svg",
+    icon: "/favicon.png",
+    apple: "/favicon.png",
   },
   openGraph: {
     type: "website",
