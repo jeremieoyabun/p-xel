@@ -36,16 +36,27 @@ export function ScrollReveal({ text }: ScrollRevealProps) {
       for (let i = 0; i < N; i++) {
         const d = i - frontier;
         let opacity: number;
+        let glow = "";
         if (d <= 0) {
           opacity = 1;
+          // Trailing violet bloom just after being revealed
+          if (d > -FEATHER * 2) {
+            const t = -d / (FEATHER * 2);
+            const g = 0.45 * (1 - t);
+            glow = `0 0 10px rgba(102,8,249,${g.toFixed(2)}), 0 0 24px rgba(102,8,249,${(g * 0.5).toFixed(2)})`;
+          }
         } else if (d < FEATHER) {
           const t = d / FEATHER;
           const eased = 1 - (1 - t) * (1 - t);
           opacity = BASE_OPACITY + (1 - BASE_OPACITY) * (1 - eased);
+          // Leading glow approaching the frontier
+          const g = 0.3 * (1 - t);
+          glow = `0 0 8px rgba(102,8,249,${g.toFixed(2)})`;
         } else {
           opacity = BASE_OPACITY;
         }
         spans[i].style.color = `rgba(255,255,255,${opacity})`;
+        spans[i].style.textShadow = glow;
       }
     }
 

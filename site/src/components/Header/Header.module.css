@@ -1,3 +1,7 @@
+/* =====================================================
+   Header base: transparent, dark text (over light bg)
+   ===================================================== */
+
 .header {
   position: sticky;
   top: 0;
@@ -10,11 +14,27 @@
     background 400ms ease,
     border-color 400ms ease,
     box-shadow 400ms ease;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-/* Scrolled on dark sections: semi-transparent dark */
+/* Scrolled on light sections: light frosted glass */
 .headerScrolled {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* =====================================================
+   Over dark / accent sections: white text + dark bg
+   ===================================================== */
+
+.headerDark {
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+.headerDark.headerScrolled {
   background: rgba(10, 10, 15, 0.85);
   backdrop-filter: blur(16px) saturate(1.2);
   -webkit-backdrop-filter: blur(16px) saturate(1.2);
@@ -22,34 +42,9 @@
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Over light sections: transparent with light styling */
-.headerLight {
-  background: rgba(255, 255, 255, 0.6);
-  border-bottom-color: rgba(0, 0, 0, 0.06);
-  box-shadow: none;
-}
-
-.headerLight.headerScrolled {
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
-}
-
-/* Light mode: dark text */
-.headerLight .navLink {
-  color: rgba(10, 10, 15, 0.6);
-}
-
-.headerLight .navLink:hover {
-  color: rgba(10, 10, 15, 1);
-}
-
-.headerLight .logoFill {
-  fill: var(--text-light-primary);
-}
-
-.headerLight .menuButton {
-  color: var(--text-light-primary);
-}
+/* =====================================================
+   Layout
+   ===================================================== */
 
 .inner {
   display: flex;
@@ -72,17 +67,27 @@
   width: auto;
 }
 
-/* Default: white fills for dark header background */
+/* =====================================================
+   Logo fills: dark by default, white on dark header
+   ===================================================== */
+
 .logoFill {
-  fill: var(--text-dark-primary);
+  fill: var(--text-light-primary);
   transition: fill 400ms ease;
+}
+
+.headerDark .logoFill {
+  fill: var(--text-dark-primary);
 }
 
 .logoAccent {
   fill: var(--accent);
 }
 
-/* Contact nav link with violet square indicator */
+/* =====================================================
+   Contact nav link
+   ===================================================== */
+
 .contactLink {
   display: flex;
   align-items: center;
@@ -96,18 +101,21 @@
   flex-shrink: 0;
 }
 
+/* =====================================================
+   Nav links: dark text by default, white on dark header
+   ===================================================== */
+
 .desktopNav {
   display: flex;
   align-items: center;
   gap: var(--space-8);
 }
 
-/* Default: light text for dark header */
 .navLink {
   font-family: var(--font-body);
   font-size: var(--text-xs);
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(10, 10, 15, 0.6);
   text-decoration: none;
   letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
@@ -128,21 +136,40 @@
 }
 
 .navLink:hover {
-  color: #ffffff;
+  color: rgba(10, 10, 15, 1);
 }
 
 .navLink:hover::after {
   width: 100%;
 }
 
-/* Menu button: white on dark header */
+/* White text on dark header */
+.headerDark .navLink {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.headerDark .navLink:hover {
+  color: #ffffff;
+}
+
+/* =====================================================
+   Menu button: dark by default, white on dark header
+   ===================================================== */
+
 .menuButton {
   display: none;
-  color: #ffffff;
+  color: var(--text-light-primary);
   transition: color 400ms ease;
 }
 
-/* Mobile */
+.headerDark .menuButton {
+  color: #ffffff;
+}
+
+/* =====================================================
+   Mobile
+   ===================================================== */
+
 @media (max-width: 767px) {
   .inner {
     height: 64px;

@@ -63,7 +63,7 @@ export default function HomePage() {
       />
 
       {/* Beat 1: Video Hero */}
-      <section className={styles.heroSection}>
+      <section className={styles.heroSection} data-theme="dark">
         <HeroVideo />
         <div className={styles.heroContent}>
           <span className={styles.heroLabel}>{hero.label}</span>
@@ -200,7 +200,7 @@ export default function HomePage() {
       </Section>
 
       {/* Beat 7: Process */}
-      <div className={styles.processWrapper}>
+      <div className={styles.processWrapper} data-theme="dark">
         <BackgroundVideo src="/legacy-assets/videos/Digital.webm" />
         <div className={styles.processOverlay} />
         <Section className={styles.processSection}>

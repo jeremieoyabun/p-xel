@@ -31,7 +31,7 @@ function Logo() {
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [overLight, setOverLight] = useState(false);
+  const [overDark, setOverDark] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -40,23 +40,21 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Detect when the header overlaps a light-themed section
+  // Detect when header overlaps a dark or accent section
   useEffect(() => {
     const checkOverlap = () => {
-      const lightSections = document.querySelectorAll('[data-theme="light"]');
-      if (lightSections.length === 0) {
-        setOverLight(false);
-        return;
-      }
+      const darkSections = document.querySelectorAll(
+        '[data-theme="dark"], [data-theme="accent"]'
+      );
       const headerBottom = 72;
       let found = false;
-      lightSections.forEach((section) => {
+      darkSections.forEach((section) => {
         const rect = section.getBoundingClientRect();
         if (rect.top < headerBottom && rect.bottom > 0) {
           found = true;
         }
       });
-      setOverLight(found);
+      setOverDark(found);
     };
 
     checkOverlap();
@@ -72,7 +70,7 @@ export function Header() {
   const headerClass = [
     styles.header,
     scrolled && styles.headerScrolled,
-    overLight && styles.headerLight,
+    overDark && styles.headerDark,
   ]
     .filter(Boolean)
     .join(" ");
