@@ -23,7 +23,7 @@ export const workProjects: WorkProject[] = [
     slug: "chairsplit",
     tags: ["SaaS", "Plateforme Métier", "PWA", "Multi-Tenant"],
     description:
-      "Plateforme SaaS de gestion pour barbershops. Revenus, commissions, équipes, fiches de paie. Multi-tenant, mobile-first, modèle d'abonnement Stripe.",
+      "Application web et plateforme SaaS de gestion pour barbershops. Revenus, commissions, équipes, fiches de paie. Multi-tenant, mobile-first, modèle d'abonnement Stripe.",
     result: "Produit SaaS complet en production",
     image: "/images/case-studies/chairsplit-hero.webp",
     tier: "featured",

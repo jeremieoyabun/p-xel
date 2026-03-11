@@ -68,9 +68,9 @@ export default function HomePage() {
         <div className={styles.heroContent}>
           <span className={styles.heroLabel}>{hero.label}</span>
           <h1 className={styles.heroHeadline}>
-            <span className={styles.heroLine}>On conçoit<span className={styles.heroDot}>.</span></span>
-            <span className={styles.heroLine}>On construit<span className={styles.heroDot}>.</span></span>
-            <span className={styles.heroLine}>On livre<span className={styles.heroDot}>.</span></span>
+            <span className={styles.heroLine}>On conçoit<span className={styles.heroDot} aria-hidden="true" /></span>
+            <span className={styles.heroLine}>On construit<span className={styles.heroDot} aria-hidden="true" /></span>
+            <span className={styles.heroLine}>On livre<span className={styles.heroDot} aria-hidden="true" /></span>
           </h1>
           <p className={styles.heroSub}>{hero.subheadline}</p>
           <div className={styles.heroActions}>

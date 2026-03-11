@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ArticlePage, Highlight } from "@/components/ArticlePage/ArticlePage";
 
 export const metadata: Metadata = {
-  title: "Tendances UX/UI 2026 : les évolutions à anticiper",
+  title: "Tendances UX/UI 2026 : 8 évolutions clés pour votre produit digital",
   description:
-    "Interfaces prédictives, IA intégrée, accessibilité universelle, design durable. Les tendances UX/UI 2026 que les studios et marques européennes doivent anticiper.",
+    "Tendances UX/UI 2026 : interfaces prédictives, IA intégrée, accessibilité, design durable. Les évolutions à anticiper pour votre prochain projet.",
 };
 
 export default function TendancesUxUi2026() {

@@ -3,9 +3,9 @@ import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
 
 export const metadata: Metadata = {
-  title: "No-code, low-code ou full-code : comment choisir en 2026",
+  title: "No-code, low-code ou full-code : quel choix pour votre projet en 2026",
   description:
-    "Entre no-code, low-code et code sur mesure, comment choisir pour ton projet digital ? Guide concret par P-XEL Studio.",
+    "No-code, low-code ou développement sur mesure ? Forces, limites et critères concrets pour choisir la bonne approche selon votre projet et votre budget.",
 };
 
 export default function NoCodeVsCode() {

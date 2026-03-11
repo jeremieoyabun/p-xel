@@ -26,7 +26,6 @@ const articles = [
       "Landing page, site vitrine, e-commerce, refonte. Les vrais prix du marché et les variables qui font la différence.",
     readingTime: "7 min",
     image: "/legacy-assets/images/Article-large_Web-design.webp",
-    featured: true,
   },
   {
     slug: "aides-digitalisation-belgique",
@@ -64,6 +63,42 @@ const articles = [
     readingTime: "7 min",
     image: "/legacy-assets/images/Article-large_UI.webp",
   },
+  {
+    slug: "refonte-site-web",
+    category: "Stratégie",
+    title: "Refonte de site web : quand et pourquoi refaire son site",
+    excerpt:
+      "Les signes qu'il est temps, les erreurs à éviter et la méthode pour une refonte qui booste vos résultats.",
+    readingTime: "8 min",
+    image: "/legacy-assets/images/Article-large_Web-design.webp",
+  },
+  {
+    slug: "lancer-mvp-rapidement",
+    category: "Produit",
+    title: "MVP : comment lancer un produit digital en 4 semaines",
+    excerpt:
+      "La méthode pour passer de l'idée au premier produit testable. Cadrage, design, build, lancement.",
+    readingTime: "9 min",
+    image: "/legacy-assets/images/Articles-No-code.webp",
+  },
+  {
+    slug: "agence-web-vs-freelance",
+    category: "Stratégie",
+    title: "Agence web vs freelance : comment choisir",
+    excerpt:
+      "Freelance, agence, studio digital. Forces, limites et critères concrets pour choisir le bon partenaire.",
+    readingTime: "8 min",
+    image: "/legacy-assets/images/Articles-Digitalisation.webp",
+  },
+  {
+    slug: "combien-coute-application-web",
+    category: "Budget",
+    title: "Combien coûte une application web en 2026 ?",
+    excerpt:
+      "MVP, SaaS, plateforme métier. Les fourchettes de prix réalistes et les facteurs qui font varier le budget.",
+    readingTime: "9 min",
+    image: "/legacy-assets/images/Articles-AI.webp",
+  },
 ];
 
 export default function PerspectivesPage() {
@@ -91,12 +126,7 @@ export default function PerspectivesPage() {
               <Link
                 key={article.slug}
                 href={`/perspectives/${article.slug}`}
-                className={[
-                  styles.card,
-                  article.featured ? styles.featured : "",
-                ]
-                  .filter(Boolean)
-                  .join(" ")}
+                className={styles.card}
               >
                 <div className={styles.cardImage}>
                   <Image
@@ -104,11 +134,7 @@ export default function PerspectivesPage() {
                     alt={article.title}
                     width={960}
                     height={540}
-                    sizes={
-                      article.featured
-                        ? "(max-width: 767px) 100vw, 1200px"
-                        : "(max-width: 767px) 100vw, 580px"
-                    }
+                    sizes="(max-width: 767px) 100vw, 580px"
                   />
                 </div>
                 <div className={styles.cardBody}>

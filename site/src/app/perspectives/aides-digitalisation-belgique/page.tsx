@@ -3,9 +3,9 @@ import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
 
 export const metadata: Metadata = {
-  title: "Aides à la digitalisation en Belgique 2026 - Primes et subsides",
+  title: "Aides digitalisation Belgique 2026 : primes Bruxelles et Wallonie",
   description:
-    "Prime Digitalisation Bruxelles (25-70%), Chèque Numérique Wallonie (50%). Les aides pour financer votre projet digital. P-XEL vous accompagne.",
+    "Prime digitalisation Bruxelles (25-70%), chèque numérique Wallonie (50%). Conditions, montants et démarches pour financer votre projet digital en 2026.",
 };
 
 export default function AidesDigitalisationBelgique() {
@@ -294,7 +294,7 @@ export default function AidesDigitalisationBelgique() {
       </p>
 
       <p>
-        Si tu as un projet concret pour 2025 ou 2026, le plus intelligent est souvent de le penser directement{" "}
+        Si tu as un projet concret pour 2026, le plus intelligent est souvent de le penser directement{" "}
         <strong>avec les aides en tête</strong>, plutôt que de lancer un site en urgence et de regretter ensuite de
         ne pas avoir activé les subsides.
       </p>

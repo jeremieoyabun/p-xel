@@ -3,7 +3,7 @@
   top: 0;
   z-index: var(--z-nav);
   width: 100%;
-  background: rgba(10, 10, 15, 0.4);
+  background: transparent;
   backdrop-filter: blur(12px) saturate(1.3);
   -webkit-backdrop-filter: blur(12px) saturate(1.3);
   transition:
@@ -13,13 +13,42 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Scrolled state: solid dark background for reliable readability */
+/* Scrolled on dark sections: semi-transparent dark */
 .headerScrolled {
-  background: rgba(10, 10, 15, 0.95);
+  background: rgba(10, 10, 15, 0.85);
   backdrop-filter: blur(16px) saturate(1.2);
   -webkit-backdrop-filter: blur(16px) saturate(1.2);
   border-bottom-color: var(--border-dark);
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Over light sections: transparent with light styling */
+.headerLight {
+  background: rgba(255, 255, 255, 0.6);
+  border-bottom-color: rgba(0, 0, 0, 0.06);
+  box-shadow: none;
+}
+
+.headerLight.headerScrolled {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Light mode: dark text */
+.headerLight .navLink {
+  color: rgba(10, 10, 15, 0.6);
+}
+
+.headerLight .navLink:hover {
+  color: rgba(10, 10, 15, 1);
+}
+
+.headerLight .logoFill {
+  fill: var(--text-light-primary);
+}
+
+.headerLight .menuButton {
+  color: var(--text-light-primary);
 }
 
 .inner {
@@ -41,10 +70,9 @@
 .logoSvg {
   height: 28px;
   width: auto;
-  transition: filter 400ms ease;
 }
 
-/* Default: white fills for video/dark header background */
+/* Default: white fills for dark header background */
 .logoFill {
   fill: var(--text-dark-primary);
   transition: fill 400ms ease;
@@ -52,55 +80,20 @@
 
 .logoAccent {
   fill: var(--accent);
-  transition:
-    transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1),
-    opacity 400ms ease,
-    filter 400ms ease;
-  transform-origin: center;
-  transform-box: fill-box;
 }
 
-/* --- Pixel scatter animation on logo hover --- */
-@keyframes pxGlow {
-  0%, 100% { filter: drop-shadow(0 0 0 transparent); }
-  50% { filter: drop-shadow(0 0 6px rgba(102, 8, 249, 0.8)); }
+/* Contact nav link with violet square indicator */
+.contactLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.logo:hover .logoAccent {
-  animation: pxGlow 600ms ease forwards;
-}
-
-/* Each pixel square scatters in a different direction */
-.logo:hover .px1 {
-  transform: translate(-12px, 8px) scale(1.15);
-}
-
-.logo:hover .px2 {
-  transform: translate(6px, -14px) scale(1.2);
-}
-
-.logo:hover .px3 {
-  transform: translate(10px, 10px) scale(1.1);
-}
-
-.logo:hover .px4 {
-  transform: translate(-10px, -10px) scale(1.25);
-}
-
-.logo:hover .px5 {
-  transform: translate(8px, 12px) scale(1.15);
-}
-
-/* Stagger the animations */
-.px1 { transition-delay: 0ms; }
-.px2 { transition-delay: 40ms; }
-.px3 { transition-delay: 80ms; }
-.px4 { transition-delay: 20ms; }
-.px5 { transition-delay: 60ms; }
-
-/* Glow on the whole logo on hover */
-.logo:hover .logoSvg {
-  filter: drop-shadow(0 0 12px rgba(102, 8, 249, 0.3));
+.contactSquare {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent);
+  flex-shrink: 0;
 }
 
 .desktopNav {
@@ -109,7 +102,7 @@
   gap: var(--space-8);
 }
 
-/* Default: light text for blurred dark header */
+/* Default: light text for dark header */
 .navLink {
   font-family: var(--font-body);
   font-size: var(--text-xs);
@@ -142,7 +135,7 @@
   width: 100%;
 }
 
-/* Menu button: white on blurred header */
+/* Menu button: white on dark header */
 .menuButton {
   display: none;
   color: #ffffff;

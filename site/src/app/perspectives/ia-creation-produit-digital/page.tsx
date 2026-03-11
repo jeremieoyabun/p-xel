@@ -3,9 +3,9 @@ import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
 
 export const metadata: Metadata = {
-  title: "IA pour les designers : les vrais usages en 2026",
+  title: "IA et design : comment l'IA accélère la création de produits digitaux en 2026",
   description:
-    "Comment les studios et équipes produit utilisent l'IA concrètement en 2026. Recherche UX, Figma, design systems, contenu. Guide P-XEL.",
+    "IA pour designers et équipes produit en 2026 : recherche UX, prototypage, design systems, contenu. Les vrais usages concrets pour gagner en vitesse.",
 };
 
 export default function IaCreationProduitDigital() {

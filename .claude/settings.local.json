@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:p-xel.be)",
+      "Read(//c/Users/conta/Documents/BILLYCHECK/billycheck/**)",
+      "Bash(npm uninstall @tailwindcss/postcss tailwindcss)",
+      "Bash(find c:/Users/conta/Documents/P-XEL-rebuild -type f \\\\\\(-name *.ts -o -name *.tsx \\\\\\) -path *perspective*)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\conta\\Documents\\P-XEL-rebuild\\public\\legacy-assets\\logos"
+    ]
+  }
+}

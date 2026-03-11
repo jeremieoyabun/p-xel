@@ -3,9 +3,9 @@ import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
 
 export const metadata: Metadata = {
-  title: "Combien coûte un site web en 2026 ? Guide complet des prix",
+  title: "Combien coûte un site web en 2026 ? Prix et guide complet",
   description:
-    "Landing page, site vitrine, e-commerce, refonte. Les vrais prix du marché en 2026. Comparaison freelance, agence, studio. Guide par P-XEL Studio.",
+    "Prix site web en 2026 : landing page, site vitrine, e-commerce, web app. Fourchettes réalistes, facteurs de coût et conseils pour optimiser votre budget.",
 };
 
 export default function CombienCouteUnSiteWeb() {

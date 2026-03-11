@@ -21,6 +21,7 @@ export function Section({
   return (
     <section
       id={id}
+      data-theme={variant}
       className={[
         styles.section,
         styles[variant],
