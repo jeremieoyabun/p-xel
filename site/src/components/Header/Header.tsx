@@ -42,28 +42,12 @@ export function Header() {
 
   // Detect when the header overlaps a light-themed section
   useEffect(() => {
-    const lightSections = document.querySelectorAll('[data-theme="light"]');
-    if (lightSections.length === 0) return;
-
-    // rootMargin: only observe the top 72px of the viewport (header height)
-    const observer = new IntersectionObserver(
-      (entries) => {
-        let isOverLight = false;
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            isOverLight = true;
-            break;
-          }
-        }
-        setOverLight(isOverLight);
-      },
-      {
-        rootMargin: "-0px 0px -calc(100% - 72px) 0px",
-      }
-    );
-
-    // Fallback: use scroll-based detection since rootMargin calc() isn't widely supported
     const checkOverlap = () => {
+      const lightSections = document.querySelectorAll('[data-theme="light"]');
+      if (lightSections.length === 0) {
+        setOverLight(false);
+        return;
+      }
       const headerBottom = 72;
       let found = false;
       lightSections.forEach((section) => {
@@ -80,7 +64,6 @@ export function Header() {
     window.addEventListener("resize", checkOverlap, { passive: true });
 
     return () => {
-      observer.disconnect();
       window.removeEventListener("scroll", checkOverlap);
       window.removeEventListener("resize", checkOverlap);
     };
