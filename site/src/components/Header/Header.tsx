@@ -50,7 +50,7 @@ export function Header() {
       let found = false;
       darkSections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        if (rect.top < headerBottom && rect.bottom > 0) {
+        if (rect.top <= headerBottom && rect.bottom > 0) {
           found = true;
         }
       });

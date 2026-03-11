@@ -88,7 +88,7 @@ export default function HomePage() {
       </section>
 
       {/* Beat 1b: Scroll Reveal Text */}
-      <section className={styles.scrollRevealSection}>
+      <section className={styles.scrollRevealSection} data-theme="dark">
         <ScrollReveal
           text={"On conçoit, construit et livre des produits digitaux complets. Un seul studio. Zéro intermédiaire.\n\nSites, applications, MVP, identités de marque. De la stratégie au déploiement, chaque projet est pensé pour performer."}
         />
