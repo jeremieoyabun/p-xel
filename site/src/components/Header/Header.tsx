@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { headerNav } from "@/lib/navigation";
@@ -31,7 +31,7 @@ function Logo() {
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [overDark, setOverDark] = useState(true);
+  const [overDark, setOverDark] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -41,7 +41,8 @@ export function Header() {
   }, []);
 
   // Detect when header overlaps a dark or accent section
-  useEffect(() => {
+  // useLayoutEffect runs before paint so there's no visible flash on either dark or light pages
+  useLayoutEffect(() => {
     const checkOverlap = () => {
       const darkSections = document.querySelectorAll(
         '[data-theme="dark"], [data-theme="accent"]'
