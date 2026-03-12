@@ -10,13 +10,14 @@ export function LanguageSwitcher() {
 
   const switchTo = locale === "fr" ? "en" : "fr";
 
+  // Strip any existing locale prefix (/fr or /en) to get the clean path
+  const cleanPath = pathname.replace(/^\/(fr|en)(\/|$)/, "/") || "/";
+
   let targetPath: string;
   if (switchTo === "en") {
-    // Add /en prefix
-    targetPath = `/en${pathname}`;
+    targetPath = `/en${cleanPath === "/" ? "/" : cleanPath}`;
   } else {
-    // Remove /en prefix
-    targetPath = pathname.replace(/^\/en/, "") || "/";
+    targetPath = cleanPath;
   }
 
   const handleClick = () => {
