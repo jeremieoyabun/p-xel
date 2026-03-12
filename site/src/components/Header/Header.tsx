@@ -107,7 +107,14 @@ export function Header() {
           </div>
         </div>
       )}
-      <div className={styles.navBar}>
+      <div
+        className={styles.navBar}
+        style={{
+          background: 'rgba(255, 255, 255, 0.15)',
+          backdropFilter: 'blur(24px) saturate(1.6)',
+          WebkitBackdropFilter: 'blur(24px) saturate(1.6)',
+        }}
+      >
       <div className={styles.inner}>
         <Link href="/" className={styles.logo} aria-label="P-XEL Studio - Accueil">
           <Logo />
