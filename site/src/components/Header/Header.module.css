@@ -39,6 +39,8 @@
 }
 
 .navBar {
+  position: relative;
+  isolation: isolate;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(24px) saturate(1.6);
   -webkit-backdrop-filter: blur(24px) saturate(1.6);

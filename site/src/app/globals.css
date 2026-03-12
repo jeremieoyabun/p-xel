@@ -106,15 +106,15 @@ ul, ol {
   border-radius: var(--radius-full);
 }
 
-/* Main content - offset for fixed header */
+/* Main content - offset for fixed header (banner ~40px + nav 72px) */
 main {
   min-height: 100dvh;
-  padding-top: 72px;
+  padding-top: 112px;
 }
 
 @media (max-width: 767px) {
   main {
-    padding-top: 64px;
+    padding-top: 100px;
   }
 }
 

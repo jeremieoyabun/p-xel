@@ -88,6 +88,7 @@ export const selectedWork = {
       tags: ["UX/UI", "Plateforme B2B", "Configurateur produit", "Design System"],
       description:
         "Plateforme B2B pour le leader européen du design acoustique et biophilique. Architecture d'information, UX/UI et configurateurs produit.",
+      result: "Site B2B multidomaines",
       href: "/work/greenmood/",
       image: "/images/case-studies/greenmood-hero.webp",
     },
