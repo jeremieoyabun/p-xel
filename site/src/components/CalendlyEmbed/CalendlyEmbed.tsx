@@ -10,9 +10,30 @@ interface CalendlyEmbedProps {
 export function CalendlyEmbed({ url }: CalendlyEmbedProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [ready, setReady] = useState(false);
+  const [visible, setVisible] = useState(false);
 
+  // Observe when the embed scrolls into view
   useEffect(() => {
-    // Load CSS if not already present
+    const el = containerRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  // Load Calendly assets only after visible
+  useEffect(() => {
+    if (!visible) return;
+
     if (!document.querySelector('link[href*="calendly.com/assets/external/widget.css"]')) {
       const link = document.createElement("link");
       link.href = "https://assets.calendly.com/assets/external/widget.css";
@@ -20,7 +41,6 @@ export function CalendlyEmbed({ url }: CalendlyEmbedProps) {
       document.head.appendChild(link);
     }
 
-    // Poll until window.Calendly is available
     const waitForCalendly = () => {
       const c = (window as unknown as Record<string, unknown>).Calendly;
       if (c) {
@@ -30,7 +50,6 @@ export function CalendlyEmbed({ url }: CalendlyEmbedProps) {
       }
     };
 
-    // Check if script already loaded
     const existing = document.querySelector(
       'script[src*="calendly.com/assets/external/widget.js"]'
     );
@@ -44,7 +63,7 @@ export function CalendlyEmbed({ url }: CalendlyEmbedProps) {
     script.async = true;
     script.onload = () => waitForCalendly();
     document.head.appendChild(script);
-  }, []);
+  }, [visible]);
 
   useEffect(() => {
     if (!ready || !containerRef.current) return;

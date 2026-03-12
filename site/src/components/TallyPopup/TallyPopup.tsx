@@ -1,9 +1,18 @@
 "use client";
 
-import { useEffect, useCallback } from "react";
+import { useCallback, useRef } from "react";
 import styles from "../PXelButton/PXelButton.module.css";
 
 const TALLY_FORM_ID = "MeeyRp";
+
+function loadTallyScript() {
+  if (document.querySelector('script[src*="tally.so/widgets/embed.js"]')) return;
+
+  const script = document.createElement("script");
+  script.src = "https://tally.so/widgets/embed.js";
+  script.async = true;
+  document.head.appendChild(script);
+}
 
 interface TallyPopupProps {
   label: string;
@@ -11,16 +20,17 @@ interface TallyPopupProps {
 }
 
 export function TallyPopup({ label, variant = "dark" }: TallyPopupProps) {
-  useEffect(() => {
-    if (document.querySelector('script[src*="tally.so/widgets/embed.js"]')) return;
+  const preloaded = useRef(false);
 
-    const script = document.createElement("script");
-    script.src = "https://tally.so/widgets/embed.js";
-    script.async = true;
-    document.head.appendChild(script);
+  const preload = useCallback(() => {
+    if (preloaded.current) return;
+    preloaded.current = true;
+    loadTallyScript();
   }, []);
 
   const openPopup = useCallback(() => {
+    loadTallyScript();
+
     const Tally = (window as unknown as Record<string, unknown>).Tally as
       | { openPopup?: (id: string, opts?: Record<string, unknown>) => void }
       | undefined;
@@ -41,6 +51,8 @@ export function TallyPopup({ label, variant = "dark" }: TallyPopupProps) {
       type="button"
       className={`${styles.btn} ${styles[variant]}`}
       onClick={openPopup}
+      onMouseEnter={preload}
+      onFocus={preload}
     >
       <span className={styles.ink} aria-hidden="true" />
       <span className={styles.label}>{label}</span>

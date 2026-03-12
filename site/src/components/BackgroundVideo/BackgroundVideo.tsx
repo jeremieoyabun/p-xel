@@ -36,7 +36,7 @@ export function BackgroundVideo({ src }: BackgroundVideoProps) {
       muted
       loop
       playsInline
-      preload="auto"
+      preload="metadata"
     >
       <source src={src} type="video/webm" />
     </video>

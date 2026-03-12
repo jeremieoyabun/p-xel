@@ -165,6 +165,8 @@ export default async function HomePage({
                 alt={logo.name}
                 width={160}
                 height={48}
+                sizes="160px"
+                loading="lazy"
                 className={styles.logoImage}
               />
             </div>
