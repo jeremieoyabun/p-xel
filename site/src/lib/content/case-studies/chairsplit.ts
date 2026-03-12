@@ -29,11 +29,13 @@ const content: Record<Locale, CaseStudy> = {
         label: "Réflexion",
         heading: "Un système de rôles, pas une interface unique.",
         body: "On a commencé par cartographier les utilisateurs. Trois rôles, trois besoins différents. Le propriétaire veut la vue d'ensemble : revenus totaux, commissions versées, rentabilité par barber, dépenses du salon. Le manager veut gérer les opérations : enregistrer les visites, suivre la caisse, générer les fiches de paie. Le barber veut voir ses propres chiffres : ses visites, ses revenus, sa commission. Chaque rôle voit la même donnée sous un angle différent. L'architecture de l'application a été conçue autour de ce système de permissions, pas comme une surcouche ajoutée après coup.",
+        image: "/images/case-studies/P-xel_work_Chairsplit-01.webp",
       },
       approach: {
         label: "Approche",
         heading: "Mobile-first. Utilisable entre deux clients.",
         body: "L'interface a été conçue comme une PWA mobile-first. Un barber entre un client dans le système en quelques taps entre deux coupes. Pas de formulaire complexe. Pas de navigation profonde. Les actions les plus fréquentes (enregistrer une visite, consulter ses revenus du jour) sont accessibles en un tap depuis l'écran principal.\n\nLe système de commissions est le coeur technique du produit. Chaque barber a son propre taux de commission, configurable par le propriétaire. Les commissions sont calculées automatiquement à chaque visite enregistrée. Les fiches de paie sont générées automatiquement à partir des données de commissions et de visites sur la période sélectionnée.\n\nLe module de dépenses permet de tracker les coûts du salon (loyer, produits, équipement) et de les intégrer dans le calcul de rentabilité globale. Le CRM client enregistre l'historique des visites, les préférences et les notes par client.\n\nL'architecture multi-tenant permet à chaque salon d'avoir son propre espace isolé avec ses données, ses barbers et sa configuration. Le modèle de monétisation passe par Stripe avec des abonnements mensuels et un essai gratuit de 14 jours.",
+        image: "/images/case-studies/P-xel_work_Chairsplit-02.webp",
       },
       execution: {
         label: "Exécution",
@@ -99,11 +101,13 @@ const content: Record<Locale, CaseStudy> = {
         label: "Thinking",
         heading: "A role-based system, not a single interface.",
         body: "We started by mapping the users. Three roles, three different needs. The owner wants the overview: total revenue, commissions paid, profitability per barber, shop expenses. The manager wants to handle operations: log visits, track the register, generate payslips. The barber wants to see their own numbers: their visits, their revenue, their commission. Each role sees the same data from a different angle. The application architecture was designed around this permission system, not as an afterthought layer.",
+        image: "/images/case-studies/P-xel_work_Chairsplit-01.webp",
       },
       approach: {
         label: "Approach",
         heading: "Mobile-first. Usable between clients.",
         body: "The interface was designed as a mobile-first PWA. A barber logs a client in a few taps between haircuts. No complex forms. No deep navigation. The most frequent actions (log a visit, check today's revenue) are accessible in one tap from the main screen.\n\nThe commission system is the technical core of the product. Each barber has their own commission rate, configurable by the owner. Commissions are calculated automatically with every logged visit. Payslips are generated automatically from commission and visit data for the selected period.\n\nThe expense module tracks shop costs (rent, products, equipment) and integrates them into the overall profitability calculation. The client CRM records visit history, preferences and notes per client.\n\nThe multi-tenant architecture gives each shop its own isolated space with its data, barbers and configuration. The monetization model runs through Stripe with monthly subscriptions and a 14-day free trial.",
+        image: "/images/case-studies/P-xel_work_Chairsplit-02.webp",
       },
       execution: {
         label: "Execution",

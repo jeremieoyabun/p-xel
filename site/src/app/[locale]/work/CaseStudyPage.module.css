@@ -79,7 +79,7 @@
 
 .beatWithImage {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.3fr 0.7fr;
   gap: var(--space-12);
   align-items: center;
 }
@@ -96,7 +96,7 @@
 
 .beatImg {
   width: 100%;
-  max-width: 480px;
+  max-width: 340px;
   height: auto;
   object-fit: contain;
 }
@@ -215,7 +215,7 @@
   }
 
   .beatImg {
-    max-width: 320px;
+    max-width: 260px;
   }
 
   .ctaActions {
