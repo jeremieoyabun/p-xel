@@ -15,9 +15,11 @@ import styles from "./CaseStudyPage.module.css";
 
 interface CaseStudyPageProps {
   study: CaseStudy;
+  locale: string;
 }
 
-export function CaseStudyPage({ study }: CaseStudyPageProps) {
+export function CaseStudyPage({ study, locale }: CaseStudyPageProps) {
+  const isFr = locale === "fr";
   const { beats } = study;
 
   return (
@@ -26,9 +28,9 @@ export function CaseStudyPage({ study }: CaseStudyPageProps) {
       <SchemaScript
         schema={[
           breadcrumbSchema([
-            { name: "Accueil", url: "/" },
-            { name: "Work", url: "/work/" },
-            { name: study.title, url: `/work/${study.slug}/` },
+            { name: isFr ? "Accueil" : "Home", url: `/${locale}/` },
+            { name: "Work", url: `/${locale}/work/` },
+            { name: study.title, url: `/${locale}/work/${study.slug}/` },
           ]),
         ]}
       />
@@ -101,7 +103,7 @@ export function CaseStudyPage({ study }: CaseStudyPageProps) {
       <Section variant="accent">
         <FadeInUp>
           <div className={styles.deliverables}>
-            <Label>Livrables</Label>
+            <Label>{isFr ? "Livrables" : "Deliverables"}</Label>
             <ul className={styles.deliverablesList}>
               {study.deliverables.map((item) => (
                 <li key={item} className={styles.deliverableItem}>
@@ -133,6 +135,7 @@ export function CaseStudyPage({ study }: CaseStudyPageProps) {
         <CaseStudyNav
           nextSlug={study.navigation.next.slug}
           nextTitle={study.navigation.next.title}
+          locale={locale}
         />
 
         <div className={styles.ctaBlock}>
@@ -143,12 +146,12 @@ export function CaseStudyPage({ study }: CaseStudyPageProps) {
               href={study.cta.serviceLink.href}
               className={styles.ctaServiceLink}
             >
-              En savoir plus
+              {isFr ? "En savoir plus" : "Learn more"}
             </Link>
           </p>
           <div className={styles.ctaActions}>
-            <CalendlyPopup label="Réserver un appel" variant="dark" />
-            <TallyPopup label="Lancer mon projet" variant="dark" />
+            <CalendlyPopup label={isFr ? "Réserver un appel" : "Book a call"} variant="dark" />
+            <TallyPopup label={isFr ? "Lancer mon projet" : "Start my project"} variant="dark" />
           </div>
         </div>
       </Section>

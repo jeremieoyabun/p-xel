@@ -15,17 +15,8 @@ import {
   localBusinessSchema,
   faqSchema,
 } from "@/lib/schema";
-import {
-  liegeIntro,
-  liegeServices,
-  liegeWhy,
-  liegeContext,
-  liegeProjects,
-  liegeProcess,
-  liegeFaq,
-  liegeOtherCities,
-  liegeCta,
-} from "@/lib/content/liege";
+import type { Locale } from "@/lib/i18n/config";
+import { getLiegeContent } from "@/lib/content/liege";
 import styles from "./page.module.css";
 
 export async function generateMetadata({
@@ -62,6 +53,7 @@ export default async function LiegePage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const t = getLiegeContent(locale as Locale);
 
   return (
     <>
@@ -72,17 +64,17 @@ export default async function LiegePage({
             { name: "Liège", url: `/${locale}/liege/` },
           ]),
           localBusinessSchema(),
-          faqSchema(liegeFaq),
+          faqSchema(t.liegeFaq),
         ]}
       />
 
       {/* Opening */}
       <Section>
         <FadeInUp>
-          <Label>{liegeIntro.label}</Label>
+          <Label>{t.liegeIntro.label}</Label>
           <SectionHeading
-            heading={liegeIntro.heading}
-            subtext={liegeIntro.subtext}
+            heading={t.liegeIntro.heading}
+            subtext={t.liegeIntro.subtext}
           />
           <div className={styles.heroCta}>
             <CalendlyPopup label={locale === "fr" ? "Réserver un appel" : "Book a call"} variant="dark" />
@@ -96,10 +88,10 @@ export default async function LiegePage({
       {/* Services */}
       <Section variant="accent">
         <FadeInUp>
-          <Label>{liegeServices.label}</Label>
-          <SectionHeading heading={liegeServices.heading} />
+          <Label>{t.liegeServices.label}</Label>
+          <SectionHeading heading={t.liegeServices.heading} />
           <div className={styles.servicesGrid}>
-            {liegeServices.items.map((item) => (
+            {t.liegeServices.items.map((item) => (
               <div key={item.title} className={styles.serviceItem}>
                 <h3 className={styles.serviceTitle}>{item.title}</h3>
                 <p className={styles.serviceBody}>{item.body}</p>
@@ -117,10 +109,10 @@ export default async function LiegePage({
       {/* Why P-XEL */}
       <Section>
         <FadeInUp>
-          <Label>{liegeWhy.label}</Label>
-          <SectionHeading heading={liegeWhy.heading} />
+          <Label>{t.liegeWhy.label}</Label>
+          <SectionHeading heading={t.liegeWhy.heading} />
           <div className={styles.whyGrid}>
-            {liegeWhy.points.map((point) => (
+            {t.liegeWhy.points.map((point) => (
               <div key={point.title} className={styles.whyPoint}>
                 <h3 className={styles.whyTitle}>{point.title}</h3>
                 <p className={styles.whyBody}>{point.body}</p>
@@ -133,10 +125,10 @@ export default async function LiegePage({
       {/* Local Context */}
       <Section>
         <FadeInUp>
-          <Label>{liegeContext.label}</Label>
-          <SectionHeading heading={liegeContext.heading} />
+          <Label>{t.liegeContext.label}</Label>
+          <SectionHeading heading={t.liegeContext.heading} />
           <div className={styles.contextBody}>
-            {liegeContext.paragraphs.map((p, i) => (
+            {t.liegeContext.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>
@@ -146,10 +138,10 @@ export default async function LiegePage({
       {/* Selected Projects */}
       <Section variant="accent">
         <FadeInUp>
-          <Label>{liegeProjects.label}</Label>
-          <SectionHeading heading={liegeProjects.heading} />
+          <Label>{t.liegeProjects.label}</Label>
+          <SectionHeading heading={t.liegeProjects.heading} />
           <div className={styles.projectGrid}>
-            {liegeProjects.studies.map((study) => (
+            {t.liegeProjects.studies.map((study) => (
               <Link
                 key={study.name}
                 href={study.href}
@@ -169,10 +161,10 @@ export default async function LiegePage({
       {/* Process */}
       <Section>
         <FadeInUp>
-          <Label>{liegeProcess.label}</Label>
-          <SectionHeading heading={liegeProcess.heading} />
+          <Label>{t.liegeProcess.label}</Label>
+          <SectionHeading heading={t.liegeProcess.heading} />
           <div className={styles.processGrid}>
-            {liegeProcess.steps.map((step) => (
+            {t.liegeProcess.steps.map((step) => (
               <ProcessStep
                 key={step.number}
                 number={step.number}
@@ -188,23 +180,23 @@ export default async function LiegePage({
       <Section>
         <FadeInUp>
           <Label>{locale === "fr" ? "Questions fréquentes" : "FAQ"}</Label>
-          <FAQ items={liegeFaq} />
+          <FAQ items={t.liegeFaq} />
         </FadeInUp>
       </Section>
 
       {/* Other Cities */}
       <Section>
         <FadeInUp>
-          <Label>{liegeOtherCities.label}</Label>
-          <p className={styles.otherCities}>{liegeOtherCities.text}</p>
+          <Label>{t.liegeOtherCities.label}</Label>
+          <p className={styles.otherCities}>{t.liegeOtherCities.text}</p>
         </FadeInUp>
       </Section>
 
       {/* CTA */}
       <Section fullHeight>
         <CTA
-          heading={liegeCta.heading}
-          subtext={liegeCta.subtext}
+          heading={t.liegeCta.heading}
+          subtext={t.liegeCta.subtext}
           primaryLabel={locale === "fr" ? "Réserver un appel" : "Book a call"}
           secondaryLabel={locale === "fr" ? "Lancer mon projet" : "Start my project"}
         />

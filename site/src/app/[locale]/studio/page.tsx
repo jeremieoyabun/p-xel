@@ -11,15 +11,7 @@ import { CTA } from "@/components/CTA/CTA";
 import { FadeInUp } from "@/components/FadeInUp/FadeInUp";
 import { SchemaScript } from "@/components/SchemaScript/SchemaScript";
 import { breadcrumbSchema, organizationSchema, personSchema } from "@/lib/schema";
-import {
-  studioIntro,
-  studioFounder,
-  studioPhilosophy,
-  studioCapabilities,
-  studioStats,
-  studioProcess,
-  studioCta,
-} from "@/lib/content/studio";
+import { getStudioContent } from "@/lib/content/studio";
 import styles from "./page.module.css";
 
 export async function generateMetadata({
@@ -52,14 +44,15 @@ export default async function StudioPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  void locale; // locale available for future i18n content
+  const isFr = locale === "fr";
+  const t = getStudioContent(locale as Locale);
 
   return (
     <>
       <SchemaScript
         schema={[
           breadcrumbSchema([
-            { name: locale === "fr" ? "Accueil" : "Home", url: `/${locale}/` },
+            { name: isFr ? "Accueil" : "Home", url: `/${locale}/` },
             { name: "Studio", url: `/${locale}/studio/` },
           ]),
           organizationSchema(),
@@ -70,17 +63,17 @@ export default async function StudioPage({
       {/* Opening */}
       <Section>
         <FadeInUp>
-          <Label>{studioIntro.label}</Label>
+          <Label>{t.studioIntro.label}</Label>
           <SectionHeading
-            heading={studioIntro.heading}
-            subtext={studioIntro.subtext}
+            heading={t.studioIntro.heading}
+            subtext={t.studioIntro.subtext}
           />
         </FadeInUp>
         <FadeInUp>
           <div className={styles.introGrid}>
-            <p className={styles.manifesto}>{studioIntro.manifesto}</p>
+            <p className={styles.manifesto}>{t.studioIntro.manifesto}</p>
             <div className={styles.introStats}>
-              {studioStats.map((stat) => (
+              {t.studioStats.map((stat) => (
                 <StatBlock
                   key={stat.label}
                   value={stat.value}
@@ -96,12 +89,12 @@ export default async function StudioPage({
       {/* Founder */}
       <Section>
         <FadeInUp>
-          <Label>{studioFounder.label}</Label>
-          <SectionHeading heading={studioFounder.heading} />
+          <Label>{t.studioFounder.label}</Label>
+          <SectionHeading heading={t.studioFounder.heading} />
           <div className={styles.founder}>
             <div className={styles.founderText}>
               <div className={styles.founderBody}>
-                {studioFounder.body.split("\n\n").map((paragraph, i) => (
+                {t.studioFounder.body.split("\n\n").map((paragraph, i) => (
                   <p key={i}>{paragraph}</p>
                 ))}
               </div>
@@ -109,7 +102,7 @@ export default async function StudioPage({
             <div className={styles.founderImage}>
               <Image
                 src="/legacy-assets/images/Fondateur.webp"
-                alt="Fondateur de P-XEL Studio"
+                alt={isFr ? "Fondateur de P-XEL Studio" : "P-XEL Studio Founder"}
                 width={400}
                 height={533}
                 sizes="(max-width: 767px) 100vw, 400px"
@@ -123,10 +116,10 @@ export default async function StudioPage({
       {/* Philosophy */}
       <Section>
         <FadeInUp>
-          <Label>{studioPhilosophy.label}</Label>
-          <SectionHeading heading={studioPhilosophy.heading} />
+          <Label>{t.studioPhilosophy.label}</Label>
+          <SectionHeading heading={t.studioPhilosophy.heading} />
           <div className={styles.principles}>
-            {studioPhilosophy.principles.map((principle) => (
+            {t.studioPhilosophy.principles.map((principle) => (
               <div key={principle.number} className={styles.principle}>
                 <span className={styles.principleNumber}>
                   {principle.number}
@@ -142,10 +135,10 @@ export default async function StudioPage({
       {/* Capabilities */}
       <Section variant="accent">
         <FadeInUp>
-          <Label>{studioCapabilities.label}</Label>
-          <SectionHeading heading={studioCapabilities.heading} />
+          <Label>{t.studioCapabilities.label}</Label>
+          <SectionHeading heading={t.studioCapabilities.heading} />
           <div className={styles.capabilities}>
-            {studioCapabilities.items.map((item) => (
+            {t.studioCapabilities.items.map((item) => (
               <div key={item.title} className={styles.capability}>
                 <h3 className={styles.capabilityTitle}>{item.title}</h3>
                 <p className={styles.capabilityBody}>{item.body}</p>
@@ -154,7 +147,7 @@ export default async function StudioPage({
                     href={item.serviceHref}
                     className={styles.capabilityLink}
                   >
-                    {locale === "fr" ? "En savoir plus" : "Learn more"}
+                    {isFr ? "En savoir plus" : "Learn more"}
                   </Link>
                 )}
               </div>
@@ -166,10 +159,10 @@ export default async function StudioPage({
       {/* Process */}
       <Section>
         <FadeInUp>
-          <Label>{studioProcess.label}</Label>
-          <SectionHeading heading={studioProcess.heading} />
+          <Label>{t.studioProcess.label}</Label>
+          <SectionHeading heading={t.studioProcess.heading} />
           <div className={styles.processGrid}>
-            {studioProcess.steps.map((step) => (
+            {t.studioProcess.steps.map((step) => (
               <ProcessStep
                 key={step.number}
                 number={step.number}
@@ -184,10 +177,10 @@ export default async function StudioPage({
       {/* CTA */}
       <Section>
         <CTA
-          heading={studioCta.heading}
-          subtext={studioCta.subtext}
-          primaryLabel={locale === "fr" ? "Réserver un appel" : "Book a call"}
-          secondaryLabel={locale === "fr" ? "Lancer mon projet" : "Start my project"}
+          heading={t.studioCta.heading}
+          subtext={t.studioCta.subtext}
+          primaryLabel={isFr ? "Réserver un appel" : "Book a call"}
+          secondaryLabel={isFr ? "Lancer mon projet" : "Start my project"}
         />
       </Section>
     </>

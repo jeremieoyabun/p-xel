@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { Locale } from "@/lib/i18n/config";
 import { CaseStudyPage } from "../CaseStudyPage";
 import { getCaseStudy } from "@/lib/content/case-studies";
 
@@ -8,7 +9,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const study = getCaseStudy("greenmood")!;
+  const study = getCaseStudy("greenmood", locale as Locale)!;
 
   return {
     title: study.metaTitle,
@@ -28,8 +29,7 @@ export default async function GreenmoodPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  void locale;
-  const study = getCaseStudy("greenmood")!;
+  const study = getCaseStudy("greenmood", locale as Locale)!;
 
-  return <CaseStudyPage study={study} />;
+  return <CaseStudyPage study={study} locale={locale} />;
 }

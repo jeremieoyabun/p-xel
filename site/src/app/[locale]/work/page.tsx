@@ -8,7 +8,8 @@ import { CTA } from "@/components/CTA/CTA";
 import { FadeInUp } from "@/components/FadeInUp/FadeInUp";
 import { SchemaScript } from "@/components/SchemaScript/SchemaScript";
 import { breadcrumbSchema } from "@/lib/schema";
-import { workIntro, workProjects, workCta } from "@/lib/content/work";
+import type { Locale } from "@/lib/i18n/config";
+import { getWorkContent } from "@/lib/content/work";
 import styles from "./page.module.css";
 
 export async function generateMetadata({
@@ -41,8 +42,9 @@ export default async function WorkPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const featured = workProjects.filter((p) => p.tier === "featured");
-  const secondary = workProjects.filter((p) => p.tier === "secondary");
+  const t = getWorkContent(locale as Locale);
+  const featured = t.workProjects.filter((p) => p.tier === "featured");
+  const secondary = t.workProjects.filter((p) => p.tier === "secondary");
 
   return (
     <>
@@ -60,10 +62,10 @@ export default async function WorkPage({
         <Section key={project.slug}>
           {i === 0 && (
             <FadeInUp>
-              <Label>{workIntro.label}</Label>
+              <Label>{t.workIntro.label}</Label>
               <SectionHeading
-                heading={workIntro.heading}
-                subtext={workIntro.subtext}
+                heading={t.workIntro.heading}
+                subtext={t.workIntro.subtext}
               />
             </FadeInUp>
           )}
@@ -152,8 +154,8 @@ export default async function WorkPage({
       {/* CTA */}
       <Section>
         <CTA
-          heading={workCta.heading}
-          subtext={workCta.subtext}
+          heading={t.workCta.heading}
+          subtext={t.workCta.subtext}
           primaryLabel={locale === "fr" ? "Réserver un appel" : "Book a call"}
           secondaryLabel={locale === "fr" ? "Lancer mon projet" : "Start my project"}
         />
