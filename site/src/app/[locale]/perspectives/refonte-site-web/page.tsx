@@ -30,10 +30,10 @@ export default async function RefonteSiteWeb({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  void locale;
 
   return (
     <ArticlePage
+      locale={locale}
       title="Refonte de site web : quand et pourquoi refaire son site"
       date="JAN. 2026"
       dateISO="2026-01-15"
@@ -43,7 +43,7 @@ export default async function RefonteSiteWeb({
       heroAlt="Refonte de site web : quand et pourquoi refaire son site"
       tags={["Refonte", "Site web", "Stratégie"]}
       readingTime="8 minutes"
-      relatedArticles={getRelatedArticles("refonte-site-web")}
+      relatedArticles={getRelatedArticles("refonte-site-web", locale as "fr" | "en")}
       relatedServices={getRelatedServices("refonte-site-web")}
     >
       <p>

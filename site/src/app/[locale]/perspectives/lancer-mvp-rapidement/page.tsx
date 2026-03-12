@@ -30,10 +30,10 @@ export default async function LancerMvpRapidement({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  void locale;
 
   return (
     <ArticlePage
+      locale={locale}
       title="MVP : comment lancer un produit digital en 4 semaines"
       date="FÉV. 2026"
       slug="lancer-mvp-rapidement"
@@ -43,7 +43,7 @@ export default async function LancerMvpRapidement({
       heroAlt="MVP : comment lancer un produit digital rapidement"
       tags={["MVP", "Produit digital", "Startup"]}
       readingTime="9 minutes"
-      relatedArticles={getRelatedArticles("lancer-mvp-rapidement")}
+      relatedArticles={getRelatedArticles("lancer-mvp-rapidement", locale as "fr" | "en")}
       relatedServices={getRelatedServices("lancer-mvp-rapidement")}
     >
       <p>

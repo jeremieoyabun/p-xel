@@ -30,10 +30,10 @@ export default async function IaCreationProduitDigital({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  void locale;
 
   return (
     <ArticlePage
+      locale={locale}
       title="IA pour les designers : les vrais usages en 2026"
       date="17 OCT. 2025"
       dateISO="2025-10-17"
@@ -43,7 +43,7 @@ export default async function IaCreationProduitDigital({
       heroAlt="IA pour les designers : les vrais usages en 2026"
       tags={["IA", "Outils IA", "UX/UI"]}
       readingTime="9 minutes"
-      relatedArticles={getRelatedArticles("ia-creation-produit-digital")}
+      relatedArticles={getRelatedArticles("ia-creation-produit-digital", locale as "fr" | "en")}
       relatedServices={getRelatedServices("ia-creation-produit-digital")}
     >
       <p>

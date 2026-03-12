@@ -69,16 +69,16 @@ export default async function PerspectivesPage({
                 <div className={styles.cardImage}>
                   <Image
                     src={article.image}
-                    alt={article.title}
+                    alt={article.title[locale as "fr" | "en"]}
                     width={960}
                     height={540}
                     sizes="(max-width: 767px) 100vw, 580px"
                   />
                 </div>
                 <div className={styles.cardBody}>
-                  <span className={styles.category}>{article.category}</span>
-                  <h3 className={styles.cardTitle}>{article.title}</h3>
-                  <p className={styles.cardExcerpt}>{article.excerpt}</p>
+                  <span className={styles.category}>{article.category[locale as "fr" | "en"]}</span>
+                  <h3 className={styles.cardTitle}>{article.title[locale as "fr" | "en"]}</h3>
+                  <p className={styles.cardExcerpt}>{article.excerpt[locale as "fr" | "en"]}</p>
                   <span className={styles.readingTime}>
                     {article.readingTime}
                   </span>

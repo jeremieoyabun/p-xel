@@ -30,10 +30,10 @@ export default async function CombienCouteApplicationWeb({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  void locale;
 
   return (
     <ArticlePage
+      locale={locale}
       title="Combien coûte une application web en 2026 ?"
       date="MARS 2026"
       slug="combien-coute-application-web"
@@ -43,7 +43,7 @@ export default async function CombienCouteApplicationWeb({
       heroAlt="Combien coûte une application web en 2026"
       tags={["Application web", "Budget", "Développement"]}
       readingTime="9 minutes"
-      relatedArticles={getRelatedArticles("combien-coute-application-web")}
+      relatedArticles={getRelatedArticles("combien-coute-application-web", locale as "fr" | "en")}
       relatedServices={getRelatedServices("combien-coute-application-web")}
     >
       {/* Article body kept in French for both locales - full i18n of article bodies will come later */}

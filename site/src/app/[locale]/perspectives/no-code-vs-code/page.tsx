@@ -30,10 +30,10 @@ export default async function NoCodeVsCode({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  void locale;
 
   return (
     <ArticlePage
+      locale={locale}
       title="No-code, low-code, full-code : comment choisir pour ton prochain produit digital ?"
       date="DÉC. 2025"
       lead="Entre plateformes no-code, briques low-code et développement « full-code », beaucoup d'équipes se retrouvent bloquées au moment de choisir leur stack. Cet article t'aide à comprendre les forces et limites de chaque approche, et surtout comment les combiner intelligemment pour aller plus vite sans sacrifier la qualité."
@@ -43,7 +43,7 @@ export default async function NoCodeVsCode({
       readingTime="8 minutes"
       slug="no-code-vs-code"
       dateISO="2025-12-01"
-      relatedArticles={getRelatedArticles("no-code-vs-code")}
+      relatedArticles={getRelatedArticles("no-code-vs-code", locale as "fr" | "en")}
       relatedServices={getRelatedServices("no-code-vs-code")}
     >
       {/* Article body kept in French for both locales - full i18n of article bodies will come later */}

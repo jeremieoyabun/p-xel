@@ -29,10 +29,10 @@ export default async function TendancesUxUi2026({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  void locale;
 
   return (
     <ArticlePage
+      locale={locale}
       title="Tendances UX/UI 2026"
       date="2 NOV. 2025"
       dateISO="2025-11-02"
@@ -42,7 +42,7 @@ export default async function TendancesUxUi2026({
       heroAlt="Tendances UX/UI 2026"
       tags={["UX/UI", "Design", "Tendances"]}
       readingTime="7 minutes"
-      relatedArticles={getRelatedArticles("tendances-ux-ui-2026")}
+      relatedArticles={getRelatedArticles("tendances-ux-ui-2026", locale as "fr" | "en")}
       relatedServices={getRelatedServices("tendances-ux-ui-2026")}
     >
       <p>

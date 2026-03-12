@@ -30,10 +30,10 @@ export default async function AidesDigitalisationBelgique({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  void locale;
 
   return (
     <ArticlePage
+      locale={locale}
       title="Prime digitalisation en Belgique : quelles aides pour les PME en 2026 ?"
       slug="aides-digitalisation-belgique"
       date="28 NOV. 2025"
@@ -43,7 +43,7 @@ export default async function AidesDigitalisationBelgique({
       heroAlt="Prime digitalisation en Belgique pour PME et indépendants"
       tags={["Digitalisation", "PME Belgique", "Prime"]}
       readingTime="8 minutes"
-      relatedArticles={getRelatedArticles("aides-digitalisation-belgique")}
+      relatedArticles={getRelatedArticles("aides-digitalisation-belgique", locale as "fr" | "en")}
       relatedServices={getRelatedServices("aides-digitalisation-belgique")}
     >
       {/* Article body kept in French for both locales - full i18n of article bodies will come later */}

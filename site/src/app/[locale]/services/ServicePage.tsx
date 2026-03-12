@@ -37,7 +37,7 @@ interface ServicePageProps {
 
 export function ServicePage({ service, locale = "fr" }: ServicePageProps) {
   const isFr = locale === "fr";
-  const relatedArticles = getArticlesForService(service.slug);
+  const relatedArticles = getArticlesForService(service.slug, locale);
   const otherServices = ALL_SERVICE_SLUGS.filter((s) => s !== service.slug).slice(0, 3);
 
   return (

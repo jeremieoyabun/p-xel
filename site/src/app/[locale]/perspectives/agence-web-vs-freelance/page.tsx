@@ -29,10 +29,10 @@ export default async function AgenceWebVsFreelance({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  void locale;
 
   return (
     <ArticlePage
+      locale={locale}
       title="Agence web vs freelance : comment choisir pour votre projet"
       date="MARS 2026"
       slug="agence-web-vs-freelance"
@@ -42,7 +42,7 @@ export default async function AgenceWebVsFreelance({
       heroAlt="Agence web vs freelance : comment choisir"
       tags={["Agence", "Freelance", "Stratégie"]}
       readingTime="8 minutes"
-      relatedArticles={getRelatedArticles("agence-web-vs-freelance")}
+      relatedArticles={getRelatedArticles("agence-web-vs-freelance", locale as "fr" | "en")}
       relatedServices={getRelatedServices("agence-web-vs-freelance")}
     >
       <p>

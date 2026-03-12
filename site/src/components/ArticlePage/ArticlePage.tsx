@@ -14,6 +14,7 @@ interface RelatedArticle {
 }
 
 interface ArticlePageProps {
+  locale: string;
   title: string;
   slug: string;
   date: string;
@@ -29,6 +30,7 @@ interface ArticlePageProps {
 }
 
 export function ArticlePage({
+  locale,
   title,
   slug,
   date,
@@ -42,7 +44,8 @@ export function ArticlePage({
   relatedServices,
   children,
 }: ArticlePageProps) {
-  const articleUrl = `${SITE_URL}/perspectives/${slug}`;
+  const isFr = locale === "fr";
+  const articleUrl = `${SITE_URL}/${locale}/perspectives/${slug}`;
   const imageUrl = `${SITE_URL}${heroImage}`;
 
   const breadcrumbSchema = {
@@ -52,7 +55,7 @@ export function ArticlePage({
       {
         "@type": "ListItem",
         position: 1,
-        name: "Accueil",
+        name: isFr ? "Accueil" : "Home",
         item: SITE_URL,
       },
       {
@@ -105,19 +108,19 @@ export function ArticlePage({
       <SchemaScript schema={breadcrumbSchema} />
       <SchemaScript schema={blogPostingSchema} />
 
-      <Link href="/perspectives" className={s.backButton} aria-label="Retour aux articles">
+      <Link href={`/${locale}/perspectives`} className={s.backButton} aria-label={isFr ? "Retour aux articles" : "Back to articles"}>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M19 12H5" />
           <path d="M12 19l-7-7 7-7" />
         </svg>
-        <span>Retour</span>
+        <span>{isFr ? "Retour" : "Back"}</span>
       </Link>
 
       <div className={s.shell}>
         {/* Editorial hero row */}
         <div className={s.heroRow}>
           <div className={s.authorCol}>
-            <span className={s.authorLabel}>Ecrit par</span>
+            <span className={s.authorLabel}>{isFr ? "Ecrit par" : "Written by"}</span>
             <span className={s.authorName}>P-XEL Studio</span>
           </div>
 
@@ -158,17 +161,17 @@ export function ArticlePage({
         {/* Related services */}
         {relatedServices && relatedServices.length > 0 && (
           <div className={s.relatedServices}>
-            <h2 className={s.relatedHeading}>Services associes</h2>
+            <h2 className={s.relatedHeading}>{isFr ? "Services associes" : "Related services"}</h2>
             <div className={s.serviceLinks}>
               {relatedServices.map((slug) => {
                 const labels = SERVICE_LABELS[slug];
                 return (
                   <Link
                     key={slug}
-                    href={`/services/${slug}/`}
+                    href={`/${locale}/services/${slug}/`}
                     className={s.serviceLink}
                   >
-                    {labels ? labels.fr : slug}
+                    {labels ? labels[isFr ? "fr" : "en"] : slug}
                   </Link>
                 );
               })}
@@ -179,12 +182,12 @@ export function ArticlePage({
         {/* Related articles */}
         {relatedArticles && relatedArticles.length > 0 && (
           <div className={s.related}>
-            <h2 className={s.relatedHeading}>Articles lies</h2>
+            <h2 className={s.relatedHeading}>{isFr ? "Articles lies" : "Related articles"}</h2>
             <div className={s.relatedGrid}>
               {relatedArticles.map((article) => (
                 <Link
                   key={article.slug}
-                  href={`/perspectives/${article.slug}`}
+                  href={`/${locale}/perspectives/${article.slug}`}
                   className={s.relatedCard}
                 >
                   <span className={s.relatedCategory}>{article.category}</span>

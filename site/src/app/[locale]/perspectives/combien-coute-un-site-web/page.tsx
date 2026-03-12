@@ -30,10 +30,10 @@ export default async function CombienCouteUnSiteWeb({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  void locale;
 
   return (
     <ArticlePage
+      locale={locale}
       title="Combien coûte un site web en 2026 ?"
       slug="combien-coute-un-site-web"
       date="20 NOV. 2025"
@@ -43,7 +43,7 @@ export default async function CombienCouteUnSiteWeb({
       heroAlt="Combien coûte un site web en 2026"
       tags={["Site web", "UX/UI", "Budget"]}
       readingTime="7 minutes"
-      relatedArticles={getRelatedArticles("combien-coute-un-site-web")}
+      relatedArticles={getRelatedArticles("combien-coute-un-site-web", locale as "fr" | "en")}
       relatedServices={getRelatedServices("combien-coute-un-site-web")}
     >
       {/* Article body kept in French for both locales - full i18n of article bodies will come later */}
