@@ -1,0 +1,339 @@
+import type { Locale } from "@/lib/i18n/config";
+
+const content = {
+  fr: {
+    bruxellesIntro: {
+      label: "Bruxelles",
+      heading: "Un studio produit pour Bruxelles. Sans le overhead d'agence.",
+      subtext:
+        "P-XEL est un studio produit basé a Liege qui accompagne les entreprises bruxelloises. Sites web, applications, MVP, branding. Un interlocuteur senior, de la strategie au deploiement. Des tarifs de studio, pas de grande agence.",
+    },
+    bruxellesServices: {
+      label: "Ce qu'on construit pour Bruxelles",
+      heading:
+        "Les services qu'il faut pour lancer, scaler ou moderniser un produit digital.",
+      items: [
+        {
+          title: "Sites web et landing pages",
+          body: "Sites vitrines, e-commerce, landing pages. Construits pour le SEO, la performance et la conversion. Chaque site est developpe sur mesure avec Next.js.",
+          href: "/services/creation-site-web/",
+        },
+        {
+          title: "Applications web et MVP",
+          body: "Applications web, plateformes SaaS, outils metier, MVPs. De l'idee au produit deploye. BillyCheck et ChairSplit : deux SaaS concus et livres par notre studio.",
+          href: "/services/application-web-mvp/",
+        },
+        {
+          title: "Design d'interface (UX/UI)",
+          body: "UX research, UI design, design systems, prototypage. Des interfaces pensees pour l'usage reel, pas pour impressionner en reunion.",
+        },
+        {
+          title: "Identite de marque",
+          body: "Logo, direction artistique, systemes visuels. Des marques construites pour se demarquer dans un marche bruxellois sature.",
+        },
+        {
+          title: "AI Studio",
+          body: "Integration d'IA dans vos produits et workflows. Automatisation, generation de contenu, outils intelligents. On integre l'IA la ou elle cree de la valeur reelle.",
+        },
+      ],
+    },
+    bruxellesWhy: {
+      label: "Pourquoi nous",
+      heading: "Pas une agence bruxelloise de plus. Un studio produit qui livre.",
+      points: [
+        {
+          title: "Un seul interlocuteur senior.",
+          body: "Pas de compte manager junior qui fait tampon. Le fondateur prend le brief, conçoit le produit, supervise chaque etape. 16 ans d'expertise sur chaque projet. Vous parlez a celui qui fait.",
+        },
+        {
+          title: "On conçoit et on livre.",
+          body: "Beaucoup d'agences bruxelloises livrent des maquettes Figma et vous laissent trouver un developpeur. Chez P-XEL, on va du design au deploiement. Vous recevez un produit fonctionnel, pas une presentation.",
+        },
+        {
+          title: "Des tarifs de studio, pas de grande agence.",
+          body: "Pas de bureaux prestige avenue Louise, pas de couches intermediaires, pas de overhead. Le budget va dans votre produit, pas dans notre structure. Vous obtenez la qualite d'une agence premium au prix d'un studio.",
+        },
+        {
+          title: "Bases a Liege, disponibles a Bruxelles.",
+          body: "Notre studio est a Liege, a 1h de Bruxelles. On se deplace pour les briefings, les ateliers et les presentations cles. Le reste se fait en remote, comme la plupart de vos projets actuels.",
+        },
+      ],
+    },
+    bruxellesContext: {
+      label: "Bruxelles et nous",
+      heading: "Un marche qu'on comprend.",
+      paragraphs: [
+        "Bruxelles concentre le plus gros de l'ecosysteme digital belge. Startups, scale-ups, corporates, institutions europeennes, agences federales. La demande est la. Mais les tarifs des grandes agences bruxelloises ne correspondent pas toujours a la valeur livree.",
+        "P-XEL propose une alternative claire : un studio produit senior, sans overhead, qui livre des produits digitaux complets. On travaille avec des startups qui sortent d'accelerateurs, des PME qui veulent un site qui performe, des scale-ups qui ont besoin d'un MVP solide sans engager une equipe interne.",
+        "Que vous soyez a Ixelles, dans le quartier europeen ou a Auderghem, le format est le meme : un interlocuteur unique, des livrables concrets, un produit en production. Pas de slides, pas de comites. Du travail.",
+      ],
+    },
+    bruxellesProjects: {
+      label: "Projets recents",
+      heading: "Ce qu'on a construit recemment.",
+      studies: [
+        {
+          name: "BillyCheck",
+          body: "Application SaaS d'optimisation de factures energetiques. IA, Next.js, Stripe. De l'idee au produit en production.",
+          href: "/work/billycheck/",
+        },
+        {
+          name: "ChairSplit",
+          body: "Plateforme SaaS de gestion pour barbershops. Multi-tenant, PWA, Supabase, Stripe. Produit complet en production.",
+          href: "/work/chairsplit/",
+        },
+        {
+          name: "Greenmood",
+          body: "Plateforme B2B pour le leader europeen du design acoustique. Architecture d'information, UX/UI et configurateurs produit.",
+          href: "/work/greenmood/",
+        },
+      ],
+    },
+    bruxellesProcess: {
+      label: "Comment on travaille",
+      heading: "Du brief au lancement. Sans friction.",
+      steps: [
+        {
+          number: "01",
+          title: "Premier contact",
+          body: "Decrivez votre projet en quelques lignes. On repond sous 24h avec un premier retour.",
+        },
+        {
+          number: "02",
+          title: "Appel decouverte",
+          body: "30 minutes pour comprendre vos objectifs, vos contraintes et vos attentes. On se deplace a Bruxelles si necessaire.",
+        },
+        {
+          number: "03",
+          title: "Proposition claire",
+          body: "Perimetre, livrables, planning et budget. Tout est pose noir sur blanc. Pas de surprises.",
+        },
+        {
+          number: "04",
+          title: "On construit",
+          body: "Design, developpement, iterations. Vous suivez l'avancement en temps reel. On livre un produit fini.",
+        },
+      ],
+    },
+    bruxellesFaq: [
+      {
+        question: "Combien coute un site web professionnel a Bruxelles ?",
+        answer:
+          "Chaque projet est chiffre sur mesure. Le budget depend du type de projet, de la complexite et de vos objectifs. On fournit une estimation gratuite et detaillee apres un premier echange. Nos tarifs de studio sont significativement inferieurs a ceux des grandes agences bruxelloises, a qualite equivalente.",
+      },
+      {
+        question:
+          "Comment travaillez-vous avec des clients bruxellois si vous etes a Liege ?",
+        answer:
+          "On se deplace a Bruxelles pour les briefings, ateliers et presentations cles. Le reste se fait en remote, en visio et via des outils collaboratifs. Liege est a 1h de Bruxelles. La plupart de nos clients preferent ce format hybride, plus efficace que des reunions en presentiel chaque semaine.",
+      },
+      {
+        question: "Quel est le delai pour creer un site web a Bruxelles ?",
+        answer:
+          "Landing page : 1 a 2 semaines. Site vitrine : 3 a 6 semaines. Application web : 6 a 12 semaines. On definit un calendrier precis des le depart et on le respecte. Pas de derives.",
+      },
+      {
+        question:
+          "Quelle difference entre P-XEL et une grande agence bruxelloise ?",
+        answer:
+          "Chez P-XEL, vous travaillez directement avec le fondateur. Pas de junior, pas de sous-traitance, pas de couches intermediaires. On conçoit et on livre le produit complet. Le resultat : plus de qualite, moins de overhead, des delais tenus. Vous payez pour le produit, pas pour la structure.",
+      },
+      {
+        question:
+          "Les entreprises bruxelloises peuvent-elles beneficier des cheques-entreprises ?",
+        answer:
+          "Les cheques-entreprises de la Region wallonne sont reserves aux entreprises wallonnes. Si votre siege social est en Region bruxelloise, d'autres dispositifs existent. On vous oriente vers les bons mecanismes de financement selon votre situation.",
+      },
+      {
+        question:
+          "Quels types d'entreprises bruxelloises font appel a P-XEL ?",
+        answer:
+          "Startups qui sortent d'accelerateurs, PME qui veulent un site performant, scale-ups qui ont besoin d'un MVP ou d'un outil metier, entreprises etablies qui modernisent leur presence digitale. On travaille aussi avec des structures proches des institutions europeennes et des agences federales qui cherchent un partenaire agile.",
+      },
+    ],
+    bruxellesOtherCities: {
+      label: "On intervient aussi a",
+      text: "Liege, Namur, Luxembourg et partout en Belgique en remote. Notre base est a Liege, notre rayon d'action est europeen.",
+    },
+    bruxellesCta: {
+      heading: "Un projet digital a Bruxelles ?",
+      subtext:
+        "On s'appelle ou on se retrouve a Bruxelles. 30 minutes, sans engagement.",
+    },
+  },
+  en: {
+    bruxellesIntro: {
+      label: "Brussels",
+      heading: "A product studio for Brussels. Without the agency overhead.",
+      subtext:
+        "P-XEL is a product studio based in Liege that works with Brussels-based businesses. Websites, applications, MVPs, branding. One senior point of contact, from strategy to deployment. Studio pricing, not big agency rates.",
+    },
+    bruxellesServices: {
+      label: "What we build for Brussels",
+      heading:
+        "The services you need to launch, scale or modernize a digital product.",
+      items: [
+        {
+          title: "Websites and landing pages",
+          body: "Corporate sites, e-commerce, landing pages. Built for SEO, performance and conversion. Every site is custom-built with Next.js.",
+          href: "/en/services/creation-site-web/",
+        },
+        {
+          title: "Web applications and MVPs",
+          body: "Web apps, SaaS platforms, business tools, MVPs. From idea to deployed product. BillyCheck and ChairSplit: two SaaS products designed and shipped by our studio.",
+          href: "/en/services/application-web-mvp/",
+        },
+        {
+          title: "Interface design (UX/UI)",
+          body: "UX research, UI design, design systems, prototyping. Interfaces built for real-world usability, not to impress in meetings.",
+        },
+        {
+          title: "Brand identity",
+          body: "Logo, art direction, visual systems. Brands built to stand out in a saturated Brussels market.",
+        },
+        {
+          title: "AI Studio",
+          body: "AI integration into your products and workflows. Automation, content generation, intelligent tools. We integrate AI where it creates real value.",
+        },
+      ],
+    },
+    bruxellesWhy: {
+      label: "Why us",
+      heading: "Not another Brussels agency. A product studio that ships.",
+      points: [
+        {
+          title: "One senior point of contact.",
+          body: "No junior account manager acting as a buffer. The founder takes the brief, designs the product, oversees every step. 16 years of expertise on every project. You talk to the person doing the work.",
+        },
+        {
+          title: "We design and we ship.",
+          body: "Many Brussels agencies deliver Figma mockups and leave you to find a developer. At P-XEL, we go from design to deployment. You get a working product, not a presentation.",
+        },
+        {
+          title: "Studio pricing, not big agency rates.",
+          body: "No prestige offices on Avenue Louise, no middle layers, no overhead. The budget goes into your product, not our structure. You get premium agency quality at studio pricing.",
+        },
+        {
+          title: "Based in Liege, available in Brussels.",
+          body: "Our studio is in Liege, 1 hour from Brussels. We travel for briefings, workshops and key presentations. The rest happens remotely, like most of your current projects.",
+        },
+      ],
+    },
+    bruxellesContext: {
+      label: "Brussels and us",
+      heading: "A market we understand.",
+      paragraphs: [
+        "Brussels concentrates the bulk of Belgium's digital ecosystem. Startups, scale-ups, corporates, EU institutions, federal agencies. The demand is there. But the rates of large Brussels agencies don't always match the value delivered.",
+        "P-XEL offers a clear alternative: a senior product studio, no overhead, that delivers complete digital products. We work with startups coming out of accelerators, SMEs that want a website that performs, scale-ups that need a solid MVP without hiring an internal team.",
+        "Whether you're in Ixelles, the European quarter or Auderghem, the format is the same: one point of contact, concrete deliverables, a product in production. No slides, no committees. Work.",
+      ],
+    },
+    bruxellesProjects: {
+      label: "Recent projects",
+      heading: "What we've built recently.",
+      studies: [
+        {
+          name: "BillyCheck",
+          body: "SaaS application for energy bill optimization. AI, Next.js, Stripe. From idea to product in production.",
+          href: "/en/work/billycheck/",
+        },
+        {
+          name: "ChairSplit",
+          body: "SaaS management platform for barbershops. Multi-tenant, PWA, Supabase, Stripe. Complete product in production.",
+          href: "/en/work/chairsplit/",
+        },
+        {
+          name: "Greenmood",
+          body: "B2B platform for Europe's leading acoustic design company. Information architecture, UX/UI and product configurators.",
+          href: "/en/work/greenmood/",
+        },
+      ],
+    },
+    bruxellesProcess: {
+      label: "How we work",
+      heading: "From brief to launch. No friction.",
+      steps: [
+        {
+          number: "01",
+          title: "First contact",
+          body: "Describe your project in a few lines. We respond within 24h with initial feedback.",
+        },
+        {
+          number: "02",
+          title: "Discovery call",
+          body: "30 minutes to understand your goals, constraints and expectations. We can meet in Brussels if needed.",
+        },
+        {
+          number: "03",
+          title: "Clear proposal",
+          body: "Scope, deliverables, timeline and budget. Everything laid out in black and white. No surprises.",
+        },
+        {
+          number: "04",
+          title: "We build",
+          body: "Design, development, iterations. You follow progress in real time. We deliver a finished product.",
+        },
+      ],
+    },
+    bruxellesFaq: [
+      {
+        question: "How much does a professional website cost in Brussels?",
+        answer:
+          "Every project is quoted on a custom basis. The budget depends on the type of project, complexity and your goals. We provide a free, detailed estimate after an initial conversation. Our studio rates are significantly lower than those of large Brussels agencies, at equivalent quality.",
+      },
+      {
+        question:
+          "How do you work with Brussels clients if you're based in Liege?",
+        answer:
+          "We travel to Brussels for briefings, workshops and key presentations. The rest happens remotely, via video calls and collaborative tools. Liege is 1 hour from Brussels. Most of our clients prefer this hybrid format, more efficient than weekly in-person meetings.",
+      },
+      {
+        question: "What is the timeline to create a website in Brussels?",
+        answer:
+          "Landing page: 1 to 2 weeks. Corporate site: 3 to 6 weeks. Web application: 6 to 12 weeks. We define a precise schedule from the start and we stick to it. No drift.",
+      },
+      {
+        question:
+          "What's the difference between P-XEL and a large Brussels agency?",
+        answer:
+          "At P-XEL, you work directly with the founder. No juniors, no outsourcing, no middle layers. We design and deliver the complete product. The result: more quality, less overhead, deadlines met. You pay for the product, not the structure.",
+      },
+      {
+        question:
+          "Can Brussels-based companies use the cheques-entreprises program?",
+        answer:
+          "The Walloon Region's cheques-entreprises are reserved for Walloon-based companies. If your headquarters are in the Brussels Region, other funding mechanisms exist. We help you navigate toward the right options for your situation.",
+      },
+      {
+        question:
+          "What types of Brussels-based businesses work with P-XEL?",
+        answer:
+          "Startups coming out of accelerators, SMEs looking for a high-performing website, scale-ups that need an MVP or business tool, established companies modernizing their digital presence. We also work with organizations close to EU institutions and federal agencies looking for an agile partner.",
+      },
+    ],
+    bruxellesOtherCities: {
+      label: "We also work in",
+      text: "Liege, Namur, Luxembourg and anywhere in Belgium remotely. Our base is in Liege, our reach is European.",
+    },
+    bruxellesCta: {
+      heading: "A digital project in Brussels?",
+      subtext:
+        "Let's hop on a call or meet in Brussels. 30 minutes, no commitment.",
+    },
+  },
+} as const;
+
+export function getBruxellesContent(locale: Locale) {
+  return content[locale];
+}
+
+// Backward compatibility
+export const bruxellesIntro = content.fr.bruxellesIntro;
+export const bruxellesServices = content.fr.bruxellesServices;
+export const bruxellesWhy = content.fr.bruxellesWhy;
+export const bruxellesContext = content.fr.bruxellesContext;
+export const bruxellesProjects = content.fr.bruxellesProjects;
+export const bruxellesProcess = content.fr.bruxellesProcess;
+export const bruxellesFaq = content.fr.bruxellesFaq;
+export const bruxellesOtherCities = content.fr.bruxellesOtherCities;
+export const bruxellesCta = content.fr.bruxellesCta;

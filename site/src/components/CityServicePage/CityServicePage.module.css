@@ -1,0 +1,116 @@
+/* Hero CTA row */
+.heroCta {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+/* Local context */
+.contextBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: var(--content-narrow);
+}
+
+.contextBody p {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.7;
+}
+
+/* What We Build */
+.offerIntro {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.7;
+  max-width: var(--content-narrow);
+}
+
+.offerGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.offerItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.offerTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+}
+
+.offerBody {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+}
+
+/* Why points */
+.whyGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.whyPoint {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.whyTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+}
+
+.whyBody {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+}
+
+/* Cross-links */
+.crossLinks {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.crossLink {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: var(--tracking-wide);
+  transition: color var(--duration-fast) var(--ease-in-out);
+}
+
+.crossLink:hover {
+  color: var(--accent-hover);
+}
+
+@media (max-width: 767px) {
+  .offerGrid,
+  .whyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroCta {
+    flex-direction: column;
+  }
+
+  .crossLinks {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+}

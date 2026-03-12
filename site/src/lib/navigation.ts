@@ -52,8 +52,12 @@ export function getFooterNav(locale: Locale) {
       ],
     },
     local: {
-      title: "Liege",
-      links: [{ label: isFr ? "Agence web Liege" : "Web agency Liege", href: lp("/liege/") }],
+      title: "Local",
+      links: [
+        { label: isFr ? "Agence web Liège" : "Web agency Liege", href: lp("/liege/") },
+        { label: isFr ? "Agence web Bruxelles" : "Web agency Brussels", href: lp("/bruxelles/") },
+        { label: isFr ? "Agence web Luxembourg" : "Web agency Luxembourg", href: lp("/luxembourg/") },
+      ],
     },
     legal: {
       title: "Legal",

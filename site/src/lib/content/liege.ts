@@ -16,20 +16,22 @@ const content = {
         {
           title: "Sites web et landing pages",
           body: "Sites vitrines, e-commerce, landing pages. Conçus pour le SEO, la performance et la génération de leads. Chaque site est construit sur mesure avec Next.js.",
-          href: "/services/creation-site-web/",
+          href: "/liege/creation-site-web/",
         },
         {
           title: "Applications web et MVP",
           body: "Applications web, plateformes SaaS, outils métier, MVPs. De l'idée au produit déployé. BillyCheck et ChairSplit : deux SaaS conçus et livrés par notre studio.",
-          href: "/services/application-web-mvp/",
+          href: "/liege/application-web-mvp/",
         },
         {
           title: "Design d'interface (UX/UI)",
           body: "UX research, UI design, design systems, prototypage. Des interfaces pensées pour l'usage, pas pour la décoration.",
+          href: "/liege/ux-ui-design/",
         },
         {
           title: "Identité de marque",
           body: "Logo, direction artistique, systèmes visuels. Des marques construites pour durer et pour scaler.",
+          href: "/liege/branding-identite/",
         },
       ],
     },
@@ -169,20 +171,22 @@ const content = {
         {
           title: "Websites and landing pages",
           body: "Corporate sites, e-commerce, landing pages. Built for SEO, performance and lead generation. Every site is custom-built with Next.js.",
-          href: "/en/services/creation-site-web/",
+          href: "/en/liege/creation-site-web/",
         },
         {
           title: "Web applications and MVPs",
           body: "Web apps, SaaS platforms, business tools, MVPs. From idea to deployed product. BillyCheck and ChairSplit: two SaaS products designed and shipped by our studio.",
-          href: "/en/services/application-web-mvp/",
+          href: "/en/liege/application-web-mvp/",
         },
         {
           title: "Interface design (UX/UI)",
           body: "UX research, UI design, design systems, prototyping. Interfaces built for usability, not decoration.",
+          href: "/en/liege/ux-ui-design/",
         },
         {
           title: "Brand identity",
           body: "Logo, art direction, visual systems. Brands built to last and to scale.",
+          href: "/en/liege/branding-identite/",
         },
       ],
     },
