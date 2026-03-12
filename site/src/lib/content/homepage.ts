@@ -101,6 +101,15 @@ export const selectedWork = {
       href: "/work/arduenna/",
       image: "/images/case-studies/arduenna-hero.webp",
     },
+    {
+      name: "Oyabun",
+      tags: ["Game Design", "Web3", "UX/UI", "Move-to-Earn"],
+      description:
+        "Application mobile move-to-earn dans un univers cyberpunk. Game design, UX/UI, économie tokenisée et direction artistique.",
+      result: "App gamifiée Web3",
+      href: "/work/oyabun/",
+      image: "/images/case-studies/oyabun-hero.webp",
+    },
   ],
   cta: { label: "Voir tous les projets", href: "/work/" },
 };
