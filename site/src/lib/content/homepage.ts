@@ -105,7 +105,7 @@ const content = {
           name: "Oyabun",
           tags: ["Game Design", "Web3", "NFT", "Play-to-Earn"],
           description:
-            "Jeu mobile Web3 dans un univers manga cyber-yakuza. Game design, direction artistique, tokenomics OYAB et systeme de progression NFT.",
+            "Jeu mobile Web3 dans un univers manga cyber-yakuza. Game design, direction artistique, tokenomics OYAB, Fight Missions et Street Missions.",
           result: "Ecosysteme gaming Web3 complet",
           href: "/work/oyabun/",
           image: "/images/case-studies/oyabun-hero.webp",

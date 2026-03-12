@@ -10,7 +10,7 @@ const content: Record<Locale, CaseStudy> = {
       "Conception et design d'un jeu mobile Web3 play-to-earn dans un univers manga cyber-yakuza. Direction artistique, game design, NFTs et tokenomics. Étude de cas P-XEL Studio.",
     tags: ["Product Design", "Gaming", "Web3", "NFT"],
     tagline:
-      "Jeu mobile Web3 dans un univers manga cyber-yakuza. Combats, missions de rue, NFTs et token OYAB. Un produit gaming concu pour durer.",
+      "Jeu mobile Web3 dans un univers manga cyber-yakuza. Fight Missions, Street Missions, NFTs et token OYAB. Un produit gaming concu pour durer.",
     keyResult: "Un ecosysteme gaming Web3 complet, du concept au lancement",
     period: "2024-2025",
     heroImage: "/images/case-studies/oyabun-hero.webp",
@@ -18,12 +18,12 @@ const content: Record<Locale, CaseStudy> = {
       context: {
         label: "Contexte",
         heading: "Un jeu mobile Web3 ancre dans un univers manga.",
-        body: "Oyabun est un jeu mobile play-to-earn plonge dans un univers manga cyber-yakuza. Les joueurs incarnent des personnages NFT, grimpent dans la hierarchie des clans, combattent en PvE et PvP, et parcourent les rues pour accumuler des tokens OYAB. Le projet ne se limitait pas a \"faire un jeu\". Il fallait concevoir un ecosysteme complet : game design, economie de tokens equilibree, systeme de progression par NFT, direction artistique immersive, et une experience mobile pensee pour des sessions courtes mais addictives.",
+        body: "Oyabun est un jeu mobile play-to-earn plonge dans un univers manga cyber-yakuza. Les joueurs incarnent des personnages NFT, grimpent dans la hierarchie des clans, enchainent les Fight Missions en PvE et PvP, et parcourent les rues en Street Missions pour accumuler des tokens OYAB. Le projet ne se limitait pas a \"faire un jeu\". Il fallait concevoir un ecosysteme complet : game design, economie de tokens equilibree, systeme de progression par NFT, direction artistique immersive, et une experience mobile pensee pour des sessions courtes mais addictives.",
       },
       challenge: {
         label: "Probleme",
-        heading: "Creer un jeu qui tient ses joueurs. Pas un projet crypto deguise.",
-        body: "Le Web3 gaming souffre d'un probleme de credibilite. Trop de projets mettent la speculation avant le gameplay. Oyabun devait prouver le contraire : un vrai jeu d'abord, avec une couche blockchain qui enrichit l'experience sans la compliquer. Le defi etait triple. Concevoir des mecaniques de combat et d'exploration engageantes. Construire une economie de tokens qui ne s'effondre pas apres trois mois. Et integrer les NFTs comme moteur de progression, pas comme produit financier. Le joueur devait ouvrir l'app, jouer en 10 minutes, et avoir envie de revenir le lendemain.",
+        heading: "Creer un jeu qui retient ses joueurs. Pas un projet crypto deguise.",
+        body: "Le Web3 gaming souffre d'un probleme de credibilite. Trop de projets mettent la speculation avant le gameplay. Oyabun devait prouver le contraire : un vrai jeu d'abord, avec une couche blockchain qui enrichit l'experience sans la compliquer. Le defi etait triple. Concevoir des Fight Missions et des Street Missions engageantes. Construire une tokenomics qui ne s'effondre pas apres trois mois. Et integrer les NFTs comme moteur de progression, pas comme produit financier. Le joueur devait ouvrir l'app, jouer en 10 minutes, et avoir envie de revenir le lendemain.",
       },
       thinking: {
         label: "Reflexion",
@@ -38,19 +38,19 @@ const content: Record<Locale, CaseStudy> = {
       execution: {
         label: "Execution",
         heading: "Direction artistique, game design et systemes.",
-        body: "P-XEL a concu l'ensemble du produit sur deux applications (Telegram et Unity) : direction artistique complete, design des personnages NFT, mecaniques de combat et d'exploration, economie de tokens OYAB, systeme de clans et de hierarchie, interfaces mobiles. UX/UI et app design des deux plateformes. Coordination dev/design pour garantir la coherence entre les equipes. Creation et validation de tous les visuels : assets sociaux, visuels NFT, videos promotionnelles. Branding et communication : identite de marque, systeme visuel, declinaisons sur tous les canaux. Web design du site vitrine de l'ecosysteme.",
+        body: "P-XEL a concu l'ensemble du produit sur deux applications (Telegram et Unity) : direction artistique complete, design des personnages NFT, Fight Missions, Street Missions, tokenomics OYAB, systeme de clans et de hierarchie, interfaces mobiles. UX/UI et app design des deux plateformes. Coordination dev/design pour garantir la coherence entre les equipes. Creation et validation de tous les visuels : assets sociaux, visuels NFT, videos promotionnelles. Branding et communication : identite de marque, systeme visuel, declinaisons sur tous les canaux. Web design du site vitrine de l'ecosysteme.",
       },
       result: {
         label: "Impact",
         heading: "Un ecosysteme gaming Web3 pret a deployer.",
-        body: "Oyabun est un produit complet : univers manga construit, mecaniques de jeu specifiees (combats PvE/PvP, missions de rue, fusion de personnages), economie de tokens modelisee, systeme de clans et de progression NFT. Le projet demontre la capacite de P-XEL a concevoir des produits complexes qui depassent le cadre classique du web : game design, worldbuilding, tokenomics, systemes NFT. Du product design applique a un domaine ou la plupart des studios ne vont pas.",
+        body: "Oyabun est un produit complet : univers manga construit, mecaniques de jeu specifiees (Fight Missions PvE/PvP, Street Missions, fusion de personnages), tokenomics modelisee, systeme de clans et de progression NFT. Le projet demontre la capacite de P-XEL a concevoir des produits complexes qui depassent le cadre classique du web : game design, worldbuilding, tokenomics, systemes NFT. Du product design applique a un domaine ou la plupart des studios ne vont pas.",
       },
     },
     deliverables: [
       "Direction artistique complete (univers manga cyber-yakuza, personnages, worldbuilding)",
       "UX/UI et app design (Telegram + Unity)",
-      "Game design (fight missions, street missions, boucle de jeu)",
-      "Architecture economie de tokens OYAB",
+      "Game design (Fight Missions, Street Missions, game loop)",
+      "Tokenomics OYAB",
       "Systeme de progression et fusion NFT",
       "Creation visuels NFT, assets sociaux et videos promotionnelles",
       "Branding, communication et web design",
