@@ -15,6 +15,7 @@ import { BackgroundVideo } from "@/components/BackgroundVideo/BackgroundVideo";
 import { ScrollReveal } from "@/components/ScrollReveal/ScrollReveal";
 import { CalendlyPopup } from "@/components/CalendlyPopup/CalendlyPopup";
 import { TallyPopup } from "@/components/TallyPopup/TallyPopup";
+import { Testimonials } from "@/components/Testimonials/Testimonials";
 import { SchemaScript } from "@/components/SchemaScript/SchemaScript";
 import {
   organizationSchema,
@@ -197,6 +198,15 @@ export default function HomePage() {
             </FadeInUp>
           ))}
         </div>
+      </Section>
+
+      {/* Beat 6b: Testimonials */}
+      <Section>
+        <FadeInUp>
+          <Label>Retours clients</Label>
+          <SectionHeading heading="Ce qu'ils en disent." />
+        </FadeInUp>
+        <Testimonials />
       </Section>
 
       {/* Beat 7: Process */}

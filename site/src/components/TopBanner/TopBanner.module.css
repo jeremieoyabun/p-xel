@@ -1,0 +1,76 @@
+.banner {
+  background: var(--surface-tertiary);
+  border-bottom: 1px solid var(--border-dark);
+  position: relative;
+  z-index: 99;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: var(--content-wide);
+  margin: 0 auto;
+  padding: 10px var(--grid-margin);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.text {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-dark-secondary);
+  letter-spacing: 0.01em;
+}
+
+.text strong {
+  color: var(--text-dark-primary);
+  font-weight: 600;
+}
+
+.link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 200ms ease;
+}
+
+.link:hover {
+  color: var(--accent-hover);
+}
+
+.close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--text-dark-muted);
+  flex-shrink: 0;
+  border-radius: 4px;
+  transition: color 200ms ease, background 200ms ease;
+}
+
+.close:hover {
+  color: var(--text-dark-primary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 767px) {
+  .text {
+    font-size: 12px;
+  }
+}
