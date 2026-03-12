@@ -14,10 +14,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/contact/", priority: 0.9, changeFrequency: "yearly" as const },
     { url: "/services/creation-site-web/", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/services/application-web-mvp/", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/liege/", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/services/ux-ui-design/", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/services/branding-identite/", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/services/ai-studio/", priority: 0.9, changeFrequency: "monthly" as const },
+    { url: "/liege/", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/perspectives/", priority: 0.7, changeFrequency: "weekly" as const },
     { url: "/perspectives/combien-coute-un-site-web/", priority: 0.7, changeFrequency: "monthly" as const },
     { url: "/perspectives/aides-digitalisation-belgique/", priority: 0.7, changeFrequency: "monthly" as const },
@@ -32,10 +32,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/politique-confidentialite/", priority: 0.3, changeFrequency: "yearly" as const },
   ];
 
-  return pages.map((page) => ({
-    url: `${SITE_URL}${page.url}`,
-    lastModified: new Date(),
-    changeFrequency: page.changeFrequency,
-    priority: page.priority,
-  }));
+  // Generate entries for both FR (default) and EN locales with hreflang alternates
+  return pages.flatMap((page) => [
+    {
+      url: `${SITE_URL}${page.url}`,
+      lastModified: new Date(),
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
+      alternates: {
+        languages: {
+          fr: `${SITE_URL}${page.url}`,
+          en: `${SITE_URL}/en${page.url}`,
+        },
+      },
+    },
+    {
+      url: `${SITE_URL}/en${page.url}`,
+      lastModified: new Date(),
+      changeFrequency: page.changeFrequency,
+      priority: page.priority * 0.9,
+      alternates: {
+        languages: {
+          fr: `${SITE_URL}${page.url}`,
+          en: `${SITE_URL}/en${page.url}`,
+        },
+      },
+    },
+  ]);
 }
