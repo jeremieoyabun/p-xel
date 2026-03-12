@@ -26,7 +26,7 @@ const testimonials: Testimonial[] = [
   {
     quote:
       "Réactif, précis, zéro bullshit. En deux mois, on avait un site et une stratégie d'acquisition qui ont généré deux ans de chiffre d'affaires.",
-    name: "Thomas L.",
+    name: "Martin B.",
     role: "Fondateur",
     company: "Arduenna Gin",
   },

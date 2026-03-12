@@ -8,7 +8,7 @@ export function CustomCursor() {
   const ringRef = useRef<HTMLDivElement>(null);
   const pos = useRef({ x: -200, y: -200 });
   const ringPos = useRef({ x: -200, y: -200 });
-  const ringSize = useRef(36);
+  const ringSize = useRef(28);
   const raf = useRef<number>(0);
 
   useEffect(() => {
@@ -31,10 +31,10 @@ export function CustomCursor() {
     const onOver = (e: MouseEvent) => {
       const t = e.target as Element | null;
       if (t?.closest("a, button, [role='button'], label, input, textarea, select")) {
-        ringSize.current = 52;
+        ringSize.current = 40;
         ringRef.current?.classList.add(styles.ringHover);
       } else {
-        ringSize.current = 36;
+        ringSize.current = 28;
         ringRef.current?.classList.remove(styles.ringHover);
       }
     };

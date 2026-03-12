@@ -18,7 +18,6 @@ export function FloatingCTA() {
   return (
     <div className={`${s.bar} ${visible ? s.barVisible : ""}`}>
       <div className={s.inner}>
-        <span className={s.text}>Un projet en tête ?</span>
         <CalendlyPopup label="Réserver un appel" variant="light" />
       </div>
     </div>

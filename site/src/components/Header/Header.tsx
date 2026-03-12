@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useLayoutEffect } from "react";
+import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
@@ -31,6 +31,7 @@ function Logo() {
 
 export function Header() {
   const pathname = usePathname();
+  const headerRef = useRef<HTMLElement>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [overDark, setOverDark] = useState(() => pathname === "/");
@@ -49,7 +50,10 @@ export function Header() {
       const darkSections = document.querySelectorAll(
         '[data-theme="dark"], [data-theme="accent"]'
       );
-      const headerBottom = 72;
+      const headerEl = headerRef.current;
+      const headerBottom = headerEl
+        ? headerEl.getBoundingClientRect().bottom
+        : 72;
       let found = false;
       darkSections.forEach((section) => {
         const rect = section.getBoundingClientRect();
@@ -79,7 +83,7 @@ export function Header() {
     .join(" ");
 
   return (
-    <header className={headerClass}>
+    <header ref={headerRef} className={headerClass}>
       <a href="#main-content" className={styles.skipLink}>
         Aller au contenu principal
       </a>
