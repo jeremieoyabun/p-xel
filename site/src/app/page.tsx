@@ -74,8 +74,7 @@ export default function HomePage() {
             <span className={styles.heroLine}>On livre<span className={styles.heroDot} aria-hidden="true" /></span>
           </h1>
           <p className={styles.heroSub}>
-            Produits digitaux premium. Sites, applications,
-            <br />identités de marque.
+            Produits digitaux premium. Sites, applications, identités de marque.
             <br />De la stratégie au déploiement.
           </p>
           <div className={styles.heroActions}>
