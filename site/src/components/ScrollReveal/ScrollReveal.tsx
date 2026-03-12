@@ -39,19 +39,19 @@ export function ScrollReveal({ text }: ScrollRevealProps) {
         let glow = "";
         if (d <= 0) {
           opacity = 1;
-          // Trailing violet bloom just after being revealed
-          if (d > -FEATHER * 3) {
-            const t = -d / (FEATHER * 3);
-            const g = 0.7 * (1 - t);
-            glow = `0 0 12px rgba(102,8,249,${g.toFixed(2)}), 0 0 32px rgba(102,8,249,${(g * 0.5).toFixed(2)}), 0 0 48px rgba(102,8,249,${(g * 0.2).toFixed(2)})`;
+          // Tight violet laser trail just after reveal
+          if (d > -FEATHER * 0.8) {
+            const t = -d / (FEATHER * 0.8);
+            const g = 1.0 * (1 - t);
+            glow = `0 0 4px rgba(130,20,255,${g.toFixed(2)}), 0 0 8px rgba(130,20,255,${(g * 0.7).toFixed(2)}), 0 0 16px rgba(102,8,249,${(g * 0.4).toFixed(2)})`;
           }
-        } else if (d < FEATHER) {
-          const t = d / FEATHER;
+        } else if (d < FEATHER * 0.5) {
+          const t = d / (FEATHER * 0.5);
           const eased = 1 - (1 - t) * (1 - t);
           opacity = BASE_OPACITY + (1 - BASE_OPACITY) * (1 - eased);
-          // Leading glow approaching the frontier
-          const g = 0.5 * (1 - t);
-          glow = `0 0 10px rgba(102,8,249,${g.toFixed(2)}), 0 0 20px rgba(102,8,249,${(g * 0.4).toFixed(2)})`;
+          // Sharp leading laser glow
+          const g = 0.9 * (1 - t);
+          glow = `0 0 3px rgba(130,20,255,${g.toFixed(2)}), 0 0 8px rgba(130,20,255,${(g * 0.6).toFixed(2)})`;
         } else {
           opacity = BASE_OPACITY;
         }
