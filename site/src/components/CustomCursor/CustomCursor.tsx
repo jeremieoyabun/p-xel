@@ -33,9 +33,11 @@ export function CustomCursor() {
       if (t?.closest("a, button, [role='button'], label, input, textarea, select")) {
         ringSize.current = 40;
         ringRef.current?.classList.add(styles.ringHover);
+        dotRef.current?.classList.add(styles.dotHover);
       } else {
         ringSize.current = 28;
         ringRef.current?.classList.remove(styles.ringHover);
+        dotRef.current?.classList.remove(styles.dotHover);
       }
     };
 

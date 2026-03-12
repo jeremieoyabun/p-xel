@@ -9,7 +9,14 @@
   z-index: 99999;
   opacity: 0;
   will-change: transform;
-  transition: opacity 400ms ease;
+  transition: opacity 400ms ease, width 200ms ease, height 200ms ease, background 200ms ease;
+}
+
+.dotHover {
+  width: 4px;
+  height: 4px;
+  background: rgba(130, 20, 255, 1);
+  box-shadow: 0 0 6px rgba(102, 8, 249, 0.8);
 }
 
 .ring {
@@ -34,8 +41,20 @@
 .ringHover {
   width: 40px;
   height: 40px;
-  border-color: rgba(102, 8, 249, 0.7);
-  background: rgba(102, 8, 249, 0.06);
+  border-color: rgba(130, 20, 255, 0.8);
+  background: rgba(102, 8, 249, 0.08);
+  animation: cursorGlow 1.2s ease-in-out infinite;
+}
+
+@keyframes cursorGlow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(102, 8, 249, 0.35), 0 0 20px rgba(102, 8, 249, 0.12);
+    border-color: rgba(130, 20, 255, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 14px rgba(102, 8, 249, 0.55), 0 0 30px rgba(102, 8, 249, 0.2);
+    border-color: rgba(140, 40, 255, 1);
+  }
 }
 
 @media (pointer: coarse) {
