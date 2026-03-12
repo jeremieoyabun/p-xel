@@ -46,6 +46,7 @@ const content: Record<Locale, CaseStudy> = {
         label: "Impact",
         heading: "Un produit SaaS complet. En production.",
         body: "ChairSplit est un produit SaaS fonctionnel, pas un MVP inachevé. Gestion des visites, calcul des commissions, fiches de paie, CRM client, suivi des dépenses, reporting. Le tout dans une interface mobile-first utilisable au quotidien par des barbers qui n'ont pas le temps de naviguer dans un logiciel complexe. Le produit est en production avec un modèle de monétisation actif.",
+        image: "/images/case-studies/P-xel_work_Chairsplit-03.webp",
       },
     },
     deliverables: [
@@ -118,6 +119,7 @@ const content: Record<Locale, CaseStudy> = {
         label: "Impact",
         heading: "A complete SaaS product. In production.",
         body: "ChairSplit is a functional SaaS product, not an unfinished MVP. Visit management, commission calculation, payslips, client CRM, expense tracking, reporting. All in a mobile-first interface usable daily by barbers who don't have time to navigate complex software. The product is in production with an active monetization model.",
+        image: "/images/case-studies/P-xel_work_Chairsplit-03.webp",
       },
     },
     deliverables: [
