@@ -92,6 +92,15 @@ export const selectedWork = {
       href: "/work/greenmood/",
       image: "/images/case-studies/greenmood-hero.webp",
     },
+    {
+      name: "Arduenna",
+      tags: ["Branding", "E-commerce", "Campagnes Ads", "Direction Artistique"],
+      description:
+        "Identité de marque, e-commerce et campagnes digitales pour un gin bio ardennais. Branding, Shopify, Meta Ads.",
+      result: "2 ans de CA en 2 mois",
+      href: "/work/arduenna/",
+      image: "/images/case-studies/arduenna-hero.webp",
+    },
   ],
   cta: { label: "Voir tous les projets", href: "/work/" },
 };
