@@ -7,9 +7,9 @@
   top: 0;
   z-index: var(--z-nav);
   width: 100%;
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(16px) saturate(1.4);
-  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
   transition:
     background 400ms ease,
     border-color 400ms ease,
