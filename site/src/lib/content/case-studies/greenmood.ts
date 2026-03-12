@@ -28,11 +28,13 @@ const content: Record<Locale, CaseStudy> = {
         label: "Réflexion",
         heading: "Penser en produit, pas en pages.",
         body: "Avant d'ouvrir Figma, on a cartographié l'ensemble du catalogue : familles de produits, variantes, options, spécifications techniques, cas d'usage. On a identifié trois profils utilisateurs distincts : l'architecte qui prescrit, le facility manager qui compare, le commercial Greenmood qui présente. Chaque profil avait des parcours différents et des besoins d'information différents. La structure devait servir les trois sans compromis. On a conçu l'architecture d'information comme un système de filtrage progressif, pas comme une arborescence statique.",
+        image: "/images/case-studies/P-xel_work_Greenmood-01.webp",
       },
       approach: {
         label: "Approche",
         heading: "Configurateurs, système de composants et navigation par usage.",
         body: "L'interface a été structurée autour de deux axes : la navigation par catégorie produit et la navigation par cas d'usage. Un architecte cherchant une solution acoustique pour un open space arrive au bon produit en trois clics, sans passer par l'arborescence complète du catalogue.\n\nLes configurateurs produit sont le coeur du projet. Chaque produit configurable dispose d'une interface dédiée où l'utilisateur sélectionne dimensions, matériaux, finitions, et visualise le résultat en temps réel. On a conçu la logique de configuration en collaboration avec l'équipe technique de Greenmood pour garantir que chaque combinaison affichée soit réellement fabricable.\n\nLe design system a été construit pour supporter la diversité du catalogue sans exploser en complexité. Composants modulaires, grille adaptable, typographie technique pour les specs, mise en page éditoriale pour les cas d'usage. Le système devait fonctionner aussi bien pour une fiche produit minimaliste que pour un configurateur à 15 options.",
+        image: "/images/case-studies/P-xel_work_Greenmood-02.webp",
       },
       execution: {
         label: "Exécution",
@@ -94,11 +96,13 @@ const content: Record<Locale, CaseStudy> = {
         label: "Thinking",
         heading: "Thinking in product, not in pages.",
         body: "Before opening Figma, we mapped the entire catalog: product families, variants, options, technical specifications, use cases. We identified three distinct user profiles: the architect who specifies, the facility manager who compares, the Greenmood sales rep who presents. Each profile had different journeys and different information needs. The structure had to serve all three without compromise. We designed the information architecture as a progressive filtering system, not a static tree.",
+        image: "/images/case-studies/P-xel_work_Greenmood-01.webp",
       },
       approach: {
         label: "Approach",
         heading: "Configurators, component system and use-case navigation.",
         body: "The interface was structured around two axes: navigation by product category and navigation by use case. An architect looking for an acoustic solution for an open space reaches the right product in three clicks, without going through the full catalog tree.\n\nProduct configurators are the heart of the project. Each configurable product has a dedicated interface where the user selects dimensions, materials, finishes, and visualizes the result in real time. We designed the configuration logic in collaboration with Greenmood's technical team to ensure every displayed combination is actually manufacturable.\n\nThe design system was built to support catalog diversity without exploding in complexity. Modular components, adaptable grid, technical typography for specs, editorial layout for use cases. The system had to work equally well for a minimal product page and a configurator with 15 options.",
+        image: "/images/case-studies/P-xel_work_Greenmood-02.webp",
       },
       execution: {
         label: "Execution",

@@ -29,11 +29,13 @@ const content: Record<Locale, CaseStudy> = {
         label: "Réflexion",
         heading: "Un système d'acquisition, pas un projet web classique.",
         body: "On a abordé le projet comme un système d'acquisition, pas comme un projet web classique. Un site e-commerce seul ne génère rien. Des campagnes publicitaires sans une boutique optimisée pour la conversion brûlent du budget. Notre stratégie reposait sur l'intégration complète : le site e-commerce et les campagnes Facebook Ads conçus comme un seul dispositif. Chaque page produit, chaque creative publicitaire, chaque audience ciblée faisait partie du même entonnoir. Le design servait la conversion. Les campagnes servaient le trafic. Les deux fonctionnaient ensemble.",
+        image: "/images/case-studies/P-xel_work_Arduenna-01.webp",
       },
       approach: {
         label: "Approche",
         heading: "Deux boutiques, 103 campagnes, un seul objectif.",
         body: "On a construit deux sites e-commerce distincts pour couvrir les différents segments de marché d'Arduenna Gin. Chaque boutique a été conçue avec un objectif de conversion précis : navigation simplifiée, fiches produit orientées vers l'achat, tunnel de commande sans friction. Le design reflétait le positionnement premium de la marque, des visuels atmosphériques au choix typographique, tout en restant au service de la performance commerciale.\n\nCôté acquisition, on a structuré 103 campagnes Facebook Ads avec une approche méthodique. Segmentation fine des audiences : géographique, par centres d'intérêt, par comportement d'achat. Tests A/B systématiques sur les creatives, les accroches et les formats. Chaque campagne était mesurée, ajustée et optimisée en continu.\n\nL'intégration entre les sites et les campagnes était totale. Les pages d'atterrissage étaient alignées avec les promesses publicitaires. Le tracking était configuré pour mesurer chaque conversion, du clic à l'achat.",
+        image: "/images/case-studies/P-xel_work_Arduenna-02.webp",
       },
       execution: {
         label: "Exécution",
@@ -96,11 +98,13 @@ const content: Record<Locale, CaseStudy> = {
         label: "Thinking",
         heading: "An acquisition system, not a standard web project.",
         body: "We approached the project as an acquisition system, not a standard web project. An e-commerce site alone generates nothing. Ad campaigns without a conversion-optimized store burn budget. Our strategy rested on complete integration: the e-commerce site and Facebook Ads campaigns designed as a single device. Every product page, every ad creative, every targeted audience was part of the same funnel. Design served conversion. Campaigns served traffic. Both worked together.",
+        image: "/images/case-studies/P-xel_work_Arduenna-01.webp",
       },
       approach: {
         label: "Approach",
         heading: "Two stores, 103 campaigns, one objective.",
         body: "We built two distinct e-commerce sites to cover Arduenna Gin's different market segments. Each store was designed with a precise conversion objective: simplified navigation, purchase-oriented product pages, frictionless checkout flow. The design reflected the brand's premium positioning, from atmospheric visuals to typographic choices, while staying in service of commercial performance.\n\nOn the acquisition side, we structured 103 Facebook Ads campaigns with a methodical approach. Granular audience segmentation: geographic, by interests, by purchase behavior. Systematic A/B testing on creatives, hooks and formats. Every campaign was measured, adjusted and continuously optimized.\n\nThe integration between sites and campaigns was total. Landing pages were aligned with ad promises. Tracking was configured to measure every conversion, from click to purchase.",
+        image: "/images/case-studies/P-xel_work_Arduenna-02.webp",
       },
       execution: {
         label: "Execution",
