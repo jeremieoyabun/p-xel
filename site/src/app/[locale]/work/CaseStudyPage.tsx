@@ -8,6 +8,7 @@ import { CalendlyPopup } from "@/components/CalendlyPopup/CalendlyPopup";
 import { TallyPopup } from "@/components/TallyPopup/TallyPopup";
 import { FadeInUp } from "@/components/FadeInUp/FadeInUp";
 import { SchemaScript } from "@/components/SchemaScript/SchemaScript";
+import { ScrollToTop } from "@/components/ScrollToTop/ScrollToTop";
 import { breadcrumbSchema } from "@/lib/schema";
 import type { CaseStudy } from "@/lib/content/case-studies";
 import styles from "./CaseStudyPage.module.css";
@@ -21,6 +22,7 @@ export function CaseStudyPage({ study }: CaseStudyPageProps) {
 
   return (
     <>
+      <ScrollToTop />
       <SchemaScript
         schema={[
           breadcrumbSchema([
