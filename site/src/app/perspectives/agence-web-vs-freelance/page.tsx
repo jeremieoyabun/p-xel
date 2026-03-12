@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import { ArticlePage, Highlight } from "@/components/ArticlePage/ArticlePage";
+import { SITE_URL } from "@/lib/constants";
+import { getRelatedArticles } from "@/lib/articles";
 
 export const metadata: Metadata = {
   title: "Agence web ou freelance : comment choisir pour votre projet",
   description:
     "Agence web ou freelance ? Comparaison claire des modèles, forces, limites et critères pour choisir le bon prestataire web en Belgique.",
+  alternates: { canonical: `${SITE_URL}/perspectives/agence-web-vs-freelance/` },
+  openGraph: { images: [{ url: "/legacy-assets/images/Articles-Digitalisation.webp", width: 1200, height: 630 }] },
 };
 
 export default function AgenceWebVsFreelance() {
@@ -12,11 +16,14 @@ export default function AgenceWebVsFreelance() {
     <ArticlePage
       title="Agence web vs freelance : comment choisir pour votre projet"
       date="MARS 2026"
+      slug="agence-web-vs-freelance"
+      dateISO="2026-03-01"
       lead="Freelance, agence classique ou studio digital : le choix d&#39;un prestataire web ne se résume pas à une question de budget. C&#39;est une décision stratégique qui impacte la qualité, la vitesse et la pérennité de votre projet. Voici comment trancher."
       heroImage="/legacy-assets/images/Articles-Digitalisation.webp"
       heroAlt="Agence web vs freelance : comment choisir"
       tags={["Agence", "Freelance", "Stratégie"]}
       readingTime="8 minutes"
+      relatedArticles={getRelatedArticles("agence-web-vs-freelance")}
     >
       <p>
         Vous lancez un site, une application ou un produit digital. Très vite, la question se pose :

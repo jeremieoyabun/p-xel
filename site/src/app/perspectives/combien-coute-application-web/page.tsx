@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
+import { SITE_URL } from "@/lib/constants";
+import { getRelatedArticles } from "@/lib/articles";
 
 export const metadata: Metadata = {
   title: "Combien coûte une application web en 2026 ? Prix et budgets réalistes",
   description:
     "Prix application web en 2026 : MVP, SaaS, plateforme métier. Fourchettes réalistes, facteurs de coût et conseils pour optimiser ton budget.",
+  alternates: { canonical: `${SITE_URL}/perspectives/combien-coute-application-web/` },
+  openGraph: { images: [{ url: "/legacy-assets/images/Articles-AI.webp", width: 1200, height: 630 }] },
 };
 
 export default function CombienCouteApplicationWeb() {
@@ -13,11 +17,14 @@ export default function CombienCouteApplicationWeb() {
     <ArticlePage
       title="Combien coûte une application web en 2026 ?"
       date="MARS 2026"
+      slug="combien-coute-application-web"
+      dateISO="2026-03-01"
       lead="Une application web n&#39;est pas un site internet. L&#39;investissement est différent, la valeur créée est différente, l&#39;approche est différente. Que tu développes un outil métier, un SaaS ou un portail client, ce guide détaille les vrais prix du marché en 2026 pour un développement sur mesure de qualité."
       heroImage="/legacy-assets/images/Articles-AI.webp"
       heroAlt="Combien coûte une application web en 2026"
       tags={["Application web", "Budget", "Développement"]}
       readingTime="9 minutes"
+      relatedArticles={getRelatedArticles("combien-coute-application-web")}
     >
       <p>
         Le <strong>prix d&#39;une application web</strong> est l&#39;une des questions les plus posées par les entreprises

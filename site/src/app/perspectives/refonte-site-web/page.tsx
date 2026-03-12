@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
+import { SITE_URL } from "@/lib/constants";
+import { getRelatedArticles } from "@/lib/articles";
 
 export const metadata: Metadata = {
   title: "Refonte de site web : quand et pourquoi refaire son site",
   description:
     "Refonte site web : les signes qu'il est temps, les erreurs à éviter et la méthode pour réussir votre redesign en 2026.",
+  alternates: { canonical: `${SITE_URL}/perspectives/refonte-site-web/` },
+  openGraph: { images: [{ url: "/legacy-assets/images/Article-large_Web-design.webp", width: 1200, height: 630 }] },
 };
 
 export default function RefonteSiteWeb() {
@@ -13,11 +17,14 @@ export default function RefonteSiteWeb() {
     <ArticlePage
       title="Refonte de site web : quand et pourquoi refaire son site"
       date="JAN. 2026"
+      dateISO="2026-01-15"
+      slug="refonte-site-web"
       lead="Un site web vieillit vite. Ce qui fonctionnait il y a trois ans peut aujourd&#39;hui freiner ta croissance, nuire à ta crédibilité et te faire perdre des leads chaque semaine. La refonte de site web n&#39;est pas un caprice visuel : c&#39;est une décision stratégique qui, bien menée, génère un retour mesurable. Ce guide couvre les signaux d&#39;alerte, les pièges classiques et la méthode pour réussir une refonte sans perdre ce qui fonctionne déjà."
       heroImage="/legacy-assets/images/Article-large_Web-design.webp"
       heroAlt="Refonte de site web : quand et pourquoi refaire son site"
       tags={["Refonte", "Site web", "Stratégie"]}
       readingTime="8 minutes"
+      relatedArticles={getRelatedArticles("refonte-site-web")}
     >
       <p>
         Beaucoup d&#39;entreprises repoussent leur <strong>refonte de site web</strong> par manque de temps, de budget

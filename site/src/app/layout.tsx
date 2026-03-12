@@ -1,44 +1,35 @@
 import type { Metadata } from "next";
+import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
 import { CustomCursor } from "@/components/CustomCursor/CustomCursor";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/lib/constants";
 import "./globals.css";
 
-/*
- * Font loading: Self-hosted WOFF2 files via next/font/local.
- * Uncomment and replace when font files are added to public/fonts/.
- *
- * import localFont from "next/font/local";
- *
- * const spaceGrotesk = localFont({
- *   src: [
- *     { path: "../../public/fonts/SpaceGrotesk-Medium.woff2", weight: "500" },
- *     { path: "../../public/fonts/SpaceGrotesk-Bold.woff2", weight: "700" },
- *   ],
- *   variable: "--font-heading",
- *   display: "swap",
- *   preload: true,
- * });
- *
- * const satoshi = localFont({
- *   src: [
- *     { path: "../../public/fonts/Satoshi-Regular.woff2", weight: "400" },
- *     { path: "../../public/fonts/Satoshi-Medium.woff2", weight: "500" },
- *     { path: "../../public/fonts/Satoshi-Bold.woff2", weight: "700" },
- *   ],
- *   variable: "--font-body",
- *   display: "swap",
- *   preload: true,
- * });
- *
- * const jetbrainsMono = localFont({
- *   src: [{ path: "../../public/fonts/JetBrainsMono-Regular.woff2", weight: "400" }],
- *   variable: "--font-mono",
- *   display: "swap",
- *   preload: false,
- * });
- */
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["500", "700"],
+  variable: "--font-heading",
+  display: "swap",
+});
+
+const satoshi = localFont({
+  src: [
+    { path: "../../public/fonts/Satoshi-Regular.woff2", weight: "400" },
+    { path: "../../public/fonts/Satoshi-Medium.woff2", weight: "500" },
+    { path: "../../public/fonts/Satoshi-Bold.woff2", weight: "700" },
+  ],
+  variable: "--font-body",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -86,14 +77,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // When fonts are loaded, add font CSS variable classes to <html>:
-  // className={`${spaceGrotesk.variable} ${satoshi.variable} ${jetbrainsMono.variable}`}
   return (
-    <html lang="fr">
+    <html lang="fr" className={`${spaceGrotesk.variable} ${satoshi.variable} ${jetbrainsMono.variable}`}>
       <body>
         <CustomCursor />
         <Header />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>

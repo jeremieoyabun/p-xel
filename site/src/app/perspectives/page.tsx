@@ -8,6 +8,7 @@ import { FadeInUp } from "@/components/FadeInUp/FadeInUp";
 import { CTA } from "@/components/CTA/CTA";
 import { SchemaScript } from "@/components/SchemaScript/SchemaScript";
 import { breadcrumbSchema } from "@/lib/schema";
+import { articles } from "@/lib/articles";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -16,90 +17,6 @@ export const metadata: Metadata = {
   description:
     "Guides et analyses par P-XEL Studio : coûts d'un site web, aides à la digitalisation, choix technologiques et stratégies produit. Des points de vue concrets pour vos projets digitaux.",
 };
-
-const articles = [
-  {
-    slug: "combien-coute-un-site-web",
-    category: "Budget",
-    title: "Combien coûte un site web en 2026 ?",
-    excerpt:
-      "Landing page, site vitrine, e-commerce, refonte. Les vrais prix du marché et les variables qui font la différence.",
-    readingTime: "7 min",
-    image: "/legacy-assets/images/Article-large_Web-design.webp",
-  },
-  {
-    slug: "aides-digitalisation-belgique",
-    category: "Aides",
-    title: "Aides à la digitalisation en Belgique",
-    excerpt:
-      "Primes Bruxelles, chèques Wallonie. Les subsides pour financer votre projet digital en 2026.",
-    readingTime: "8 min",
-    image: "/legacy-assets/images/Articles-Digitalisation.webp",
-  },
-  {
-    slug: "no-code-vs-code",
-    category: "Technologie",
-    title: "No-code, low-code ou full-code : comment choisir",
-    excerpt:
-      "Webflow, Bubble ou sur mesure ? Les critères concrets pour choisir selon votre projet, budget et ambition.",
-    readingTime: "8 min",
-    image: "/legacy-assets/images/Articles-No-code.webp",
-  },
-  {
-    slug: "ia-creation-produit-digital",
-    category: "IA",
-    title: "Comment l'IA accélère la création de votre produit digital",
-    excerpt:
-      "Prototypage rapide, génération d'assets, automatisation. Ce que l'IA change concrètement dans la livraison d'un produit.",
-    readingTime: "9 min",
-    image: "/legacy-assets/images/Articles-AI.webp",
-  },
-  {
-    slug: "tendances-ux-ui-2026",
-    category: "UX/UI",
-    title: "Tendances UX/UI 2026",
-    excerpt:
-      "Interfaces prédictives, IA intégrée, accessibilité universelle, design durable. Les évolutions à anticiper.",
-    readingTime: "7 min",
-    image: "/legacy-assets/images/Article-large_UI.webp",
-  },
-  {
-    slug: "refonte-site-web",
-    category: "Stratégie",
-    title: "Refonte de site web : quand et pourquoi refaire son site",
-    excerpt:
-      "Les signes qu'il est temps, les erreurs à éviter et la méthode pour une refonte qui booste vos résultats.",
-    readingTime: "8 min",
-    image: "/legacy-assets/images/Article-large_Web-design.webp",
-  },
-  {
-    slug: "lancer-mvp-rapidement",
-    category: "Produit",
-    title: "MVP : comment lancer un produit digital en 4 semaines",
-    excerpt:
-      "La méthode pour passer de l'idée au premier produit testable. Cadrage, design, build, lancement.",
-    readingTime: "9 min",
-    image: "/legacy-assets/images/Articles-No-code.webp",
-  },
-  {
-    slug: "agence-web-vs-freelance",
-    category: "Stratégie",
-    title: "Agence web vs freelance : comment choisir",
-    excerpt:
-      "Freelance, agence, studio digital. Forces, limites et critères concrets pour choisir le bon partenaire.",
-    readingTime: "8 min",
-    image: "/legacy-assets/images/Articles-Digitalisation.webp",
-  },
-  {
-    slug: "combien-coute-application-web",
-    category: "Budget",
-    title: "Combien coûte une application web en 2026 ?",
-    excerpt:
-      "MVP, SaaS, plateforme métier. Les fourchettes de prix réalistes et les facteurs qui font varier le budget.",
-    readingTime: "9 min",
-    image: "/legacy-assets/images/Articles-AI.webp",
-  },
-];
 
 export default function PerspectivesPage() {
   return (

@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
+import { SITE_URL } from "@/lib/constants";
+import { getRelatedArticles } from "@/lib/articles";
 
 export const metadata: Metadata = {
   title: "MVP : comment lancer un produit digital en 4 semaines",
   description:
     "Comment lancer un MVP solide en 4 semaines ? Étapes, budget et méthode pour créer un produit digital qui valide vite.",
+  alternates: { canonical: `${SITE_URL}/perspectives/lancer-mvp-rapidement/` },
+  openGraph: { images: [{ url: "/legacy-assets/images/Articles-No-code.webp", width: 1200, height: 630 }] },
 };
 
 export default function LancerMvpRapidement() {
@@ -13,11 +17,14 @@ export default function LancerMvpRapidement() {
     <ArticlePage
       title="MVP : comment lancer un produit digital en 4 semaines"
       date="FÉV. 2026"
+      slug="lancer-mvp-rapidement"
+      dateISO="2026-02-01"
       lead="La majorité des projets digitaux échouent parce qu&#39;ils essaient d&#39;en faire trop, trop tôt. Fonctionnalités inutiles, architecture surdimensionnée, mois de développement avant le moindre retour terrain. Le résultat : un produit qui arrive trop tard, trop cher, et souvent à côté de ce que le marché attend. Lancer un MVP en 4 semaines, ce n&#39;est pas bâcler. C&#39;est choisir la vitesse comme avantage stratégique."
       heroImage="/legacy-assets/images/Articles-No-code.webp"
       heroAlt="MVP : comment lancer un produit digital rapidement"
       tags={["MVP", "Produit digital", "Startup"]}
       readingTime="9 minutes"
+      relatedArticles={getRelatedArticles("lancer-mvp-rapidement")}
     >
       <p>
         Chaque semaine passée à construire sans confronter le marché est une semaine de risque

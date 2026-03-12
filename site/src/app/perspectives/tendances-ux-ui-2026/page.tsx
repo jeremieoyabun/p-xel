@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import { ArticlePage, Highlight } from "@/components/ArticlePage/ArticlePage";
+import { SITE_URL } from "@/lib/constants";
+import { getRelatedArticles } from "@/lib/articles";
 
 export const metadata: Metadata = {
   title: "Tendances UX/UI 2026 : 8 évolutions clés pour votre produit digital",
   description:
     "Tendances UX/UI 2026 : interfaces prédictives, IA intégrée, accessibilité, design durable. Les évolutions à anticiper pour votre prochain projet.",
+  alternates: { canonical: `${SITE_URL}/perspectives/tendances-ux-ui-2026/` },
+  openGraph: { images: [{ url: "/legacy-assets/images/Article-large_UI.webp", width: 1200, height: 630 }] },
 };
 
 export default function TendancesUxUi2026() {
@@ -12,11 +16,14 @@ export default function TendancesUxUi2026() {
     <ArticlePage
       title="Tendances UX/UI 2026"
       date="2 NOV. 2025"
+      dateISO="2025-11-02"
+      slug="tendances-ux-ui-2026"
       lead="De l'interface prédictive à la personnalisation IA, du micro-moment au design durable, 2026 marque un tournant majeur dans l'expérience numérique. Voici les tendances UX/UI 2026 que les studios, agences et marques européennes doivent anticiper."
       heroImage="/legacy-assets/images/Article-large_UI.webp"
       heroAlt="Tendances UX/UI 2026"
       tags={["UX/UI", "Design", "Tendances"]}
       readingTime="7 minutes"
+      relatedArticles={getRelatedArticles("tendances-ux-ui-2026")}
     >
       <p>
         En 2026, l&#39;UX et l&#39;UI ne se contentent plus d&#39;être esthétiques : elles deviennent

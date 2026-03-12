@@ -1,23 +1,30 @@
 import type { Metadata } from "next";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
+import { SITE_URL } from "@/lib/constants";
+import { getRelatedArticles } from "@/lib/articles";
 
 export const metadata: Metadata = {
   title: "Aides digitalisation Belgique 2026 : primes Bruxelles et Wallonie",
   description:
     "Prime digitalisation Bruxelles (25-70%), chèque numérique Wallonie (50%). Conditions, montants et démarches pour financer votre projet digital en 2026.",
+  alternates: { canonical: `${SITE_URL}/perspectives/aides-digitalisation-belgique/` },
+  openGraph: { images: [{ url: "/legacy-assets/images/Articles-Digitalisation.webp", width: 1200, height: 630 }] },
 };
 
 export default function AidesDigitalisationBelgique() {
   return (
     <ArticlePage
       title="Prime digitalisation en Belgique : quelles aides pour les PME en 2026 ?"
+      slug="aides-digitalisation-belgique"
       date="28 NOV. 2025"
+      dateISO="2025-11-28"
       lead="En 2026, les PME, indépendants et ASBL de Bruxelles et Wallonie peuvent financer jusqu'à 70 % de leur projet digital : site web, e-commerce, automatisation, CRM, audit SEO. Ce guide clarifie les primes disponibles, les montants, les conditions et la meilleure façon de monter un dossier accepté."
       heroImage="/legacy-assets/images/Article-large_Digitalisation.webp"
       heroAlt="Prime digitalisation en Belgique pour PME et indépendants"
       tags={["Digitalisation", "PME Belgique", "Prime"]}
       readingTime="8 minutes"
+      relatedArticles={getRelatedArticles("aides-digitalisation-belgique")}
     >
       <p>
         La plupart des entreprises belges savent qu&#39;il existe des aides pour la digitalisation, mais très peu savent

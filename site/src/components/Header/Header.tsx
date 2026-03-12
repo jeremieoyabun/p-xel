@@ -80,6 +80,9 @@ export function Header() {
 
   return (
     <header className={headerClass}>
+      <a href="#main-content" className={styles.skipLink}>
+        Aller au contenu principal
+      </a>
       <div className={styles.inner}>
         <Link href="/" className={styles.logo} aria-label="P-XEL Studio - Accueil">
           <Logo />

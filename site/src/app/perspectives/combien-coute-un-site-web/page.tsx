@@ -1,23 +1,30 @@
 import type { Metadata } from "next";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
+import { SITE_URL } from "@/lib/constants";
+import { getRelatedArticles } from "@/lib/articles";
 
 export const metadata: Metadata = {
   title: "Combien coûte un site web en 2026 ? Prix et guide complet",
   description:
     "Prix site web en 2026 : landing page, site vitrine, e-commerce, web app. Fourchettes réalistes, facteurs de coût et conseils pour optimiser votre budget.",
+  alternates: { canonical: `${SITE_URL}/perspectives/combien-coute-un-site-web/` },
+  openGraph: { images: [{ url: "/legacy-assets/images/Article-large_Web-design.webp", width: 1200, height: 630 }] },
 };
 
 export default function CombienCouteUnSiteWeb() {
   return (
     <ArticlePage
       title="Combien coûte un site web en 2026 ?"
+      slug="combien-coute-un-site-web"
       date="20 NOV. 2025"
+      dateISO="2025-11-20"
       lead="En 2026, le prix d'un site internet ne se résume plus au nombre de pages. UX/UI, SEO, performances, e-commerce, automatisation et IA : ce guide détaille les fourchettes de prix réalistes pour un site vitrine, un site e-commerce ou une web app professionnelle, en Belgique, France, Luxembourg et Suisse."
       heroImage="/legacy-assets/images/Article-large_Web-design.webp"
       heroAlt="Combien coûte un site web en 2026"
       tags={["Site web", "UX/UI", "Budget"]}
       readingTime="7 minutes"
+      relatedArticles={getRelatedArticles("combien-coute-un-site-web")}
     >
       <p>
         En 2026, poser la question <strong>« combien coûte un site web ? »</strong> revient à demander le prix

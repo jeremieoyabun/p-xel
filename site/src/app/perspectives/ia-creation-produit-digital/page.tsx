@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
+import { SITE_URL } from "@/lib/constants";
+import { getRelatedArticles } from "@/lib/articles";
 
 export const metadata: Metadata = {
   title: "IA et design : comment l'IA accélère la création de produits digitaux en 2026",
   description:
     "IA pour designers et équipes produit en 2026 : recherche UX, prototypage, design systems, contenu. Les vrais usages concrets pour gagner en vitesse.",
+  alternates: { canonical: `${SITE_URL}/perspectives/ia-creation-produit-digital/` },
+  openGraph: { images: [{ url: "/legacy-assets/images/Articles-AI.webp", width: 1200, height: 630 }] },
 };
 
 export default function IaCreationProduitDigital() {
@@ -13,11 +17,14 @@ export default function IaCreationProduitDigital() {
     <ArticlePage
       title="IA pour les designers : les vrais usages en 2026"
       date="17 OCT. 2025"
+      dateISO="2025-10-17"
+      slug="ia-creation-produit-digital"
       lead="En 2026, l'IA ne remplace pas les designers : elle devient leur meilleur copilote. De la recherche UX aux maquettes Figma, du contenu d'interface aux design systems, voici comment les studios et équipes produit utilisent concrètement l'IA pour gagner en vitesse, en qualité et en impact, sans perdre leur patte créative."
       heroImage="/legacy-assets/images/Article-large_AI.webp"
       heroAlt="IA pour les designers : les vrais usages en 2026"
       tags={["IA", "Outils IA", "UX/UI"]}
       readingTime="9 minutes"
+      relatedArticles={getRelatedArticles("ia-creation-produit-digital")}
     >
       <p>
         En 2026, l&#39;Intelligence Artificielle fait partie du quotidien des designers : product designers, UX/UI,

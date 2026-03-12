@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
+import { SITE_URL } from "@/lib/constants";
+import { getRelatedArticles } from "@/lib/articles";
 
 export const metadata: Metadata = {
   title: "No-code, low-code ou full-code : quel choix pour votre projet en 2026",
   description:
     "No-code, low-code ou développement sur mesure ? Forces, limites et critères concrets pour choisir la bonne approche selon votre projet et votre budget.",
+  alternates: { canonical: `${SITE_URL}/perspectives/no-code-vs-code/` },
+  openGraph: { images: [{ url: "/legacy-assets/images/Articles-No-code.webp", width: 1200, height: 630 }] },
 };
 
 export default function NoCodeVsCode() {
@@ -18,6 +22,9 @@ export default function NoCodeVsCode() {
       heroAlt="No-code, low-code, full-code : comment choisir"
       tags={["No-code", "Full-code", "Product design"]}
       readingTime="8 minutes"
+      slug="no-code-vs-code"
+      dateISO="2025-12-01"
+      relatedArticles={getRelatedArticles("no-code-vs-code")}
     >
       <p>
         Pendant longtemps, lancer un site, une app ou un back-office interne signifiait forcément{" "}
