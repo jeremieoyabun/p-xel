@@ -34,13 +34,10 @@
     box-shadow var(--duration-base) var(--ease-in-out);
 }
 
-.placeholderText {
-  font-family: var(--font-heading);
-  font-size: var(--text-3xl);
-  font-weight: 700;
-  color: var(--text-dark-muted);
-  letter-spacing: var(--tracking-tighter);
-  opacity: 0.3;
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .content {

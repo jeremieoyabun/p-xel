@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./ProjectCard.module.css";
 
@@ -16,11 +17,19 @@ export function ProjectCard({
   description,
   result,
   href,
+  image,
 }: ProjectCardProps) {
   return (
     <Link href={href} className={styles.card}>
       <div className={styles.imagePlaceholder}>
-        <span className={styles.placeholderText}>{name}</span>
+        <Image
+          src={image || "/images/case-studies/placeholder.webp"}
+          alt={name}
+          width={700}
+          height={467}
+          sizes="(max-width: 767px) 100vw, 50vw"
+          className={styles.cardImg}
+        />
       </div>
       <div className={styles.content}>
         <h3 className={styles.name}>{name}</h3>

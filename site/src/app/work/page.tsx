@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Section } from "@/components/Section/Section";
 import { Label } from "@/components/Label/Label";
@@ -56,9 +57,14 @@ export default function WorkPage() {
               className={styles.featuredCard}
             >
               <div className={styles.featuredImage}>
-                <span className={styles.featuredImageText}>
-                  {project.name}
-                </span>
+                <Image
+                  src={project.image}
+                  alt={project.name}
+                  width={1400}
+                  height={788}
+                  sizes="(max-width: 768px) 100vw, 1200px"
+                  className={styles.projectImg}
+                />
               </div>
               <div className={styles.featuredContent}>
                 <h2 className={styles.featuredName}>{project.name}</h2>
@@ -93,9 +99,14 @@ export default function WorkPage() {
                 className={styles.secondaryCard}
               >
                 <div className={styles.secondaryImage}>
-                  <span className={styles.secondaryImageText}>
-                    {project.name}
-                  </span>
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    width={700}
+                    height={467}
+                    sizes="(max-width: 767px) 100vw, 50vw"
+                    className={styles.projectImg}
+                  />
                 </div>
                 <div className={styles.secondaryContent}>
                   <h3 className={styles.secondaryName}>{project.name}</h3>

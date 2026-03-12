@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Section } from "@/components/Section/Section";
 import { Label } from "@/components/Label/Label";
@@ -49,7 +50,15 @@ export function CaseStudyPage({ study }: CaseStudyPageProps) {
             <span className={styles.heroPeriod}>{study.period}</span>
           </div>
           <div className={styles.heroImage}>
-            <span className={styles.heroImageText}>{study.title}</span>
+            <Image
+              src={study.heroImage}
+              alt={study.title}
+              width={1400}
+              height={788}
+              sizes="(max-width: 768px) 100vw, 1200px"
+              priority
+              className={styles.heroImg}
+            />
           </div>
         </div>
       </Section>
