@@ -8,35 +8,19 @@
   left: 0;
   z-index: var(--z-nav);
   width: 100%;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(24px) saturate(1.6);
-  -webkit-backdrop-filter: blur(24px) saturate(1.6);
-  transition:
-    background 400ms ease,
-    border-color 400ms ease,
-    box-shadow 400ms ease;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-/* Scrolled on light sections: add shadow */
-.headerScrolled {
-  border-bottom-color: rgba(0, 0, 0, 0.08);
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
 }
 
 /* =====================================================
    Over dark / accent sections: white text + dark bg
    ===================================================== */
 
-.headerDark {
-  background: rgba(10, 10, 15, 0.85);
-  backdrop-filter: blur(16px) saturate(1.2);
-  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+.headerDark .navBar {
+  background: rgba(10, 10, 15, 0.6);
   border-bottom-color: rgba(255, 255, 255, 0.06);
 }
 
-.headerDark.headerScrolled {
-  border-bottom-color: var(--border-dark);
+.headerDark.headerScrolled .navBar {
+  background: rgba(10, 10, 15, 0.75);
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -52,6 +36,22 @@
   max-width: var(--content-wide);
   margin: 0 auto;
   padding: 0 var(--grid-margin);
+}
+
+.navBar {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(24px) saturate(1.6);
+  -webkit-backdrop-filter: blur(24px) saturate(1.6);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  transition:
+    background 400ms ease,
+    border-color 400ms ease,
+    box-shadow 400ms ease;
+}
+
+.headerScrolled .navBar {
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
 }
 
 .logo {

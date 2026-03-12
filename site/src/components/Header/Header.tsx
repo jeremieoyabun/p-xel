@@ -107,6 +107,7 @@ export function Header() {
           </div>
         </div>
       )}
+      <div className={styles.navBar}>
       <div className={styles.inner}>
         <Link href="/" className={styles.logo} aria-label="P-XEL Studio - Accueil">
           <Logo />
@@ -135,6 +136,7 @@ export function Header() {
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
+      </div>
       </div>
 
       {isOpen && (
