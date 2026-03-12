@@ -2,6 +2,7 @@ export interface CaseStudyBeat {
   label: string;
   heading: string;
   body: string;
+  image?: string;
 }
 
 export interface CaseStudy {

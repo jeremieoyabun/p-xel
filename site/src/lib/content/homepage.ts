@@ -103,10 +103,10 @@ const content = {
         },
         {
           name: "Oyabun",
-          tags: ["Game Design", "Web3", "UX/UI", "Move-to-Earn"],
+          tags: ["Game Design", "Web3", "NFT", "Play-to-Earn"],
           description:
-            "Application mobile move-to-earn dans un univers cyberpunk. Game design, UX/UI, economie tokenisee et direction artistique.",
-          result: "App gamifiee Web3",
+            "Jeu mobile Web3 dans un univers manga cyber-yakuza. Game design, direction artistique, tokenomics OYAB et systeme de progression NFT.",
+          result: "Ecosysteme gaming Web3 complet",
           href: "/work/oyabun/",
           image: "/images/case-studies/oyabun-hero.webp",
         },
@@ -309,10 +309,10 @@ const content = {
         },
         {
           name: "Oyabun",
-          tags: ["Game Design", "Web3", "UX/UI", "Move-to-Earn"],
+          tags: ["Game Design", "Web3", "NFT", "Play-to-Earn"],
           description:
-            "Move-to-earn mobile app in a cyberpunk universe. Game design, UX/UI, tokenized economy and art direction.",
-          result: "Gamified Web3 app",
+            "Web3 mobile game in a manga cyber-yakuza universe. Game design, art direction, OYAB tokenomics and NFT progression system.",
+          result: "Complete Web3 gaming ecosystem",
           href: "/en/work/oyabun/",
           image: "/images/case-studies/oyabun-hero.webp",
         },

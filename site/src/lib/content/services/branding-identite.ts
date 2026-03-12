@@ -126,8 +126,8 @@ const content: Record<Locale, ServicePage> = {
       studies: [
         {
           name: "Oyabun",
-          tags: ["Branding", "Direction artistique", "Identité visuelle"],
-          body: "Création de l'identité de marque complète pour Oyabun. Direction artistique, logo, système visuel et déclinaisons. Une marque distinctive construite pour se démarquer dans un marché concurrentiel.",
+          tags: ["Branding", "Direction artistique", "Univers manga"],
+          body: "Identite de marque complete pour un ecosysteme gaming Web3. Direction artistique cyber-yakuza, logo, personnages NFT, systeme visuel et declinaisons sur tous les supports.",
           href: "/work/oyabun/",
         },
       ],
@@ -309,8 +309,8 @@ const content: Record<Locale, ServicePage> = {
       studies: [
         {
           name: "Oyabun",
-          tags: ["Branding", "Art Direction", "Visual Identity"],
-          body: "Complete brand identity creation for Oyabun. Art direction, logo, visual system and variations. A distinctive brand built to stand out in a competitive market.",
+          tags: ["Branding", "Art Direction", "Manga universe"],
+          body: "Complete brand identity for a Web3 gaming ecosystem. Cyber-yakuza art direction, logo, NFT characters, visual system and variations across all touchpoints.",
           href: "/en/work/oyabun/",
         },
       ],

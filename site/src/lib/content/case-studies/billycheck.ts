@@ -29,11 +29,13 @@ const content: Record<Locale, CaseStudy> = {
         label: "Réflexion",
         heading: "Penser en produit, pas en fonctionnalités.",
         body: "On a commencé par le résultat final : l'écran que l'utilisateur voit après avoir scanné sa facture. C'est cet écran qui décide si le produit a de la valeur ou non. On a conçu à rebours : d'abord l'expérience de résultat, puis le flux d'upload, puis l'architecture technique pour supporter les deux. La décision clé a été d'éliminer le login obligatoire. Un utilisateur qui découvre le produit doit pouvoir scanner une facture et voir ses économies sans créer de compte. L'authentification intervient après la valeur, pas avant. Ce choix a conditionné toute l'architecture technique.",
+        image: "/legacy-assets/images/case-studies/P-xel_work_Billycheck-01.webp",
       },
       approach: {
         label: "Approche",
         heading: "Un flux en trois étapes. Zéro friction.",
         body: "L'interface a été conçue autour d'un parcours linéaire : upload, analyse, résultats. Pas de dashboard complexe. Pas de menu à comprendre. L'utilisateur arrive, uploade sa facture (photo ou PDF), et l'IA fait le reste.\n\nL'extraction des données repose sur GPT-4o Vision. Le modèle analyse la facture, identifie les champs pertinents (consommation, tarif, distributeur, type de compteur, région) et les structure pour le moteur de comparaison. On a construit un modèle de tarification qui intègre les spécificités du marché belge : tarifs régionaux, codes GRD, structures tarifaires mono et bi-horaires, coûts de distribution variables par zone.\n\nLe moteur de comparaison confronte les données extraites aux offres de plus de 15 fournisseurs d'énergie belges. Le résultat affiche les économies potentielles par fournisseur, classées par pertinence.\n\nLe modèle économique est freemium avec Stripe. Le premier scan est gratuit. Les scans suivants sont disponibles via des crédits payés.",
+        image: "/legacy-assets/images/case-studies/P-xel_work_Billycheck-02.webp",
       },
       execution: {
         label: "Exécution",
@@ -44,6 +46,7 @@ const content: Record<Locale, CaseStudy> = {
         label: "Impact",
         heading: "Un produit qui fonctionne. Pas une maquette.",
         body: "BillyCheck est en production. Les utilisateurs scannent des factures, obtiennent des comparaisons et identifient des économies. Le produit fait en 30 secondes ce qui demandait 15 minutes de recherche manuelle. L'expérience est fluide, l'IA est fiable, le modèle de monétisation est en place. C'est exactement ce que signifie \"on conçoit, on construit, on livre.\"",
+        image: "/legacy-assets/images/case-studies/P-xel_work_Billycheck-03.webp",
       },
     },
     deliverables: [
@@ -96,11 +99,13 @@ const content: Record<Locale, CaseStudy> = {
         label: "Thinking",
         heading: "Thinking in product, not in features.",
         body: "We started with the end result: the screen the user sees after scanning their bill. That screen decides whether the product has value or not. We designed backwards: first the results experience, then the upload flow, then the technical architecture to support both. The key decision was eliminating mandatory login. A user discovering the product should be able to scan a bill and see their savings without creating an account. Authentication comes after value, not before. This choice conditioned the entire technical architecture.",
+        image: "/legacy-assets/images/case-studies/P-xel_work_Billycheck-01.webp",
       },
       approach: {
         label: "Approach",
         heading: "A three-step flow. Zero friction.",
         body: "The interface was designed around a linear journey: upload, analysis, results. No complex dashboard. No menu to figure out. The user arrives, uploads their bill (photo or PDF), and AI does the rest.\n\nData extraction relies on GPT-4o Vision. The model analyzes the bill, identifies relevant fields (consumption, rate, distributor, meter type, region) and structures them for the comparison engine. We built a pricing model that integrates Belgian market specifics: regional rates, GRD codes, single and dual-rate structures, variable distribution costs by zone.\n\nThe comparison engine matches extracted data against offers from 15+ Belgian energy providers. The result displays potential savings by provider, ranked by relevance.\n\nThe business model is freemium with Stripe. The first scan is free. Subsequent scans are available via paid credits.",
+        image: "/legacy-assets/images/case-studies/P-xel_work_Billycheck-02.webp",
       },
       execution: {
         label: "Execution",
@@ -111,6 +116,7 @@ const content: Record<Locale, CaseStudy> = {
         label: "Impact",
         heading: "A product that works. Not a mockup.",
         body: "BillyCheck is in production. Users scan bills, get comparisons and identify savings. The product does in 30 seconds what used to take 15 minutes of manual research. The experience is smooth, the AI is reliable, the monetization model is in place. This is exactly what \"we design, we build, we ship\" means.",
+        image: "/legacy-assets/images/case-studies/P-xel_work_Billycheck-03.webp",
       },
     },
     deliverables: [

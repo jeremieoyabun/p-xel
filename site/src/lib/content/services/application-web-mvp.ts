@@ -126,8 +126,8 @@ const content: Record<Locale, ServicePage> = {
         },
         {
           name: "Oyabun",
-          tags: ["Web3", "Unity", "Application Telegram"],
-          body: "Écosystème Web3 complet. Site web, application Telegram avec mécaniques de jeu, intégration Unity pour les éléments 3D, architecture blockchain.",
+          tags: ["Web3", "NFT", "Play-to-Earn"],
+          body: "Jeu mobile Web3 play-to-earn dans un univers manga cyber-yakuza. Game design, tokenomics OYAB, systeme de progression NFT, direction artistique et UX mobile.",
           href: "/work/oyabun/",
         },
       ],
@@ -312,8 +312,8 @@ const content: Record<Locale, ServicePage> = {
         },
         {
           name: "Oyabun",
-          tags: ["Web3", "Unity", "Telegram Application"],
-          body: "Complete Web3 ecosystem. Website, Telegram application with game mechanics, Unity integration for 3D elements, blockchain architecture.",
+          tags: ["Web3", "NFT", "Play-to-Earn"],
+          body: "Web3 play-to-earn mobile game in a manga cyber-yakuza universe. Game design, OYAB tokenomics, NFT progression system, art direction and mobile UX.",
           href: "/en/work/oyabun/",
         },
       ],

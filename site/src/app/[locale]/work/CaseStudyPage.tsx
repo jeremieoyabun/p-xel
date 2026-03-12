@@ -67,14 +67,29 @@ export function CaseStudyPage({ study }: CaseStudyPageProps) {
       {Object.entries(beats).map(([key, beat]) => (
         <Section key={key}>
           <FadeInUp>
-            <div className={styles.beat}>
-              <Label>{beat.label}</Label>
-              <SectionHeading heading={beat.heading} />
-              <div className={styles.beatBody}>
-                {beat.body.split("\n\n").map((paragraph, i) => (
-                  <p key={i}>{paragraph}</p>
-                ))}
+            <div className={beat.image ? styles.beatWithImage : styles.beat}>
+              <div className={beat.image ? styles.beatText : undefined}>
+                <Label>{beat.label}</Label>
+                <SectionHeading heading={beat.heading} />
+                <div className={styles.beatBody}>
+                  {beat.body.split("\n\n").map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
+                  ))}
+                </div>
               </div>
+              {beat.image && (
+                <div className={styles.beatImage}>
+                  <Image
+                    src={beat.image}
+                    alt={beat.heading}
+                    width={600}
+                    height={800}
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                    loading="lazy"
+                    className={styles.beatImg}
+                  />
+                </div>
+              )}
             </div>
           </FadeInUp>
         </Section>

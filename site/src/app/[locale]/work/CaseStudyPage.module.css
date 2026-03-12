@@ -77,6 +77,30 @@
   max-width: var(--content-narrow);
 }
 
+.beatWithImage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.beatText {
+  max-width: var(--content-narrow);
+}
+
+.beatImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.beatImg {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  object-fit: contain;
+}
+
 .beatBody {
   display: flex;
   flex-direction: column;
@@ -179,6 +203,19 @@
 @media (max-width: 767px) {
   .heroTitle {
     font-size: var(--text-4xl);
+  }
+
+  .beatWithImage {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .beatImage {
+    order: -1;
+  }
+
+  .beatImg {
+    max-width: 320px;
   }
 
   .ctaActions {
