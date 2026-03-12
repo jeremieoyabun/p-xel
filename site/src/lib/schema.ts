@@ -189,6 +189,42 @@ export function serviceSchema(name: string, description: string) {
   };
 }
 
+interface ReviewItem {
+  name: string;
+  role: string;
+  company: string;
+  quote: string;
+}
+
+export function aggregateRatingSchema(reviews: readonly ReviewItem[]) {
+  return {
+    "@context": "https://schema.org" as const,
+    "@type": "ProfessionalService" as const,
+    "@id": `${SITE_URL}/#business`,
+    name: SITE_NAME,
+    aggregateRating: {
+      "@type": "AggregateRating" as const,
+      ratingValue: "5",
+      bestRating: "5",
+      ratingCount: String(reviews.length),
+      reviewCount: String(reviews.length),
+    },
+    review: reviews.map((r) => ({
+      "@type": "Review" as const,
+      reviewRating: {
+        "@type": "Rating" as const,
+        ratingValue: "5",
+        bestRating: "5",
+      },
+      author: {
+        "@type": "Person" as const,
+        name: r.name,
+      },
+      reviewBody: r.quote,
+    })),
+  };
+}
+
 export function faqSchema(items: readonly FAQItem[]) {
   return {
     "@context": "https://schema.org" as const,

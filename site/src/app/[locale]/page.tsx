@@ -23,6 +23,7 @@ import {
   webSiteSchema,
   breadcrumbSchema,
   faqSchema,
+  aggregateRatingSchema,
 } from "@/lib/schema";
 import { getHomepageContent } from "@/lib/content/homepage";
 import type { Locale } from "@/lib/i18n/config";
@@ -105,6 +106,11 @@ export default async function HomePage({
           webSiteSchema(),
           breadcrumbSchema([{ name: isFr ? "Accueil" : "Home", url: "/" }]),
           faqSchema(t.faq.items),
+          aggregateRatingSchema([
+            { name: "Mehdi A.", role: "Co-fondateur", company: "BillyCheck", quote: "P-XEL a transforme notre idee en produit fonctionnel en quelques semaines." },
+            { name: "Julien D.", role: "CEO", company: "ChairSplit", quote: "P-XEL a livre une plateforme complete, operationnelle, que nos equipes utilisent au quotidien." },
+            { name: "Martin B.", role: "Fondateur", company: "Arduenna Gin", quote: "En deux mois, on avait un site et une strategie d'acquisition qui ont genere deux ans de chiffre d'affaires." },
+          ]),
         ]}
       />
 

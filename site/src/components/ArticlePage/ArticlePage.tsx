@@ -79,8 +79,9 @@ export function ArticlePage({
     dateModified: dateISO,
     url: articleUrl,
     author: {
-      "@type": "Organization",
-      name: "P-XEL Studio",
+      "@type": "Person",
+      name: "Jeremie Oyabun",
+      jobTitle: "Founder & Product Designer",
       url: SITE_URL,
     },
     publisher: {

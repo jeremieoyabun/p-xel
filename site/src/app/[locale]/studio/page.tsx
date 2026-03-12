@@ -10,7 +10,7 @@ import { ProcessStep } from "@/components/ProcessStep/ProcessStep";
 import { CTA } from "@/components/CTA/CTA";
 import { FadeInUp } from "@/components/FadeInUp/FadeInUp";
 import { SchemaScript } from "@/components/SchemaScript/SchemaScript";
-import { breadcrumbSchema, organizationSchema } from "@/lib/schema";
+import { breadcrumbSchema, organizationSchema, personSchema } from "@/lib/schema";
 import {
   studioIntro,
   studioFounder,
@@ -63,6 +63,7 @@ export default async function StudioPage({
             { name: "Studio", url: `/${locale}/studio/` },
           ]),
           organizationSchema(),
+          personSchema(),
         ]}
       />
 
