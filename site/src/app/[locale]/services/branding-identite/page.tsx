@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ServicePage } from "../ServicePage";
-import { brandingIdentite } from "@/lib/content/services/branding-identite";
+import { getBrandingIdentiteContent } from "@/lib/content/services/branding-identite";
+import type { Locale } from "@/lib/i18n/config";
 
 export async function generateMetadata({
   params,
@@ -8,16 +9,16 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  void locale;
+  const service = getBrandingIdentiteContent(locale as Locale);
 
   return {
-    title: brandingIdentite.metaTitle,
-    description: brandingIdentite.metaDescription,
-    alternates: { canonical: `/${locale}/services/${brandingIdentite.slug}/` },
+    title: service.metaTitle,
+    description: service.metaDescription,
+    alternates: { canonical: `/${locale}/services/${service.slug}/` },
     openGraph: {
-      title: `${brandingIdentite.metaTitle} | P-XEL Studio`,
-      description: brandingIdentite.metaDescription,
-      url: `/${locale}/services/${brandingIdentite.slug}/`,
+      title: `${service.metaTitle} | P-XEL Studio`,
+      description: service.metaDescription,
+      url: `/${locale}/services/${service.slug}/`,
     },
   };
 }
@@ -28,7 +29,7 @@ export default async function BrandingIdentitePage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  void locale;
+  const service = getBrandingIdentiteContent(locale as Locale);
 
-  return <ServicePage service={brandingIdentite} />;
+  return <ServicePage service={service} locale={locale as Locale} />;
 }

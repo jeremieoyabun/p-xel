@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
 import { SITE_URL } from "@/lib/constants";
-import { getRelatedArticles } from "@/lib/articles";
+import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
 
 export async function generateMetadata({
   params,
@@ -44,6 +44,7 @@ export default async function LancerMvpRapidement({
       tags={["MVP", "Produit digital", "Startup"]}
       readingTime="9 minutes"
       relatedArticles={getRelatedArticles("lancer-mvp-rapidement")}
+      relatedServices={getRelatedServices("lancer-mvp-rapidement")}
     >
       <p>
         Chaque semaine passée à construire sans confronter le marché est une semaine de risque

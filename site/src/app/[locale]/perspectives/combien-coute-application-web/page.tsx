@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
 import { SITE_URL } from "@/lib/constants";
-import { getRelatedArticles } from "@/lib/articles";
+import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
 
 export async function generateMetadata({
   params,
@@ -44,6 +44,7 @@ export default async function CombienCouteApplicationWeb({
       tags={["Application web", "Budget", "Développement"]}
       readingTime="9 minutes"
       relatedArticles={getRelatedArticles("combien-coute-application-web")}
+      relatedServices={getRelatedServices("combien-coute-application-web")}
     >
       {/* Article body kept in French for both locales - full i18n of article bodies will come later */}
       <p>

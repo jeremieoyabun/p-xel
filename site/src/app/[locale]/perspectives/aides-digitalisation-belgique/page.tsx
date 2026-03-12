@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
 import { SITE_URL } from "@/lib/constants";
-import { getRelatedArticles } from "@/lib/articles";
+import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
 
 export async function generateMetadata({
   params,
@@ -44,6 +44,7 @@ export default async function AidesDigitalisationBelgique({
       tags={["Digitalisation", "PME Belgique", "Prime"]}
       readingTime="8 minutes"
       relatedArticles={getRelatedArticles("aides-digitalisation-belgique")}
+      relatedServices={getRelatedServices("aides-digitalisation-belgique")}
     >
       {/* Article body kept in French for both locales - full i18n of article bodies will come later */}
       <p>

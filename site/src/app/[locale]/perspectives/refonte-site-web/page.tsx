@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
 import { SITE_URL } from "@/lib/constants";
-import { getRelatedArticles } from "@/lib/articles";
+import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
 
 export async function generateMetadata({
   params,
@@ -44,6 +44,7 @@ export default async function RefonteSiteWeb({
       tags={["Refonte", "Site web", "Stratégie"]}
       readingTime="8 minutes"
       relatedArticles={getRelatedArticles("refonte-site-web")}
+      relatedServices={getRelatedServices("refonte-site-web")}
     >
       <p>
         Beaucoup d&#39;entreprises repoussent leur <strong>refonte de site web</strong> par manque de temps, de budget

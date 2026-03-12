@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ArticlePage, Highlight } from "@/components/ArticlePage/ArticlePage";
 import { SITE_URL } from "@/lib/constants";
-import { getRelatedArticles } from "@/lib/articles";
+import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
 
 export async function generateMetadata({
   params,
@@ -43,6 +43,7 @@ export default async function TendancesUxUi2026({
       tags={["UX/UI", "Design", "Tendances"]}
       readingTime="7 minutes"
       relatedArticles={getRelatedArticles("tendances-ux-ui-2026")}
+      relatedServices={getRelatedServices("tendances-ux-ui-2026")}
     >
       <p>
         En 2026, l&#39;UX et l&#39;UI ne se contentent plus d&#39;être esthétiques : elles deviennent

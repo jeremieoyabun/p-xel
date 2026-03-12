@@ -243,14 +243,92 @@
   margin-top: var(--space-6);
 }
 
+/* Related Articles */
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+.relatedCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-6);
+  border: 1px solid var(--border-dark);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color var(--duration-fast) var(--ease-in-out),
+    transform var(--duration-base) var(--ease-out);
+}
+
+.relatedCard:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.relatedCategory {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.relatedTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.relatedTime {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-dark-muted);
+  letter-spacing: var(--tracking-wide);
+}
+
+/* Other Services */
+.otherServicesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.otherServiceLink {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-dark-secondary);
+  text-decoration: none;
+  padding: var(--space-3) var(--space-5);
+  border: 1px solid var(--border-dark);
+  letter-spacing: var(--tracking-wide);
+  transition: border-color var(--duration-fast) var(--ease-in-out),
+    color var(--duration-fast) var(--ease-in-out);
+}
+
+.otherServiceLink:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 @media (max-width: 767px) {
   .offerGrid,
   .approachGrid,
-  .studyGrid {
+  .studyGrid,
+  .relatedGrid {
     grid-template-columns: 1fr;
   }
 
   .heroCta {
+    flex-direction: column;
+  }
+
+  .otherServicesGrid {
     flex-direction: column;
   }
 }

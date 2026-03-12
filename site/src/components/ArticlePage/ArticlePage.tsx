@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SchemaScript } from "@/components/SchemaScript/SchemaScript";
 import { SITE_URL } from "@/lib/constants";
+import { SERVICE_LABELS } from "@/lib/service-labels";
 import s from "./ArticlePage.module.css";
 
 interface RelatedArticle {
@@ -23,6 +24,7 @@ interface ArticlePageProps {
   tags: string[];
   readingTime: string;
   relatedArticles?: RelatedArticle[];
+  relatedServices?: string[];
   children: ReactNode;
 }
 
@@ -37,6 +39,7 @@ export function ArticlePage({
   tags,
   readingTime,
   relatedArticles,
+  relatedServices,
   children,
 }: ArticlePageProps) {
   const articleUrl = `${SITE_URL}/perspectives/${slug}`;
@@ -150,6 +153,27 @@ export function ArticlePage({
             ))}
           </div>
         </footer>
+
+        {/* Related services */}
+        {relatedServices && relatedServices.length > 0 && (
+          <div className={s.relatedServices}>
+            <h2 className={s.relatedHeading}>Services associes</h2>
+            <div className={s.serviceLinks}>
+              {relatedServices.map((slug) => {
+                const labels = SERVICE_LABELS[slug];
+                return (
+                  <Link
+                    key={slug}
+                    href={`/services/${slug}/`}
+                    className={s.serviceLink}
+                  >
+                    {labels ? labels.fr : slug}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
         {/* Related articles */}
         {relatedArticles && relatedArticles.length > 0 && (

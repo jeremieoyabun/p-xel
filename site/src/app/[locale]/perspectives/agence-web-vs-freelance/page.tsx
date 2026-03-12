@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ArticlePage, Highlight } from "@/components/ArticlePage/ArticlePage";
 import { SITE_URL } from "@/lib/constants";
-import { getRelatedArticles } from "@/lib/articles";
+import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
 
 export async function generateMetadata({
   params,
@@ -43,6 +43,7 @@ export default async function AgenceWebVsFreelance({
       tags={["Agence", "Freelance", "Stratégie"]}
       readingTime="8 minutes"
       relatedArticles={getRelatedArticles("agence-web-vs-freelance")}
+      relatedServices={getRelatedServices("agence-web-vs-freelance")}
     >
       <p>
         Vous lancez un site, une application ou un produit digital. Très vite, la question se pose :

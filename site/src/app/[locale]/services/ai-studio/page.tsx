@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ServicePage } from "../ServicePage";
-import { aiStudio } from "@/lib/content/services/ai-studio";
+import { getAiStudioContent } from "@/lib/content/services/ai-studio";
+import type { Locale } from "@/lib/i18n/config";
 
 export async function generateMetadata({
   params,
@@ -8,16 +9,16 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  void locale;
+  const service = getAiStudioContent(locale as Locale);
 
   return {
-    title: aiStudio.metaTitle,
-    description: aiStudio.metaDescription,
-    alternates: { canonical: `/${locale}/services/${aiStudio.slug}/` },
+    title: service.metaTitle,
+    description: service.metaDescription,
+    alternates: { canonical: `/${locale}/services/${service.slug}/` },
     openGraph: {
-      title: `${aiStudio.metaTitle} | P-XEL Studio`,
-      description: aiStudio.metaDescription,
-      url: `/${locale}/services/${aiStudio.slug}/`,
+      title: `${service.metaTitle} | P-XEL Studio`,
+      description: service.metaDescription,
+      url: `/${locale}/services/${service.slug}/`,
     },
   };
 }
@@ -28,7 +29,7 @@ export default async function AiStudioPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  void locale;
+  const service = getAiStudioContent(locale as Locale);
 
-  return <ServicePage service={aiStudio} />;
+  return <ServicePage service={service} locale={locale as Locale} />;
 }

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
 import { SITE_URL } from "@/lib/constants";
-import { getRelatedArticles } from "@/lib/articles";
+import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
 
 export async function generateMetadata({
   params,
@@ -44,6 +44,7 @@ export default async function IaCreationProduitDigital({
       tags={["IA", "Outils IA", "UX/UI"]}
       readingTime="9 minutes"
       relatedArticles={getRelatedArticles("ia-creation-produit-digital")}
+      relatedServices={getRelatedServices("ia-creation-produit-digital")}
     >
       <p>
         En 2026, l&#39;Intelligence Artificielle fait partie du quotidien des designers : product designers, UX/UI,

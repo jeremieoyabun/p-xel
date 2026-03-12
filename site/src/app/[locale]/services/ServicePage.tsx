@@ -15,21 +15,38 @@ import {
   serviceSchema,
   faqSchema,
 } from "@/lib/schema";
+import { getArticlesForService } from "@/lib/articles";
+import { SERVICE_LABELS } from "@/lib/service-labels";
 import type { ServicePage as ServicePageData } from "@/lib/content/services/types";
+import type { Locale } from "@/lib/i18n/config";
+import { localePath } from "@/lib/i18n/get-path";
 import styles from "./ServicePage.module.css";
+
+const ALL_SERVICE_SLUGS = [
+  "creation-site-web",
+  "application-web-mvp",
+  "ux-ui-design",
+  "branding-identite",
+  "ai-studio",
+];
 
 interface ServicePageProps {
   service: ServicePageData;
+  locale?: Locale;
 }
 
-export function ServicePage({ service }: ServicePageProps) {
+export function ServicePage({ service, locale = "fr" }: ServicePageProps) {
+  const isFr = locale === "fr";
+  const relatedArticles = getArticlesForService(service.slug);
+  const otherServices = ALL_SERVICE_SLUGS.filter((s) => s !== service.slug).slice(0, 3);
+
   return (
     <>
       <SchemaScript
         schema={[
           breadcrumbSchema([
-            { name: "Accueil", url: "/" },
-            { name: service.hero.label, url: `/services/${service.slug}/` },
+            { name: isFr ? "Accueil" : "Home", url: `/${locale}/` },
+            { name: service.hero.label, url: `/${locale}/services/${service.slug}/` },
           ]),
           serviceSchema(service.hero.label, service.metaDescription),
           faqSchema(service.faq.items),
@@ -45,8 +62,8 @@ export function ServicePage({ service }: ServicePageProps) {
             subtext={service.hero.subheadline}
           />
           <div className={styles.heroCta}>
-            <CalendlyPopup label="Réserver un appel" variant="dark" />
-            <TallyPopup label="Lancer mon projet" variant="dark" />
+            <CalendlyPopup label={isFr ? "Réserver un appel" : "Book a call"} variant="dark" />
+            <TallyPopup label={isFr ? "Lancer mon projet" : "Start my project"} variant="dark" />
           </div>
         </FadeInUp>
       </Section>
@@ -153,7 +170,9 @@ export function ServicePage({ service }: ServicePageProps) {
                   ))}
                 </div>
                 <p className={styles.studyBody}>{study.body}</p>
-                <span className={styles.studyLink}>Voir le projet</span>
+                <span className={styles.studyLink}>
+                  {isFr ? "Voir le projet" : "View project"}
+                </span>
               </Link>
             ))}
           </div>
@@ -175,8 +194,8 @@ export function ServicePage({ service }: ServicePageProps) {
           </span>
           <p className={styles.investmentNote}>{service.investment.note}</p>
           <div className={styles.investmentCta}>
-            <Button variant="ghost" href="/contact/">
-              Demander une estimation
+            <Button variant="ghost" href={localePath("/contact/", locale)}>
+              {isFr ? "Demander une estimation" : "Request a quote"}
             </Button>
           </div>
         </FadeInUp>
@@ -190,13 +209,65 @@ export function ServicePage({ service }: ServicePageProps) {
         </FadeInUp>
       </Section>
 
+      {/* Related Articles */}
+      {relatedArticles.length > 0 && (
+        <Section>
+          <FadeInUp>
+            <Label>{isFr ? "Lectures connexes" : "Related reading"}</Label>
+            <SectionHeading
+              heading={isFr ? "Approfondir le sujet." : "Go deeper."}
+            />
+            <div className={styles.relatedGrid}>
+              {relatedArticles.map((article) => (
+                <Link
+                  key={article.slug}
+                  href={localePath(`/perspectives/${article.slug}/`, locale)}
+                  className={styles.relatedCard}
+                >
+                  <span className={styles.relatedCategory}>
+                    {article.category}
+                  </span>
+                  <span className={styles.relatedTitle}>{article.title}</span>
+                  <span className={styles.relatedTime}>
+                    {article.readingTime}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </FadeInUp>
+        </Section>
+      )}
+
+      {/* Other Services */}
+      <Section variant="accent">
+        <FadeInUp>
+          <Label>
+            {isFr ? "Nos autres services" : "Our other services"}
+          </Label>
+          <div className={styles.otherServicesGrid}>
+            {otherServices.map((slug) => {
+              const labels = SERVICE_LABELS[slug];
+              return (
+                <Link
+                  key={slug}
+                  href={localePath(`/services/${slug}/`, locale)}
+                  className={styles.otherServiceLink}
+                >
+                  {labels ? labels[locale] : slug}
+                </Link>
+              );
+            })}
+          </div>
+        </FadeInUp>
+      </Section>
+
       {/* CTA */}
       <Section fullHeight>
         <CTA
           heading={service.cta.heading}
           subtext={service.cta.subtext}
-          primaryLabel="Réserver un appel"
-          secondaryLabel="Lancer mon projet"
+          primaryLabel={isFr ? "Réserver un appel" : "Book a call"}
+          secondaryLabel={isFr ? "Lancer mon projet" : "Start my project"}
         />
       </Section>
     </>

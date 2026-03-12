@@ -309,11 +309,43 @@
   }
 }
 
+/* ---- Related services ---- */
+
+.relatedServices {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid #e2e2e4;
+}
+
+.serviceLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.serviceLink {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  letter-spacing: 0.04em;
+  transition: background 200ms ease, color 200ms ease;
+}
+
+.serviceLink:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
 /* ---- Related articles ---- */
 
 .related {
-  margin-top: 56px;
-  padding-top: 40px;
+  margin-top: 40px;
+  padding-top: 32px;
   border-top: 1px solid #e2e2e4;
 }
 

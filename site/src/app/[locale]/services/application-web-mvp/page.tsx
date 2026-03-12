@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ServicePage } from "../ServicePage";
-import { applicationWebMvp } from "@/lib/content/services/application-web-mvp";
+import { getApplicationWebMvpContent } from "@/lib/content/services/application-web-mvp";
+import type { Locale } from "@/lib/i18n/config";
 
 export async function generateMetadata({
   params,
@@ -8,16 +9,16 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  void locale;
+  const service = getApplicationWebMvpContent(locale as Locale);
 
   return {
-    title: applicationWebMvp.metaTitle,
-    description: applicationWebMvp.metaDescription,
-    alternates: { canonical: `/${locale}/services/${applicationWebMvp.slug}/` },
+    title: service.metaTitle,
+    description: service.metaDescription,
+    alternates: { canonical: `/${locale}/services/${service.slug}/` },
     openGraph: {
-      title: `${applicationWebMvp.metaTitle} | P-XEL Studio`,
-      description: applicationWebMvp.metaDescription,
-      url: `/${locale}/services/${applicationWebMvp.slug}/`,
+      title: `${service.metaTitle} | P-XEL Studio`,
+      description: service.metaDescription,
+      url: `/${locale}/services/${service.slug}/`,
     },
   };
 }
@@ -28,7 +29,7 @@ export default async function ApplicationWebMvpPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  void locale;
+  const service = getApplicationWebMvpContent(locale as Locale);
 
-  return <ServicePage service={applicationWebMvp} />;
+  return <ServicePage service={service} locale={locale as Locale} />;
 }

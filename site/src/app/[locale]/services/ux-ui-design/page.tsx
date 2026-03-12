@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ServicePage } from "../ServicePage";
-import { uxUiDesign } from "@/lib/content/services/ux-ui-design";
+import { getUxUiDesignContent } from "@/lib/content/services/ux-ui-design";
+import type { Locale } from "@/lib/i18n/config";
 
 export async function generateMetadata({
   params,
@@ -8,16 +9,16 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  void locale;
+  const service = getUxUiDesignContent(locale as Locale);
 
   return {
-    title: uxUiDesign.metaTitle,
-    description: uxUiDesign.metaDescription,
-    alternates: { canonical: `/${locale}/services/${uxUiDesign.slug}/` },
+    title: service.metaTitle,
+    description: service.metaDescription,
+    alternates: { canonical: `/${locale}/services/${service.slug}/` },
     openGraph: {
-      title: `${uxUiDesign.metaTitle} | P-XEL Studio`,
-      description: uxUiDesign.metaDescription,
-      url: `/${locale}/services/${uxUiDesign.slug}/`,
+      title: `${service.metaTitle} | P-XEL Studio`,
+      description: service.metaDescription,
+      url: `/${locale}/services/${service.slug}/`,
     },
   };
 }
@@ -28,7 +29,7 @@ export default async function UxUiDesignPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  void locale;
+  const service = getUxUiDesignContent(locale as Locale);
 
-  return <ServicePage service={uxUiDesign} />;
+  return <ServicePage service={service} locale={locale as Locale} />;
 }
