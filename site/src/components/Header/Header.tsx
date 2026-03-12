@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useLayoutEffect, useRef } from "react";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { headerNav } from "@/lib/navigation";
@@ -30,11 +29,10 @@ function Logo() {
 }
 
 export function Header() {
-  const pathname = usePathname();
   const headerRef = useRef<HTMLElement>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [overDark, setOverDark] = useState(() => pathname === "/");
+  const [overDark, setOverDark] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -84,9 +82,6 @@ export function Header() {
 
   return (
     <header ref={headerRef} className={headerClass}>
-      <a href="#main-content" className={styles.skipLink}>
-        Aller au contenu principal
-      </a>
       <div className={styles.inner}>
         <Link href="/" className={styles.logo} aria-label="P-XEL Studio - Accueil">
           <Logo />

@@ -1,28 +1,5 @@
-/* Skip to content (accessibility) */
-.skipLink {
-  position: absolute;
-  top: -100%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 200;
-  padding: 8px 20px;
-  background: var(--accent);
-  color: #fff;
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 0 0 8px 8px;
-  text-decoration: none;
-  transition: top 200ms ease;
-}
-
-.skipLink:focus {
-  top: 0;
-  outline: none;
-}
-
 /* =====================================================
-   Header base: transparent, dark text (over light bg)
+   Header base: frosted glass, dark text (over light bg)
    ===================================================== */
 
 .header {
@@ -30,9 +7,9 @@
   top: 0;
   z-index: var(--z-nav);
   width: 100%;
-  background: transparent;
-  backdrop-filter: blur(12px) saturate(1.3);
-  -webkit-backdrop-filter: blur(12px) saturate(1.3);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
   transition:
     background 400ms ease,
     border-color 400ms ease,
@@ -40,11 +17,8 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-/* Scrolled on light sections: light frosted glass */
+/* Scrolled on light sections: add shadow */
 .headerScrolled {
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(16px) saturate(1.4);
-  -webkit-backdrop-filter: blur(16px) saturate(1.4);
   border-bottom-color: rgba(0, 0, 0, 0.08);
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
 }
@@ -54,13 +28,13 @@
    ===================================================== */
 
 .headerDark {
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
   border-bottom-color: rgba(255, 255, 255, 0.06);
 }
 
 .headerDark.headerScrolled {
-  background: rgba(10, 10, 15, 0.85);
-  backdrop-filter: blur(16px) saturate(1.2);
-  -webkit-backdrop-filter: blur(16px) saturate(1.2);
   border-bottom-color: var(--border-dark);
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
 }
