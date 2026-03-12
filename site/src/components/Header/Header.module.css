@@ -109,6 +109,12 @@
   display: flex;
   align-items: center;
   gap: var(--space-8);
+  color: rgba(10, 10, 15, 0.6);
+  transition: color 400ms ease;
+}
+
+.headerDark .desktopNav {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .navLink {
