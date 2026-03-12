@@ -1,10 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useLocale } from "@/lib/i18n/locale-context";
 import { CalendlyPopup } from "@/components/CalendlyPopup/CalendlyPopup";
 import s from "./FloatingCTA.module.css";
 
 export function FloatingCTA() {
+  const locale = useLocale();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -18,7 +20,7 @@ export function FloatingCTA() {
   return (
     <div className={`${s.bar} ${visible ? s.barVisible : ""}`}>
       <div className={s.inner}>
-        <CalendlyPopup label="Réserver un appel" variant="light" />
+        <CalendlyPopup label={locale === "fr" ? "Reserver un appel" : "Book a call"} variant="light" />
       </div>
     </div>
   );

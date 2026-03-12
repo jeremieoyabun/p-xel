@@ -1,12 +1,8 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import {
-  contactForm,
-  projectTypes,
-  budgetRanges,
-  timelineOptions,
-} from "@/lib/content/contact";
+import { useLocale } from "@/lib/i18n/locale-context";
+import { getContactContent } from "@/lib/content/contact";
 import styles from "./ContactForm.module.css";
 
 interface FieldErrors {
@@ -17,18 +13,25 @@ interface FieldErrors {
 }
 
 export function ContactForm() {
+  const locale = useLocale();
+  const t = getContactContent(locale);
+  const isFr = locale === "fr";
+
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errors, setErrors] = useState<FieldErrors>({});
 
+  const required = isFr ? "Requis" : "Required";
+  const invalidEmail = isFr ? "Email invalide" : "Invalid email";
+
   function validate(form: FormData): FieldErrors {
     const errs: FieldErrors = {};
-    if (!form.get("nom")) errs.nom = "Requis";
+    if (!form.get("nom")) errs.nom = required;
     const email = form.get("email") as string;
-    if (!email) errs.email = "Requis";
+    if (!email) errs.email = required;
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
-      errs.email = "Email invalide";
-    if (!form.get("projectType")) errs.projectType = "Requis";
-    if (!form.get("message")) errs.message = "Requis";
+      errs.email = invalidEmail;
+    if (!form.get("projectType")) errs.projectType = required;
+    if (!form.get("message")) errs.message = required;
     return errs;
   }
 
@@ -36,7 +39,6 @@ export function ContactForm() {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
 
-    // Honeypot check
     if (form.get("website")) return;
 
     const errs = validate(form);
@@ -70,7 +72,7 @@ export function ContactForm() {
   }
 
   if (status === "success") {
-    return <p className={styles.success}>{contactForm.successMessage}</p>;
+    return <p className={styles.success}>{t.contactForm.successMessage}</p>;
   }
 
   return (
@@ -89,13 +91,13 @@ export function ContactForm() {
 
       <div className={styles.field}>
         <label htmlFor="nom" className={styles.label}>
-          Nom <span className={styles.required}>*</span>
+          {isFr ? "Nom" : "Name"} <span className={styles.required}>*</span>
         </label>
         <input
           type="text"
           id="nom"
           name="nom"
-          placeholder="Votre nom"
+          placeholder={isFr ? "Votre nom" : "Your name"}
           className={`${styles.input} ${errors.nom ? styles.invalid : ""}`}
           required
         />
@@ -110,7 +112,7 @@ export function ContactForm() {
           type="email"
           id="email"
           name="email"
-          placeholder="votre@email.com"
+          placeholder={isFr ? "votre@email.com" : "your@email.com"}
           className={`${styles.input} ${errors.email ? styles.invalid : ""}`}
           required
         />
@@ -121,7 +123,7 @@ export function ContactForm() {
 
       <div className={styles.field}>
         <label htmlFor="projectType" className={styles.label}>
-          Type de projet <span className={styles.required}>*</span>
+          {isFr ? "Type de projet" : "Project type"} <span className={styles.required}>*</span>
         </label>
         <select
           id="projectType"
@@ -131,9 +133,9 @@ export function ContactForm() {
           required
         >
           <option value="" disabled>
-            Sélectionnez
+            {isFr ? "Selectionnez" : "Select"}
           </option>
-          {projectTypes.map((type) => (
+          {t.projectTypes.map((type) => (
             <option key={type} value={type}>
               {type}
             </option>
@@ -146,7 +148,7 @@ export function ContactForm() {
 
       <div className={styles.field}>
         <label htmlFor="budget" className={styles.label}>
-          Budget estimatif
+          {isFr ? "Budget estimatif" : "Estimated budget"}
         </label>
         <select
           id="budget"
@@ -154,8 +156,8 @@ export function ContactForm() {
           className={styles.select}
           defaultValue=""
         >
-          <option value="">Non précisé</option>
-          {budgetRanges.map((range) => (
+          <option value="">{isFr ? "Non precise" : "Not specified"}</option>
+          {t.budgetRanges.map((range) => (
             <option key={range} value={range}>
               {range}
             </option>
@@ -165,7 +167,7 @@ export function ContactForm() {
 
       <div className={styles.field}>
         <label htmlFor="timeline" className={styles.label}>
-          Délai souhaité
+          {isFr ? "Delai souhaite" : "Desired timeline"}
         </label>
         <select
           id="timeline"
@@ -173,8 +175,8 @@ export function ContactForm() {
           className={styles.select}
           defaultValue=""
         >
-          <option value="">Non précisé</option>
-          {timelineOptions.map((option) => (
+          <option value="">{isFr ? "Non precise" : "Not specified"}</option>
+          {t.timelineOptions.map((option) => (
             <option key={option} value={option}>
               {option}
             </option>
@@ -189,7 +191,7 @@ export function ContactForm() {
         <textarea
           id="message"
           name="message"
-          placeholder="Décrivez votre projet, vos objectifs et vos contraintes principales."
+          placeholder={isFr ? "Decrivez votre projet, vos objectifs et vos contraintes principales." : "Describe your project, goals and main constraints."}
           className={`${styles.textarea} ${errors.message ? styles.invalid : ""}`}
           required
         />
@@ -199,7 +201,7 @@ export function ContactForm() {
       </div>
 
       {status === "error" && (
-        <p className={styles.error}>{contactForm.errorMessage}</p>
+        <p className={styles.error}>{t.contactForm.errorMessage}</p>
       )}
 
       <button
@@ -209,7 +211,7 @@ export function ContactForm() {
       >
         <span className={styles.submitInk} aria-hidden="true" />
         <span className={styles.submitLabel}>
-          {status === "submitting" ? "Envoi..." : contactForm.submitLabel}
+          {status === "submitting" ? (isFr ? "Envoi..." : "Sending...") : t.contactForm.submitLabel}
         </span>
         <span className={styles.submitCircle} aria-hidden="true">
           <svg className={styles.submitIcon} viewBox="0 0 24 24" aria-hidden="true">
