@@ -3,7 +3,10 @@
 import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { headerNav } from "@/lib/navigation";
+import { useLocale } from "@/lib/i18n/locale-context";
+import { getHeaderNav } from "@/lib/navigation";
+import { localePath } from "@/lib/i18n/get-path";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher/LanguageSwitcher";
 import styles from "./Header.module.css";
 import bannerStyles from "../TopBanner/TopBanner.module.css";
 
@@ -30,11 +33,15 @@ function Logo() {
 }
 
 export function Header() {
+  const locale = useLocale();
   const headerRef = useRef<HTMLElement>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [overDark, setOverDark] = useState(false);
   const [bannerVisible, setBannerVisible] = useState(true);
+
+  const isFr = locale === "fr";
+  const nav = getHeaderNav(locale);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -43,8 +50,6 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Detect when header overlaps a dark or accent section
-  // useLayoutEffect runs before paint so there's no visible flash on either dark or light pages
   useLayoutEffect(() => {
     const checkOverlap = () => {
       const darkSections = document.querySelectorAll(
@@ -82,6 +87,10 @@ export function Header() {
     .filter(Boolean)
     .join(" ");
 
+  const bannerText = isFr
+    ? { pre: "On prend ", strong: "2-3 nouveaux projets", post: " par mois. ", link: "Verifier la disponibilite", close: "Fermer le bandeau" }
+    : { pre: "We take ", strong: "2-3 new projects", post: " per month. ", link: "Check availability", close: "Close banner" };
+
   return (
     <header ref={headerRef} className={headerClass}>
       {bannerVisible && (
@@ -89,15 +98,15 @@ export function Header() {
           <div className={bannerStyles.inner}>
             <span className={bannerStyles.dot} aria-hidden="true" />
             <span className={bannerStyles.text}>
-              On prend <strong>2-3 nouveaux projets</strong> par mois.{" "}
-              <Link href="/contact" className={bannerStyles.link}>
-                Vérifier la disponibilité
+              {bannerText.pre}<strong>{bannerText.strong}</strong>{bannerText.post}{" "}
+              <Link href={localePath("/contact", locale)} className={bannerStyles.link}>
+                {bannerText.link}
               </Link>
             </span>
             <button
               className={bannerStyles.close}
               onClick={() => setBannerVisible(false)}
-              aria-label="Fermer le bandeau"
+              aria-label={bannerText.close}
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M18 6L6 18" />
@@ -109,12 +118,12 @@ export function Header() {
       )}
       <div className={styles.navBar} style={{ backdropFilter: 'blur(24px) saturate(1.6)', WebkitBackdropFilter: 'blur(24px) saturate(1.6)' }}>
       <div className={styles.inner}>
-        <Link href="/" className={styles.logo} aria-label="P-XEL Studio - Accueil">
+        <Link href={localePath("/", locale)} className={styles.logo} aria-label="P-XEL Studio">
           <Logo />
         </Link>
 
-        <nav className={styles.desktopNav} aria-label="Navigation principale">
-          {headerNav.map((item) =>
+        <nav className={styles.desktopNav} aria-label={isFr ? "Navigation principale" : "Main navigation"}>
+          {nav.map((item) =>
             item.label === "Contact" ? (
               <Link key={item.href} href={item.href} className={`${styles.navLink} ${styles.contactLink}`}>
                 <span className={styles.contactSquare} aria-hidden="true" />
@@ -126,13 +135,14 @@ export function Header() {
               </Link>
             )
           )}
+          <LanguageSwitcher />
         </nav>
 
         <button
           className={styles.menuButton}
           onClick={() => setIsOpen(!isOpen)}
           aria-expanded={isOpen}
-          aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-label={isOpen ? (isFr ? "Fermer le menu" : "Close menu") : (isFr ? "Ouvrir le menu" : "Open menu")}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -140,8 +150,8 @@ export function Header() {
       </div>
 
       {isOpen && (
-        <nav className={styles.mobileNav} aria-label="Navigation mobile">
-          {headerNav.map((item) => (
+        <nav className={styles.mobileNav} aria-label={isFr ? "Navigation mobile" : "Mobile navigation"}>
+          {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -151,6 +161,7 @@ export function Header() {
               {item.label}
             </Link>
           ))}
+          <LanguageSwitcher />
         </nav>
       )}
     </header>

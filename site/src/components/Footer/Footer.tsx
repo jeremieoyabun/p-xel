@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
-import { footerNav } from "@/lib/navigation";
+import { useLocale } from "@/lib/i18n/locale-context";
+import { getFooterNav } from "@/lib/navigation";
+import { localePath } from "@/lib/i18n/get-path";
 import { CONTACT, SOCIAL } from "@/lib/constants";
 import styles from "./Footer.module.css";
 
@@ -26,25 +30,30 @@ function FooterLogo() {
 }
 
 export function Footer() {
+  const locale = useLocale();
+  const isFr = locale === "fr";
+  const nav = getFooterNav(locale);
+
+  const tagline = isFr
+    ? "Studio produit digital. On concoit, construit et livre des produits digitaux premium."
+    : "Digital product studio. We design, build and ship premium digital products.";
+
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <div className={styles.grid}>
           <div className={styles.brand}>
-            <Link href="/" className={styles.logo} aria-label="P-XEL Studio">
+            <Link href={localePath("/", locale)} className={styles.logo} aria-label="P-XEL Studio">
               <FooterLogo />
             </Link>
-            <p className={styles.tagline}>
-              Studio produit digital. On conçoit, construit et livre des
-              produits digitaux premium.
-            </p>
+            <p className={styles.tagline}>{tagline}</p>
             <div className={styles.contact}>
               <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
               <a href={`tel:${CONTACT.phoneRaw}`}>{CONTACT.phone}</a>
             </div>
           </div>
 
-          {Object.values(footerNav).map((column) => (
+          {Object.values(nav).map((column) => (
             <div key={column.title} className={styles.column}>
               <h4 className={styles.columnTitle}>{column.title}</h4>
               <ul className={styles.columnList}>

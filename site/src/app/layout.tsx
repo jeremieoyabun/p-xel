@@ -1,11 +1,5 @@
-import type { Metadata } from "next";
 import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import localFont from "next/font/local";
-import { Header } from "@/components/Header/Header";
-import { Footer } from "@/components/Footer/Footer";
-import { CustomCursor } from "@/components/CustomCursor/CustomCursor";
-import { FloatingCTA } from "@/components/FloatingCTA/FloatingCTA";
-import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/lib/constants";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -32,61 +26,17 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
-  title: {
-    template: "%s | P-XEL Studio",
-    default: `${SITE_NAME} | Studio Digital à Liège`,
-  },
-  description: SITE_DESCRIPTION,
-  icons: {
-    icon: "/favicon.png",
-    apple: "/favicon.png",
-  },
-  openGraph: {
-    type: "website",
-    locale: "fr_BE",
-    siteName: SITE_NAME,
-    url: SITE_URL,
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@pxelstudio",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large" as const,
-      "max-snippet": -1,
-    },
-  },
-  alternates: {
-    canonical: SITE_URL,
-  },
-  verification: {
-    // Add Google Search Console verification code when available
-    // google: "verification-code",
-  },
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${spaceGrotesk.variable} ${satoshi.variable} ${jetbrainsMono.variable}`}>
-      <body>
-        <CustomCursor />
-        <Header />
-        <main id="main-content">{children}</main>
-        <Footer />
-        <FloatingCTA />
-      </body>
+    <html
+      suppressHydrationWarning
+      className={`${spaceGrotesk.variable} ${satoshi.variable} ${jetbrainsMono.variable}`}
+    >
+      <body>{children}</body>
     </html>
   );
 }

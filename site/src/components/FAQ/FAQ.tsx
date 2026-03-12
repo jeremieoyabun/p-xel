@@ -10,7 +10,7 @@ interface FAQItem {
 }
 
 interface FAQProps {
-  items: FAQItem[];
+  items: readonly FAQItem[];
 }
 
 export function FAQ({ items }: FAQProps) {

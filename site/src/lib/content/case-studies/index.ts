@@ -1,9 +1,10 @@
-import { billycheck } from "./billycheck";
-import { chairsplit } from "./chairsplit";
-import { greenmood } from "./greenmood";
-import { oyabun } from "./oyabun";
-import { arduennaGin } from "./arduenna-gin";
+import { billycheck, getBillycheckContent } from "./billycheck";
+import { chairsplit, getChairsplitContent } from "./chairsplit";
+import { greenmood, getGreenmoodContent } from "./greenmood";
+import { oyabun, getOyabunContent } from "./oyabun";
+import { arduennaGin, getArduennaGinContent } from "./arduenna-gin";
 import type { CaseStudy } from "./types";
+import type { Locale } from "@/lib/i18n/config";
 
 export type { CaseStudy } from "./types";
 export type { WorkProject } from "./types";
@@ -24,6 +25,19 @@ export const caseStudyOrder = [
   "arduenna-gin",
 ] as const;
 
-export function getCaseStudy(slug: string): CaseStudy | undefined {
-  return caseStudies[slug];
+export function getCaseStudy(slug: string, locale?: Locale): CaseStudy | undefined {
+  if (!locale || locale === "fr") {
+    return caseStudies[slug];
+  }
+  return getCaseStudies(locale)[slug];
+}
+
+export function getCaseStudies(locale: Locale): Record<string, CaseStudy> {
+  return {
+    billycheck: getBillycheckContent(locale),
+    chairsplit: getChairsplitContent(locale),
+    greenmood: getGreenmoodContent(locale),
+    oyabun: getOyabunContent(locale),
+    "arduenna-gin": getArduennaGinContent(locale),
+  };
 }

@@ -91,7 +91,7 @@ export function serviceSchema(name: string, description: string) {
   };
 }
 
-export function faqSchema(items: FAQItem[]) {
+export function faqSchema(items: readonly FAQItem[]) {
   return {
     "@context": "https://schema.org" as const,
     "@type": "FAQPage" as const,
