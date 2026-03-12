@@ -4,7 +4,6 @@ import localFont from "next/font/local";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
 import { CustomCursor } from "@/components/CustomCursor/CustomCursor";
-import { TopBanner } from "@/components/TopBanner/TopBanner";
 import { FloatingCTA } from "@/components/FloatingCTA/FloatingCTA";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/lib/constants";
 import "./globals.css";
@@ -83,7 +82,6 @@ export default function RootLayout({
     <html lang="fr" className={`${spaceGrotesk.variable} ${satoshi.variable} ${jetbrainsMono.variable}`}>
       <body>
         <CustomCursor />
-        <TopBanner />
         <Header />
         <main id="main-content">{children}</main>
         <Footer />

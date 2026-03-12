@@ -1,8 +1,5 @@
 .banner {
-  background: var(--surface-tertiary);
-  border-bottom: 1px solid var(--border-dark);
-  position: relative;
-  z-index: 99;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .inner {
@@ -32,12 +29,12 @@
 .text {
   font-family: var(--font-body);
   font-size: 13px;
-  color: var(--text-dark-secondary);
+  color: rgba(10, 10, 15, 0.5);
   letter-spacing: 0.01em;
 }
 
 .text strong {
-  color: var(--text-dark-primary);
+  color: rgba(10, 10, 15, 0.8);
   font-weight: 600;
 }
 
@@ -58,15 +55,15 @@
   justify-content: center;
   width: 24px;
   height: 24px;
-  color: var(--text-dark-muted);
+  color: rgba(10, 10, 15, 0.35);
   flex-shrink: 0;
   border-radius: 4px;
   transition: color 200ms ease, background 200ms ease;
 }
 
 .close:hover {
-  color: var(--text-dark-primary);
-  background: rgba(255, 255, 255, 0.06);
+  color: rgba(10, 10, 15, 0.7);
+  background: rgba(0, 0, 0, 0.04);
 }
 
 @media (max-width: 767px) {

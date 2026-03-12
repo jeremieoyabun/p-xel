@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { headerNav } from "@/lib/navigation";
 import styles from "./Header.module.css";
+import bannerStyles from "../TopBanner/TopBanner.module.css";
 
 function Logo() {
   return (
@@ -33,6 +34,7 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [overDark, setOverDark] = useState(false);
+  const [bannerVisible, setBannerVisible] = useState(true);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -82,6 +84,29 @@ export function Header() {
 
   return (
     <header ref={headerRef} className={headerClass}>
+      {bannerVisible && (
+        <div className={bannerStyles.banner}>
+          <div className={bannerStyles.inner}>
+            <span className={bannerStyles.dot} aria-hidden="true" />
+            <span className={bannerStyles.text}>
+              On prend <strong>2-3 nouveaux projets</strong> par mois.{" "}
+              <Link href="/contact" className={bannerStyles.link}>
+                Vérifier la disponibilité
+              </Link>
+            </span>
+            <button
+              className={bannerStyles.close}
+              onClick={() => setBannerVisible(false)}
+              aria-label="Fermer le bandeau"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 6L6 18" />
+                <path d="M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
       <div className={styles.inner}>
         <Link href="/" className={styles.logo} aria-label="P-XEL Studio - Accueil">
           <Logo />
