@@ -6,6 +6,8 @@ export interface ServicePage {
     label: string;
     heading: string;
     subheadline: string;
+    image?: string;
+    video?: string;
   };
   problem: {
     label: string;

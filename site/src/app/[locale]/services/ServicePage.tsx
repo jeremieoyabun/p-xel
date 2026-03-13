@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Section } from "@/components/Section/Section";
 import { Label } from "@/components/Label/Label";
 import { SectionHeading } from "@/components/SectionHeading/SectionHeading";
@@ -66,6 +67,35 @@ export function ServicePage({ service, locale = "fr" }: ServicePageProps) {
             <TallyPopup label={isFr ? "Lancer mon projet" : "Start my project"} variant="dark" />
           </div>
         </FadeInUp>
+        {service.hero.video && (
+          <FadeInUp>
+            <div className={styles.heroMedia}>
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className={styles.heroVideo}
+              >
+                <source src={service.hero.video} type="video/webm" />
+              </video>
+            </div>
+          </FadeInUp>
+        )}
+        {service.hero.image && !service.hero.video && (
+          <FadeInUp>
+            <div className={styles.heroMedia}>
+              <Image
+                src={service.hero.image}
+                alt={service.hero.heading}
+                width={1200}
+                height={675}
+                sizes="(max-width: 768px) 100vw, 1100px"
+                className={styles.heroImage}
+              />
+            </div>
+          </FadeInUp>
+        )}
       </Section>
 
       {/* Problem */}

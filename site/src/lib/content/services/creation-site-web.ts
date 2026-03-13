@@ -13,6 +13,7 @@ const content: Record<Locale, ServicePage> = {
       heading: "Des sites web qui convertissent. Pas juste qui existent.",
       subheadline:
         "Sites vitrines, e-commerce, landing pages. Conçus pour le SEO, la performance et la génération de leads. De la stratégie au déploiement.",
+      image: "/images/Services_PC.webp",
     },
 
     problem: {
@@ -199,6 +200,7 @@ const content: Record<Locale, ServicePage> = {
       heading: "Websites that convert. Not just exist.",
       subheadline:
         "Business websites, e-commerce, landing pages. Built for SEO, performance and lead generation. From strategy to deployment.",
+      image: "/images/Services_PC.webp",
     },
 
     problem: {

@@ -13,6 +13,7 @@ const content: Record<Locale, ServicePage> = {
       heading: "Des interfaces qui fonctionnent. Pas juste des maquettes qui plaisent.",
       subheadline:
         "On conçoit des expériences utilisateur pensées pour la conversion, la clarté et la scalabilité. Audit UX, design systems, prototypage, refonte. De la recherche au handoff développeur.",
+      image: "/images/Services_UX-UI.webp",
     },
 
     problem: {
@@ -195,6 +196,7 @@ const content: Record<Locale, ServicePage> = {
       heading: "Interfaces that work. Not just mockups that look good.",
       subheadline:
         "We design user experiences built for conversion, clarity and scalability. UX audit, design systems, prototyping, redesign. From research to developer handoff.",
+      image: "/images/Services_UX-UI.webp",
     },
 
     problem: {

@@ -15,6 +15,7 @@ const content: Record<Locale, ServicePage> = {
         "On conçoit et livre des produits avec l'IA intégrée. Pas des démos. Des produits qui tournent.",
       subheadline:
         "Agents IA, interfaces intelligentes, automatisations, intégrations LLM. Ce qui prenait 3 semaines en agence classique, on le livre en 5 jours.",
+      video: "/images/Services_IA.webm",
     },
 
     problem: {
@@ -175,6 +176,7 @@ const content: Record<Locale, ServicePage> = {
         "We design and ship products with built-in AI. Not demos. Products that run.",
       subheadline:
         "AI agents, intelligent interfaces, automations, LLM integrations. What used to take 3 weeks at a traditional agency, we deliver in 5 days.",
+      video: "/images/Services_IA.webm",
     },
 
     problem: {

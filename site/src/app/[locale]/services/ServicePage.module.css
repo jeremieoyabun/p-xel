@@ -1,3 +1,25 @@
+/* Hero Media */
+.heroMedia {
+  margin-top: var(--space-12);
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.heroVideo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
+}
+
 /* Problem */
 .problemIntro {
   display: flex;

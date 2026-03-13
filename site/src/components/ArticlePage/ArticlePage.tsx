@@ -171,7 +171,7 @@ export function ArticlePage({
                     href={`/${locale}/services/${slug}/`}
                     className={s.serviceLink}
                   >
-                    {labels ? labels[isFr ? "fr" : "en"] : slug}
+                    {labels ? labels[locale as "fr" | "en"] : slug}
                   </Link>
                 );
               })}

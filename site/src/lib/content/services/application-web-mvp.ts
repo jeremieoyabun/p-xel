@@ -15,6 +15,7 @@ const content: Record<Locale, ServicePage> = {
         "On construit des produits digitaux qui fonctionnent. Pas des prototypes qui restent dans un tiroir.",
       subheadline:
         "Applications web, plateformes SaaS, outils métier, MVPs. De la stratégie produit au déploiement. Un seul studio. Un seul interlocuteur.",
+      image: "/images/Services_mobile.webp",
     },
 
     problem: {
@@ -201,6 +202,7 @@ const content: Record<Locale, ServicePage> = {
         "We build digital products that work. Not prototypes that gather dust.",
       subheadline:
         "Web applications, SaaS platforms, business tools, MVPs. From product strategy to deployment. One studio. One point of contact.",
+      image: "/images/Services_mobile.webp",
     },
 
     problem: {
