@@ -1,31 +1,38 @@
-/* Featured project card - full-width, immersive */
-.featuredCard {
+/* Projects grid - 2 per row */
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-12);
+  margin-top: var(--space-12);
+}
+
+.projectCard {
   display: block;
   text-decoration: none;
   color: inherit;
   transition: transform var(--duration-base) var(--ease-out);
 }
 
-.featuredCard:hover {
+.projectCard:hover {
   transform: translateY(-4px);
 }
 
-.featuredCard:hover .featuredImage {
+.projectCard:hover .projectImage {
   border-color: var(--border-dark-hover);
 }
 
-.featuredCard:hover .viewProject {
+.projectCard:hover .viewProject {
   color: var(--accent);
 }
 
-.featuredImage {
+.projectImage {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3 / 2;
   background-color: var(--surface-secondary);
   border: 1px solid var(--border-dark);
   overflow: hidden;
   border-radius: var(--radius-lg);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-6);
   transition: border-color var(--duration-fast) var(--ease-in-out);
 }
 
@@ -35,25 +42,18 @@
   object-fit: cover;
 }
 
-.featuredContent {
+.projectContent {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
-  max-width: var(--content-narrow);
 }
 
-.featuredName {
+.projectName {
   font-family: var(--font-heading);
-  font-size: var(--text-3xl);
+  font-size: var(--text-xl);
   font-weight: 700;
   letter-spacing: var(--tracking-tight);
-  line-height: 1.15;
-}
-
-.featuredDesc {
-  font-size: var(--text-md);
-  color: var(--text-dark-secondary);
-  line-height: 1.6;
+  line-height: 1.2;
 }
 
 /* Tags */
@@ -83,6 +83,12 @@
   letter-spacing: var(--tracking-wide);
 }
 
+.projectDesc {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+}
+
 /* View project link */
 .viewProject {
   font-family: var(--font-mono);
@@ -94,65 +100,8 @@
   transition: color var(--duration-fast) var(--ease-in-out);
 }
 
-/* Secondary projects - compact, side by side */
-.secondaryGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-8);
-}
-
-.secondaryCard {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  transition: transform var(--duration-base) var(--ease-out);
-}
-
-.secondaryCard:hover {
-  transform: translateY(-4px);
-}
-
-.secondaryCard:hover .secondaryImage {
-  border-color: var(--border-dark-hover);
-}
-
-.secondaryCard:hover .viewProject {
-  color: var(--accent);
-}
-
-.secondaryImage {
-  width: 100%;
-  aspect-ratio: 3 / 2;
-  background-color: var(--surface-secondary);
-  border: 1px solid var(--border-dark);
-  overflow: hidden;
-  border-radius: var(--radius-lg);
-  margin-bottom: var(--space-6);
-  transition: border-color var(--duration-fast) var(--ease-in-out);
-}
-
-.secondaryContent {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-}
-
-.secondaryName {
-  font-family: var(--font-heading);
-  font-size: var(--text-xl);
-  font-weight: 700;
-  letter-spacing: var(--tracking-tight);
-  line-height: 1.2;
-}
-
-.secondaryDesc {
-  font-size: var(--text-base);
-  color: var(--text-dark-secondary);
-  line-height: 1.6;
-}
-
 @media (max-width: 767px) {
-  .secondaryGrid {
+  .projectGrid {
     grid-template-columns: 1fr;
   }
 }

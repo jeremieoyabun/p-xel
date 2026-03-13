@@ -43,8 +43,6 @@ export default async function WorkPage({
 }) {
   const { locale } = await params;
   const t = getWorkContent(locale as Locale);
-  const featured = t.workProjects.filter((p) => p.tier === "featured");
-  const secondary = t.workProjects.filter((p) => p.tier === "secondary");
 
   return (
     <>
@@ -57,66 +55,26 @@ export default async function WorkPage({
         ]}
       />
 
-      {/* Intro + Featured Projects */}
-      {featured.map((project, i) => (
-        <Section key={project.slug}>
-          {i === 0 && (
-            <FadeInUp>
-              <Label>{t.workIntro.label}</Label>
-              <SectionHeading
-                heading={t.workIntro.heading}
-                subtext={t.workIntro.subtext}
-              />
-            </FadeInUp>
-          )}
-          <FadeInUp>
-            <Link
-              href={`/${locale}/work/${project.slug}/`}
-              className={styles.featuredCard}
-            >
-              <div className={styles.featuredImage}>
-                <Image
-                  src={project.image}
-                  alt={project.name}
-                  width={1400}
-                  height={788}
-                  sizes="(max-width: 768px) 100vw, 1200px"
-                  className={styles.projectImg}
-                />
-              </div>
-              <div className={styles.featuredContent}>
-                <h2 className={styles.featuredName}>{project.name}</h2>
-                <div className={styles.tags}>
-                  {project.tags.map((tag) => (
-                    <span key={tag} className={styles.tag}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <p className={styles.featuredDesc}>{project.description}</p>
-                {project.result && (
-                  <span className={styles.result}>{project.result}</span>
-                )}
-                <span className={styles.viewProject}>
-                  {locale === "fr" ? "Voir le projet" : "View project"}
-                </span>
-              </div>
-            </Link>
-          </FadeInUp>
-        </Section>
-      ))}
-
-      {/* Secondary Projects - Side by side */}
+      {/* Intro */}
       <Section>
         <FadeInUp>
-          <div className={styles.secondaryGrid}>
-            {secondary.map((project) => (
+          <Label>{t.workIntro.label}</Label>
+          <SectionHeading
+            heading={t.workIntro.heading}
+            subtext={t.workIntro.subtext}
+          />
+        </FadeInUp>
+
+        {/* All Projects - 2 per row */}
+        <FadeInUp>
+          <div className={styles.projectGrid}>
+            {t.workProjects.map((project) => (
               <Link
                 key={project.slug}
                 href={`/${locale}/work/${project.slug}/`}
-                className={styles.secondaryCard}
+                className={styles.projectCard}
               >
-                <div className={styles.secondaryImage}>
+                <div className={styles.projectImage}>
                   <Image
                     src={project.image}
                     alt={project.name}
@@ -126,8 +84,8 @@ export default async function WorkPage({
                     className={styles.projectImg}
                   />
                 </div>
-                <div className={styles.secondaryContent}>
-                  <h3 className={styles.secondaryName}>{project.name}</h3>
+                <div className={styles.projectContent}>
+                  <h2 className={styles.projectName}>{project.name}</h2>
                   <div className={styles.tags}>
                     {project.tags.map((tag) => (
                       <span key={tag} className={styles.tag}>
@@ -135,9 +93,7 @@ export default async function WorkPage({
                       </span>
                     ))}
                   </div>
-                  <p className={styles.secondaryDesc}>
-                    {project.description}
-                  </p>
+                  <p className={styles.projectDesc}>{project.description}</p>
                   {project.result && (
                     <span className={styles.result}>{project.result}</span>
                   )}
