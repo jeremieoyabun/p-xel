@@ -16,6 +16,18 @@
   width: 100%;
   border-radius: var(--radius-lg);
   overflow: hidden;
+  position: relative;
+}
+
+.heroMedia::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light, #8b5cf6), var(--accent));
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
 }
 
 .heroImage {
