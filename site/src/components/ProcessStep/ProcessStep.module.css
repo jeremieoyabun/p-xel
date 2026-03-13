@@ -29,7 +29,8 @@
     text-shadow 300ms ease;
 }
 
-.step:hover .number {
+.step:hover .number,
+.stepVisible .number {
   opacity: 1;
   text-shadow:
     0 0 20px rgba(102, 8, 249, 0.6),

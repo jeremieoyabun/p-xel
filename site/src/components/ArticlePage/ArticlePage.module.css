@@ -225,38 +225,23 @@
   background: none;
 }
 
-/* ---- Floating back button ---- */
+/* ---- Back button ---- */
 
 .backButton {
-  position: fixed;
-  top: 24px;
-  left: 24px;
-  z-index: 100;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid #e2e2e4;
-  border-radius: 999px;
+  gap: 6px;
   font-family: var(--font-body);
   font-size: 13px;
-  font-weight: 600;
-  color: #111;
+  font-weight: 500;
+  color: #999;
   text-decoration: none;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  transition:
-    background 200ms ease,
-    box-shadow 200ms ease,
-    transform 200ms ease;
+  margin-bottom: 32px;
+  transition: color 200ms ease;
 }
 
 .backButton:hover {
-  background: #fff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
-  transform: translateX(-2px);
+  color: var(--accent);
 }
 
 .backButton svg {
@@ -292,16 +277,6 @@
     flex-direction: column;
     gap: 12px;
     align-items: flex-start;
-  }
-
-  .backButton {
-    top: 16px;
-    left: 16px;
-    padding: 10px 14px;
-  }
-
-  .backButton span {
-    display: none;
   }
 
   .relatedGrid {

@@ -410,8 +410,17 @@
     grid-template-columns: 1fr;
   }
 
+  .heroMedia {
+    margin: 0 calc(-1 * var(--grid-margin));
+    width: calc(100% + 2 * var(--grid-margin));
+  }
+
   .heroCta {
     flex-direction: column;
+  }
+
+  .studyImageWrap {
+    aspect-ratio: 16 / 10;
   }
 
   .otherServicesGrid {

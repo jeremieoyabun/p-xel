@@ -19,3 +19,13 @@
 .switcher:hover {
   opacity: 1;
 }
+
+@media (max-width: 767px) {
+  .switcher {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+    border-radius: 6px;
+    margin-top: var(--space-6);
+    align-self: flex-start;
+  }
+}
