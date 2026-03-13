@@ -13,6 +13,7 @@ const content: Record<Locale, ServicePage> = {
       heading: "Votre marque mérite plus qu'un logo.",
       subheadline:
         "On construit des identités de marque qui structurent votre communication, différencient votre offre et soutiennent votre croissance. Du logo au design system complet.",
+      image: "/images/Services_Branding.webp",
     },
 
     problem: {
@@ -37,30 +38,37 @@ const content: Record<Locale, ServicePage> = {
         {
           title: "Logo et marque verbale",
           body: "Conception du logo, du logotype et de la marque verbale. On crée un signe distinctif qui fonctionne sur tous les supports, toutes les tailles, tous les contextes.",
+          icon: "hexagon",
         },
         {
           title: "Identité visuelle",
           body: "Palette de couleurs, typographie, iconographie, style photographique. Un langage visuel cohérent qui traduit votre positionnement en éléments concrets.",
+          icon: "palette",
         },
         {
           title: "Direction artistique",
           body: "Définition de l'univers visuel global de la marque. Atmosphère, ton, références, principes de composition. Le cadre créatif qui guide toutes les productions.",
+          icon: "eye",
         },
         {
           title: "Charte graphique",
           body: "Document de référence complet : règles d'utilisation du logo, codes couleurs, grilles typographiques, do's and don'ts. Pour que votre marque reste cohérente, même sans vous.",
+          icon: "book",
         },
         {
           title: "Brand guidelines",
           body: "Au-delà du visuel : ton de voix, principes de communication, vocabulaire de marque, exemples d'application. Le guide complet pour tous les collaborateurs et prestataires.",
+          icon: "compass",
         },
         {
           title: "Design system de marque",
           body: "Bibliothèque de composants visuels réutilisables dans Figma. Templates, éléments graphiques, mises en page. Pour produire des supports cohérents rapidement.",
+          icon: "grid",
         },
         {
           title: "Supports digitaux et print",
           body: "Application de l'identité sur vos supports clés : cartes de visite, templates de présentation, réseaux sociaux, signatures email, papeterie.",
+          icon: "printer",
         },
       ],
     },
@@ -196,6 +204,7 @@ const content: Record<Locale, ServicePage> = {
       heading: "Your brand deserves more than a logo.",
       subheadline:
         "We build brand identities that structure your communication, differentiate your offering and support your growth. From logo to complete design system.",
+      image: "/images/Services_Branding.webp",
     },
 
     problem: {
@@ -220,30 +229,37 @@ const content: Record<Locale, ServicePage> = {
         {
           title: "Logo and wordmark",
           body: "Logo, logotype and wordmark design. We create a distinctive mark that works across all media, all sizes, all contexts.",
+          icon: "hexagon",
         },
         {
           title: "Visual identity",
           body: "Color palette, typography, iconography, photographic style. A consistent visual language that translates your positioning into concrete elements.",
+          icon: "palette",
         },
         {
           title: "Art direction",
           body: "Definition of the brand's overall visual universe. Atmosphere, tone, references, composition principles. The creative framework that guides all productions.",
+          icon: "eye",
         },
         {
           title: "Brand style guide",
           body: "Complete reference document: logo usage rules, color codes, typographic grids, do's and don'ts. So your brand stays consistent, even without you.",
+          icon: "book",
         },
         {
           title: "Brand guidelines",
           body: "Beyond the visual: tone of voice, communication principles, brand vocabulary, application examples. The complete guide for all team members and vendors.",
+          icon: "compass",
         },
         {
           title: "Brand design system",
           body: "Reusable visual component library in Figma. Templates, graphic elements, layouts. To produce consistent assets quickly.",
+          icon: "grid",
         },
         {
           title: "Digital and print assets",
           body: "Identity application on your key touchpoints: business cards, presentation templates, social media, email signatures, stationery.",
+          icon: "printer",
         },
       ],
     },

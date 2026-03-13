@@ -38,26 +38,32 @@ const content: Record<Locale, ServicePage> = {
         {
           title: "Audit UX",
           body: "Analyse complète de votre produit existant : parcours utilisateur, taux de conversion, points de friction, heuristiques d'utilisabilité. On identifie ce qui bloque et on priorise les corrections.",
+          icon: "search",
         },
         {
           title: "Wireframes & architecture",
           body: "Structure des écrans, hiérarchie de l'information, flux utilisateur. On pose les fondations avant de toucher au visuel. Chaque décision est justifiée par la recherche.",
+          icon: "layout",
         },
         {
           title: "UI Design",
           body: "Interfaces haute fidélité conçues dans Figma. Typographie, couleurs, spacing, composants. Un design qui sert la clarté et la conversion, pas juste l'esthétique.",
+          icon: "pen",
         },
         {
           title: "Design Systems",
           body: "Bibliothèque de composants réutilisables, tokens de design, documentation des patterns. Pour garantir la cohérence visuelle et accélérer le développement à grande échelle.",
+          icon: "grid",
         },
         {
           title: "Prototypage interactif",
           body: "Prototypes cliquables dans Figma pour valider les parcours avant le développement. On teste les hypothèses avec de vrais utilisateurs avant d'écrire une ligne de code.",
+          icon: "mouse",
         },
         {
           title: "Refonte d'interfaces",
           body: "Votre produit fonctionne mais l'interface a vieilli ? On modernise sans casser ce qui marche. Migration progressive, système de composants, nouvelles fondations visuelles.",
+          icon: "zap",
         },
       ],
     },
@@ -221,26 +227,32 @@ const content: Record<Locale, ServicePage> = {
         {
           title: "UX Audit",
           body: "Complete analysis of your existing product: user journeys, conversion rates, friction points, usability heuristics. We identify what's blocking and prioritize the fixes.",
+          icon: "search",
         },
         {
           title: "Wireframes & architecture",
           body: "Screen structure, information hierarchy, user flows. We lay the foundations before touching the visual. Every decision is backed by research.",
+          icon: "layout",
         },
         {
           title: "UI Design",
           body: "High-fidelity interfaces designed in Figma. Typography, colors, spacing, components. Design that serves clarity and conversion, not just aesthetics.",
+          icon: "pen",
         },
         {
           title: "Design Systems",
           body: "Reusable component library, design tokens, pattern documentation. To ensure visual consistency and accelerate development at scale.",
+          icon: "grid",
         },
         {
           title: "Interactive prototyping",
           body: "Clickable prototypes in Figma to validate journeys before development. We test hypotheses with real users before writing a single line of code.",
+          icon: "mouse",
         },
         {
           title: "Interface redesign",
           body: "Your product works but the interface has aged? We modernize without breaking what works. Progressive migration, component system, new visual foundations.",
+          icon: "zap",
         },
       ],
     },

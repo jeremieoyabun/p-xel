@@ -22,6 +22,7 @@ export interface ServicePage {
     items: {
       title: string;
       body: string;
+      icon?: string;
     }[];
   };
   approach: {
@@ -49,6 +50,7 @@ export interface ServicePage {
       tags: string[];
       body: string;
       href: string;
+      image?: string;
     }[];
   };
   investment: {

@@ -39,22 +39,27 @@ const content: Record<Locale, ServicePage> = {
         {
           title: "Applications web sur mesure",
           body: "Interfaces complexes, logiques métier spécifiques, gestion de données. On construit des applications web qui répondent à des besoins que les solutions standard ne couvrent pas.",
+          icon: "app",
         },
         {
           title: "Plateformes SaaS",
           body: "De l'architecture à l'interface, on conçoit des plateformes pensées pour scaler. Gestion utilisateurs, abonnements, tableaux de bord, APIs.",
+          icon: "platform",
         },
         {
           title: "Outils métier",
           body: "CRM internes, outils de gestion, configurateurs produit, plateformes de commande. Des outils construits autour de vos processus, pas l'inverse.",
+          icon: "tool",
         },
         {
           title: "MVPs pour validation marché",
           body: "Un produit fonctionnel, déployé et utilisable en quelques semaines. Suffisamment solide pour valider votre marché. Suffisamment léger pour itérer vite.",
+          icon: "rocket",
         },
         {
           title: "Plateformes et écosystèmes digitaux",
           body: "Écosystèmes multi-interfaces : web, mobile, intégrations tierces. On conçoit l'architecture globale et on livre les composants un par un.",
+          icon: "ecosystem",
         },
       ],
     },
@@ -226,22 +231,27 @@ const content: Record<Locale, ServicePage> = {
         {
           title: "Custom web applications",
           body: "Complex interfaces, specific business logic, data management. We build web applications that address needs standard solutions can't cover.",
+          icon: "app",
         },
         {
           title: "SaaS platforms",
           body: "From architecture to interface, we design platforms built to scale. User management, subscriptions, dashboards, APIs.",
+          icon: "platform",
         },
         {
           title: "Business tools",
           body: "Internal CRMs, management tools, product configurators, ordering platforms. Tools built around your processes, not the other way around.",
+          icon: "tool",
         },
         {
           title: "MVPs for market validation",
           body: "A functional product, deployed and usable in a few weeks. Solid enough to validate your market. Lean enough to iterate fast.",
+          icon: "rocket",
         },
         {
           title: "Platforms and digital ecosystems",
           body: "Multi-interface ecosystems: web, mobile, third-party integrations. We design the global architecture and deliver components one by one.",
+          icon: "ecosystem",
         },
       ],
     },

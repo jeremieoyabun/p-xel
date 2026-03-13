@@ -39,22 +39,27 @@ const content: Record<Locale, ServicePage> = {
         {
           title: "Site vitrine professionnel",
           body: "Pour les entreprises qui veulent une présence en ligne crédible, claire et optimisée. Structure pensée pour le SEO, design aligné sur votre positionnement, contenu orienté conversion.",
+          icon: "globe",
         },
         {
           title: "Site e-commerce",
           body: "Boutiques en ligne conçues pour vendre. Architecture produit, tunnel d'achat optimisé, intégration paiement, gestion de stock. On construit des e-commerces qui performent, pas juste des catalogues en ligne.",
+          icon: "cart",
         },
         {
           title: "Landing pages",
           body: "Pages de conversion uniques, conçues pour des campagnes spécifiques. Chaque élément est testé et optimisé : titre, structure, CTA, preuve sociale, vitesse de chargement.",
+          icon: "target",
         },
         {
           title: "Refonte de site web",
           body: "Votre site actuel ne performe plus ? On audite, on identifie les problèmes, on reconstruit sur des bases solides. Migration SEO incluse pour protéger votre trafic existant.",
+          icon: "refresh",
         },
         {
           title: "Sites multi-pages et corporate",
           body: "Pour les entreprises avec des besoins complexes. Architecture d'information structurée, multiple entrées SEO, pages de service, contenu éditorial, intégration CRM.",
+          icon: "layers",
         },
       ],
     },
@@ -226,22 +231,27 @@ const content: Record<Locale, ServicePage> = {
         {
           title: "Professional business website",
           body: "For companies that want a credible, clear and optimized online presence. SEO-driven structure, design aligned with your positioning, conversion-focused content.",
+          icon: "globe",
         },
         {
           title: "E-commerce website",
           body: "Online stores built to sell. Product architecture, optimized checkout flow, payment integration, inventory management. We build e-commerce that performs, not just online catalogs.",
+          icon: "cart",
         },
         {
           title: "Landing pages",
           body: "Single-purpose conversion pages, designed for specific campaigns. Every element is tested and optimized: headline, structure, CTA, social proof, load speed.",
+          icon: "target",
         },
         {
           title: "Website redesign",
           body: "Your current site isn't performing? We audit, identify the issues, and rebuild on solid foundations. SEO migration included to protect your existing traffic.",
+          icon: "refresh",
         },
         {
           title: "Multi-page and corporate sites",
           body: "For companies with complex needs. Structured information architecture, multiple SEO entry points, service pages, editorial content, CRM integration.",
+          icon: "layers",
         },
       ],
     },

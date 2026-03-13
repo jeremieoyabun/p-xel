@@ -39,22 +39,27 @@ const content: Record<Locale, ServicePage> = {
         {
           title: "MVPs avec IA intégrée",
           body: "Produits fonctionnels avec traitement LLM, analyse de documents, génération de contenu ou recommandations. Déployés en production, pas en sandbox.",
+          icon: "sparkle",
         },
         {
           title: "Agents et automatisations",
           body: "Agents IA qui exécutent des tâches métier complexes. Extraction de données, classement automatique, résumés, workflows intelligents.",
+          icon: "bot",
         },
         {
           title: "Interfaces intelligentes",
           body: "Recherche sémantique, chat intégré, suggestions contextuelles, personnalisation dynamique. Des interfaces qui s'adaptent au comportement utilisateur.",
+          icon: "workflow",
         },
         {
           title: "Intégrations LLM",
           body: "OpenAI, Anthropic Claude, Mistral, Gemini. On choisit le modèle adapté à votre usage, on gère le prompt engineering, les coûts et la fiabilité.",
+          icon: "cpu",
         },
         {
           title: "Outils métier augmentés",
           body: "CRM, tableaux de bord, outils de gestion enrichis par l'IA. Analyse prédictive, alertes intelligentes, synthèses automatiques.",
+          icon: "tool",
         },
       ],
     },
@@ -113,6 +118,7 @@ const content: Record<Locale, ServicePage> = {
           tags: ["Application Web", "GPT-4o Vision", "Fintech", "SaaS"],
           body: "Application SaaS d'optimisation de factures énergétiques. Upload d'une facture, analyse IA via GPT-4o Vision, comparaison automatique de 15+ fournisseurs. De l'idée au produit en production.",
           href: "/work/billycheck/",
+          image: "/images/case-studies/billycheck-hero.webp",
         },
       ],
     },
@@ -200,22 +206,27 @@ const content: Record<Locale, ServicePage> = {
         {
           title: "MVPs with built-in AI",
           body: "Functional products with LLM processing, document analysis, content generation or recommendations. Deployed in production, not in a sandbox.",
+          icon: "sparkle",
         },
         {
           title: "Agents and automations",
           body: "AI agents that execute complex business tasks. Data extraction, automatic classification, summaries, intelligent workflows.",
+          icon: "bot",
         },
         {
           title: "Intelligent interfaces",
           body: "Semantic search, integrated chat, contextual suggestions, dynamic personalization. Interfaces that adapt to user behavior.",
+          icon: "workflow",
         },
         {
           title: "LLM integrations",
           body: "OpenAI, Anthropic Claude, Mistral, Gemini. We choose the model suited to your use case, handle prompt engineering, cost management and reliability.",
+          icon: "cpu",
         },
         {
           title: "AI-augmented business tools",
           body: "CRMs, dashboards, management tools enhanced by AI. Predictive analysis, intelligent alerts, automatic summaries.",
+          icon: "tool",
         },
       ],
     },
@@ -274,6 +285,7 @@ const content: Record<Locale, ServicePage> = {
           tags: ["Web Application", "GPT-4o Vision", "Fintech", "SaaS"],
           body: "SaaS application for energy bill optimization. Upload a bill, AI analysis via GPT-4o Vision, automatic comparison of 15+ providers. From idea to product in production.",
           href: "/en/work/billycheck/",
+          image: "/images/case-studies/billycheck-hero.webp",
         },
       ],
     },

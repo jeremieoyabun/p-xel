@@ -8,6 +8,7 @@ import { Button } from "@/components/Button/Button";
 import { CalendlyPopup } from "@/components/CalendlyPopup/CalendlyPopup";
 import { TallyPopup } from "@/components/TallyPopup/TallyPopup";
 import { FAQ } from "@/components/FAQ/FAQ";
+import { ServiceIcon } from "@/components/ServiceIcon/ServiceIcon";
 import { CTA } from "@/components/CTA/CTA";
 import { FadeInUp } from "@/components/FadeInUp/FadeInUp";
 import { SchemaScript } from "@/components/SchemaScript/SchemaScript";
@@ -57,45 +58,45 @@ export function ServicePage({ service, locale = "fr" }: ServicePageProps) {
       {/* Hero */}
       <Section>
         <FadeInUp>
-          <Label>{service.hero.label}</Label>
-          <SectionHeading
-            heading={service.hero.heading}
-            subtext={service.hero.subheadline}
-          />
-          <div className={styles.heroCta}>
-            <CalendlyPopup label={isFr ? "Réserver un appel" : "Book a call"} variant="dark" />
-            <TallyPopup label={isFr ? "Lancer mon projet" : "Start my project"} variant="dark" />
+          <div className={(service.hero.image || service.hero.video) ? styles.heroGrid : undefined}>
+            <div className={styles.heroText}>
+              <Label>{service.hero.label}</Label>
+              <SectionHeading
+                heading={service.hero.heading}
+                subtext={service.hero.subheadline}
+              />
+              <div className={styles.heroCta}>
+                <CalendlyPopup label={isFr ? "Réserver un appel" : "Book a call"} variant="dark" />
+                <TallyPopup label={isFr ? "Lancer mon projet" : "Start my project"} variant="dark" />
+              </div>
+            </div>
+            {service.hero.video && (
+              <div className={styles.heroMedia}>
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className={styles.heroVideo}
+                >
+                  <source src={service.hero.video} type="video/webm" />
+                </video>
+              </div>
+            )}
+            {service.hero.image && !service.hero.video && (
+              <div className={styles.heroMedia}>
+                <Image
+                  src={service.hero.image}
+                  alt={service.hero.heading}
+                  width={700}
+                  height={467}
+                  sizes="(max-width: 767px) 100vw, 50vw"
+                  className={styles.heroImage}
+                />
+              </div>
+            )}
           </div>
         </FadeInUp>
-        {service.hero.video && (
-          <FadeInUp>
-            <div className={styles.heroMedia}>
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className={styles.heroVideo}
-              >
-                <source src={service.hero.video} type="video/webm" />
-              </video>
-            </div>
-          </FadeInUp>
-        )}
-        {service.hero.image && !service.hero.video && (
-          <FadeInUp>
-            <div className={styles.heroMedia}>
-              <Image
-                src={service.hero.image}
-                alt={service.hero.heading}
-                width={1200}
-                height={675}
-                sizes="(max-width: 768px) 100vw, 1100px"
-                className={styles.heroImage}
-              />
-            </div>
-          </FadeInUp>
-        )}
       </Section>
 
       {/* Problem */}
@@ -127,6 +128,9 @@ export function ServicePage({ service, locale = "fr" }: ServicePageProps) {
           <div className={styles.offerGrid}>
             {service.whatWeBuild.items.map((item) => (
               <div key={item.title} className={styles.offerItem}>
+                {item.icon && (
+                  <ServiceIcon name={item.icon} className={styles.offerIcon} />
+                )}
                 <h3 className={styles.offerTitle}>{item.title}</h3>
                 <p className={styles.offerBody}>{item.body}</p>
               </div>
@@ -191,6 +195,18 @@ export function ServicePage({ service, locale = "fr" }: ServicePageProps) {
                 href={study.href}
                 className={styles.studyCard}
               >
+                {study.image && (
+                  <div className={styles.studyImageWrap}>
+                    <Image
+                      src={study.image}
+                      alt={study.name}
+                      width={600}
+                      height={400}
+                      sizes="(max-width: 767px) 100vw, 50vw"
+                      className={styles.studyImage}
+                    />
+                  </div>
+                )}
                 <h3 className={styles.studyName}>{study.name}</h3>
                 <div className={styles.studyTags}>
                   {study.tags.map((tag) => (
