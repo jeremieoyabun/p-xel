@@ -91,7 +91,7 @@ export default async function HomePage({
         calendly: "Book a call",
       };
 
-  const capabilityLinkText = isFr ? "En savoir plus" : "Learn more";
+  const capabilityLinkPrefix = isFr ? "Découvrir" : "Discover";
 
   const testimonialsData = isFr
     ? { label: "Retours clients", heading: "Ce qu'ils en disent." }
@@ -198,7 +198,7 @@ export default async function HomePage({
                 <p className={styles.capabilityDesc}>{item.description}</p>
                 {item.href && (
                   <a href={item.href} className={styles.capabilityLink}>
-                    {capabilityLinkText}
+                    {capabilityLinkPrefix} {item.title.toLowerCase()}
                   </a>
                 )}
               </div>

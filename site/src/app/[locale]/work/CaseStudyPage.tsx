@@ -146,7 +146,7 @@ export function CaseStudyPage({ study, locale }: CaseStudyPageProps) {
               href={study.cta.serviceLink.href}
               className={styles.ctaServiceLink}
             >
-              {isFr ? "En savoir plus" : "Learn more"}
+              {study.cta.serviceLink.label}
             </Link>
           </p>
           <div className={styles.ctaActions}>

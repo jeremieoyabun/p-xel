@@ -97,7 +97,7 @@ export default async function LiegePage({
                 <p className={styles.serviceBody}>{item.body}</p>
                 {"href" in item && item.href && (
                   <Link href={item.href} className={styles.serviceLink}>
-                    {locale === "fr" ? "En savoir plus" : "Learn more"}
+                    {locale === "fr" ? "Découvrir" : "Discover"} {item.title.toLowerCase()}
                   </Link>
                 )}
               </div>

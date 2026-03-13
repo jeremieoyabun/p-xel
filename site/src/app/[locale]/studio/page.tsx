@@ -147,7 +147,7 @@ export default async function StudioPage({
                     href={item.serviceHref}
                     className={styles.capabilityLink}
                   >
-                    {isFr ? "En savoir plus" : "Learn more"}
+                    {isFr ? "Découvrir" : "Discover"} {item.title.toLowerCase()}
                   </Link>
                 )}
               </div>
