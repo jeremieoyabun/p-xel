@@ -36,6 +36,7 @@ const content = {
         tags: ["UX/UI", "Plateforme B2B", "Configurateur produit", "Design System"],
         description:
           "Plateforme B2B pour le leader européen du design acoustique et biophilique. Architecture d'information, UX/UI et configurateurs produit.",
+        result: "UX/UI complète pour le leader européen",
         image: "/images/case-studies/greenmood-hero.webp",
         tier: "featured" as const,
       },
@@ -99,6 +100,7 @@ const content = {
         tags: ["UX/UI", "B2B Platform", "Product Configurator", "Design System"],
         description:
           "B2B platform for Europe\u2019s leading acoustic and biophilic design company. Information architecture, UX/UI and product configurators.",
+        result: "Full UX/UI for the European market leader",
         image: "/images/case-studies/greenmood-hero.webp",
         tier: "featured" as const,
       },
