@@ -40,10 +40,21 @@ export async function generateMetadata({
       locale: isFr ? "fr_BE" : "en_US",
       siteName: SITE_NAME,
       url: SITE_URL,
+      images: [
+        {
+          url: `${SITE_URL}/${locale}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: isFr
+            ? "P-XEL Studio - Studio Digital a Liege"
+            : "P-XEL Studio - Digital Product Studio",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       site: "@pxelstudio",
+      images: [`${SITE_URL}/${locale}/opengraph-image`],
     },
     robots: {
       index: true,
