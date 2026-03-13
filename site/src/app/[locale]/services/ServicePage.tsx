@@ -71,20 +71,20 @@ export function ServicePage({ service, locale = "fr" }: ServicePageProps) {
               </div>
             </div>
             {service.hero.video && (
-              <div className={styles.heroMedia}>
+              <div className={`${styles.heroMedia}${service.hero.hideAccent ? ` ${styles.heroMediaNoAccent}` : ""}`}>
                 <video
                   autoPlay
                   loop
                   muted
                   playsInline
-                  className={styles.heroVideo}
+                  className={`${styles.heroVideo}${service.hero.videoBlend ? ` ${styles.heroVideoBlend}` : ""}`}
                 >
                   <source src={service.hero.video} type="video/webm" />
                 </video>
               </div>
             )}
             {service.hero.image && !service.hero.video && (
-              <div className={styles.heroMedia}>
+              <div className={`${styles.heroMedia}${service.hero.hideAccent ? ` ${styles.heroMediaNoAccent}` : ""}`}>
                 <Image
                   src={service.hero.image}
                   alt={service.hero.heading}

@@ -8,6 +8,8 @@ export interface ServicePage {
     subheadline: string;
     image?: string;
     video?: string;
+    videoBlend?: boolean;
+    hideAccent?: boolean;
   };
   problem: {
     label: string;

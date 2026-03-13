@@ -43,6 +43,15 @@
   border-radius: var(--radius-lg);
 }
 
+.heroVideoBlend {
+  mix-blend-mode: screen;
+  border-radius: 0;
+}
+
+.heroMediaNoAccent::after {
+  display: none;
+}
+
 /* Problem */
 .problemIntro {
   display: flex;
