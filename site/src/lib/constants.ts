@@ -1,4 +1,4 @@
-export const SITE_URL = "https://p-xel.be";
+export const SITE_URL = "https://www.p-xel.be";
 export const SITE_NAME = "P-XEL Studio";
 export const SITE_DESCRIPTION =
   "Studio produit digital à Liège. Sites web, applications, MVP, branding et UX/UI. Du concept au produit livré.";
