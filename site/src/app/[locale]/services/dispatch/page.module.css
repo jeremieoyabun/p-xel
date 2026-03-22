@@ -1,0 +1,240 @@
+/* Hero CTA */
+.heroCta {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+/* Section intro */
+.sectionIntro {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.7;
+  max-width: var(--content-narrow);
+}
+
+/* Problems */
+.problemsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-8);
+}
+
+.problemCard {
+  position: relative;
+  padding: var(--space-6);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-md);
+  background: var(--surface-secondary);
+  transition: border-color var(--duration-fast) var(--ease-in-out);
+}
+
+.problemCard:hover {
+  border-color: var(--border-dark-hover);
+}
+
+.problemX {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-4);
+  font-size: var(--text-lg);
+  color: #ef4444;
+  opacity: 0.5;
+}
+
+.problemCard p {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+  padding-right: var(--space-5);
+}
+
+/* Features */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.featureCard {
+  padding: var(--space-7);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-md);
+  transition: border-color var(--duration-fast) var(--ease-in-out),
+    transform var(--duration-base) var(--ease-out);
+}
+
+.featureCard:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.featureTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: var(--space-2);
+}
+
+.featureBody {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+}
+
+/* Process */
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+/* Case Study */
+.caseGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.caseBlock {
+  padding: var(--space-6);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-dark);
+}
+
+.caseLabel {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--accent);
+  margin-bottom: var(--space-3);
+}
+
+.caseBody {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+}
+
+.caseCta {
+  margin-top: var(--space-8);
+}
+
+/* Audience */
+.audienceBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: var(--content-narrow);
+}
+
+.audienceBody p {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.7;
+}
+
+/* Pricing */
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.pricingCard {
+  padding: var(--space-8);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-md);
+  background: var(--surface-secondary);
+}
+
+.pricingLabel {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--accent);
+  margin-bottom: var(--space-3);
+}
+
+.pricingAmount {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+}
+
+.pricingBody {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+}
+
+.pricingNote {
+  font-size: var(--text-sm);
+  color: var(--text-dark-muted);
+  line-height: 1.6;
+  margin-top: var(--space-6);
+}
+
+.pricingCta {
+  margin-top: var(--space-6);
+}
+
+/* Other Services */
+.otherServicesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.otherServiceLink {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-dark-secondary);
+  text-decoration: none;
+  padding: var(--space-3) var(--space-5);
+  border: 1px solid var(--border-dark);
+  letter-spacing: var(--tracking-wide);
+  transition: border-color var(--duration-fast) var(--ease-in-out),
+    color var(--duration-fast) var(--ease-in-out);
+}
+
+.otherServiceLink:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .heroCta {
+    flex-direction: column;
+  }
+
+  .problemsGrid,
+  .featuresGrid,
+  .processGrid,
+  .pricingGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .caseGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .otherServicesGrid {
+    flex-direction: column;
+  }
+}

@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/services/ux-ui-design/", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/services/branding-identite/", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/services/ai-studio/", priority: 0.9, changeFrequency: "monthly" as const },
+    { url: "/services/dispatch/", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/liege/", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/liege/creation-site-web/", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/liege/application-web-mvp/", priority: 0.8, changeFrequency: "monthly" as const },
