@@ -66,21 +66,21 @@ export default async function HomePage({
   const isFr = locale === "fr";
 
   const heroLines = isFr
-    ? ["On concoit", "On construit", "On livre"]
+    ? ["On conçoit", "On construit", "On livre"]
     : ["We design", "We build", "We ship"];
 
   const heroSub = isFr
-    ? ["Produits digitaux premium. Sites, applications, identites de marque.", "De la strategie au deploiement."]
+    ? ["Produits digitaux premium. Sites, applications, identités de marque.", "De la stratégie au déploiement."]
     : ["Premium digital products. Websites, apps, brand identities.", "From strategy to deployment."];
 
   const scrollText = isFr
-    ? "On concoit, construit et livre des produits digitaux complets. Un seul studio. Zero intermediaire.\n\nSites, applications, MVP, identites de marque. De la strategie au deploiement, chaque projet est pense pour performer."
+    ? "On conçoit, construit et livre des produits digitaux complets. Un seul studio. Zéro intermédiaire.\n\nSites, applications, MVP, identités de marque. De la stratégie au déploiement, chaque projet est pensé pour performer."
     : "We design, build and ship complete digital products. One studio. Zero middlemen.\n\nWebsites, apps, MVPs, brand identities. From strategy to deployment, every project is built to perform.";
 
   const processCta = isFr
     ? {
-        heading: "Pret a demarrer ?",
-        text: "Decrivez votre projet en quelques lignes. On revient vers vous sous 24h.",
+        heading: "Prêt à démarrer ?",
+        text: "Décrivez votre projet en quelques lignes. On revient vers vous sous 24h.",
         tally: "Lancer mon projet",
         calendly: "Reserver un appel",
       }

@@ -35,7 +35,7 @@ export function Footer() {
   const nav = getFooterNav(locale);
 
   const tagline = isFr
-    ? "Studio produit digital. On concoit, construit et livre des produits digitaux premium."
+    ? "Studio produit digital. On conçoit, construit et livre des produits digitaux premium."
     : "Digital product studio. We design, build and ship premium digital products.";
 
   return (

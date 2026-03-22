@@ -3,16 +3,16 @@ import type { Locale } from "@/lib/i18n/config";
 const content = {
   fr: {
     hero: {
-      label: "Product Design Studio / Liege, BE",
-      headline: "On concoit. On construit. On livre.",
+      label: "Product Design Studio / Liège, BE",
+      headline: "On conçoit. On construit. On livre.",
       subheadline:
-        "Produits digitaux premium. Sites, applications, identites de marque. De la strategie au deploiement.",
-      ctaPrimary: { label: "Reserver un appel", href: "https://calendly.com/p-xel" },
+        "Produits digitaux premium. Sites, applications, identités de marque. De la stratégie au déploiement.",
+      ctaPrimary: { label: "Réserver un appel", href: "https://calendly.com/p-xel" },
       ctaSecondary: { label: "Voir nos projets", href: "/work/" },
     },
     proofStrip: [
-      { value: 16, suffix: "+", label: "annees d'expertise" },
-      { value: 49, suffix: "+", label: "projets livres" },
+      { value: 16, suffix: "+", label: "années d'expertise" },
+      { value: 49, suffix: "+", label: "projets livrés" },
       { value: 98, suffix: "%", label: "clients satisfaits" },
     ],
     clientLogos: [
@@ -33,52 +33,52 @@ const content = {
       label: "Ce qu'on construit",
       heading: "Du produit. Pas des livrables.",
       subtext:
-        "On ne vend pas des heures. On concoit des produits digitaux complets, de l'idee au lancement. Un seul studio. Zero intermediaire.",
+        "On ne vend pas des heures. On conçoit des produits digitaux complets, de l'idée au lancement. Un seul studio. Zéro intermédiaire.",
       items: [
         {
           title: "Sites web",
           description:
-            "Sites vitrines, e-commerce, plateformes corporate. Rapides, optimises SEO, construits pour convertir.",
+            "Sites vitrines, e-commerce, plateformes corporate. Rapides, optimisés SEO, construits pour convertir.",
           href: "/services/creation-site-web/",
         },
         {
           title: "Applications web et MVP",
           description:
-            "Outils metier, plateformes SaaS, prototypes fonctionnels, integrations IA. Du concept au produit qui tourne en production.",
+            "Outils métier, plateformes SaaS, prototypes fonctionnels, intégrations IA. Du concept au produit qui tourne en production.",
           href: "/services/application-web-mvp/",
         },
         {
           title: "Design d'interface",
           description:
-            "UX research, UI design, design systems, prototypage. Des interfaces pensees pour l'usage, pas pour la decoration.",
+            "UX research, UI design, design systems, prototypage. Des interfaces pensées pour l'usage, pas pour la décoration.",
           href: "/services/ux-ui-design/",
         },
         {
-          title: "Identite de marque",
+          title: "Identité de marque",
           description:
-            "Logo, direction artistique, systemes visuels. Des marques construites pour durer et pour scaler.",
+            "Logo, direction artistique, systèmes visuels. Des marques construites pour durer et pour scaler.",
           href: "/services/branding-identite/",
         },
       ],
     },
     selectedWork: {
-      label: "Ce qu'on a livre",
+      label: "Ce qu'on a livré",
       heading: "Derniers projets",
       projects: [
         {
           name: "BillyCheck",
           tags: ["Application Web", "SaaS", "Intelligence Artificielle", "Fintech"],
           description:
-            "Application SaaS d'optimisation de factures energetiques. Upload, analyse IA, comparaison de 15+ fournisseurs. De l'idee au produit en production.",
-          result: "30 secondes pour trouver des economies",
+            "Application SaaS d'optimisation de factures énergétiques. Upload, analyse IA, comparaison de 15+ fournisseurs. De l'idée au produit en production.",
+          result: "30 secondes pour trouver des économies",
           href: "/work/billycheck/",
           image: "/images/case-studies/billycheck-hero.webp",
         },
         {
           name: "ChairSplit",
-          tags: ["SaaS", "Plateforme Metier", "PWA", "Multi-Tenant"],
+          tags: ["SaaS", "Plateforme Métier", "PWA", "Multi-Tenant"],
           description:
-            "Plateforme SaaS de gestion pour barbershops. Revenus, commissions, equipes, fiches de paie. Multi-tenant, mobile-first.",
+            "Plateforme SaaS de gestion pour barbershops. Revenus, commissions, équipes, fiches de paie. Multi-tenant, mobile-first.",
           result: "Produit SaaS complet en production",
           href: "/work/chairsplit/",
           image: "/images/case-studies/chairsplit-hero.webp",
@@ -87,7 +87,7 @@ const content = {
           name: "Greenmood",
           tags: ["UX/UI", "Plateforme B2B", "Configurateur produit", "Design System"],
           description:
-            "Plateforme B2B pour le leader europeen du design acoustique et biophilique. Architecture d'information, UX/UI et configurateurs produit.",
+            "Plateforme B2B pour le leader européen du design acoustique et biophilique. Architecture d'information, UX/UI et configurateurs produit.",
           result: "Site B2B multidomaines",
           href: "/work/greenmood/",
           image: "/images/case-studies/greenmood-hero.webp",
@@ -96,7 +96,7 @@ const content = {
           name: "Arduenna",
           tags: ["Branding", "E-commerce", "Campagnes Ads", "Direction Artistique"],
           description:
-            "Identite de marque, e-commerce et campagnes digitales pour un gin bio ardennais. Branding, Shopify, Meta Ads.",
+            "Identité de marque, e-commerce et campagnes digitales pour un gin bio ardennais. Branding, Shopify, Meta Ads.",
           result: "2 ans de CA en 2 mois",
           href: "/work/arduenna/",
           image: "/images/case-studies/arduenna-hero.webp",
@@ -106,7 +106,7 @@ const content = {
           tags: ["Game Design", "Web3", "NFT", "Play-to-Earn"],
           description:
             "Jeu mobile Web3 dans un univers manga cyber-yakuza. Game design, direction artistique, tokenomics OYAB, Fight Missions et Street Missions.",
-          result: "Ecosysteme gaming Web3 complet",
+          result: "Écosystème gaming Web3 complet",
           href: "/work/oyabun/",
           image: "/images/case-studies/oyabun-hero.webp",
         },
@@ -119,18 +119,18 @@ const content = {
       points: [
         {
           number: "01",
-          title: "On concoit et on execute",
-          body: "La plupart des studios s'arretent a la maquette Figma. On va jusqu'au deploiement. Design, code, mise en ligne. Votre produit est fonctionnel, pas juste beau sur un ecran de presentation.",
+          title: "On conçoit et on exécute",
+          body: "La plupart des studios s'arrêtent à la maquette Figma. On va jusqu'au déploiement. Design, code, mise en ligne. Votre produit est fonctionnel, pas juste beau sur un écran de présentation.",
         },
         {
           number: "02",
           title: "Un seul interlocuteur",
-          body: "Pas de compte manager. Pas de couche intermediaire. Un studio senior qui travaille directement avec les decideurs. On comprend votre projet parce qu'on le porte du debut a la fin.",
+          body: "Pas de compte manager. Pas de couche intermédiaire. Un studio senior qui travaille directement avec les décideurs. On comprend votre projet parce qu'on le porte du début à la fin.",
         },
         {
           number: "03",
-          title: "Rapide et precis",
-          body: "On utilise l'IA comme levier d'execution. Ce qui prend 3 semaines en agence classique, on le livre en 5 jours. 2 ans de CA en 2 mois pour Arduenna Gin. Un SaaS complet en production pour BillyCheck. On ne promet pas la vitesse. On la demontre.",
+          title: "Rapide et précis",
+          body: "On utilise l'IA comme levier d'exécution. Ce qui prend 3 semaines en agence classique, on le livre en 5 jours. 2 ans de CA en 2 mois pour Arduenna Gin. Un SaaS complet en production pour BillyCheck. On ne promet pas la vitesse. On la démontre.",
         },
       ],
     },
@@ -141,11 +141,11 @@ const content = {
         {
           number: "01",
           title: "Premier contact",
-          description: "Decrivez votre projet en quelques lignes. On repond sous 24h.",
+          description: "Décrivez votre projet en quelques lignes. On répond sous 24h.",
         },
         {
           number: "02",
-          title: "Appel decouverte",
+          title: "Appel découverte",
           description:
             "30 minutes pour comprendre vos objectifs, vos contraintes et vos attentes.",
         },
@@ -153,56 +153,56 @@ const content = {
           number: "03",
           title: "Proposition claire",
           description:
-            "Perimetre, livrables, planning, budget. Tout est pose. Pas de surprises.",
+            "Périmètre, livrables, planning, budget. Tout est posé. Pas de surprises.",
         },
         {
           number: "04",
           title: "On construit",
           description:
-            "Design, developpement, iterations. Vous suivez l'avancement en temps reel.",
+            "Design, développement, itérations. Vous suivez l'avancement en temps réel.",
         },
       ],
     },
     faq: {
-      label: "Questions frequentes",
+      label: "Questions fréquentes",
       items: [
         {
           question: "Quels types de projets prenez-vous en charge ?",
           answer:
-            "Sites web, applications web, MVP, landing pages, e-commerce, branding et identites visuelles. On travaille avec des startups, des PME et des marques ambitieuses en Belgique, au Luxembourg et en Europe.",
+            "Sites web, applications web, MVP, landing pages, e-commerce, branding et identités visuelles. On travaille avec des startups, des PME et des marques ambitieuses en Belgique, au Luxembourg et en Europe.",
         },
         {
-          question: "Combien coute un projet avec P-XEL ?",
+          question: "Combien coûte un projet avec P-XEL ?",
           answer:
-            "Chaque projet est chiffre sur mesure en fonction du perimetre, de la complexite et de vos objectifs. A titre indicatif : landing page a partir de 1\u00a0500\u00a0\u20ac, site vitrine a partir de 3\u00a0500\u00a0\u20ac, MVP a partir de 5\u00a0000\u00a0\u20ac. On fournit une estimation detaillee et gratuite apres un premier echange. Pas de surprise, pas d'engagement.",
+            "Chaque projet est chiffré sur mesure en fonction du périmètre, de la complexité et de vos objectifs. À titre indicatif : landing page à partir de 1\u00a0500\u00a0\u20ac, site vitrine à partir de 3\u00a0500\u00a0\u20ac, MVP à partir de 5\u00a0000\u00a0\u20ac. On fournit une estimation détaillée et gratuite après un premier échange. Pas de surprise, pas d'engagement.",
         },
         {
-          question: "Quelle est la duree moyenne d'un projet ?",
+          question: "Quelle est la durée moyenne d'un projet ?",
           answer:
-            "Landing page : 1 a 2 semaines. Site vitrine : 3 a 6 semaines. Application web : 6 a 12 semaines. On adapte le planning a vos contraintes.",
+            "Landing page : 1 à 2 semaines. Site vitrine : 3 à 6 semaines. Application web : 6 à 12 semaines. On adapte le planning à vos contraintes.",
         },
         {
           question:
-            "Est-ce que vous developpez aussi ou uniquement du design ?",
+            "Est-ce que vous développez aussi ou uniquement du design ?",
           answer:
-            "On concoit et on developpe. Design, code et deploiement. Vous recevez un produit fonctionnel, pas une maquette.",
+            "On conçoit et on développe. Design, code et déploiement. Vous recevez un produit fonctionnel, pas une maquette.",
         },
         {
-          question: "Ou etes-vous bases ?",
+          question: "Où êtes-vous basés ?",
           answer:
-            "A Liege, en Belgique. On travaille avec des clients en Wallonie, a Bruxelles, au Luxembourg et partout en Europe en remote.",
+            "À Liège, en Belgique. On travaille avec des clients en Wallonie, à Bruxelles, au Luxembourg et partout en Europe en remote.",
         },
       ],
     },
     finalCta: {
-      heading: "Votre projet merite mieux qu'un template.",
+      heading: "Votre projet mérite mieux qu'un template.",
       subtext:
-        "Parlez-nous de votre idee. 30 minutes pour cadrer votre projet et poser les bases.",
-      ctaPrimary: { label: "Reserver un appel", href: "https://calendly.com/p-xel" },
+        "Parlez-nous de votre idée. 30 minutes pour cadrer votre projet et poser les bases.",
+      ctaPrimary: { label: "Réserver un appel", href: "https://calendly.com/p-xel" },
       ctaSecondary: { label: "Lancer mon projet", href: "/contact/" },
     },
     scrollRevealText:
-      "On concoit, construit et livre des produits digitaux qui comptent.",
+      "On conçoit, construit et livre des produits digitaux qui comptent.",
     testimonials: {
       label: "Retours clients",
     },
