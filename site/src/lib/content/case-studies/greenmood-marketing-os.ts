@@ -4,11 +4,11 @@ import type { Locale } from "@/lib/i18n/config";
 const content: Record<Locale, CaseStudy> = {
   fr: {
     slug: "greenmood-marketing-os",
-    title: "Greenmood Marketing OS",
+    title: "Marketing OS",
     metaTitle:
-      "Greenmood Marketing OS — Plateforme Marketing IA | P-XEL",
+      "Marketing OS — Plateforme Marketing IA | P-XEL",
     metaDescription:
-      "Plateforme marketing IA sur mesure pour Greenmood. Publication automatisée, gestion multi-marchés, workflows éditoriaux intelligents. 8 marchés, 6 plateformes, un seul dashboard.",
+      "Plateforme marketing IA sur mesure. Publication automatisée, gestion multi-marchés, workflows éditoriaux intelligents. 8 marchés, 6 plateformes, un seul dashboard.",
     tags: [
       "Application Web",
       "Intelligence Artificielle",
@@ -16,7 +16,7 @@ const content: Record<Locale, CaseStudy> = {
       "Multi-Marché",
     ],
     tagline:
-      "Système d'exploitation marketing propulsé par l'IA. Une plateforme interne qui orchestre la création de contenu, les workflows d'approbation et la publication automatisée sur 8 marchés et 6 réseaux sociaux — alimentée par Claude AI.",
+      "OS marketing propulsé par l'IA. Une plateforme qui orchestre la création de contenu, les workflows d'approbation et la publication automatisée sur 8 marchés et 6 réseaux sociaux.",
     keyResult: "60+ posts/mois gérés depuis un seul dashboard",
     period: "2026",
     heroImage: "/images/case-studies/greenmood-marketing-os-hero.webp",
@@ -105,11 +105,11 @@ const content: Record<Locale, CaseStudy> = {
 
   en: {
     slug: "greenmood-marketing-os",
-    title: "Greenmood Marketing OS",
+    title: "Marketing OS",
     metaTitle:
-      "Greenmood Marketing OS — AI-Powered Marketing Platform | P-XEL",
+      "Marketing OS — AI-Powered Marketing Platform | P-XEL",
     metaDescription:
-      "Custom AI marketing operating system built for Greenmood, the Belgian biophilic design brand. Automated publishing, multi-market content management, and intelligent editorial workflows.",
+      "Custom AI marketing operating system. Automated publishing, multi-market content management, and intelligent editorial workflows. 8 markets, 6 platforms, one dashboard.",
     tags: [
       "Web Application",
       "Artificial Intelligence",
@@ -117,7 +117,7 @@ const content: Record<Locale, CaseStudy> = {
       "Multi-Market",
     ],
     tagline:
-      "AI-powered marketing operating system. A production-grade internal platform that orchestrates content creation, approval workflows, and automated publishing across 8 markets and 6 social platforms — powered by Claude AI.",
+      "AI-powered marketing OS. A production-grade platform that orchestrates content creation, approval workflows, and automated publishing across 8 markets and 6 social platforms.",
     keyResult: "60+ posts/month managed from a single dashboard",
     period: "2026",
     heroImage: "/images/case-studies/greenmood-marketing-os-hero.webp",

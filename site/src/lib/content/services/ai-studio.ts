@@ -115,7 +115,7 @@ const content: Record<Locale, ServicePage> = {
       heading: "Ce qu'on a livré avec l'IA.",
       studies: [
         {
-          name: "Greenmood Marketing OS",
+          name: "Marketing OS",
           tags: ["Application Web", "Claude AI", "Marketing Automation", "Multi-Marché"],
           body: "Plateforme marketing IA complète pour Greenmood. Calendrier éditorial, compositeur IA ancré dans une base de connaissances, publication automatisée sur 8 marchés et 6 plateformes. 60+ posts/mois, zéro erreur factuelle.",
           href: "/work/greenmood-marketing-os/",
@@ -290,7 +290,7 @@ const content: Record<Locale, ServicePage> = {
       heading: "What we've shipped with AI.",
       studies: [
         {
-          name: "Greenmood Marketing OS",
+          name: "Marketing OS",
           tags: ["Web Application", "Claude AI", "Marketing Automation", "Multi-Market"],
           body: "Complete AI marketing platform for Greenmood. Editorial calendar, knowledge-base-grounded AI composer, automated publishing across 8 markets and 6 platforms. 60+ posts/month, zero factual errors.",
           href: "/en/work/greenmood-marketing-os/",

@@ -11,7 +11,7 @@ const content = {
     },
     workProjects: [
       {
-        name: "Greenmood Marketing OS",
+        name: "Marketing OS",
         slug: "greenmood-marketing-os",
         tags: ["Application Web", "Intelligence Artificielle", "Marketing Automation", "Multi-Marché"],
         description:
@@ -85,7 +85,7 @@ const content = {
     },
     workProjects: [
       {
-        name: "Greenmood Marketing OS",
+        name: "Marketing OS",
         slug: "greenmood-marketing-os",
         tags: ["Web Application", "Artificial Intelligence", "Marketing Automation", "Multi-Market"],
         description:

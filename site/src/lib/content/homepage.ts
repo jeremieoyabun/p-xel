@@ -66,7 +66,7 @@ const content = {
       heading: "Derniers projets",
       projects: [
         {
-          name: "Greenmood Marketing OS",
+          name: "Marketing OS",
           tags: ["Application Web", "Intelligence Artificielle", "Marketing Automation", "Multi-Marché"],
           description:
             "Plateforme marketing IA sur mesure pour Greenmood. Calendrier éditorial, compositeur IA, publication automatisée sur 8 marchés et 6 réseaux sociaux. Propulsée par Claude AI.",
@@ -281,7 +281,7 @@ const content = {
       heading: "Recent projects",
       projects: [
         {
-          name: "Greenmood Marketing OS",
+          name: "Marketing OS",
           tags: ["Web Application", "Artificial Intelligence", "Marketing Automation", "Multi-Market"],
           description:
             "Custom AI marketing platform for Greenmood. Editorial calendar, AI composer, automated publishing across 8 markets and 6 social platforms. Powered by Claude AI.",

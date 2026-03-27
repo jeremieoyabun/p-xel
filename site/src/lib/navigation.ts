@@ -18,7 +18,7 @@ export function getFooterNav(locale: Locale) {
     work: {
       title: "Work",
       links: [
-        { label: "Greenmood Marketing OS", href: lp("/work/greenmood-marketing-os/") },
+        { label: "Marketing OS", href: lp("/work/greenmood-marketing-os/") },
         { label: "BillyCheck", href: lp("/work/billycheck/") },
         { label: "ChairSplit", href: lp("/work/chairsplit/") },
         { label: "Greenmood", href: lp("/work/greenmood/") },
