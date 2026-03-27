@@ -132,7 +132,7 @@ const content = {
       {
         question: "Quel est le délai pour créer un site web ou une application ?",
         answer:
-          "Landing page : 1 semaine. Site corporate multilingue : 2 à 4 semaines. Application web : 4 à 8 semaines. On définit un calendrier précis dès le départ et on le respecte.",
+          "Landing page : 1 semaine. Site corporate multilingue : 1 à 2 semaines. Application web : 4 semaines. On définit un calendrier précis dès le départ et on le respecte.",
       },
       {
         question: "Pouvez-vous créer des sites multilingues pour le marché luxembourgeois ?",
@@ -286,7 +286,7 @@ const content = {
       {
         question: "What is the timeline to create a website or application?",
         answer:
-          "Landing page: 1 week. Multilingual corporate site: 2 to 4 weeks. Web application: 4 to 8 weeks. We define a precise schedule from the start and we stick to it.",
+          "Landing page: 1 week. Multilingual corporate site: 1 to 2 weeks. Web application: 4 weeks. We define a precise schedule from the start and we stick to it.",
       },
       {
         question: "Can you build multilingual sites for the Luxembourg market?",

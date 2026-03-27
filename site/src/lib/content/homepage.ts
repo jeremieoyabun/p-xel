@@ -188,7 +188,7 @@ const content = {
         {
           question: "Quelle est la durée moyenne d'un projet ?",
           answer:
-            "Landing page : 1 semaine. Site vitrine : 2 à 4 semaines. Application web : 4 à 8 semaines. On adapte le planning à vos contraintes.",
+            "Landing page : 1 semaine. Site vitrine : 1 à 2 semaines. Application web : 4 semaines. On adapte le planning à vos contraintes.",
         },
         {
           question:
@@ -403,7 +403,7 @@ const content = {
         {
           question: "What is the average project duration?",
           answer:
-            "Landing page: 1 week. Showcase website: 2 to 4 weeks. Web application: 4 to 8 weeks. We adapt the timeline to your constraints.",
+            "Landing page: 1 week. Showcase website: 1 to 2 weeks. Web application: 4 weeks. We adapt the timeline to your constraints.",
         },
         {
           question: "Do you also develop or only design?",
