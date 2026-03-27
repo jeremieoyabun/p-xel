@@ -5,6 +5,7 @@ import { getApplicationWebMvpContent } from "./application-web-mvp";
 import { getUxUiDesignContent } from "./ux-ui-design";
 import { getBrandingIdentiteContent } from "./branding-identite";
 import { getAiStudioContent } from "./ai-studio";
+import { getRefonteSiteWebContent } from "./refonte-site-web";
 
 const getters: Record<string, (locale: Locale) => ServicePage> = {
   "creation-site-web": getCreationSiteWebContent,
@@ -12,6 +13,7 @@ const getters: Record<string, (locale: Locale) => ServicePage> = {
   "ux-ui-design": getUxUiDesignContent,
   "branding-identite": getBrandingIdentiteContent,
   "ai-studio": getAiStudioContent,
+  "refonte-site-web": getRefonteSiteWebContent,
 };
 
 export function getServiceBySlug(slug: string, locale: Locale): ServicePage | null {

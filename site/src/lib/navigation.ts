@@ -35,6 +35,7 @@ export function getFooterNav(locale: Locale) {
         { label: isFr ? "Applications & MVP" : "Apps & MVPs", href: lp("/services/application-web-mvp/") },
         { label: "UX/UI Design", href: lp("/services/ux-ui-design/") },
         { label: isFr ? "Branding & Identité" : "Branding & Identity", href: lp("/services/branding-identite/") },
+        { label: isFr ? "Refonte de site web" : "Website redesign", href: lp("/services/refonte-site-web/") },
       ],
     },
     perspectives: {
@@ -58,6 +59,8 @@ export function getFooterNav(locale: Locale) {
       links: [
         { label: isFr ? "Agence web Liège" : "Web agency Liege", href: lp("/liege/") },
         { label: isFr ? "Agence web Bruxelles" : "Web agency Brussels", href: lp("/bruxelles/") },
+        { label: isFr ? "Agence web Namur" : "Web agency Namur", href: lp("/namur/") },
+        { label: isFr ? "Agence web Charleroi" : "Web agency Charleroi", href: lp("/charleroi/") },
         { label: isFr ? "Agence web Luxembourg" : "Web agency Luxembourg", href: lp("/luxembourg/") },
       ],
     },

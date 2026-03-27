@@ -32,6 +32,21 @@ const ALL_SERVICE_SLUGS = [
   "ai-studio",
 ];
 
+const CITY_SERVICE_SLUGS = [
+  "creation-site-web",
+  "application-web-mvp",
+  "ux-ui-design",
+  "branding-identite",
+  "ai-studio",
+];
+
+const CITIES = [
+  { slug: "liege", fr: "Liège", en: "Liege" },
+  { slug: "bruxelles", fr: "Bruxelles", en: "Brussels" },
+  { slug: "namur", fr: "Namur", en: "Namur" },
+  { slug: "luxembourg", fr: "Luxembourg", en: "Luxembourg" },
+];
+
 interface ServicePageProps {
   service: ServicePageData;
   locale?: Locale;
@@ -277,6 +292,28 @@ export function ServicePage({ service, locale = "fr" }: ServicePageProps) {
                   <span className={styles.relatedTime}>
                     {article.readingTime}
                   </span>
+                </Link>
+              ))}
+            </div>
+          </FadeInUp>
+        </Section>
+      )}
+
+      {/* City Variants */}
+      {CITY_SERVICE_SLUGS.includes(service.slug) && (
+        <Section>
+          <FadeInUp>
+            <Label>
+              {isFr ? "Ce service près de chez vous" : "This service near you"}
+            </Label>
+            <div className={styles.otherServicesGrid}>
+              {CITIES.map((city) => (
+                <Link
+                  key={city.slug}
+                  href={localePath(`/${city.slug}/${service.slug}/`, locale)}
+                  className={styles.otherServiceLink}
+                >
+                  {isFr ? city.fr : city.en}
                 </Link>
               ))}
             </div>
