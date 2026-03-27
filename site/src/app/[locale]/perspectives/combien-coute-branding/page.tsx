@@ -129,7 +129,7 @@ export default async function CombienCouteBranding({
 
           <figure style={{ margin: '2rem 0' }}>
             <Image
-              src="/images/articles/branding.webp"
+              src="/images/articles/article-branding.webp"
               alt="Identité visuelle et branding professionnel"
               width={1200}
               height={675}
@@ -346,7 +346,7 @@ export default async function CombienCouteBranding({
 
           <figure style={{ margin: '2rem 0' }}>
             <Image
-              src="/images/articles/branding.webp"
+              src="/images/articles/article-branding.webp"
               alt="Professional visual identity and branding"
               width={1200}
               height={675}
