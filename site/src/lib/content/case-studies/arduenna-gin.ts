@@ -64,7 +64,7 @@ const content: Record<Locale, CaseStudy> = {
       serviceLink: { label: "sites web et plateformes", href: "/services/creation-site-web/" },
     },
     navigation: {
-      next: { slug: "billycheck", title: "BillyCheck" },
+      next: { slug: "greenmood-marketing-os", title: "Greenmood Marketing OS" },
     },
     internalLinks: [
       { label: "Création de sites web", href: "/services/creation-site-web/" },
@@ -133,7 +133,7 @@ const content: Record<Locale, CaseStudy> = {
       serviceLink: { label: "websites and platforms", href: "/en/services/creation-site-web/" },
     },
     navigation: {
-      next: { slug: "billycheck", title: "BillyCheck" },
+      next: { slug: "greenmood-marketing-os", title: "Greenmood Marketing OS" },
     },
     internalLinks: [
       { label: "Website creation", href: "/en/services/creation-site-web/" },

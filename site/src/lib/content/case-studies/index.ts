@@ -1,6 +1,7 @@
 import { billycheck, getBillycheckContent } from "./billycheck";
 import { chairsplit, getChairsplitContent } from "./chairsplit";
 import { greenmood, getGreenmoodContent } from "./greenmood";
+import { greenmoodMarketingOs, getGreenmoodMarketingOsContent } from "./greenmood-marketing-os";
 import { oyabun, getOyabunContent } from "./oyabun";
 import { arduennaGin, getArduennaGinContent } from "./arduenna-gin";
 import type { CaseStudy } from "./types";
@@ -13,11 +14,13 @@ export const caseStudies: Record<string, CaseStudy> = {
   billycheck,
   chairsplit,
   greenmood,
+  "greenmood-marketing-os": greenmoodMarketingOs,
   oyabun,
   "arduenna-gin": arduennaGin,
 };
 
 export const caseStudyOrder = [
+  "greenmood-marketing-os",
   "billycheck",
   "chairsplit",
   "greenmood",
@@ -37,6 +40,7 @@ export function getCaseStudies(locale: Locale): Record<string, CaseStudy> {
     billycheck: getBillycheckContent(locale),
     chairsplit: getChairsplitContent(locale),
     greenmood: getGreenmoodContent(locale),
+    "greenmood-marketing-os": getGreenmoodMarketingOsContent(locale),
     oyabun: getOyabunContent(locale),
     "arduenna-gin": getArduennaGinContent(locale),
   };

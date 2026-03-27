@@ -7,9 +7,19 @@ const content = {
       label: "Work",
       heading: "Ce qu'on a construit.",
       subtext:
-        "Cinq projets. Cinq preuves. Chaque produit conçu, construit et livré par notre studio.",
+        "Six projets. Six preuves. Chaque produit conçu, construit et livré par notre studio.",
     },
     workProjects: [
+      {
+        name: "Greenmood Marketing OS",
+        slug: "greenmood-marketing-os",
+        tags: ["Application Web", "Intelligence Artificielle", "Marketing Automation", "Multi-Marché"],
+        description:
+          "Plateforme marketing IA sur mesure. Calendrier éditorial, compositeur IA, publication automatisée sur 8 marchés et 6 réseaux sociaux. Propulsée par Claude AI.",
+        result: "60+ posts/mois, 8 marchés, zéro erreur",
+        image: "/images/case-studies/greenmood-marketing-os-hero.webp",
+        tier: "featured" as const,
+      },
       {
         name: "BillyCheck",
         slug: "billycheck",
@@ -71,9 +81,19 @@ const content = {
       label: "Work",
       heading: "What we\u2019ve built.",
       subtext:
-        "Five projects. Five proofs. Every product designed, built and shipped by our studio.",
+        "Six projects. Six proofs. Every product designed, built and shipped by our studio.",
     },
     workProjects: [
+      {
+        name: "Greenmood Marketing OS",
+        slug: "greenmood-marketing-os",
+        tags: ["Web Application", "Artificial Intelligence", "Marketing Automation", "Multi-Market"],
+        description:
+          "Custom AI marketing platform. Editorial calendar, AI composer, automated publishing across 8 markets and 6 social platforms. Powered by Claude AI.",
+        result: "60+ posts/month, 8 markets, zero errors",
+        image: "/images/case-studies/greenmood-marketing-os-hero.webp",
+        tier: "featured" as const,
+      },
       {
         name: "BillyCheck",
         slug: "billycheck",

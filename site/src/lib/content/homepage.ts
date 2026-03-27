@@ -66,6 +66,15 @@ const content = {
       heading: "Derniers projets",
       projects: [
         {
+          name: "Greenmood Marketing OS",
+          tags: ["Application Web", "Intelligence Artificielle", "Marketing Automation", "Multi-Marché"],
+          description:
+            "Plateforme marketing IA sur mesure pour Greenmood. Calendrier éditorial, compositeur IA, publication automatisée sur 8 marchés et 6 réseaux sociaux. Propulsée par Claude AI.",
+          result: "60+ posts/mois, 8 marchés, zéro erreur",
+          href: "/work/greenmood-marketing-os/",
+          image: "/images/case-studies/greenmood-marketing-os-hero.webp",
+        },
+        {
           name: "BillyCheck",
           tags: ["Application Web", "SaaS", "Intelligence Artificielle", "Fintech"],
           description:
@@ -271,6 +280,15 @@ const content = {
       label: "What we've shipped",
       heading: "Recent projects",
       projects: [
+        {
+          name: "Greenmood Marketing OS",
+          tags: ["Web Application", "Artificial Intelligence", "Marketing Automation", "Multi-Market"],
+          description:
+            "Custom AI marketing platform for Greenmood. Editorial calendar, AI composer, automated publishing across 8 markets and 6 social platforms. Powered by Claude AI.",
+          result: "60+ posts/month, 8 markets, zero errors",
+          href: "/en/work/greenmood-marketing-os/",
+          image: "/images/case-studies/greenmood-marketing-os-hero.webp",
+        },
         {
           name: "BillyCheck",
           tags: ["Web App", "SaaS", "Artificial Intelligence", "Fintech"],
