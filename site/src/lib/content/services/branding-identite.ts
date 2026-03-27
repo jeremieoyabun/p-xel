@@ -13,7 +13,7 @@ const content: Record<Locale, ServicePage> = {
       heading: "Votre marque mérite plus qu'un logo.",
       subheadline:
         "On construit des identités de marque qui structurent votre communication, différencient votre offre et soutiennent votre croissance. Du logo au design system complet.",
-      image: "/images/Services_branding.png",
+      image: "/images/Services_branding.webp",
       hideAccent: true,
     },
 
@@ -206,7 +206,7 @@ const content: Record<Locale, ServicePage> = {
       heading: "Your brand deserves more than a logo.",
       subheadline:
         "We build brand identities that structure your communication, differentiate your offering and support your growth. From logo to complete design system.",
-      image: "/images/Services_branding.png",
+      image: "/images/Services_branding.webp",
       hideAccent: true,
     },
 
