@@ -181,7 +181,7 @@ export function ArticlePage({
         {/* Related articles */}
         {relatedArticles && relatedArticles.length > 0 && (
           <div className={s.related}>
-            <h2 className={s.relatedHeading}>{isFr ? "Articles lies" : "Related articles"}</h2>
+            <h2 className={s.relatedHeading}>{isFr ? "Articles liés" : "Related articles"}</h2>
             <div className={s.relatedGrid}>
               {relatedArticles.map((article) => (
                 <Link
