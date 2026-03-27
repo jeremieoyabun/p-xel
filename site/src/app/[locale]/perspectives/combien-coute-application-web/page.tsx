@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
 import { SITE_URL } from "@/lib/constants";
@@ -98,6 +99,20 @@ export default async function CombienCouteApplicationWeb({
             et le budget doit refléter cette réalité.
           </p>
 
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/case-studies/billycheck-hero.webp"
+              alt="Application SaaS BillyCheck concue par P-XEL Studio"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+            <figcaption style={{ fontSize: '0.875rem', color: '#8A8A9A', marginTop: '0.5rem' }}>
+              BillyCheck : un SaaS de verification automatique de factures, concu et developpe par P-XEL.
+            </figcaption>
+          </figure>
+
           <h2>Les facteurs qui déterminent le prix</h2>
 
           <p>
@@ -186,6 +201,20 @@ export default async function CombienCouteApplicationWeb({
             précise toujours après une phase de cadrage qui définit le périmètre fonctionnel, les contraintes
             techniques et les priorités business. Sans cette étape, tout chiffrage est approximatif.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/case-studies/chairsplit-hero.webp"
+              alt="Plateforme ChairSplit concue par P-XEL Studio"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+            <figcaption style={{ fontSize: '0.875rem', color: '#8A8A9A', marginTop: '0.5rem' }}>
+              ChairSplit : une plateforme de reservation et de partage de postes, concue et developpee par P-XEL.
+            </figcaption>
+          </figure>
 
           <h2>MVP vs produit complet : comment réduire le budget initial</h2>
 
@@ -351,6 +380,20 @@ export default async function CombienCouteApplicationWeb({
             reality.
           </p>
 
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/case-studies/billycheck-hero.webp"
+              alt="BillyCheck SaaS application designed by P-XEL Studio"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+            <figcaption style={{ fontSize: '0.875rem', color: '#8A8A9A', marginTop: '0.5rem' }}>
+              BillyCheck: an automated invoice verification SaaS, designed and developed by P-XEL.
+            </figcaption>
+          </figure>
+
           <h2>The factors that determine the price</h2>
 
           <p>
@@ -437,6 +480,20 @@ export default async function CombienCouteApplicationWeb({
             always refined after a scoping phase that defines the functional perimeter, technical constraints,
             and business priorities. Without that step, any estimate is approximate.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/case-studies/chairsplit-hero.webp"
+              alt="ChairSplit platform designed by P-XEL Studio"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+            <figcaption style={{ fontSize: '0.875rem', color: '#8A8A9A', marginTop: '0.5rem' }}>
+              ChairSplit: a booking and seat-sharing platform, designed and developed by P-XEL.
+            </figcaption>
+          </figure>
 
           <h2>MVP vs full product: how to reduce the initial budget</h2>
 

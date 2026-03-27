@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
 import { SITE_URL } from "@/lib/constants";
@@ -97,6 +98,20 @@ export default async function CombienCouteUnSiteWeb({
             Plus le tunnel d&#39;achat est fluide, plus la complexité technique derrière est importante.
           </p>
 
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/case-studies/arduenna-hero.webp"
+              alt="Site e-commerce Arduenna concu par P-XEL Studio"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+            <figcaption style={{ fontSize: '0.875rem', color: '#8A8A9A', marginTop: '0.5rem' }}>
+              Arduenna : un site e-commerce sur mesure concu et developpe par P-XEL Studio.
+            </figcaption>
+          </figure>
+
           <h3>4. Web app ou plateforme métier</h3>
           <p>
             Portail client, intranet, configurateur, SaaS, application métier : ici, on ne parle plus simplement de site,
@@ -104,6 +119,20 @@ export default async function CombienCouteUnSiteWeb({
             workflows complexes. Ces projets impliquent UX, UI, développement, sécurité, data, parfois intégration ERP/CRM,
             et se chiffrent souvent en dizaines de milliers d&#39;euros.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/case-studies/greenmood-hero.webp"
+              alt="Plateforme Greenmood concue par P-XEL Studio"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+            <figcaption style={{ fontSize: '0.875rem', color: '#8A8A9A', marginTop: '0.5rem' }}>
+              Greenmood : une plateforme web sur mesure avec gestion de contenu, calendrier et analytics.
+            </figcaption>
+          </figure>
 
           <h2>Les facteurs qui font vraiment varier le prix en 2026</h2>
 
@@ -253,6 +282,20 @@ export default async function CombienCouteUnSiteWeb({
             The smoother the purchase funnel, the greater the technical complexity behind it.
           </p>
 
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/case-studies/arduenna-hero.webp"
+              alt="Arduenna e-commerce website designed by P-XEL Studio"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+            <figcaption style={{ fontSize: '0.875rem', color: '#8A8A9A', marginTop: '0.5rem' }}>
+              Arduenna: a custom e-commerce site designed and developed by P-XEL Studio.
+            </figcaption>
+          </figure>
+
           <h3>4. Web app or business platform</h3>
           <p>
             Client portal, intranet, configurator, SaaS, business application: here we&#39;re no longer talking
@@ -260,6 +303,20 @@ export default async function CombienCouteUnSiteWeb({
             and complex workflows. These projects involve UX, UI, development, security, data, sometimes
             ERP/CRM integration, and often run into tens of thousands of euros.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/case-studies/greenmood-hero.webp"
+              alt="Greenmood platform designed by P-XEL Studio"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+            <figcaption style={{ fontSize: '0.875rem', color: '#8A8A9A', marginTop: '0.5rem' }}>
+              Greenmood: a custom web platform with content management, calendar and analytics.
+            </figcaption>
+          </figure>
 
           <h2>The factors that actually drive pricing in 2026</h2>
 

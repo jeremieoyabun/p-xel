@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
 import { SITE_URL } from "@/lib/constants";
@@ -154,6 +155,20 @@ export default async function LancerMvpRapidement({
             entre les mains d&#39;utilisateurs réels le plus vite possible.
           </p>
 
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/case-studies/billycheck-hero.webp"
+              alt="BillyCheck, un MVP SaaS lance en moins de 6 semaines par P-XEL"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+            <figcaption style={{ fontSize: '0.875rem', color: '#8A8A9A', marginTop: '0.5rem' }}>
+              BillyCheck : un MVP SaaS passe du concept au premier utilisateur en moins de 6 semaines.
+            </figcaption>
+          </figure>
+
           <h3>4. Lancement</h3>
           <p>
             Le lancement d&#39;un MVP n&#39;est pas un événement marketing massif. C&#39;est un{" "}
@@ -235,6 +250,20 @@ export default async function LancerMvpRapidement({
             le reste (auth, paiement, CRM, emails). C&#39;est cette combinaison qui permet de
             tenir le délai de 4 semaines sans sacrifier la qualité du cœur de produit.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/case-studies/chairsplit-hero.webp"
+              alt="ChairSplit, un MVP lance rapidement par P-XEL Studio"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+            <figcaption style={{ fontSize: '0.875rem', color: '#8A8A9A', marginTop: '0.5rem' }}>
+              ChairSplit : une plateforme de reservation lancee rapidement avec une approche MVP disciplinee.
+            </figcaption>
+          </figure>
 
           <h2>Combien coûte un MVP en 2026</h2>
 
@@ -384,6 +413,20 @@ export default async function LancerMvpRapidement({
             users as fast as possible.
           </p>
 
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/case-studies/billycheck-hero.webp"
+              alt="BillyCheck, an MVP SaaS launched in under 6 weeks by P-XEL"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+            <figcaption style={{ fontSize: '0.875rem', color: '#8A8A9A', marginTop: '0.5rem' }}>
+              BillyCheck: an MVP SaaS that went from concept to first user in under 6 weeks.
+            </figcaption>
+          </figure>
+
           <h3>4. Launch</h3>
           <p>
             Launching an MVP is not a massive marketing event. It is a targeted{" "}
@@ -465,6 +508,20 @@ export default async function LancerMvpRapidement({
             emails). This combination is what makes it possible to hit the 4-week deadline without
             sacrificing core product quality.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/case-studies/chairsplit-hero.webp"
+              alt="ChairSplit, an MVP launched quickly by P-XEL Studio"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+            <figcaption style={{ fontSize: '0.875rem', color: '#8A8A9A', marginTop: '0.5rem' }}>
+              ChairSplit: a booking platform launched quickly with a disciplined MVP approach.
+            </figcaption>
+          </figure>
 
           <h2>How much does an MVP cost in 2026</h2>
 

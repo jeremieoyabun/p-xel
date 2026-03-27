@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArticlePage, Highlight } from "@/components/ArticlePage/ArticlePage";
 import { SITE_URL } from "@/lib/constants";
 import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
@@ -196,6 +197,20 @@ export default async function AgenceWebVsFreelance({
             un modèle pensé pour les projets ambitieux à taille humaine.
           </p>
 
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/legacy-assets/images/Fondateur.webp"
+              alt="Fondateur de P-XEL Studio, studio digital en Belgique"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+            <figcaption style={{ fontSize: '0.875rem', color: '#8A8A9A', marginTop: '0.5rem' }}>
+              P-XEL Studio : un studio digital qui combine design, developpement et vision produit.
+            </figcaption>
+          </figure>
+
           <h2>Comment choisir selon ton projet</h2>
 
           <p>
@@ -229,6 +244,20 @@ export default async function AgenceWebVsFreelance({
             idéal. Il comprend la logique MVP, itère vite et pense conversion dès le départ. Un freelance
             peut manquer de vision globale. Une agence sera trop lente et trop chère pour cette phase.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/case-studies/greenmood-hero.webp"
+              alt="Plateforme Greenmood, projet complexe realise par P-XEL Studio"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+            <figcaption style={{ fontSize: '0.875rem', color: '#8A8A9A', marginTop: '0.5rem' }}>
+              Greenmood : un projet complexe (contenu, calendrier, analytics) realise par P-XEL avec une approche studio.
+            </figcaption>
+          </figure>
 
           <h2>Les questions à poser avant de signer</h2>
 
@@ -424,6 +453,20 @@ export default async function AgenceWebVsFreelance({
             built for ambitious projects at a human scale.
           </p>
 
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/legacy-assets/images/Fondateur.webp"
+              alt="P-XEL Studio founder, digital studio based in Belgium"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+            <figcaption style={{ fontSize: '0.875rem', color: '#8A8A9A', marginTop: '0.5rem' }}>
+              P-XEL Studio: a digital studio combining design, development and product vision.
+            </figcaption>
+          </figure>
+
           <h2>How to choose based on your project</h2>
 
           <p>
@@ -457,6 +500,20 @@ export default async function AgenceWebVsFreelance({
             freelancer may lack the big-picture vision. An agency will be too slow and too expensive
             for this stage.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/case-studies/greenmood-hero.webp"
+              alt="Greenmood platform, a complex project delivered by P-XEL Studio"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+            <figcaption style={{ fontSize: '0.875rem', color: '#8A8A9A', marginTop: '0.5rem' }}>
+              Greenmood: a complex project (content, calendar, analytics) delivered by P-XEL with a studio approach.
+            </figcaption>
+          </figure>
 
           <h2>Questions to ask before signing</h2>
 

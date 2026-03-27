@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
 import { SITE_URL } from "@/lib/constants";
@@ -259,6 +260,20 @@ export default async function LancerSaasBelgique({
             interface épurée, onboarding en 2 minutes, résultats visibles dès le premier scan.
           </p>
 
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/case-studies/billycheck-hero.webp"
+              alt="Interface du SaaS BillyCheck concu par P-XEL Studio"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+            <figcaption style={{ fontSize: '0.875rem', color: '#8A8A9A', marginTop: '0.5rem' }}>
+              BillyCheck : verification automatique de factures, du concept au lancement en 6 semaines.
+            </figcaption>
+          </figure>
+
           <h3>ChairSplit</h3>
           <p>
             <strong>ChairSplit</strong> est une plateforme de réservation et de partage de postes pour
@@ -267,6 +282,20 @@ export default async function LancerSaasBelgique({
             Supabase, Stripe), il illustre comment un MVP bien cadré peut attaquer un marché de niche
             avec un budget maîtrisé.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/case-studies/chairsplit-hero.webp"
+              alt="Interface de la plateforme ChairSplit concue par P-XEL Studio"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+            <figcaption style={{ fontSize: '0.875rem', color: '#8A8A9A', marginTop: '0.5rem' }}>
+              ChairSplit : reservation et partage de postes pour espaces de coworking et salons.
+            </figcaption>
+          </figure>
 
           <div className={articleStyles.highlight}>
             <p>
@@ -503,6 +532,20 @@ export default async function LancerSaasBelgique({
             results from the first scan.
           </p>
 
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/case-studies/billycheck-hero.webp"
+              alt="BillyCheck SaaS interface designed by P-XEL Studio"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+            <figcaption style={{ fontSize: '0.875rem', color: '#8A8A9A', marginTop: '0.5rem' }}>
+              BillyCheck: automated invoice verification, from concept to launch in 6 weeks.
+            </figcaption>
+          </figure>
+
           <h3>ChairSplit</h3>
           <p>
             <strong>ChairSplit</strong> is a booking and seat-sharing platform for coworking spaces
@@ -510,6 +553,20 @@ export default async function LancerSaasBelgique({
             and tenants. Developed with the same stack (Next.js, Supabase, Stripe), it illustrates
             how a well-scoped MVP can tackle a niche market with a controlled budget.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/case-studies/chairsplit-hero.webp"
+              alt="ChairSplit platform interface designed by P-XEL Studio"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+            <figcaption style={{ fontSize: '0.875rem', color: '#8A8A9A', marginTop: '0.5rem' }}>
+              ChairSplit: booking and seat-sharing for coworking spaces and salons.
+            </figcaption>
+          </figure>
 
           <div className={articleStyles.highlight}>
             <p>
