@@ -26,8 +26,8 @@ const content = (locale: Locale) => {
   return {
     meta: {
       title: isFr
-        ? "Dispatch — Coordination de contenu multi-marchés | P-XEL"
-        : "Dispatch — Multi-Market Content Coordination | P-XEL",
+        ? "Dispatch  - Coordination de contenu multi-marchés | P-XEL"
+        : "Dispatch  - Multi-Market Content Coordination | P-XEL",
       description: isFr
         ? "Centralisez la création de contenu, distribuez-le à vos marchés régionaux, gardez le contrôle de votre marque. Plateforme + onboarding accompagné."
         : "Centralize content creation, distribute it to your regional markets, and keep brand control. Platform + guided onboarding.",
@@ -238,7 +238,7 @@ const content = (locale: Locale) => {
             { question: "How many markets can Dispatch handle?", answer: "There's no technical limit. The platform is designed to scale from 3 to 20+ markets. Each market has its own dashboard and approval workflows." },
             { question: "Can we connect Dispatch to our publishing tools?", answer: "Integration with tools like Buffer, Hootsuite, or direct publishing to Meta Business Suite is on the roadmap. In the meantime, validated content is ready to copy-paste in one click." },
             { question: "Who creates the content?", answer: "You do. Dispatch is a coordination tool, not a creation tool. Your HQ team produces master content, Dispatch distributes it and coordinates validation with your markets." },
-            { question: "Do our regional teams need technical skills?", answer: "No. The interface is designed for marketing profiles, not developers. Viewing the calendar, approving a post, uploading a photo — everything is a few clicks away." },
+            { question: "Do our regional teams need technical skills?", answer: "No. The interface is designed for marketing profiles, not developers. Viewing the calendar, approving a post, uploading a photo  - everything is a few clicks away." },
             { question: "How does onboarding work?", answer: "We configure the platform together in 1 to 2 weeks. We import your existing calendar, create access for each market, and train your teams. During the first 30 days, we're available to adjust what needs adjusting." },
           ],
     },
