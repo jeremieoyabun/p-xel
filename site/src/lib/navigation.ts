@@ -36,6 +36,7 @@ export function getFooterNav(locale: Locale) {
         { label: "UX/UI Design", href: lp("/services/ux-ui-design/") },
         { label: isFr ? "Branding & Identité" : "Branding & Identity", href: lp("/services/branding-identite/") },
         { label: isFr ? "Refonte de site web" : "Website redesign", href: lp("/services/refonte-site-web/") },
+        { label: "E-commerce", href: lp("/services/creation-e-commerce/") },
       ],
     },
     perspectives: {
