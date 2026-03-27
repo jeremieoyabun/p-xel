@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
 import { SITE_URL } from "@/lib/constants";
@@ -172,6 +173,17 @@ export default async function NextjsVsWordpress({
             <strong>Next.js</strong> : les pages statiques sont servies depuis un CDN mondial. Peu importe le trafic,
             le site reste rapide. La scalabilité est native et transparente.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/articles/performances-ui.webp"
+              alt="Comparaison des performances Next.js et WordPress"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+          </figure>
 
           <h2>Quand choisir WordPress</h2>
 
@@ -374,6 +386,17 @@ export default async function NextjsVsWordpress({
             <strong>Next.js</strong>: static pages are served from a global CDN. Regardless of traffic,
             the site stays fast. Scalability is native and seamless.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/articles/performances-ui.webp"
+              alt="Next.js vs WordPress performance comparison"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+          </figure>
 
           <h2>When to choose WordPress</h2>
 

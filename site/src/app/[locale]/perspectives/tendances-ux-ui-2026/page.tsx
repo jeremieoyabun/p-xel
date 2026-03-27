@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArticlePage, Highlight } from "@/components/ArticlePage/ArticlePage";
 import { SITE_URL } from "@/lib/constants";
 import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
@@ -77,6 +78,17 @@ export default async function TendancesUxUi2026({
             d&#39;écrans figés mais comme un flux adaptatif qui apprend et évolue. L&#39;IA devient un
             co-designer du parcours.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/articles/Futuritic-UI.webp"
+              alt="Interface utilisateur futuriste et immersive"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+          </figure>
 
           <h2>2. Minimalisme stratégique et micro-interactions sur mesure</h2>
 
@@ -207,6 +219,17 @@ export default async function TendancesUxUi2026({
             of static screens but as an adaptive flow that learns and evolves. AI becomes a
             co-designer of the journey.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/articles/Futuritic-UI.webp"
+              alt="Futuristic and immersive user interface"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+          </figure>
 
           <h2>2. Strategic minimalism and tailored micro-interactions</h2>
 

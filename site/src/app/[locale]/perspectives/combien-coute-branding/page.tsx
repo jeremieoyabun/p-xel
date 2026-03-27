@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
 import { SITE_URL } from "@/lib/constants";
@@ -125,6 +126,17 @@ export default async function CombienCouteBranding({
             ou des plateformes de crowdsourcing. Ce n&apos;est pas forcément inutile pour un side project, mais
             ce n&apos;est pas du branding stratégique.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/articles/branding.webp"
+              alt="Identité visuelle et branding professionnel"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+          </figure>
 
           <h2>Les facteurs qui influencent le prix</h2>
 
@@ -331,6 +343,17 @@ export default async function CombienCouteBranding({
             or crowdsourcing platforms. That is not necessarily useless for a side project, but
             it is not strategic branding.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/articles/branding.webp"
+              alt="Professional visual identity and branding"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+          </figure>
 
           <h2>Factors that influence pricing</h2>
 

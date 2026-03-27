@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
 import { SITE_URL } from "@/lib/constants";
@@ -74,6 +75,17 @@ export default async function IaCreationProduitDigital({
               sur la cohérence, l&#39;accessibilité et la pertinence du design.
             </p>
           </div>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/articles/ai-product-design.webp"
+              alt="Intelligence artificielle dans le design produit"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+          </figure>
 
           <h2>1. Accélérer la recherche, les moodboards et le cadrage</h2>
 
@@ -293,6 +305,17 @@ export default async function IaCreationProduitDigital({
               over consistency, accessibility and design relevance.
             </p>
           </div>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/articles/ai-product-design.webp"
+              alt="Artificial intelligence in product design"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+          </figure>
 
           <h2>1. Accelerating research, moodboards and project framing</h2>
 

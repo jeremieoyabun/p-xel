@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
 import { SITE_URL } from "@/lib/constants";
@@ -131,6 +132,17 @@ export default async function NoCodeVsCode({
             Limites : extensibilité réduite, dépendance à une plateforme, coûts qui peuvent grimper à l&#39;usage,
             et parfois des <strong>briques UX/UI moins fines</strong> que du sur-mesure.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/articles/No-code.webp"
+              alt="Plateforme de développement no-code"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+          </figure>
 
           <h2>Quand privilégier le full-code ?</h2>
 
@@ -386,6 +398,17 @@ export default async function NoCodeVsCode({
             Limitations: reduced extensibility, platform dependency, costs that can escalate with usage,
             and sometimes <strong>less refined UX/UI building blocks</strong> than custom work.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/articles/No-code.webp"
+              alt="No-code development platform"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+          </figure>
 
           <h2>When to go full-code</h2>
 

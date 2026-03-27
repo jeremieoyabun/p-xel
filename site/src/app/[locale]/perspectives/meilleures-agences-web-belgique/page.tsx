@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArticlePage, Highlight } from "@/components/ArticlePage/ArticlePage";
 import { SITE_URL } from "@/lib/constants";
 import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
@@ -64,6 +65,17 @@ export default async function MeilleuresAgencesWebBelgique({
             Pas de partenariat caché. Juste une analyse factuelle des agences qui font un travail remarquable en
             Belgique, avec leurs forces et leurs spécialités respectives.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/articles/agency.webp"
+              alt="Espace de travail d'une agence web premium"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+          </figure>
 
           <h2>Comment évaluer une agence web : les critères qui comptent</h2>
 
@@ -281,6 +293,17 @@ export default async function MeilleuresAgencesWebBelgique({
             hidden partnerships. Just a factual analysis of agencies doing remarkable work in Belgium, with their
             respective strengths and specialties.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/articles/agency.webp"
+              alt="Premium web agency workspace"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+          </figure>
 
           <h2>How to evaluate a web agency: the criteria that matter</h2>
 

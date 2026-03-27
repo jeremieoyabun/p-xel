@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
 import { SITE_URL } from "@/lib/constants";
@@ -271,6 +272,17 @@ export default async function RefonteSiteWeb({
             exactement ce qu&#39;il faut préserver, ce qu&#39;il faut améliorer et ce qu&#39;il faut reconstruire.
             C&#39;est la base de tout le projet.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/articles/website-redesign-analytics.webp"
+              alt="Analytics et audit de performance web"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+          </figure>
 
           <h3>Fixer des objectifs mesurables</h3>
           <p>
@@ -591,6 +603,17 @@ export default async function RefonteSiteWeb({
             exactly what to preserve, what to improve and what to rebuild.
             It is the foundation of the entire project.
           </p>
+
+          <figure style={{ margin: '2rem 0' }}>
+            <Image
+              src="/images/articles/website-redesign-analytics.webp"
+              alt="Web performance analytics and audit"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            />
+          </figure>
 
           <h3>Set measurable objectives</h3>
           <p>
