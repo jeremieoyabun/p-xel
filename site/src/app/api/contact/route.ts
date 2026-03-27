@@ -46,7 +46,7 @@ export async function POST(request: Request) {
         `Email: ${email}`,
         `Type de projet: ${projectType}`,
         budget ? `Budget: ${budget}` : null,
-        timeline ? `Delai: ${timeline}` : null,
+        timeline ? `Délai: ${timeline}` : null,
         ``,
         `Message:`,
         message,
