@@ -68,7 +68,7 @@ export default async function MeilleuresAgencesWebBelgique({
 
           <figure style={{ margin: '2rem 0' }}>
             <Image
-              src="/images/articles/agency.webp"
+              src="/images/articles/web-agency.webp"
               alt="Espace de travail d'une agence web premium"
               width={1200}
               height={675}
@@ -296,7 +296,7 @@ export default async function MeilleuresAgencesWebBelgique({
 
           <figure style={{ margin: '2rem 0' }}>
             <Image
-              src="/images/articles/agency.webp"
+              src="/images/articles/web-agency.webp"
               alt="Premium web agency workspace"
               width={1200}
               height={675}
