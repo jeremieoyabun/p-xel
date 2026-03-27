@@ -43,7 +43,7 @@ export function localBusinessSchema() {
     address: {
       "@type": "PostalAddress" as const,
       streetAddress: "Rue de la Casquette 5",
-      addressLocality: "Liege",
+      addressLocality: "Liège",
       postalCode: "4000",
       addressRegion: "Wallonie",
       addressCountry: "BE",
@@ -63,7 +63,7 @@ export function localBusinessSchema() {
     ],
     priceRange: "$$",
     areaServed: [
-      { "@type": "City" as const, name: "Liege" },
+      { "@type": "City" as const, name: "Liège" },
       { "@type": "City" as const, name: "Bruxelles" },
       { "@type": "City" as const, name: "Luxembourg" },
       { "@type": "AdministrativeArea" as const, name: "Wallonie" },

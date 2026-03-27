@@ -25,11 +25,11 @@ export async function generateMetadata({
     title: {
       template: "%s | P-XEL Studio",
       default: isFr
-        ? `${SITE_NAME} | Studio Digital a Liege`
+        ? `${SITE_NAME} | Studio Digital à Liège`
         : `${SITE_NAME} | Digital Product Studio`,
     },
     description: isFr
-      ? "Studio produit digital a Liege. Sites web, applications, MVP, branding et UX/UI. Du concept au produit livre."
+      ? "Studio produit digital à Liège. Sites web, applications, MVP, branding et UX/UI. Du concept au produit livré."
       : "Digital product studio in Liege, Belgium. Websites, web apps, MVPs, branding and UX/UI. From concept to shipped product.",
     icons: {
       icon: "/favicon.png",
@@ -46,7 +46,7 @@ export async function generateMetadata({
           width: 1200,
           height: 630,
           alt: isFr
-            ? "P-XEL Studio - Studio Digital a Liege"
+            ? "P-XEL Studio - Studio Digital à Liège"
             : "P-XEL Studio - Digital Product Studio",
         },
       ],

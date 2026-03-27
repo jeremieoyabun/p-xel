@@ -11,11 +11,11 @@ export default function NotFound() {
         <span className={styles.code}>404</span>
         <h1 className={styles.heading}>Page introuvable.</h1>
         <p className={styles.body}>
-          Cette page n&apos;existe pas ou a ete deplacee.
+          Cette page n&apos;existe pas ou a été déplacée.
         </p>
         <div className={styles.actions}>
           <Button variant="primary" href="/">
-            Retour a l&apos;accueil
+            Retour à l&apos;accueil
           </Button>
           <Button variant="ghost" href="/contact/">
             Nous contacter

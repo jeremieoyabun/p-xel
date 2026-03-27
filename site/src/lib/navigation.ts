@@ -32,15 +32,15 @@ export function getFooterNav(locale: Locale) {
         { label: isFr ? "Sites web" : "Websites", href: lp("/services/creation-site-web/") },
         { label: isFr ? "Applications & MVP" : "Apps & MVPs", href: lp("/services/application-web-mvp/") },
         { label: "UX/UI Design", href: lp("/services/ux-ui-design/") },
-        { label: isFr ? "Branding & Identite" : "Branding & Identity", href: lp("/services/branding-identite/") },
+        { label: isFr ? "Branding & Identité" : "Branding & Identity", href: lp("/services/branding-identite/") },
       ],
     },
     perspectives: {
       title: "Perspectives",
       links: [
         { label: isFr ? "Tous les articles" : "All articles", href: lp("/perspectives/") },
-        { label: isFr ? "Combien coute un site web" : "How much does a website cost", href: lp("/perspectives/combien-coute-un-site-web/") },
-        { label: isFr ? "Aides a la digitalisation" : "Digitalization grants", href: lp("/perspectives/aides-digitalisation-belgique/") },
+        { label: isFr ? "Combien coûte un site web" : "How much does a website cost", href: lp("/perspectives/combien-coute-un-site-web/") },
+        { label: isFr ? "Aides à la digitalisation" : "Digitalization grants", href: lp("/perspectives/aides-digitalisation-belgique/") },
         { label: isFr ? "No-code vs full-code" : "No-code vs full-code", href: lp("/perspectives/no-code-vs-code/") },
       ],
     },
@@ -62,8 +62,8 @@ export function getFooterNav(locale: Locale) {
     legal: {
       title: "Legal",
       links: [
-        { label: isFr ? "Mentions legales" : "Legal notice", href: lp("/mentions-legales/") },
-        { label: isFr ? "Politique de confidentialite" : "Privacy policy", href: lp("/politique-confidentialite/") },
+        { label: isFr ? "Mentions légales" : "Legal notice", href: lp("/mentions-legales/") },
+        { label: isFr ? "Politique de confidentialité" : "Privacy policy", href: lp("/politique-confidentialite/") },
       ],
     },
   };

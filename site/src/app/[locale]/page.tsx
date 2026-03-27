@@ -41,7 +41,7 @@ export async function generateMetadata({
       ? "P-XEL Studio | Design, Code & Lancement de Produits Digitaux"
       : "P-XEL Studio | Design, Code & Digital Product Launch",
     description: isFr
-      ? "Studio digital a Liege. On concoit, construit et livre des produits digitaux premium. Sites, applications, MVP, branding. Reservez un appel."
+      ? "Studio digital à Liège. On conçoit, construit et livre des produits digitaux premium. Sites, applications, MVP, branding. Réservez un appel."
       : "Digital studio in Liege. We design, build and ship premium digital products. Websites, apps, MVPs, branding. Book a call.",
     alternates: { canonical: isFr ? "/" : "/en/" },
     openGraph: {
@@ -49,7 +49,7 @@ export async function generateMetadata({
         ? "P-XEL Studio | Design, Code & Lancement de Produits Digitaux"
         : "P-XEL Studio | Design, Code & Digital Product Launch",
       description: isFr
-        ? "Studio digital a Liege. On concoit, construit et livre des produits digitaux premium."
+        ? "Studio digital à Liège. On conçoit, construit et livre des produits digitaux premium."
         : "Digital studio in Liege. We design, build and ship premium digital products.",
       url: isFr ? "/" : "/en/",
     },
@@ -107,9 +107,9 @@ export default async function HomePage({
           breadcrumbSchema([{ name: isFr ? "Accueil" : "Home", url: "/" }]),
           faqSchema(t.faq.items),
           aggregateRatingSchema([
-            { name: "Mehdi A.", role: "Co-fondateur", company: "BillyCheck", quote: "P-XEL a transforme notre idee en produit fonctionnel en quelques semaines." },
-            { name: "Julien D.", role: "CEO", company: "ChairSplit", quote: "P-XEL a livre une plateforme complete, operationnelle, que nos equipes utilisent au quotidien." },
-            { name: "Martin B.", role: "Fondateur", company: "Arduenna Gin", quote: "En deux mois, on avait un site et une strategie d'acquisition qui ont genere deux ans de chiffre d'affaires." },
+            { name: "Mehdi A.", role: "Co-fondateur", company: "BillyCheck", quote: "P-XEL a transformé notre idée en produit fonctionnel en quelques semaines." },
+            { name: "Julien D.", role: "CEO", company: "ChairSplit", quote: "P-XEL a livré une plateforme complète, opérationnelle, que nos équipes utilisent au quotidien." },
+            { name: "Martin B.", role: "Fondateur", company: "Arduenna Gin", quote: "En deux mois, on avait un site et une stratégie d'acquisition qui ont généré deux ans de chiffre d'affaires." },
           ]),
         ]}
       />
@@ -140,7 +140,7 @@ export default async function HomePage({
           </div>
         </div>
         <div className={styles.heroBottom}>
-          <span className={styles.heroAnchor}>Liege, BE</span>
+          <span className={styles.heroAnchor}>Liège, BE</span>
           <span className={styles.heroAnchorSep} aria-hidden="true" />
           <span className={styles.heroAnchor}>Since 2008</span>
         </div>

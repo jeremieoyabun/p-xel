@@ -15,21 +15,21 @@ const testimonials: Record<string, Testimonial[]> = {
   fr: [
     {
       quote:
-        "P-XEL a transforme notre idee en produit fonctionnel en quelques semaines. La qualite du design et la rigueur technique sont au-dessus de tout ce qu'on avait vu avant.",
+        "P-XEL a transformé notre idée en produit fonctionnel en quelques semaines. La qualité du design et la rigueur technique sont au-dessus de tout ce qu'on avait vu avant.",
       name: "Mehdi A.",
       role: "Co-fondateur",
       company: "BillyCheck",
     },
     {
       quote:
-        "On cherchait un partenaire qui comprenne le produit, pas juste le design. P-XEL a livre une plateforme complete, operationnelle, que nos equipes utilisent au quotidien.",
+        "On cherchait un partenaire qui comprenne le produit, pas juste le design. P-XEL a livré une plateforme complète, opérationnelle, que nos équipes utilisent au quotidien.",
       name: "Julien D.",
       role: "CEO",
       company: "ChairSplit",
     },
     {
       quote:
-        "Reactif, precis, zero bullshit. En deux mois, on avait un site et une strategie d'acquisition qui ont genere deux ans de chiffre d'affaires.",
+        "Réactif, précis, zéro bullshit. En deux mois, on avait un site et une stratégie d'acquisition qui ont généré deux ans de chiffre d'affaires.",
       name: "Martin B.",
       role: "Fondateur",
       company: "Arduenna Gin",

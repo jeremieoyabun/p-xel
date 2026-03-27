@@ -82,7 +82,7 @@ export default async function OgImage({
           }}
         >
           {isFr
-            ? "Sites web, applications, MVP, branding et UX/UI. Du concept au produit livre."
+            ? "Sites web, applications, MVP, branding et UX/UI. Du concept au produit livré."
             : "Websites, web apps, MVPs, branding and UX/UI. From concept to shipped product."}
         </p>
 

@@ -133,7 +133,7 @@ const content: Record<Locale, ServicePage> = {
         {
           name: "Oyabun",
           tags: ["Web3", "NFT", "Play-to-Earn"],
-          body: "Jeu mobile Web3 play-to-earn dans un univers manga cyber-yakuza. Game design, tokenomics OYAB, systeme de progression NFT, direction artistique et UX mobile.",
+          body: "Jeu mobile Web3 play-to-earn dans un univers manga cyber-yakuza. Game design, tokenomics OYAB, système de progression NFT, direction artistique et UX mobile.",
           href: "/work/oyabun/",
         },
       ],

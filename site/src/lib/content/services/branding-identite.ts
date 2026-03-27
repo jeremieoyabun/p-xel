@@ -136,7 +136,7 @@ const content: Record<Locale, ServicePage> = {
         {
           name: "Oyabun",
           tags: ["Branding", "Direction artistique", "Univers manga"],
-          body: "Identite de marque complete pour un ecosysteme gaming Web3. Direction artistique cyber-yakuza, logo, personnages NFT, systeme visuel et declinaisons sur tous les supports.",
+          body: "Identité de marque complète pour un écosystème gaming Web3. Direction artistique cyber-yakuza, logo, personnages NFT, système visuel et déclinaisons sur tous les supports.",
           href: "/work/oyabun/",
         },
       ],
