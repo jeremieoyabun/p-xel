@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/work/greenmood/", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/work/oyabun/", priority: 0.7, changeFrequency: "monthly" as const },
     { url: "/work/arduenna-gin/", priority: 0.7, changeFrequency: "monthly" as const },
+    { url: "/work/greenmood-marketing-os/", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/studio/", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/contact/", priority: 0.9, changeFrequency: "yearly" as const },
     { url: "/services/creation-site-web/", priority: 0.8, changeFrequency: "monthly" as const },

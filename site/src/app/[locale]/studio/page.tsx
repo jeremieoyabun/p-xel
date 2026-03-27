@@ -23,7 +23,7 @@ export async function generateMetadata({
   const isFr = locale === "fr";
 
   return {
-    title: "Studio",
+    title: isFr ? "Le Studio" : "The Studio",
     description: isFr
       ? "Un studio. Un fondateur. 16 ans d'expertise produit. On conçoit, construit et livre des produits digitaux premium. Découvrez comment on travaille."
       : "One studio. One founder. 16 years of product expertise. We design, build and ship premium digital products. Discover how we work.",

@@ -21,10 +21,12 @@ export async function generateMetadata({
   const isFr = locale === "fr";
 
   return {
-    title: "Work",
+    title: isFr
+      ? "Projets et études de cas"
+      : "Projects & Case Studies",
     description: isFr
-      ? "Applications web, plateformes SaaS, identités de marque. Cinq produits digitaux conçus, construits et livrés par P-XEL Studio. Voir les projets."
-      : "Web applications, SaaS platforms, brand identities. Five digital products designed, built and shipped by P-XEL Studio. View projects.",
+      ? "Applications web, plateformes SaaS, identités de marque. Six produits digitaux conçus, construits et livrés par P-XEL Studio à Liège. Voir les projets."
+      : "Web applications, SaaS platforms, brand identities. Six digital products designed, built and shipped by P-XEL Studio in Liege, Belgium. View projects.",
     alternates: { canonical: `/${locale}/work/` },
     openGraph: {
       title: "Work | P-XEL Studio",

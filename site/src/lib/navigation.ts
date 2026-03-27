@@ -3,6 +3,7 @@ import { localePath } from "@/lib/i18n/get-path";
 
 export function getHeaderNav(locale: Locale) {
   return [
+    { label: "Services", href: localePath("/services/creation-site-web/", locale) },
     { label: "Work", href: localePath("/work/", locale) },
     { label: "Perspectives", href: localePath("/perspectives/", locale) },
     { label: "Studio", href: localePath("/studio/", locale) },
