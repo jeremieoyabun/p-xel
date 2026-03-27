@@ -132,7 +132,7 @@ const content = {
       {
         question: "Quel est le délai pour créer un site web à Liège ?",
         answer:
-          "Landing page : 1 à 2 semaines. Site vitrine : 3 à 6 semaines. Application web : 6 à 12 semaines. On définit un calendrier précis dès le départ et on le respecte.",
+          "Landing page : 1 semaine. Site vitrine : 2 à 4 semaines. Application web : 4 à 8 semaines. On définit un calendrier précis dès le départ et on le respecte.",
       },
       {
         question: "P-XEL peut-il m'aider avec les chèques-entreprises ?",
@@ -287,7 +287,7 @@ const content = {
       {
         question: "What is the timeline to create a website in Liege?",
         answer:
-          "Landing page: 1 to 2 weeks. Corporate site: 3 to 6 weeks. Web application: 6 to 12 weeks. We define a precise schedule from the start and we stick to it.",
+          "Landing page: 1 week. Corporate site: 2 to 4 weeks. Web application: 4 to 8 weeks. We define a precise schedule from the start and we stick to it.",
       },
       {
         question: "Can P-XEL help me with Belgian business vouchers (cheques-entreprises)?",
