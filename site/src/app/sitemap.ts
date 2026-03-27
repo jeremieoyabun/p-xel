@@ -51,6 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/perspectives/lancer-mvp-rapidement/", priority: 0.7, changeFrequency: "monthly" as const },
     { url: "/perspectives/agence-web-vs-freelance/", priority: 0.7, changeFrequency: "monthly" as const },
     { url: "/perspectives/combien-coute-application-web/", priority: 0.7, changeFrequency: "monthly" as const },
+    { url: "/perspectives/meilleures-agences-web-belgique/", priority: 0.7, changeFrequency: "monthly" as const },
     { url: "/mentions-legales/", priority: 0.3, changeFrequency: "yearly" as const },
     { url: "/politique-confidentialite/", priority: 0.3, changeFrequency: "yearly" as const },
   ];
