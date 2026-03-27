@@ -3,6 +3,7 @@ import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
 import { CustomCursor } from "@/components/CustomCursor/CustomCursor";
 import { FloatingCTA } from "@/components/FloatingCTA/FloatingCTA";
+import { CookieBanner } from "@/components/CookieBanner/CookieBanner";
 import { LocaleProvider } from "@/lib/i18n/locale-context";
 import { locales, type Locale } from "@/lib/i18n/config";
 import { SetHtmlLang } from "@/lib/i18n/set-lang";
@@ -94,6 +95,7 @@ export default async function LocaleLayout({
       <main id="main-content">{children}</main>
       <Footer />
       <FloatingCTA />
+      <CookieBanner />
     </LocaleProvider>
   );
 }
