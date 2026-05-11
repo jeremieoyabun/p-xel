@@ -15,7 +15,7 @@ const content = {
         slug: "greenmood-marketing-os",
         tags: ["Application Web", "Intelligence Artificielle", "Marketing Automation", "Multi-Marché"],
         description:
-          "Plateforme marketing IA sur mesure. Calendrier éditorial, compositeur IA, publication automatisée sur 8 marchés et 6 réseaux sociaux. Propulsée par Claude AI.",
+          "Plateforme marketing IA sur mesure. Calendrier éditorial, compositeur IA, publication automatisée sur 8 marchés et 6 réseaux sociaux.",
         result: "60+ posts/mois, 8 marchés, zéro erreur",
         image: "/images/case-studies/greenmood-marketing-os-hero.webp",
         tier: "featured" as const,
@@ -89,7 +89,7 @@ const content = {
         slug: "greenmood-marketing-os",
         tags: ["Web Application", "Artificial Intelligence", "Marketing Automation", "Multi-Market"],
         description:
-          "Custom AI marketing platform. Editorial calendar, AI composer, automated publishing across 8 markets and 6 social platforms. Powered by Claude AI.",
+          "Custom AI marketing platform. Editorial calendar, AI composer, automated publishing across 8 markets and 6 social platforms.",
         result: "60+ posts/month, 8 markets, zero errors",
         image: "/images/case-studies/greenmood-marketing-os-hero.webp",
         tier: "featured" as const,

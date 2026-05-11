@@ -44,14 +44,14 @@ const content: Record<Locale, CaseStudy> = {
         label: "Approche",
         heading:
           "Six modules. Un seul système intégré.",
-        body: "**Calendrier éditorial**  - Vue mois, semaine et agenda. Chaque marché et plateforme identifié par couleur. Drag-and-drop, création par lots multi-marchés, publication intelligente par fuseau horaire.\n\n**Compositeur IA**  - Claude AI génère du contenu ancré dans la base de connaissances Greenmood : specs produit réelles, guidelines de ton, règles par marché. L'IA ne fabrique jamais de données. Chaque post passe un fact-checking avant planification.\n\n**Pipeline d'approbation**  - Machine à 6 états : Brouillon → Généré par IA → Vérifié → Approuvé marque → Prêt à planifier → Planifié → Publié. Chaque transition est loguée. Aucun raccourci possible.\n\n**Publication automatisée**  - Intégration directe Instagram Graph API et LinkedIn API. Images uniques, carousels (jusqu'à 10 slides), Stories et Reels. Premiers commentaires auto-postés pour la stratégie de liens LinkedIn.\n\n**Intelligence marché**  - Moteur d'intelligence compétitive propulsé par IA. Monitoring des tendances, mouvements concurrents et lacunes de contenu. Recommandations d'opportunités scorées par pertinence.\n\n**Multi-marché, multi-langue**  - 8 marchés avec ton localisé. Français pour la France, polonais pour la Pologne, coréen pour la Corée du Sud. L'interface elle-même est trilingue (EN/FR/PL).",
+        body: "**Calendrier éditorial**  - Vue mois, semaine et agenda. Chaque marché et plateforme identifié par couleur. Drag-and-drop, création par lots multi-marchés, publication intelligente par fuseau horaire.\n\n**Compositeur IA**  - L'IA génère du contenu ancré dans la base de connaissances Greenmood : specs produit réelles, guidelines de ton, règles par marché. L'IA ne fabrique jamais de données. Chaque post passe un fact-checking avant planification.\n\n**Pipeline d'approbation**  - Machine à 6 états : Brouillon → Généré par IA → Vérifié → Approuvé marque → Prêt à planifier → Planifié → Publié. Chaque transition est loguée. Aucun raccourci possible.\n\n**Publication automatisée**  - Intégration directe Instagram Graph API et LinkedIn API. Images uniques, carousels (jusqu'à 10 slides), Stories et Reels. Premiers commentaires auto-postés pour la stratégie de liens LinkedIn.\n\n**Intelligence marché**  - Moteur d'intelligence compétitive propulsé par IA. Monitoring des tendances, mouvements concurrents et lacunes de contenu. Recommandations d'opportunités scorées par pertinence.\n\n**Multi-marché, multi-langue**  - 8 marchés avec ton localisé. Français pour la France, polonais pour la Pologne, coréen pour la Corée du Sud. L'interface elle-même est trilingue (EN/FR/PL).",
         image: "/images/case-studies/gmos-approach.webp",
       },
       execution: {
         label: "Exécution",
         heading:
           "Full-stack. Du design au déploiement en production.",
-        body: "L'application a été construite avec Next.js 16 (App Router) et React 19 en TypeScript strict. La base de données tourne sur Neon PostgreSQL avec Prisma ORM. L'IA utilise Anthropic Claude : Sonnet pour la génération de contenu, Haiku pour la validation et le fact-checking.\n\nLes médias passent par Cloudinary pour le CDN et l'optimisation d'images. L'authentification est session-based avec protection middleware. Le tout est déployé sur Vercel (Edge + Serverless) avec Tailwind CSS v4 pour le styling.\n\nLe système gère les rôles (Opérateur, Coordinateur, Lecteur), les guardrails de marque (l'IA ne fabrique jamais de specs, crédite toujours les designers) et la publication timezone-aware (les posts US sont publiés en heure de New York, les posts Émirats en heure de Dubaï).",
+        body: "L'application a été construite avec Next.js 16 (App Router) et React 19 en TypeScript strict. La base de données tourne sur Neon PostgreSQL avec Prisma ORM. Deux modèles IA séparés sont orchestrés : un modèle puissant pour la génération de contenu, un modèle plus rapide pour la validation et le fact-checking.\n\nLes médias passent par Cloudinary pour le CDN et l'optimisation d'images. L'authentification est session-based avec protection middleware. Le tout est déployé sur Vercel (Edge + Serverless) avec Tailwind CSS v4 pour le styling.\n\nLe système gère les rôles (Opérateur, Coordinateur, Lecteur), les guardrails de marque (l'IA ne fabrique jamais de specs, crédite toujours les designers) et la publication timezone-aware (les posts US sont publiés en heure de New York, les posts Émirats en heure de Dubaï).",
         image: "/images/case-studies/gmos-execution.webp",
       },
       result: {
@@ -80,7 +80,6 @@ const content: Record<Locale, CaseStudy> = {
       "TypeScript",
       "PostgreSQL",
       "Prisma",
-      "Claude AI",
       "Cloudinary",
       "Vercel",
       "Tailwind CSS",
@@ -145,14 +144,14 @@ const content: Record<Locale, CaseStudy> = {
         label: "Approach",
         heading:
           "Six modules. One integrated system.",
-        body: "**Editorial Calendar**  - Month, week and agenda views. Every market and platform color-coded. Drag-and-drop scheduling, multi-market batch creation, and timezone-aware publishing.\n\n**AI Content Composer**  - Claude AI generates content grounded in Greenmood\u2019s Knowledge Base: real product specs, brand tone guidelines, and market-specific rules. The AI never invents facts. Every generated post passes through fact-checking before scheduling.\n\n**Approval Pipeline**  - A strict 6-step state machine: Draft \u2192 AI Generated \u2192 Fact-Checked \u2192 Brand Approved \u2192 Ready to Schedule \u2192 Scheduled \u2192 Published. Every transition is logged. No shortcuts.\n\n**Automated Publishing**  - Direct integration with Instagram Graph API and LinkedIn API. Single images, carousels (up to 10 slides), Stories, and Reels. First comments auto-posted for LinkedIn link strategy.\n\n**Market Intelligence**  - An AI-powered competitive intelligence engine that monitors industry trends, competitor moves, and content gaps. Recommends actionable content opportunities scored by relevance.\n\n**Multi-Market, Multi-Language**  - 8 markets, each with localized tone. French for France, Polish for Poland, Korean for South Korea. The platform UI itself is trilingual (EN/FR/PL).",
+        body: "**Editorial Calendar**  - Month, week and agenda views. Every market and platform color-coded. Drag-and-drop scheduling, multi-market batch creation, and timezone-aware publishing.\n\n**AI Content Composer**  - The AI generates content grounded in Greenmood\u2019s Knowledge Base: real product specs, brand tone guidelines, and market-specific rules. The AI never invents facts. Every generated post passes through fact-checking before scheduling.\n\n**Approval Pipeline**  - A strict 6-step state machine: Draft \u2192 AI Generated \u2192 Fact-Checked \u2192 Brand Approved \u2192 Ready to Schedule \u2192 Scheduled \u2192 Published. Every transition is logged. No shortcuts.\n\n**Automated Publishing**  - Direct integration with Instagram Graph API and LinkedIn API. Single images, carousels (up to 10 slides), Stories, and Reels. First comments auto-posted for LinkedIn link strategy.\n\n**Market Intelligence**  - An AI-powered competitive intelligence engine that monitors industry trends, competitor moves, and content gaps. Recommends actionable content opportunities scored by relevance.\n\n**Multi-Market, Multi-Language**  - 8 markets, each with localized tone. French for France, Polish for Poland, Korean for South Korea. The platform UI itself is trilingual (EN/FR/PL).",
         image: "/images/case-studies/gmos-approach.webp",
       },
       execution: {
         label: "Execution",
         heading:
           "Full-stack. From design to production deployment.",
-        body: "The application was built with Next.js 16 (App Router) and React 19 in strict TypeScript. The database runs on Neon PostgreSQL with Prisma ORM. AI uses Anthropic Claude: Sonnet for content generation, Haiku for validation and fact-checking.\n\nMedia goes through Cloudinary for CDN and image optimization. Authentication is session-based with middleware protection. Everything is deployed on Vercel (Edge + Serverless) with Tailwind CSS v4 for styling.\n\nThe system manages roles (Operator, Coordinator, Viewer), brand guardrails (AI never fabricates specs, always credits designers), and timezone-aware publishing (US posts publish in New York time, UAE posts in Dubai time).",
+        body: "The application was built with Next.js 16 (App Router) and React 19 in strict TypeScript. The database runs on Neon PostgreSQL with Prisma ORM. Two separate AI models are orchestrated: a powerful model for content generation, a faster one for validation and fact-checking.\n\nMedia goes through Cloudinary for CDN and image optimization. Authentication is session-based with middleware protection. Everything is deployed on Vercel (Edge + Serverless) with Tailwind CSS v4 for styling.\n\nThe system manages roles (Operator, Coordinator, Viewer), brand guardrails (AI never fabricates specs, always credits designers), and timezone-aware publishing (US posts publish in New York time, UAE posts in Dubai time).",
         image: "/images/case-studies/gmos-execution.webp",
       },
       result: {
@@ -181,7 +180,6 @@ const content: Record<Locale, CaseStudy> = {
       "TypeScript",
       "PostgreSQL",
       "Prisma",
-      "Claude AI",
       "Cloudinary",
       "Vercel",
       "Tailwind CSS",
