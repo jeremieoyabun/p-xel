@@ -1,0 +1,462 @@
+/* ============================================================
+   Luxembourg landing page — LP-specific styles
+   These complement the shared liege/page.module.css used for the EN city hub.
+   ============================================================ */
+
+/* ---------- Hero ---------- */
+.heroEyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-4);
+}
+
+.heroTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 5.5vw, 4.25rem);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.05;
+  margin: 0 0 var(--space-4);
+}
+
+.heroTitle .accent {
+  color: var(--accent);
+  display: block;
+}
+
+.heroSubtitle {
+  font-size: var(--text-lg);
+  color: var(--text-dark-secondary);
+  line-height: 1.55;
+  max-width: 720px;
+  margin: var(--space-4) 0 var(--space-6);
+}
+
+.heroCtas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.heroTrustStrip {
+  margin-top: var(--space-6);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  color: var(--text-dark-tertiary, var(--text-dark-secondary));
+  opacity: 0.75;
+}
+
+/* ---------- Pitch (3-column stats) ---------- */
+.pitchGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.pitchItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-6) 0;
+  border-top: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+}
+
+.pitchStat {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  color: var(--accent);
+  line-height: 1;
+}
+
+.pitchTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  margin-top: var(--space-2);
+}
+
+.pitchBody {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .pitchGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
+
+/* ---------- Process timeline ---------- */
+.processList {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-8) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.processStep {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-6);
+  align-items: start;
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+}
+
+.processStep:last-child {
+  border-bottom: none;
+}
+
+.processStepNumber {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--accent);
+  letter-spacing: var(--tracking-wider);
+  padding-top: 0.25rem;
+  min-width: 2.5rem;
+}
+
+.processStepBody h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--space-2);
+}
+
+.processStepBody p {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.processNotice {
+  margin-top: var(--space-6);
+  padding: var(--space-4) var(--space-6);
+  border-left: 3px solid var(--accent);
+  background: var(--surface-elevated, rgba(255, 255, 255, 0.03));
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--text-dark-secondary);
+}
+
+.processNotice strong {
+  color: var(--text-dark);
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+/* ---------- Eligibility checklist + package callouts ---------- */
+.eligibilityIntro {
+  max-width: var(--content-narrow);
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+  margin: var(--space-4) 0 var(--space-8);
+}
+
+.eligibilityChecklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.eligibilityChecklist li {
+  display: grid;
+  grid-template-columns: 1.5rem 1fr;
+  gap: var(--space-3);
+  font-size: var(--text-base);
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+.eligibilityCheck {
+  color: var(--accent);
+  font-weight: 700;
+  font-family: var(--font-mono);
+  line-height: 1.4;
+}
+
+.packagesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin: var(--space-8) 0 var(--space-4);
+}
+
+.packageCard {
+  padding: var(--space-6);
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.1));
+  border-radius: var(--radius-md, 8px);
+  background: var(--surface-elevated, rgba(255, 255, 255, 0.02));
+}
+
+.packageCard h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--space-3);
+  color: var(--accent);
+}
+
+.packageCard p {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.packagesNote {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  color: var(--text-dark-tertiary, var(--text-dark-secondary));
+  margin: 0 0 var(--space-6);
+  opacity: 0.7;
+}
+
+.eligibilityCta {
+  margin-top: var(--space-6);
+}
+
+@media (max-width: 700px) {
+  .packagesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Services grid (4 cards) ---------- */
+.lpServicesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.lpServiceCard {
+  padding: var(--space-6);
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  border-radius: var(--radius-md, 8px);
+  background: var(--surface-elevated, rgba(255, 255, 255, 0.02));
+}
+
+.lpServiceCard h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--space-3);
+}
+
+.lpServiceCard p {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .lpServicesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Comparison table ---------- */
+.comparisonWrapper {
+  margin-top: var(--space-8);
+  overflow-x: auto;
+}
+
+.comparisonTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-base);
+}
+
+.comparisonTable th,
+.comparisonTable td {
+  text-align: left;
+  padding: var(--space-4) var(--space-3);
+  border-bottom: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  vertical-align: top;
+}
+
+.comparisonTable th {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--text-dark-secondary);
+  font-weight: 600;
+}
+
+.comparisonTable th:last-child {
+  color: var(--accent);
+}
+
+.comparisonTable td:first-child {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.comparisonTable td:nth-child(2) {
+  color: var(--text-dark-secondary);
+}
+
+.comparisonTable td:last-child {
+  color: var(--text-dark);
+}
+
+.comparisonConclusion {
+  margin-top: var(--space-6);
+  max-width: var(--content-narrow);
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+}
+
+/* ---------- About section ---------- */
+.aboutLayout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--space-8);
+  align-items: start;
+  margin-top: var(--space-8);
+}
+
+.aboutPhoto {
+  border-radius: var(--radius-md, 8px);
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: var(--surface-elevated, rgba(255, 255, 255, 0.03));
+}
+
+.aboutPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.aboutCopy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.aboutCopy p {
+  font-size: var(--text-base);
+  color: var(--text-dark-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.aboutLogos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+}
+
+.aboutLogo {
+  height: 28px;
+  width: auto;
+  opacity: 0.6;
+  filter: grayscale(1);
+  transition: opacity var(--duration-fast, 0.2s) var(--ease-in-out, ease);
+}
+
+.aboutLogo:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 800px) {
+  .aboutLayout {
+    grid-template-columns: 1fr;
+  }
+  .aboutPhoto {
+    max-width: 240px;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* ---------- Final CTA ---------- */
+.finalCtaWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-6);
+}
+
+.finalCtaSubtext {
+  font-size: var(--text-lg);
+  color: var(--text-dark-secondary);
+  line-height: 1.55;
+  max-width: 640px;
+  margin: 0;
+}
+
+.finalCtaLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+}
+
+.finalCtaLinks a {
+  color: var(--text-dark-secondary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.15rem;
+  transition: all var(--duration-fast, 0.2s) var(--ease-in-out, ease);
+}
+
+.finalCtaLinks a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- Disclaimer footer block ---------- */
+.disclaimer {
+  margin-top: var(--space-6);
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: var(--tracking-wide);
+  line-height: 1.6;
+  color: var(--text-dark-tertiary, var(--text-dark-secondary));
+  opacity: 0.7;
+  max-width: var(--content-wide, 1200px);
+}

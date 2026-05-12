@@ -72,6 +72,17 @@ const nextConfig: NextConfig = {
         destination: "/:path*",
         permanent: true,
       },
+      // Luxembourg SME Package landing redirects (anchor to eligibility section)
+      {
+        source: "/sme-package-digital",
+        destination: "/luxembourg/#eligibilite",
+        permanent: true,
+      },
+      {
+        source: "/sme-package-ia",
+        destination: "/luxembourg/#eligibilite",
+        permanent: true,
+      },
     ];
   },
 };
