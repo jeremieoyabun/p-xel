@@ -188,14 +188,6 @@ export const luxembourgLpContent = {
       "En 2026, notre fondateur est aussi CTO de Projet 111, une application de sécurité citoyenne en cours de lancement. Cela nous garde proches des réalités produit côté entrepreneur.",
       "Notre différence : nous avons intégré Claude dans tout notre workflow. Nous livrons en semaines ce que les agences livrent en trimestres, sans sacrifier la qualité.",
     ],
-    logos: [
-      { name: "Greenmood", src: "/legacy-assets/logos/Logo_Greenmood.webp" },
-      { name: "Oyabun", src: "/legacy-assets/logos/OYABUN_New-Logo_black.webp" },
-      { name: "Hopscotch", src: "/legacy-assets/logos/Hopscotch-Logo.webp" },
-      { name: "Globodai", src: "/legacy-assets/logos/Globodai-b.webp" },
-      { name: "Modular", src: "/legacy-assets/logos/Modular-logo.webp" },
-      { name: "Naturovape", src: "/legacy-assets/logos/Naturovape-logo.webp" },
-    ],
   },
 
   faq: {

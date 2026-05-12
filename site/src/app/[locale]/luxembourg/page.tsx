@@ -17,6 +17,7 @@ import {
   localBusinessSchema,
   faqSchema,
 } from "@/lib/schema";
+import { CONTACT } from "@/lib/constants";
 import { getLuxembourgContent } from "@/lib/content/luxembourg";
 import { luxembourgLpContent } from "@/lib/content/luxembourg-lp";
 import liegeStyles from "../liege/page.module.css";
@@ -94,7 +95,9 @@ function LuxembourgLandingFr() {
           </h1>
           <p className={lpStyles.heroSubtitle}>{c.hero.subtitle}</p>
           <div className={lpStyles.heroCtas}>
-            <CalendlyPopup label={c.hero.ctaPrimary.label} variant="dark" />
+            <Button variant="primary" href={CONTACT.calendlyUrl}>
+              {c.hero.ctaPrimary.label}
+            </Button>
             <Button variant="ghost" href={c.hero.ctaSecondary.href}>
               {c.hero.ctaSecondary.label}
             </Button>
@@ -165,7 +168,9 @@ function LuxembourgLandingFr() {
           </div>
           <p className={lpStyles.packagesNote}>{c.eligibility.note}</p>
           <div className={lpStyles.eligibilityCta}>
-            <CalendlyPopup label={c.eligibility.cta.label} variant="dark" />
+            <Button variant="primary" href={CONTACT.calendlyUrl}>
+              {c.eligibility.cta.label}
+            </Button>
           </div>
         </FadeInUp>
       </Section>
@@ -238,18 +243,6 @@ function LuxembourgLandingFr() {
               ))}
             </div>
           </div>
-          <div className={lpStyles.aboutLogos}>
-            {c.about.logos.map((logo) => (
-              <Image
-                key={logo.name}
-                src={logo.src}
-                alt={logo.name}
-                width={120}
-                height={28}
-                className={lpStyles.aboutLogo}
-              />
-            ))}
-          </div>
         </FadeInUp>
       </Section>
 
@@ -268,7 +261,9 @@ function LuxembourgLandingFr() {
           <div className={lpStyles.finalCtaWrap}>
             <SectionHeading heading={c.finalCta.heading} />
             <p className={lpStyles.finalCtaSubtext}>{c.finalCta.subtext}</p>
-            <CalendlyPopup label={c.finalCta.cta.label} variant="dark" />
+            <Button variant="primary" href={CONTACT.calendlyUrl}>
+              {c.finalCta.cta.label}
+            </Button>
             <div className={lpStyles.finalCtaLinks}>
               {c.finalCta.secondaryLinks.map((link) => (
                 <Link key={link.href} href={`/fr${link.href}`}>
