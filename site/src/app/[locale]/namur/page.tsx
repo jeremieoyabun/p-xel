@@ -77,6 +77,7 @@ export default async function NamurPage({
         <FadeInUp>
           <Label>{c.namurIntro.label}</Label>
           <SectionHeading
+            as="h1"
             heading={c.namurIntro.heading}
             subtext={c.namurIntro.subtext}
           />

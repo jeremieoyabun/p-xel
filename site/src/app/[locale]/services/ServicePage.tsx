@@ -77,6 +77,7 @@ export function ServicePage({ service, locale = "fr" }: ServicePageProps) {
             <div className={styles.heroText}>
               <Label>{service.hero.label}</Label>
               <SectionHeading
+                as="h1"
                 heading={service.hero.heading}
                 subtext={service.hero.subheadline}
               />

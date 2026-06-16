@@ -50,6 +50,7 @@ export default async function PerspectivesPage({
         <FadeInUp>
           <Label>{locale === "fr" ? "Éditorial" : "Editorial"}</Label>
           <SectionHeading
+            as="h1"
             heading="Perspectives"
             subtext={
               locale === "fr"

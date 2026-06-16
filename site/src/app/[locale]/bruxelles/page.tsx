@@ -77,6 +77,7 @@ export default async function BruxellesPage({
         <FadeInUp>
           <Label>{c.bruxellesIntro.label}</Label>
           <SectionHeading
+            as="h1"
             heading={c.bruxellesIntro.heading}
             subtext={c.bruxellesIntro.subtext}
           />

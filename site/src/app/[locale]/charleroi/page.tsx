@@ -77,6 +77,7 @@ export default async function CharleroiPage({
         <FadeInUp>
           <Label>{c.charleroiIntro.label}</Label>
           <SectionHeading
+            as="h1"
             heading={c.charleroiIntro.heading}
             subtext={c.charleroiIntro.subtext}
           />

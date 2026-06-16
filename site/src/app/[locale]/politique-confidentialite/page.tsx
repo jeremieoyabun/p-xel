@@ -49,7 +49,7 @@ export default async function PolitiqueConfidentialitePage({
 
       <Section>
         <Label>Legal</Label>
-        <SectionHeading heading={isFr ? "Politique de confidentialité" : "Privacy Policy"} />
+        <SectionHeading as="h1" heading={isFr ? "Politique de confidentialité" : "Privacy Policy"} />
         <div className={styles.content}>
           <div className={styles.block}>
             <h2>{isFr ? "Responsable du traitement" : "Data Controller"}</h2>

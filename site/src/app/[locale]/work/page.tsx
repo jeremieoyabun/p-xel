@@ -63,6 +63,7 @@ export default async function WorkPage({
         <FadeInUp>
           <Label>{t.workIntro.label}</Label>
           <SectionHeading
+            as="h1"
             heading={t.workIntro.heading}
             subtext={t.workIntro.subtext}
           />

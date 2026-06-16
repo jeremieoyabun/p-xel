@@ -74,6 +74,7 @@ export default async function LiegePage({
         <FadeInUp>
           <Label>{t.liegeIntro.label}</Label>
           <SectionHeading
+            as="h1"
             heading={t.liegeIntro.heading}
             subtext={t.liegeIntro.subtext}
           />
