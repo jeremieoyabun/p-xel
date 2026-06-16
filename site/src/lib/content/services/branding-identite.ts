@@ -4,7 +4,7 @@ import type { Locale } from "@/lib/i18n/config";
 const content: Record<Locale, ServicePage> = {
   fr: {
     slug: "branding-identite",
-    metaTitle: "Branding & Identité Visuelle | P-XEL Studio - Belgique",
+    metaTitle: "Branding & Identité Visuelle - Belgique",
     metaDescription:
       "Branding stratégique en Belgique. Logo, identité visuelle, charte graphique et design system. Un studio senior avec 16+ ans d'expérience produit.",
 
@@ -197,7 +197,7 @@ const content: Record<Locale, ServicePage> = {
 
   en: {
     slug: "branding-identite",
-    metaTitle: "Branding & Visual Identity | P-XEL Studio - Belgium",
+    metaTitle: "Branding & Visual Identity - Belgium",
     metaDescription:
       "Strategic branding in Belgium. Logo, visual identity, brand guidelines and design system. A senior studio with 16+ years of product experience.",
 

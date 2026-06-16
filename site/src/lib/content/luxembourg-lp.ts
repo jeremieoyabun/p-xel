@@ -7,7 +7,7 @@ import { CONTACT } from "@/lib/constants";
  */
 export const luxembourgLpContent = {
   meta: {
-    title: "Développer une app ou un SaaS au Luxembourg, subventionné 70% | P-XEL",
+    title: "Développer une app ou un SaaS au Luxembourg, subventionné 70%",
     description:
       "Studio AI-accelerated basé à Liège. Nous concevons votre app ou SaaS sur-mesure, éligible aux SME Packages Digital et IA du Luxembourg. Audit gratuit 30 min.",
   },

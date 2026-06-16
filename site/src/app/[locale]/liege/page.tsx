@@ -30,8 +30,8 @@ export async function generateMetadata({
 
   return {
     title: isFr
-      ? "Agence Web à Liège | P-XEL Studio"
-      : "Web Agency in Liège | P-XEL Studio",
+      ? "Agence web à Liège"
+      : "Web Agency in Liège",
     description: isFr
       ? "Studio digital basé à Liège. Sites web, applications, MVP, branding et UX/UI. Du concept au produit livré. 16+ ans d'expertise. Réservez un appel."
       : "Digital studio based in Liège. Websites, applications, MVPs, branding and UX/UI. From concept to shipped product. 16+ years of expertise. Book a call.",

@@ -38,7 +38,7 @@ export async function generateMetadata({
   return {
     title: isFr
       ? frTitle
-      : "Web Agency in Luxembourg | P-XEL Studio",
+      : "Web Agency in Luxembourg",
     description: isFr
       ? frDescription
       : "Digital product studio for Luxembourg. Websites, applications, MVPs, branding and UX/UI. Based in Liège, serving Luxembourg.",

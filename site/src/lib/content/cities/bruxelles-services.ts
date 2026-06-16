@@ -14,7 +14,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
     /*  creation-site-web                                             */
     /* -------------------------------------------------------------- */
     "creation-site-web": {
-      metaTitle: "Création de Site Web à Bruxelles | P-XEL Studio",
+      metaTitle: "Création de Site Web à Bruxelles",
       metaDescription:
         "Site web performant pour entreprises bruxelloises. Next.js, SEO technique, landing pages et e-commerce. Studio senior basé à Liège, livraison rapide.",
       hero: {
@@ -83,7 +83,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
     /*  application-web-mvp                                           */
     /* -------------------------------------------------------------- */
     "application-web-mvp": {
-      metaTitle: "Application Web & MVP à Bruxelles | P-XEL Studio",
+      metaTitle: "Application Web & MVP à Bruxelles",
       metaDescription:
         "Développement d'applications web et MVP pour startups et entreprises à Bruxelles. Architecture moderne, lancement rapide. Studio senior basé à Liège.",
       hero: {
@@ -151,7 +151,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
     /*  ux-ui-design                                                  */
     /* -------------------------------------------------------------- */
     "ux-ui-design": {
-      metaTitle: "UX/UI Design à Bruxelles | P-XEL Studio",
+      metaTitle: "UX/UI Design à Bruxelles",
       metaDescription:
         "Design UX/UI pour produits digitaux à Bruxelles. Recherche utilisateur, prototypage, design systems. Studio senior, approche produit concrète.",
       hero: {
@@ -219,7 +219,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
     /*  branding-identite                                             */
     /* -------------------------------------------------------------- */
     "branding-identite": {
-      metaTitle: "Branding & Identité Visuelle à Bruxelles | P-XEL Studio",
+      metaTitle: "Branding & Identité Visuelle à Bruxelles",
       metaDescription:
         "Identité visuelle et branding pour entreprises à Bruxelles. Logo, direction artistique, système de marque. Studio senior, résultat premium.",
       hero: {
@@ -287,7 +287,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
     /*  ai-studio                                                     */
     /* -------------------------------------------------------------- */
     "ai-studio": {
-      metaTitle: "AI Studio à Bruxelles | P-XEL Studio",
+      metaTitle: "AI Studio à Bruxelles",
       metaDescription:
         "Intégration IA et automatisation pour entreprises à Bruxelles. Workflows intelligents, prototypage IA, intégration produit. Studio senior à Liège.",
       hero: {
@@ -360,7 +360,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
     /*  creation-site-web                                             */
     /* -------------------------------------------------------------- */
     "creation-site-web": {
-      metaTitle: "Website Creation in Brussels | P-XEL Studio",
+      metaTitle: "Website Creation in Brussels",
       metaDescription:
         "High-performance websites for Brussels businesses. Next.js, technical SEO, landing pages and e-commerce. Senior studio based in Liege, fast delivery.",
       hero: {
@@ -429,7 +429,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
     /*  application-web-mvp                                           */
     /* -------------------------------------------------------------- */
     "application-web-mvp": {
-      metaTitle: "Web Application & MVP in Brussels | P-XEL Studio",
+      metaTitle: "Web Application & MVP in Brussels",
       metaDescription:
         "Web app and MVP development for startups and businesses in Brussels. Modern architecture, fast launch. Senior studio based in Liege.",
       hero: {
@@ -497,7 +497,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
     /*  ux-ui-design                                                  */
     /* -------------------------------------------------------------- */
     "ux-ui-design": {
-      metaTitle: "UX/UI Design in Brussels | P-XEL Studio",
+      metaTitle: "UX/UI Design in Brussels",
       metaDescription:
         "UX/UI design for digital products in Brussels. User research, prototyping, design systems. Senior studio, concrete product approach.",
       hero: {
@@ -565,7 +565,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
     /*  branding-identite                                             */
     /* -------------------------------------------------------------- */
     "branding-identite": {
-      metaTitle: "Branding & Visual Identity in Brussels | P-XEL Studio",
+      metaTitle: "Branding & Visual Identity in Brussels",
       metaDescription:
         "Visual identity and branding for Brussels businesses. Logo, art direction, brand systems. Senior studio, premium results.",
       hero: {
@@ -633,7 +633,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
     /*  ai-studio                                                     */
     /* -------------------------------------------------------------- */
     "ai-studio": {
-      metaTitle: "AI Studio in Brussels | P-XEL Studio",
+      metaTitle: "AI Studio in Brussels",
       metaDescription:
         "AI integration and automation for Brussels businesses. Smart workflows, AI prototyping, product integration. Senior studio based in Liege.",
       hero: {

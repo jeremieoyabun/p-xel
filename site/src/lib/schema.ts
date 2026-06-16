@@ -1,4 +1,4 @@
-import { SITE_URL, SITE_NAME, CONTACT, SOCIAL } from "./constants";
+import { SITE_URL, SITE_NAME, CONTACT, SOCIAL, FOUNDER } from "./constants";
 
 interface BreadcrumbItem {
   name: string;
@@ -35,11 +35,19 @@ export function localBusinessSchema() {
     "@id": `${SITE_URL}/#business`,
     name: SITE_NAME,
     url: SITE_URL,
+    description:
+      "Studio web et SaaS accéléré par l'IA basé à Liège. Création de sites performants, applications web, MVP SaaS, e-commerce sur mesure, UX/UI design et automatisations IA pour PME belges et luxembourgeoises.",
     telephone: CONTACT.phoneRaw,
     email: CONTACT.email,
     image: `${SITE_URL}/logo.svg`,
     logo: `${SITE_URL}/logo.svg`,
-    sameAs: [SOCIAL.linkedin],
+    sameAs: [SOCIAL.linkedin, SOCIAL.linkedinFounder],
+    founder: {
+      "@type": "Person" as const,
+      name: FOUNDER.name,
+      jobTitle: FOUNDER.jobTitle,
+      sameAs: [SOCIAL.linkedinFounder],
+    },
     address: {
       "@type": "PostalAddress" as const,
       streetAddress: "Rue de la Casquette 5",
@@ -89,18 +97,20 @@ export function personSchema() {
   return {
     "@context": "https://schema.org" as const,
     "@type": "Person" as const,
-    name: "Jeremie Oyabun",
-    jobTitle: "Founder & Product Designer",
+    name: FOUNDER.name,
+    jobTitle: FOUNDER.jobTitle,
     worksFor: {
       "@type": "Organization" as const,
       name: SITE_NAME,
       url: SITE_URL,
     },
-    sameAs: [SOCIAL.linkedin],
+    sameAs: [SOCIAL.linkedinFounder],
     knowsAbout: [
       "Product Design",
       "UX/UI Design",
       "Web Development",
+      "SaaS & MVP",
+      "E-commerce",
       "Branding",
       "AI-powered workflows",
     ],
@@ -130,7 +140,7 @@ export function articleSchema({
     dateModified: dateModified || new Date().toISOString().split("T")[0],
     author: {
       "@type": "Person" as const,
-      name: "Jeremie Oyabun",
+      name: FOUNDER.name,
       url: SITE_URL,
     },
     publisher: {

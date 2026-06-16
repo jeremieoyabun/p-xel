@@ -4,7 +4,7 @@ import type { Locale } from "@/lib/i18n/config";
 const content: Record<Locale, ServicePage> = {
   fr: {
     slug: "creation-site-web",
-    metaTitle: "Création Site Web | P-XEL Studio - Belgique",
+    metaTitle: "Création Site Web - Belgique",
     metaDescription:
       "Sites web performants, e-commerce et landing pages. Design sur mesure, SEO intégré, Core Web Vitals optimisés. Réservez un appel. Studio à Liège.",
 
@@ -136,6 +136,7 @@ const content: Record<Locale, ServicePage> = {
           name: "Arduenna Gin",
           tags: ["E-commerce", "Marketing Digital", "Campagnes Ads"],
           body: "Conception et développement de deux sites e-commerce. Stratégie d'acquisition digitale. 103 campagnes Facebook Ads. Résultat : 2 ans de chiffre d'affaires réalisés en 2 mois.",
+          image: "/images/case-studies/arduenna-hero.webp",
           href: "/work/arduenna-gin/",
         },
       ],
@@ -196,7 +197,7 @@ const content: Record<Locale, ServicePage> = {
 
   en: {
     slug: "creation-site-web",
-    metaTitle: "Website Creation | P-XEL Studio - Belgium",
+    metaTitle: "Website Creation - Belgium",
     metaDescription:
       "High-performance websites, e-commerce and landing pages. Custom design, built-in SEO, optimized Core Web Vitals. Book a call. Studio in Liege, Belgium.",
 
@@ -328,6 +329,7 @@ const content: Record<Locale, ServicePage> = {
           name: "Arduenna Gin",
           tags: ["E-commerce", "Digital Marketing", "Ad Campaigns"],
           body: "Design and development of two e-commerce sites. Digital acquisition strategy. 103 Facebook Ads campaigns. Result: 2 years of revenue achieved in 2 months.",
+          image: "/images/case-studies/arduenna-hero.webp",
           href: "/en/work/arduenna-gin/",
         },
       ],
