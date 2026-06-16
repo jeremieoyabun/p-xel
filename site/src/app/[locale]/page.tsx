@@ -70,9 +70,23 @@ export default async function HomePage({
     ? ["On conçoit", "On construit", "On livre"]
     : ["We design", "We build", "We ship"];
 
+  const heroKeyword = isFr
+    ? "Studio web & SaaS pour PME ambitieuses"
+    : "AI web & SaaS studio for ambitious SMEs";
+
   const heroSub = isFr
-    ? ["Produits digitaux premium. Sites, applications, identités de marque.", "De la stratégie au déploiement."]
-    : ["Premium digital products. Websites, apps, brand identities.", "From strategy to deployment."];
+    ? [
+        "Nous concevons, développons et lançons des sites haute performance, applications web et MVP SaaS en quelques semaines.",
+        "Liège · Belgique · Luxembourg. Un seul interlocuteur senior.",
+      ]
+    : [
+        "We design, build and ship high-performance websites, web apps and SaaS MVPs in a matter of weeks.",
+        "Liège · Belgium · Luxembourg. One senior point of contact.",
+      ];
+
+  const heroProof = isFr
+    ? ["Greenmood · BillyCheck · ChairSplit · Arduenna", "16+ ans d'expérience · Next.js · Vercel · IA"]
+    : ["Greenmood · BillyCheck · ChairSplit · Arduenna", "16+ years of experience · Next.js · Vercel · AI"];
 
   const scrollText = isFr
     ? "On conçoit, construit et livre des produits digitaux complets. Un seul studio. Zéro intermédiaire.\n\nSites, applications, MVP, identités de marque. De la stratégie au déploiement, chaque projet est pensé pour performer."
@@ -121,6 +135,7 @@ export default async function HomePage({
         <div className={styles.heroContent}>
           <span className={styles.heroLabel}>{t.hero.label}</span>
           <h1 className={styles.heroHeadline}>
+            <span className={styles.heroKeyword}>{heroKeyword}</span>
             {heroLines.map((line) => (
               <span key={line} className={styles.heroLine}>
                 {line}
@@ -139,6 +154,10 @@ export default async function HomePage({
               {t.hero.ctaSecondary.label}
             </Button>
           </div>
+          <p className={styles.heroProof}>
+            <span>{heroProof[0]}</span>
+            <span className={styles.heroProofMeta}>{heroProof[1]}</span>
+          </p>
         </div>
         <div className={styles.heroBottom}>
           <span className={styles.heroAnchor}>Liège, BE</span>
