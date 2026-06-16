@@ -207,10 +207,10 @@ export default async function CharleroiPage({
           heading={c.charleroiCta.heading}
           subtext={c.charleroiCta.subtext}
           primaryLabel={
-            locale === "fr" ? "Réserver un appel" : "Book a call"
+            locale === "fr" ? "Discuter de mon projet à Charleroi" : "Discuss my project in Charleroi"
           }
           secondaryLabel={
-            locale === "fr" ? "Lancer mon projet" : "Start my project"
+            locale === "fr" ? "Recevoir un avis sur mon site" : "Get feedback on my site"
           }
         />
       </Section>

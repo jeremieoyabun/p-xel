@@ -207,10 +207,10 @@ export default async function BruxellesPage({
           heading={c.bruxellesCta.heading}
           subtext={c.bruxellesCta.subtext}
           primaryLabel={
-            locale === "fr" ? "Réserver un appel" : "Book a call"
+            locale === "fr" ? "Discuter de mon projet à Bruxelles" : "Discuss my project in Brussels"
           }
           secondaryLabel={
-            locale === "fr" ? "Lancer mon projet" : "Start my project"
+            locale === "fr" ? "Recevoir un avis sur mon site" : "Get feedback on my site"
           }
         />
       </Section>

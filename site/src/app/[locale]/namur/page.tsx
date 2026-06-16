@@ -207,10 +207,10 @@ export default async function NamurPage({
           heading={c.namurCta.heading}
           subtext={c.namurCta.subtext}
           primaryLabel={
-            locale === "fr" ? "Réserver un appel" : "Book a call"
+            locale === "fr" ? "Discuter de mon projet à Namur" : "Discuss my project in Namur"
           }
           secondaryLabel={
-            locale === "fr" ? "Lancer mon projet" : "Start my project"
+            locale === "fr" ? "Recevoir un avis sur mon site" : "Get feedback on my site"
           }
         />
       </Section>
