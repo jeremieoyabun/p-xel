@@ -84,10 +84,6 @@ export default async function HomePage({
         "Liège · Belgium · Luxembourg. One senior point of contact.",
       ];
 
-  const heroProof = isFr
-    ? ["Greenmood · BillyCheck · ChairSplit · Arduenna", "16+ ans d'expérience · Next.js · Vercel · IA"]
-    : ["Greenmood · BillyCheck · ChairSplit · Arduenna", "16+ years of experience · Next.js · Vercel · AI"];
-
   const scrollText = isFr
     ? "On conçoit, construit et livre des produits digitaux complets. Un seul studio. Zéro intermédiaire.\n\nSites, applications, MVP, identités de marque. De la stratégie au déploiement, chaque projet est pensé pour performer."
     : "We design, build and ship complete digital products. One studio. Zero middlemen.\n\nWebsites, apps, MVPs, brand identities. From strategy to deployment, every project is built to perform.";
@@ -154,10 +150,6 @@ export default async function HomePage({
               {t.hero.ctaSecondary.label}
             </Button>
           </div>
-          <p className={styles.heroProof}>
-            <span>{heroProof[0]}</span>
-            <span className={styles.heroProofMeta}>{heroProof[1]}</span>
-          </p>
         </div>
         <div className={styles.heroBottom}>
           <span className={styles.heroAnchor}>Liège, BE</span>
