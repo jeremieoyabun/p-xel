@@ -83,6 +83,18 @@ const nextConfig: NextConfig = {
         destination: "/luxembourg/#eligibilite",
         permanent: true,
       },
+      // Legacy WordPress URLs (old site) -> closest current page.
+      // Demo/theme junk (/product/*, /product-tag/*, /elementor-hf/*,
+      // /tournament-details) is intentionally left to 404, having no SEO value.
+      { source: "/home", destination: "/", permanent: true },
+      { source: "/blog", destination: "/perspectives", permanent: true },
+      { source: "/blog/:path*", destination: "/perspectives", permanent: true },
+      { source: "/design", destination: "/services/ux-ui-design", permanent: true },
+      { source: "/dev", destination: "/services/application-web-mvp", permanent: true },
+      { source: "/launch", destination: "/services/application-web-mvp", permanent: true },
+      { source: "/creative-content", destination: "/services/branding-identite", permanent: true },
+      { source: "/services/expert-teams", destination: "/studio", permanent: true },
+      { source: "/services/worldwide-client", destination: "/studio", permanent: true },
     ];
   },
 };

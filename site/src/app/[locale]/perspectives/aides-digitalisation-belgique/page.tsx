@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import { buildAlternates } from "@/lib/seo";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
-import { SITE_URL } from "@/lib/constants";
 import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
 
 export async function generateMetadata({
@@ -19,7 +19,7 @@ export async function generateMetadata({
     description: isFr
       ? "Prime digitalisation Bruxelles (25-70%), chèque numérique Wallonie (50%). Conditions, montants et démarches pour financer votre projet digital en 2026."
       : "Brussels digitalization grant (25-70%), Wallonia digital voucher (50%). Conditions, amounts and steps to fund your digital project in 2026.",
-    alternates: { canonical: `${SITE_URL}/${locale}/perspectives/aides-digitalisation-belgique/` },
+    alternates: buildAlternates(locale, `/perspectives/aides-digitalisation-belgique/`),
     openGraph: { images: [{ url: "/legacy-assets/images/Articles-Digitalisation.webp", width: 1200, height: 630 }] },
   };
 }

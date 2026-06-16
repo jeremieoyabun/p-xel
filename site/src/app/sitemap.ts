@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/constants";
+import { localizedPath } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [
@@ -60,31 +61,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/politique-confidentialite/", priority: 0.3, changeFrequency: "yearly" as const },
   ];
 
-  // Generate entries for both FR (default) and EN locales with hreflang alternates
-  return pages.flatMap((page) => [
-    {
-      url: `${SITE_URL}${page.url}`,
-      lastModified: new Date(),
-      changeFrequency: page.changeFrequency,
-      priority: page.priority,
-      alternates: {
-        languages: {
-          fr: `${SITE_URL}${page.url}`,
-          en: `${SITE_URL}/en${page.url}`,
-        },
+  // Generate entries for both FR (default) and EN locales with hreflang alternates.
+  // URLs are slash-free (root excepted) so they resolve to 200, not a 308 redirect.
+  return pages.flatMap((page) => {
+    const frUrl = `${SITE_URL}${localizedPath("fr", page.url)}`;
+    const enUrl = `${SITE_URL}${localizedPath("en", page.url)}`;
+    const languages = { fr: frUrl, en: enUrl, "x-default": frUrl };
+    return [
+      {
+        url: frUrl,
+        lastModified: new Date(),
+        changeFrequency: page.changeFrequency,
+        priority: page.priority,
+        alternates: { languages },
       },
-    },
-    {
-      url: `${SITE_URL}/en${page.url}`,
-      lastModified: new Date(),
-      changeFrequency: page.changeFrequency,
-      priority: page.priority * 0.9,
-      alternates: {
-        languages: {
-          fr: `${SITE_URL}${page.url}`,
-          en: `${SITE_URL}/en${page.url}`,
-        },
+      {
+        url: enUrl,
+        lastModified: new Date(),
+        changeFrequency: page.changeFrequency,
+        priority: page.priority * 0.9,
+        alternates: { languages },
       },
-    },
-  ]);
+    ];
+  });
 }

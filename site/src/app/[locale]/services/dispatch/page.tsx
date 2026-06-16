@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildAlternates, localizedPath } from "@/lib/seo";
 import Link from "next/link";
 import { Section } from "@/components/Section/Section";
 import { Label } from "@/components/Label/Label";
@@ -268,14 +269,11 @@ export async function generateMetadata({
   return {
     title: t.meta.title,
     description: t.meta.description,
-    alternates: {
-      canonical: `/${locale}/services/dispatch/`,
-      languages: { fr: "/fr/services/dispatch/", en: "/en/services/dispatch/" },
-    },
+    alternates: buildAlternates(locale, `/services/dispatch/`),
     openGraph: {
       title: t.meta.title,
       description: t.meta.description,
-      url: `/${locale}/services/dispatch/`,
+      url: localizedPath(locale, `/services/dispatch/`),
       siteName: "P-XEL Studio",
       locale: locale === "fr" ? "fr_BE" : "en_US",
       type: "website",
@@ -309,8 +307,8 @@ export default async function DispatchPage({
       <SchemaScript
         schema={[
           breadcrumbSchema([
-            { name: isFr ? "Accueil" : "Home", url: `/${locale}/` },
-            { name: "Dispatch", url: `/${locale}/services/dispatch/` },
+            { name: isFr ? "Accueil" : "Home", url: localizedPath(locale, `/`) },
+            { name: "Dispatch", url: localizedPath(locale, `/services/dispatch/`) },
           ]),
           serviceSchema("Dispatch", t.meta.description),
           faqSchema(t.faq.items),

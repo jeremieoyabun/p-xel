@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildAlternates, localizedPath } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
 import Image from "next/image";
 import Link from "next/link";
@@ -41,13 +42,13 @@ export async function generateMetadata({
     description: isFr
       ? frDescription
       : "Digital product studio for Luxembourg. Websites, applications, MVPs, branding and UX/UI. Based in Liège, serving Luxembourg.",
-    alternates: { canonical: `/${locale}/luxembourg/` },
+    alternates: buildAlternates(locale, `/luxembourg/`),
     openGraph: {
       title: isFr ? frTitle : "Web Agency in Luxembourg | P-XEL Studio",
       description: isFr
         ? frDescription
         : "Digital product studio for Luxembourg. Websites, applications, MVPs, branding and UX/UI.",
-      url: `/${locale}/luxembourg/`,
+      url: localizedPath(locale, `/luxembourg/`),
     },
   };
 }
@@ -290,8 +291,8 @@ function LuxembourgCityHub({ locale }: { locale: Locale }) {
       <SchemaScript
         schema={[
           breadcrumbSchema([
-            { name: "Home", url: `/${locale}/` },
-            { name: "Luxembourg", url: `/${locale}/luxembourg/` },
+            { name: "Home", url: localizedPath(locale, `/`) },
+            { name: "Luxembourg", url: localizedPath(locale, `/luxembourg/`) },
           ]),
           localBusinessSchema(),
           faqSchema(c.luxembourgFaq),

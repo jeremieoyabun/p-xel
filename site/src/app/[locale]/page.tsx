@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildAlternates, localizedPath } from "@/lib/seo";
 import Image from "next/image";
 import { Section } from "@/components/Section/Section";
 import { Label } from "@/components/Label/Label";
@@ -43,7 +44,7 @@ export async function generateMetadata({
     description: isFr
       ? "Studio digital à Liège. On conçoit, construit et livre des produits digitaux premium. Sites, applications, MVP, branding. Réservez un appel."
       : "Digital studio in Liege. We design, build and ship premium digital products. Websites, apps, MVPs, branding. Book a call.",
-    alternates: { canonical: isFr ? "/" : "/en/" },
+    alternates: buildAlternates(locale, "/"),
     openGraph: {
       title: isFr
         ? "P-XEL Studio | Design, Code & Lancement de Produits Digitaux"
@@ -51,7 +52,7 @@ export async function generateMetadata({
       description: isFr
         ? "Studio digital à Liège. On conçoit, construit et livre des produits digitaux premium."
         : "Digital studio in Liege. We design, build and ship premium digital products.",
-      url: isFr ? "/" : "/en/",
+      url: localizedPath(locale, "/"),
     },
   };
 }
@@ -82,7 +83,7 @@ export default async function HomePage({
         heading: "Prêt à démarrer ?",
         text: "Décrivez votre projet en quelques lignes. On revient vers vous sous 24h.",
         tally: "Lancer mon projet",
-        calendly: "Reserver un appel",
+        calendly: "Réserver un appel",
       }
     : {
         heading: "Ready to start?",

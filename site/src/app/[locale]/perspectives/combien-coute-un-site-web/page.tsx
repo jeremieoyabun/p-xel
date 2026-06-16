@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import { buildAlternates } from "@/lib/seo";
 import Image from "next/image";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
-import { SITE_URL } from "@/lib/constants";
 import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
 
 export async function generateMetadata({
@@ -20,7 +20,7 @@ export async function generateMetadata({
     description: isFr
       ? "Prix site web en 2026 : landing page, site vitrine, e-commerce, web app. Fourchettes réalistes, facteurs de coût et conseils pour optimiser votre budget."
       : "Website pricing in 2026: landing page, showcase site, e-commerce, web app. Realistic ranges, cost factors and tips to optimize your budget.",
-    alternates: { canonical: `${SITE_URL}/${locale}/perspectives/combien-coute-un-site-web/` },
+    alternates: buildAlternates(locale, `/perspectives/combien-coute-un-site-web/`),
     openGraph: { images: [{ url: "/legacy-assets/images/Article-large_Web-design.webp", width: 1200, height: 630 }] },
   };
 }

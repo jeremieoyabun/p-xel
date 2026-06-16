@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import { buildAlternates } from "@/lib/seo";
 import Image from "next/image";
 import { ArticlePage, Highlight } from "@/components/ArticlePage/ArticlePage";
-import { SITE_URL } from "@/lib/constants";
 import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
 
 export async function generateMetadata({
@@ -19,7 +19,7 @@ export async function generateMetadata({
     description: isFr
       ? "Comparatif honnête des meilleures agences web en Belgique. Critères de sélection, spécialités, tarifs et conseils pour choisir le bon partenaire digital."
       : "Honest comparison of the best web agencies in Belgium. Selection criteria, specialties, pricing and advice for choosing the right digital partner.",
-    alternates: { canonical: `${SITE_URL}/${locale}/perspectives/meilleures-agences-web-belgique/` },
+    alternates: buildAlternates(locale, `/perspectives/meilleures-agences-web-belgique/`),
     openGraph: { images: [{ url: "/images/perspectives/agences-web-belgique.webp", width: 1200, height: 630 }] },
   };
 }

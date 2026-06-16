@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildAlternates, localizedPath } from "@/lib/seo";
 import { ServicePage } from "../ServicePage";
 import { getCreationSiteWebContent } from "@/lib/content/services/creation-site-web";
 import type { Locale } from "@/lib/i18n/config";
@@ -14,11 +15,11 @@ export async function generateMetadata({
   return {
     title: service.metaTitle,
     description: service.metaDescription,
-    alternates: { canonical: `/${locale}/services/${service.slug}/` },
+    alternates: buildAlternates(locale, `/services/${service.slug}/`),
     openGraph: {
       title: `${service.metaTitle} | P-XEL Studio`,
       description: service.metaDescription,
-      url: `/${locale}/services/${service.slug}/`,
+      url: localizedPath(locale, `/services/${service.slug}/`),
     },
   };
 }

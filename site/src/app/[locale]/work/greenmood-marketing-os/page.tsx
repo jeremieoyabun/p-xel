@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildAlternates, localizedPath } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
 import { CaseStudyPage } from "../CaseStudyPage";
 import { getCaseStudy } from "@/lib/content/case-studies";
@@ -14,11 +15,11 @@ export async function generateMetadata({
   return {
     title: study.metaTitle,
     description: study.metaDescription,
-    alternates: { canonical: `/${locale}/work/${study.slug}/` },
+    alternates: buildAlternates(locale, `/work/${study.slug}/`),
     openGraph: {
       title: `${study.metaTitle} | P-XEL Studio`,
       description: study.metaDescription,
-      url: `/${locale}/work/${study.slug}/`,
+      url: localizedPath(locale, `/work/${study.slug}/`),
     },
   };
 }

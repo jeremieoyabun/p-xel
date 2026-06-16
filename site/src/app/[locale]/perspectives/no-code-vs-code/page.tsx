@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import { buildAlternates } from "@/lib/seo";
 import Image from "next/image";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
-import { SITE_URL } from "@/lib/constants";
 import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
 
 export async function generateMetadata({
@@ -20,7 +20,7 @@ export async function generateMetadata({
     description: isFr
       ? "No-code, low-code ou développement sur mesure ? Forces, limites et critères concrets pour choisir la bonne approche selon votre projet et votre budget."
       : "No-code, low-code or custom development? Strengths, limitations and concrete criteria to choose the right approach for your project and budget.",
-    alternates: { canonical: `${SITE_URL}/${locale}/perspectives/no-code-vs-code/` },
+    alternates: buildAlternates(locale, `/perspectives/no-code-vs-code/`),
     openGraph: { images: [{ url: "/legacy-assets/images/Articles-No-code.webp", width: 1200, height: 630 }] },
   };
 }

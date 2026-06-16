@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildAlternates, localizedPath } from "@/lib/seo";
 import { Section } from "@/components/Section/Section";
 import { Label } from "@/components/Label/Label";
 import { SectionHeading } from "@/components/SectionHeading/SectionHeading";
@@ -19,7 +20,7 @@ export async function generateMetadata({
     description: isFr
       ? "Mentions légales du site p-xel.be. Informations sur l'éditeur, l'hébergement et les conditions d'utilisation."
       : "Legal notice for p-xel.be. Information about the publisher, hosting and terms of use.",
-    alternates: { canonical: `/${locale}/mentions-legales/` },
+    alternates: buildAlternates(locale, `/mentions-legales/`),
     robots: { index: true, follow: true },
   };
 }
@@ -36,8 +37,8 @@ export default async function MentionsLegalesPage({
       <SchemaScript
         schema={[
           breadcrumbSchema([
-            { name: locale === "fr" ? "Accueil" : "Home", url: `/${locale}/` },
-            { name: locale === "fr" ? "Mentions légales" : "Legal Notice", url: `/${locale}/mentions-legales/` },
+            { name: locale === "fr" ? "Accueil" : "Home", url: localizedPath(locale, `/`) },
+            { name: locale === "fr" ? "Mentions légales" : "Legal Notice", url: localizedPath(locale, `/mentions-legales/`) },
           ]),
         ]}
       />

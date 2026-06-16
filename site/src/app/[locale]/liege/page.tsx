@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildAlternates, localizedPath } from "@/lib/seo";
 import Link from "next/link";
 import { Section } from "@/components/Section/Section";
 import { Label } from "@/components/Label/Label";
@@ -34,7 +35,7 @@ export async function generateMetadata({
     description: isFr
       ? "Studio digital basé à Liège. Sites web, applications, MVP, branding et UX/UI. Du concept au produit livré. 16+ ans d'expertise. Réservez un appel."
       : "Digital studio based in Liège. Websites, applications, MVPs, branding and UX/UI. From concept to shipped product. 16+ years of expertise. Book a call.",
-    alternates: { canonical: `/${locale}/liege/` },
+    alternates: buildAlternates(locale, `/liege/`),
     openGraph: {
       title: isFr
         ? "Agence Web à Liège | P-XEL Studio"
@@ -42,7 +43,7 @@ export async function generateMetadata({
       description: isFr
         ? "Studio digital basé à Liège. Sites web, applications, MVP, branding et UX/UI. Du concept au produit livré."
         : "Digital studio based in Liège. Websites, applications, MVPs, branding and UX/UI. From concept to shipped product.",
-      url: `/${locale}/liege/`,
+      url: localizedPath(locale, `/liege/`),
     },
   };
 }
@@ -60,8 +61,8 @@ export default async function LiegePage({
       <SchemaScript
         schema={[
           breadcrumbSchema([
-            { name: locale === "fr" ? "Accueil" : "Home", url: `/${locale}/` },
-            { name: "Liège", url: `/${locale}/liege/` },
+            { name: locale === "fr" ? "Accueil" : "Home", url: localizedPath(locale, `/`) },
+            { name: "Liège", url: localizedPath(locale, `/liege/`) },
           ]),
           localBusinessSchema(),
           faqSchema(t.liegeFaq),

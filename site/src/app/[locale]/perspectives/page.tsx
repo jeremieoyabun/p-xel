@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localizedPath } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { Section } from "@/components/Section/Section";
@@ -40,8 +41,8 @@ export default async function PerspectivesPage({
     <>
       <SchemaScript
         schema={breadcrumbSchema([
-          { name: locale === "fr" ? "Accueil" : "Home", url: `/${locale}/` },
-          { name: "Perspectives", url: `/${locale}/perspectives` },
+          { name: locale === "fr" ? "Accueil" : "Home", url: localizedPath(locale, `/`) },
+          { name: "Perspectives", url: localizedPath(locale, `/perspectives`) },
         ])}
       />
 

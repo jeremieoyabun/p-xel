@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import { buildAlternates } from "@/lib/seo";
 import Image from "next/image";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
-import { SITE_URL } from "@/lib/constants";
 import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
 
 export async function generateMetadata({
@@ -20,7 +20,7 @@ export async function generateMetadata({
     description: isFr
       ? "Comment lancer un MVP solide en 4 semaines ? Étapes, budget et méthode pour créer un produit digital qui valide vite."
       : "How to launch a solid MVP in 4 weeks? Steps, budget and method to create a digital product that validates fast.",
-    alternates: { canonical: `${SITE_URL}/${locale}/perspectives/lancer-mvp-rapidement/` },
+    alternates: buildAlternates(locale, `/perspectives/lancer-mvp-rapidement/`),
     openGraph: { images: [{ url: "/legacy-assets/images/Article-large_web-mvp.webp", width: 1200, height: 630 }] },
   };
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildAlternates, localizedPath } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
 import Image from "next/image";
 import Link from "next/link";
@@ -27,13 +28,13 @@ export async function generateMetadata({
     description: isFr
       ? "Un studio. Un fondateur. 16 ans d'expertise produit. On conçoit, construit et livre des produits digitaux premium. Découvrez comment on travaille."
       : "One studio. One founder. 16 years of product expertise. We design, build and ship premium digital products. Discover how we work.",
-    alternates: { canonical: `/${locale}/studio/` },
+    alternates: buildAlternates(locale, `/studio/`),
     openGraph: {
       title: "Studio | P-XEL Studio",
       description: isFr
         ? "Un studio. Un fondateur. 16 ans d'expertise produit. On conçoit, construit et livre des produits digitaux premium."
         : "One studio. One founder. 16 years of product expertise. We design, build and ship premium digital products.",
-      url: `/${locale}/studio/`,
+      url: localizedPath(locale, `/studio/`),
     },
   };
 }
@@ -52,8 +53,8 @@ export default async function StudioPage({
       <SchemaScript
         schema={[
           breadcrumbSchema([
-            { name: isFr ? "Accueil" : "Home", url: `/${locale}/` },
-            { name: "Studio", url: `/${locale}/studio/` },
+            { name: isFr ? "Accueil" : "Home", url: localizedPath(locale, `/`) },
+            { name: "Studio", url: localizedPath(locale, `/studio/`) },
           ]),
           organizationSchema(),
           personSchema(),
