@@ -108,6 +108,18 @@
   flex-direction: column;
 }
 
+/* Keyword line: semantic SEO/clarity layer above the signature beats */
+.heroKeyword {
+  font-size: var(--text-xl);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-light-secondary);
+  margin-bottom: var(--space-3);
+  opacity: 0;
+  animation: heroReveal 700ms cubic-bezier(0.16, 1, 0.3, 1) 150ms forwards;
+}
+
 .heroLine {
   display: block;
   opacity: 0;
@@ -144,6 +156,23 @@
   margin-top: var(--space-6);
   opacity: 0;
   animation: heroReveal 700ms cubic-bezier(0.16, 1, 0.3, 1) 900ms forwards;
+}
+
+.heroProof {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-top: var(--space-5);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  color: var(--text-light-secondary);
+  opacity: 0;
+  animation: heroReveal 700ms cubic-bezier(0.16, 1, 0.3, 1) 1050ms forwards;
+}
+
+.heroProofMeta {
+  color: var(--text-light-muted);
 }
 
 .heroBottom {
@@ -211,9 +240,11 @@
 
 @media (prefers-reduced-motion: reduce) {
   .heroLabel,
+  .heroKeyword,
   .heroLine,
   .heroSub,
   .heroActions,
+  .heroProof,
   .heroBottom {
     opacity: 1;
     filter: none;

@@ -7,8 +7,8 @@ const content = {
       headline: "On conçoit. On construit. On livre.",
       subheadline:
         "Produits digitaux premium. Sites, applications, identités de marque. De la stratégie au déploiement.",
-      ctaPrimary: { label: "Réserver un appel", href: "https://calendly.com/p-xel" },
-      ctaSecondary: { label: "Voir nos projets", href: "/work/" },
+      ctaPrimary: { label: "Parler de mon projet", href: "https://calendly.com/p-xel" },
+      ctaSecondary: { label: "Voir les réalisations", href: "/work/" },
     },
     proofStrip: [
       { value: 16, suffix: "+", label: "années d'expertise" },
@@ -222,7 +222,7 @@ const content = {
       headline: "We design. We build. We ship.",
       subheadline:
         "Premium digital products. Websites, apps, brand identities. From strategy to deployment.",
-      ctaPrimary: { label: "Book a call", href: "https://calendly.com/p-xel" },
+      ctaPrimary: { label: "Discuss my project", href: "https://calendly.com/p-xel" },
       ctaSecondary: { label: "View our work", href: "/en/work/" },
     },
     proofStrip: [
