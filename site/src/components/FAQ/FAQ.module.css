@@ -53,16 +53,17 @@
 
 .content {
   display: grid;
-  grid-template-rows: 0fr;
+  grid-template-rows: minmax(0, 0fr);
   transition: grid-template-rows var(--duration-slow) var(--ease-out);
 }
 
 .contentOpen {
-  grid-template-rows: 1fr;
+  grid-template-rows: minmax(0, 1fr);
 }
 
 .content > p {
   overflow: hidden;
+  min-height: 0;
 }
 
 .answer {
