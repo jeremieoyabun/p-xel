@@ -1,13 +1,25 @@
 "use client";
 
-import { useCallback, useRef } from "react";
+import { useCallback, useEffect } from "react";
 import styles from "../PXelButton/PXelButton.module.css";
 
 const CALENDLY_URL =
   "https://calendly.com/p-xel-studio/30min?hide_gdpr_banner=1&background_color=111117&text_color=e8e8ec&primary_color=6608f9";
 
-function loadCalendlyAssets() {
-  if (document.querySelector('script[src*="calendly.com/assets/external/widget.js"]')) return;
+const SCRIPT_SRC = "https://assets.calendly.com/assets/external/widget.js";
+
+type CalendlyApi = { initPopupWidget?: (opts: Record<string, unknown>) => void };
+
+function getCalendly(): CalendlyApi | undefined {
+  return (window as unknown as { Calendly?: CalendlyApi }).Calendly;
+}
+
+/** Loads the Calendly assets once and returns the (possibly already-loaded) script element. */
+function loadCalendlyAssets(): HTMLScriptElement {
+  const existing = document.querySelector<HTMLScriptElement>(
+    `script[src="${SCRIPT_SRC}"]`
+  );
+  if (existing) return existing;
 
   const link = document.createElement("link");
   link.href = "https://assets.calendly.com/assets/external/widget.css";
@@ -15,9 +27,10 @@ function loadCalendlyAssets() {
   document.head.appendChild(link);
 
   const script = document.createElement("script");
-  script.src = "https://assets.calendly.com/assets/external/widget.js";
+  script.src = SCRIPT_SRC;
   script.async = true;
   document.head.appendChild(script);
+  return script;
 }
 
 interface CalendlyPopupProps {
@@ -26,26 +39,45 @@ interface CalendlyPopupProps {
 }
 
 export function CalendlyPopup({ label, variant = "dark" }: CalendlyPopupProps) {
-  const preloaded = useRef(false);
+  // Eagerly load Calendly once the page is idle so the popup is ready on first click,
+  // including on mobile where there is no hover to trigger a preload.
+  useEffect(() => {
+    const idle =
+      (window as unknown as { requestIdleCallback?: (cb: () => void) => number })
+        .requestIdleCallback ?? ((cb: () => void) => window.setTimeout(cb, 1500));
+    const id = idle(() => loadCalendlyAssets());
+    return () => {
+      const cancel = (window as unknown as { cancelIdleCallback?: (h: number) => void })
+        .cancelIdleCallback;
+      if (cancel && typeof id === "number") cancel(id);
+    };
+  }, []);
 
   const preload = useCallback(() => {
-    if (preloaded.current) return;
-    preloaded.current = true;
     loadCalendlyAssets();
   }, []);
 
   const openPopup = useCallback(() => {
-    loadCalendlyAssets();
+    const open = () => getCalendly()?.initPopupWidget?.({ url: CALENDLY_URL });
 
-    const calendly = (window as unknown as Record<string, unknown>).Calendly as
-      | { initPopupWidget?: (opts: Record<string, unknown>) => void }
-      | undefined;
-
-    if (calendly?.initPopupWidget) {
-      calendly.initPopupWidget({ url: CALENDLY_URL });
-    } else {
-      window.open(CALENDLY_URL, "_blank");
+    if (getCalendly()?.initPopupWidget) {
+      open();
+      return;
     }
+
+    // Script not ready yet: load it and open the popup as soon as it is available,
+    // polling briefly. window.open is only a last resort if Calendly never loads.
+    loadCalendlyAssets();
+    let tries = 0;
+    const timer = window.setInterval(() => {
+      if (getCalendly()?.initPopupWidget) {
+        window.clearInterval(timer);
+        open();
+      } else if (++tries > 40) {
+        window.clearInterval(timer);
+        window.open(CALENDLY_URL, "_blank", "noopener");
+      }
+    }, 100);
   }, []);
 
   return (
