@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localePath } from "@/lib/i18n/get-path";
 import { localizedPath } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
@@ -65,7 +66,7 @@ export default async function PerspectivesPage({
             {articles.map((article) => (
               <Link
                 key={article.slug}
-                href={`/${locale}/perspectives/${article.slug}`}
+                href={localePath(`/perspectives/${article.slug}`, locale)}
                 className={styles.card}
               >
                 <div className={styles.cardImage}>

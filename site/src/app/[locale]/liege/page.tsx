@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localePath } from "@/lib/i18n/get-path";
 import { buildAlternates, localizedPath } from "@/lib/seo";
 import Link from "next/link";
 import { Section } from "@/components/Section/Section";
@@ -80,7 +81,7 @@ export default async function LiegePage({
           />
           <div className={styles.heroCta}>
             <CalendlyPopup label={locale === "fr" ? "Réserver un appel" : "Book a call"} variant="dark" />
-            <Button variant="ghost" href={`/${locale}/work/`}>
+            <Button variant="ghost" href={localePath(`/work/`, locale)}>
               {locale === "fr" ? "Voir nos projets" : "View our projects"}
             </Button>
           </div>

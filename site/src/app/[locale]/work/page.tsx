@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localePath } from "@/lib/i18n/get-path";
 import { buildAlternates, localizedPath } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
@@ -75,7 +76,7 @@ export default async function WorkPage({
             {t.workProjects.map((project) => (
               <Link
                 key={project.slug}
-                href={`/${locale}/work/${project.slug}/`}
+                href={localePath(`/work/${project.slug}/`, locale)}
                 className={styles.projectCard}
               >
                 <div className={styles.projectImage}>
