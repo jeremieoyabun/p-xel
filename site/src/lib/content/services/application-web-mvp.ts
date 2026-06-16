@@ -5,7 +5,7 @@ const content: Record<Locale, ServicePage> = {
   fr: {
     slug: "application-web-mvp",
     metaTitle:
-      "Développement Application Web & MVP | P-XEL Studio - Belgique",
+      "Développement Application Web & MVP - Belgique",
     metaDescription:
       "Applications web, MVPs et plateformes sur mesure. De la stratégie au déploiement. Studio produit à Liège. 16+ ans d'expérience. Réservez un appel.",
 
@@ -199,7 +199,7 @@ const content: Record<Locale, ServicePage> = {
   en: {
     slug: "application-web-mvp",
     metaTitle:
-      "Web Application & MVP Development | P-XEL Studio - Belgium",
+      "Web Application & MVP Development - Belgium",
     metaDescription:
       "Custom web applications, MVPs and platforms. From strategy to deployment. Product studio in Liege, Belgium. 16+ years of experience. Book a call.",
 

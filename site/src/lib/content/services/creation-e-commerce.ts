@@ -5,119 +5,123 @@ const content: Record<Locale, ServicePage> = {
   fr: {
     slug: "creation-e-commerce",
     metaTitle:
-      "Création Site E-commerce | Boutique en Ligne sur Mesure | P-XEL Studio",
+      "E-commerce sur mesure : boutique 100% propriétaire, sans commission",
     metaDescription:
-      "Création de sites e-commerce en Belgique. Shopify, headless commerce, Next.js + Stripe. Design premium, SEO produit, conversion optimisée. Studio à Liège.",
+      "Boutique e-commerce développée sur mesure, dont vous êtes 100% propriétaire. Pas d'abonnement de plateforme, pas de commission sur les ventes. Web + caisse magasin (POS). Next.js, Medusa, Stripe. Studio à Liège.",
 
     hero: {
-      label: "E-commerce",
-      heading:
-        "Des boutiques qui vendent. Pas juste qui existent.",
+      label: "E-commerce sur mesure",
+      heading: "On ne vous loue pas un site. On vous construit le moteur de votre commerce.",
       subheadline:
-        "Shopify, headless commerce, Next.js + Stripe. On conçoit des e-commerces pensés pour la conversion, le SEO et la scalabilité.",
+        "Une boutique développée sur mesure, dont vous êtes 100% propriétaire : du code au design jusqu'aux données. Pas de commission sur vos ventes, pas de limite de thème. Web et caisse magasin réunis.",
     },
 
     problem: {
       label: "Le constat",
-      heading: "Un template Shopify ne suffit plus.",
+      heading: "La plupart des boutiques sont louées. Pas la vôtre.",
       intro:
-        "La plupart des boutiques en ligne se ressemblent. Même template, même UX, même résultat : un taux de conversion sous les 1%.",
+        "Un template, une commission prélevée sur chaque vente, et des blocages dès que le business sort du cadre. Vous payez plus cher à mesure que vous vendez, sans jamais rien posséder.",
       points: [
-        "Des templates génériques qui ne reflètent pas votre marque. Votre boutique ressemble à 10 000 autres.",
-        "Pas de stratégie SEO produit. Vos fiches produit n'apparaissent pas dans Google Shopping ni dans les résultats organiques.",
-        "Un tunnel d'achat mal pensé. Trop d'étapes, pas de confiance, abandon de panier massif.",
-        "Aucune intégration métier. Gestion de stock manuelle, pas de connexion ERP, pas d'automatisation.",
+        "Vous louez. Un abonnement de plateforme qui grimpe avec le chiffre d'affaires, plus une commission sur chaque vente.",
+        "Vous êtes limité. « Ce n'est pas possible avec notre thème » dès qu'une fonctionnalité sort du cadre.",
+        "Vous dépendez d'apps tierces. Chaque besoin métier devient une app de plus à payer et à maintenir.",
+        "Votre boutique physique est un outil séparé, à payer en plus, jamais vraiment synchronisé avec le web.",
       ],
     },
 
     whatWeBuild: {
-      label: "Ce qu'on construit",
-      heading: "E-commerce sur mesure. De la fiche produit au paiement.",
+      label: "Les modules",
+      heading: "Le moteur complet de votre commerce. Web et magasin.",
       intro:
-        "On ne vend pas des thèmes. On conçoit des systèmes de vente en ligne complets.",
+        "Chaque fonctionnalité est construite autour de votre métier, pas l'inverse. Et ce socle est pensé pour être répliqué et adapté à d'autres marques.",
       items: [
         {
-          title: "Shopify sur mesure",
-          body: "Thème custom, branding intégré, apps configurées. Shopify reste la référence pour vendre vite avec un back-office solide.",
+          title: "Une boutique premium",
+          body: "Catalogue multi-collections, fiches produits riches (galeries, variantes, avis clients, cross-sell), recherche instantanée et design haut de gamme animé.",
           icon: "cart",
         },
         {
-          title: "Headless commerce",
-          body: "Next.js en front, Shopify ou Stripe en back. Performance maximale, liberté totale sur le design, SEO technique parfait.",
-          icon: "zap",
-        },
-        {
-          title: "Fiches produit optimisées",
-          body: "SEO produit, schema markup, images optimisées, descriptions qui convertissent. Chaque fiche est une page de vente.",
-          icon: "file",
-        },
-        {
-          title: "Tunnel de conversion",
-          body: "Checkout optimisé, upsells, cross-sells, panier persistant. Chaque étape est pensée pour réduire l'abandon.",
+          title: "Un checkout 100% sur mesure",
+          body: "Carte bancaire (Stripe) et paiement local, panier intelligent, suivi de commande en temps réel, e-mails automatiques (confirmation, expédition, relance avis).",
           icon: "target",
         },
         {
-          title: "Intégrations métier",
-          body: "Paiement Stripe/Mollie, gestion de stock, connexion ERP, emails transactionnels, analytics e-commerce.",
+          title: "Une caisse en magasin (POS)",
+          body: "Le même système gère les ventes physiques : encaissement espèces, carte ou QR, impression de tickets, remises, scanner code-barres, historique du jour.",
           icon: "tool",
+        },
+        {
+          title: "Un tableau de bord business",
+          body: "Chiffre d'affaires, marge, coûts, bénéfice, alertes de stock et suivi des prix, en direct. Web et magasin pilotés depuis une seule interface qui vous appartient.",
+          icon: "file",
+        },
+        {
+          title: "Une vraie gestion de stock",
+          body: "Inventaire synchronisé site et magasin, ouverture de boîtes scellées en unités, produits gradés, précommandes et « coming soon ».",
+          icon: "zap",
+        },
+        {
+          title: "Local et marketing intégrés",
+          body: "Site multilingue, paiements et conformité adaptés au pays, SEO complet, Meta Ads, pixel de conversion et analytics. Branché à l'acquisition dès le jour 1.",
+          icon: "target",
         },
       ],
     },
 
     approach: {
       label: "Notre méthode",
-      heading: "Du catalogue au premier achat. Sans friction.",
+      heading: "De votre métier au premier achat. Sans friction.",
       intro:
-        "On travaille en cycles courts. Votre boutique est en ligne rapidement, puis on optimise.",
+        "On part de votre réalité commerçante, puis on construit le socle qui s'y adapte. Cycles courts, mise en ligne rapide, optimisation continue.",
       steps: [
         {
           number: "01",
-          title: "Audit et stratégie",
-          body: "Analyse de votre marché, de vos concurrents et de vos produits. On définit l'architecture, le tunnel de conversion et la stratégie SEO.",
+          title: "Cadrage métier",
+          body: "On modélise votre catalogue, vos canaux de vente (web et magasin), vos flux de stock et vos contraintes. C'est votre métier qui définit le système.",
         },
         {
           number: "02",
           title: "Design UX e-commerce",
-          body: "Maquettes du catalogue, des fiches produit, du panier et du checkout. Chaque écran est optimisé pour la conversion mobile.",
+          body: "Catalogue, fiches produit, panier, checkout et caisse magasin. Chaque écran est pensé pour la conversion et pour la rapidité d'usage en boutique.",
         },
         {
           number: "03",
-          title: "Développement et intégrations",
-          body: "Shopify custom ou headless Next.js. Paiement, stock, emails, analytics. Tout est connecté et testé.",
+          title: "Développement sur mesure",
+          body: "Boutique, checkout, POS, tableau de bord et stock, sur un socle Next.js + Medusa. Paiement, e-mails, analytics : tout est connecté et testé.",
         },
         {
           number: "04",
-          title: "Lancement et optimisation",
-          body: "Mise en ligne, monitoring des conversions, A/B tests sur le tunnel d'achat. On optimise les performances en continu.",
+          title: "Lancement et acquisition",
+          body: "Mise en ligne, branchement Meta Ads et analytics, suivi des conversions. On optimise le tunnel et les performances en continu.",
         },
       ],
     },
 
     deliverables: {
       label: "Ce que vous recevez",
-      heading: "Une boutique prête à vendre. Pas un prototype.",
+      heading: "Une boutique que vous possédez à 100%.",
       intro: "",
       items: [
-        "Site e-commerce complet (Shopify custom ou headless Next.js)",
-        "Design premium adapté à votre marque",
-        "Fiches produit optimisées SEO avec schema markup",
-        "Tunnel d'achat optimisé (panier, checkout, confirmation)",
-        "Intégration paiement (Stripe, Mollie, Shopify Payments)",
-        "Emails transactionnels (confirmation, expédition, abandon panier)",
-        "Google Analytics 4 + tracking e-commerce",
-        "Formation back-office et documentation",
+        "Boutique e-commerce complète, développée sur mesure (Next.js + Medusa)",
+        "Checkout custom (Stripe + paiement local) et e-mails transactionnels automatisés",
+        "Caisse magasin (POS) intégrée nativement : espèces, carte, QR, tickets",
+        "Tableau de bord business : chiffre d'affaires, marge, bénéfice, alertes de stock",
+        "Gestion de stock synchronisée entre le site et le magasin",
+        "Site multilingue, SEO produit complet et schema markup",
+        "Marketing branché : Meta Ads, pixel de conversion, Google Analytics",
+        "Code, design et données : vous êtes propriétaire de tout",
       ],
-      note: "Vous êtes propriétaire de tout. Code, design, données clients, catalogue.",
+      note: "Pas de taxe de plateforme. Pas de commission sur vos ventes. Stack moderne et éprouvée : Next.js, TypeScript, Tailwind, Medusa, PostgreSQL, Stripe, Meilisearch, Vercel.",
     },
 
     caseStudies: {
       label: "Projets récents",
-      heading: "Ce qu'on a vendu en ligne.",
+      heading: "Ce qu'on a construit pour vendre.",
       studies: [
         {
           name: "Arduenna Gin",
-          tags: ["E-commerce", "Shopify", "Facebook Ads"],
-          body: "Deux sites e-commerce et 103 campagnes d'acquisition pour un gin artisanal belge. Résultat : 2 ans de chiffre d'affaires généré en 2 mois.",
+          tags: ["E-commerce", "Acquisition", "Facebook Ads"],
+          body: "Deux boutiques en ligne et 103 campagnes d'acquisition pour un gin artisanal belge. Résultat : deux ans de chiffre d'affaires générés en deux mois.",
           href: "/work/arduenna-gin/",
           image: "/images/case-studies/arduenna-hero.webp",
         },
@@ -126,166 +130,170 @@ const content: Record<Locale, ServicePage> = {
 
     investment: {
       label: "Investissement",
-      heading: "Un budget calibré sur votre ambition.",
-      body: "Le coût d'un e-commerce dépend de la plateforme, du nombre de produits et des intégrations nécessaires.\n\nÀ titre indicatif : boutique Shopify custom à partir de 3\u00a0500\u00a0€, e-commerce headless (Next.js + Stripe) à partir de 8\u00a0000\u00a0€. Estimation gratuite et détaillée après un premier échange.",
+      heading: "Un investissement, pas une location.",
+      body: "Un socle e-commerce sur mesure demande un investissement initial plus élevé qu'un template, mais sans abonnement de plateforme ni commission sur vos ventes. Sur la durée, vous payez moins et vous possédez tout.\n\nÀ titre indicatif : boutique sur mesure à partir de 8 000 €, socle complet web + caisse magasin sur devis. Estimation gratuite et détaillée après un premier échange.",
       anchor: "Estimation gratuite sous 24h",
-      note: "On inclut toujours une estimation des coûts récurrents (hébergement, apps, paiement) pour que vous ayez une vision complète.",
+      note: "On chiffre aussi vos coûts récurrents réels (hébergement, paiement) pour une vision complète. Sans commission sur vos ventes.",
     },
 
     faq: {
       label: "Questions fréquentes",
       items: [
         {
-          question: "Shopify ou headless : comment choisir ?",
+          question: "Pourquoi du sur-mesure plutôt que Shopify ?",
           answer:
-            "Shopify est idéal pour lancer vite avec un back-office complet. Le headless (Next.js + API) offre plus de liberté design et de meilleures performances SEO. On vous conseille en fonction de votre catalogue, budget et objectifs.",
+            "Avec une plateforme louée, vous payez un abonnement qui grimpe avec votre chiffre d'affaires, une commission sur chaque vente, et vous êtes limité par le thème. En sur-mesure, vous possédez le code, le design et les données, sans commission, et chaque fonctionnalité est construite autour de votre métier.",
         },
         {
-          question: "Combien coûte un site e-commerce en Belgique ?",
+          question: "La caisse en magasin est-elle vraiment incluse ?",
           answer:
-            "Shopify custom à partir de 3 500 €. Headless commerce à partir de 8 000 €. Le prix dépend du nombre de produits, des intégrations et du niveau de personnalisation. Estimation gratuite après un premier échange.",
+            "Oui. Le même système gère le web et le magasin : encaissement espèces, carte ou QR, impression de tickets, remises, scanner code-barres et historique. Votre stock et vos ventes sont synchronisés entre les deux canaux.",
         },
         {
-          question: "En combien de temps mon e-commerce est en ligne ?",
+          question: "Combien coûte un e-commerce sur mesure ?",
           answer:
-            "Shopify : 1 à 2 semaines. Headless commerce : 3 à 4 semaines. On définit un planning précis dès le départ.",
+            "À partir de 8 000 € pour une boutique sur mesure. Un socle complet web + caisse magasin se chiffre sur devis selon vos besoins. Pas d'abonnement de plateforme ni de commission sur vos ventes. Estimation gratuite après un premier échange.",
         },
         {
-          question: "Est-ce que le SEO est inclus ?",
+          question: "Suis-je vraiment propriétaire de tout ?",
           answer:
-            "Oui. Structure de pages, meta tags, schema produit, sitemap, vitesse de chargement. Chaque fiche produit est optimisée pour apparaitre dans Google et Google Shopping.",
+            "Oui, à 100% : le code, le design, les données clients et le catalogue vous appartiennent. Vous pouvez faire évoluer la boutique dans n'importe quelle direction, sur votre propre moteur.",
         },
         {
-          question: "Peut-on migrer depuis WooCommerce ou Wix ?",
+          question: "Peut-on migrer depuis Shopify, WooCommerce ou Wix ?",
           answer:
-            "Oui. On migre vos produits, clients, commandes et URLs. Redirections 301 incluses pour préserver votre SEO existant.",
+            "Oui. On migre vos produits, clients, commandes et URLs, avec les redirections 301 pour préserver votre SEO existant.",
         },
       ],
     },
 
     cta: {
-      heading: "Prêt à vendre en ligne ?",
+      heading: "Prêt à posséder votre commerce ?",
       subtext:
-        "Décrivez votre projet. On vous propose une stratégie e-commerce adaptée sous 24h.",
+        "Décrivez votre projet. On vous propose un socle e-commerce sur mesure adapté à votre métier sous 24h.",
     },
   },
 
   en: {
     slug: "creation-e-commerce",
     metaTitle:
-      "E-commerce Website Creation | Custom Online Store | P-XEL Studio",
+      "Custom e-commerce: a store you own 100%, with no commission",
     metaDescription:
-      "E-commerce website creation in Belgium. Shopify, headless commerce, Next.js + Stripe. Premium design, product SEO, optimized conversion. Studio in Liege.",
+      "A fully custom e-commerce store you own 100%, from code to design to data. No platform subscription, no commission on sales. Web + in-store POS. Next.js, Medusa, Stripe. Studio in Liège.",
 
     hero: {
-      label: "E-commerce",
-      heading:
-        "Stores that sell. Not just exist.",
+      label: "Custom e-commerce",
+      heading: "We don't rent you a website. We build the engine of your business.",
       subheadline:
-        "Shopify, headless commerce, Next.js + Stripe. We build e-commerce sites designed for conversion, SEO and scalability.",
+        "A fully custom store you own 100%, from code to design to data. No commission on your sales, no theme limits. Web and in-store checkout, unified.",
     },
 
     problem: {
       label: "The reality",
-      heading: "A Shopify template is no longer enough.",
+      heading: "Most stores are rented. Yours won't be.",
       intro:
-        "Most online stores look the same. Same template, same UX, same result: a conversion rate under 1%.",
+        "A template, a commission on every sale, and roadblocks the moment your business steps outside the box. You pay more as you sell more, and you never own anything.",
       points: [
-        "Generic templates that don't reflect your brand. Your store looks like 10,000 others.",
-        "No product SEO strategy. Your product pages don't appear in Google Shopping or organic results.",
-        "Poorly designed purchase funnel. Too many steps, no trust signals, massive cart abandonment.",
-        "No business integrations. Manual stock management, no ERP connection, no automation.",
+        "You rent. A platform subscription that grows with revenue, plus a commission on every sale.",
+        "You're limited. \"That's not possible with our theme\" the moment a feature steps outside the box.",
+        "You depend on third-party apps. Every business need becomes one more app to pay for and maintain.",
+        "Your physical store is a separate tool, paid for on top, never truly synced with the web.",
       ],
     },
 
     whatWeBuild: {
-      label: "What we build",
-      heading: "Custom e-commerce. From product page to payment.",
+      label: "The modules",
+      heading: "The full engine of your business. Web and store.",
       intro:
-        "We don't sell themes. We design complete online sales systems.",
+        "Every feature is built around your business, not the other way around. And this foundation is designed to be replicated and adapted to other brands.",
       items: [
         {
-          title: "Custom Shopify",
-          body: "Custom theme, integrated branding, configured apps. Shopify remains the reference for selling fast with a solid back-office.",
+          title: "A premium storefront",
+          body: "Multi-collection catalog, rich product pages (galleries, variants, reviews, cross-sell), instant search and an animated high-end design.",
           icon: "cart",
         },
         {
-          title: "Headless commerce",
-          body: "Next.js frontend, Shopify or Stripe backend. Maximum performance, total design freedom, perfect technical SEO.",
-          icon: "zap",
-        },
-        {
-          title: "Optimized product pages",
-          body: "Product SEO, schema markup, optimized images, descriptions that convert. Each page is a sales page.",
-          icon: "file",
-        },
-        {
-          title: "Conversion funnel",
-          body: "Optimized checkout, upsells, cross-sells, persistent cart. Every step designed to reduce abandonment.",
+          title: "A 100% custom checkout",
+          body: "Card (Stripe) and local payment, smart cart, real-time order tracking, automated emails (confirmation, shipping, review request).",
           icon: "target",
         },
         {
-          title: "Business integrations",
-          body: "Stripe/Mollie payment, stock management, ERP connection, transactional emails, e-commerce analytics.",
+          title: "In-store checkout (POS)",
+          body: "The same system runs physical sales: cash, card or QR payment, receipt printing, discounts, barcode scanner and daily history.",
           icon: "tool",
+        },
+        {
+          title: "A business dashboard",
+          body: "Revenue, margin, costs, profit, stock alerts and price tracking, live. Web and store run from a single interface that you own.",
+          icon: "file",
+        },
+        {
+          title: "Real inventory management",
+          body: "Stock synced between site and store, opening sealed boxes into units, graded products, pre-orders and \"coming soon\".",
+          icon: "zap",
+        },
+        {
+          title: "Local & marketing built in",
+          body: "Multilingual site, country-adapted payments and compliance, full SEO, Meta Ads, conversion pixel and analytics. Wired to acquisition from day one.",
+          icon: "target",
         },
       ],
     },
 
     approach: {
       label: "Our method",
-      heading: "From catalog to first purchase. No friction.",
+      heading: "From your business to the first purchase. No friction.",
       intro:
-        "We work in short cycles. Your store goes live quickly, then we optimize.",
+        "We start from your real-world operations, then build the foundation that fits. Short cycles, fast launch, continuous optimization.",
       steps: [
         {
           number: "01",
-          title: "Audit and strategy",
-          body: "Analysis of your market, competitors and products. We define the architecture, conversion funnel and SEO strategy.",
+          title: "Business scoping",
+          body: "We model your catalog, sales channels (web and store), stock flows and constraints. Your business defines the system.",
         },
         {
           number: "02",
           title: "E-commerce UX design",
-          body: "Mockups for catalog, product pages, cart and checkout. Every screen optimized for mobile conversion.",
+          body: "Catalog, product pages, cart, checkout and in-store POS. Every screen is built for conversion and for speed of use in the store.",
         },
         {
           number: "03",
-          title: "Development and integrations",
-          body: "Custom Shopify or headless Next.js. Payment, stock, emails, analytics. Everything connected and tested.",
+          title: "Custom development",
+          body: "Storefront, checkout, POS, dashboard and stock on a Next.js + Medusa foundation. Payment, emails, analytics: all connected and tested.",
         },
         {
           number: "04",
-          title: "Launch and optimization",
-          body: "Go live, conversion monitoring, A/B tests on the purchase funnel. We optimize performance continuously.",
+          title: "Launch and acquisition",
+          body: "Go live, Meta Ads and analytics wired in, conversion tracking. We optimize the funnel and performance continuously.",
         },
       ],
     },
 
     deliverables: {
       label: "What you receive",
-      heading: "A store ready to sell. Not a prototype.",
+      heading: "A store you own 100%.",
       intro: "",
       items: [
-        "Complete e-commerce site (custom Shopify or headless Next.js)",
-        "Premium design tailored to your brand",
-        "SEO-optimized product pages with schema markup",
-        "Optimized purchase funnel (cart, checkout, confirmation)",
-        "Payment integration (Stripe, Mollie, Shopify Payments)",
-        "Transactional emails (confirmation, shipping, cart abandonment)",
-        "Google Analytics 4 + e-commerce tracking",
-        "Back-office training and documentation",
+        "Complete, fully custom e-commerce store (Next.js + Medusa)",
+        "Custom checkout (Stripe + local payment) and automated transactional emails",
+        "Natively integrated in-store POS: cash, card, QR, receipts",
+        "Business dashboard: revenue, margin, profit, stock alerts",
+        "Inventory synced between site and store",
+        "Multilingual site, full product SEO and schema markup",
+        "Marketing wired in: Meta Ads, conversion pixel, Google Analytics",
+        "Code, design and data: you own everything",
       ],
-      note: "You own everything. Code, design, customer data, catalog.",
+      note: "No platform fee. No commission on your sales. Modern, proven stack: Next.js, TypeScript, Tailwind, Medusa, PostgreSQL, Stripe, Meilisearch, Vercel.",
     },
 
     caseStudies: {
       label: "Recent projects",
-      heading: "What we've sold online.",
+      heading: "What we've built to sell.",
       studies: [
         {
           name: "Arduenna Gin",
-          tags: ["E-commerce", "Shopify", "Facebook Ads"],
-          body: "Two e-commerce sites and 103 acquisition campaigns for a Belgian artisanal gin. Result: 2 years of revenue generated in 2 months.",
+          tags: ["E-commerce", "Acquisition", "Facebook Ads"],
+          body: "Two online stores and 103 acquisition campaigns for a Belgian artisanal gin. Result: two years of revenue generated in two months.",
           href: "/en/work/arduenna-gin/",
           image: "/images/case-studies/arduenna-hero.webp",
         },
@@ -294,47 +302,47 @@ const content: Record<Locale, ServicePage> = {
 
     investment: {
       label: "Investment",
-      heading: "A budget calibrated on your ambition.",
-      body: "The cost of an e-commerce site depends on the platform, number of products and required integrations.\n\nAs a guide: custom Shopify store from 3,500 EUR, headless e-commerce (Next.js + Stripe) from 8,000 EUR. Free and detailed estimate after a first conversation.",
+      heading: "An investment, not a rental.",
+      body: "A custom e-commerce foundation requires a higher upfront investment than a template, but with no platform subscription and no commission on your sales. Over time, you pay less and you own everything.\n\nAs a guide: custom store from 8,000 EUR, full web + in-store POS foundation on quote. Free and detailed estimate after a first conversation.",
       anchor: "Free estimate within 24h",
-      note: "We always include an estimate of recurring costs (hosting, apps, payment) so you have a complete picture.",
+      note: "We also estimate your real recurring costs (hosting, payment) for a complete picture. No commission on your sales.",
     },
 
     faq: {
       label: "Frequently asked questions",
       items: [
         {
-          question: "Shopify or headless: how to choose?",
+          question: "Why custom rather than Shopify?",
           answer:
-            "Shopify is ideal for launching fast with a complete back-office. Headless (Next.js + API) offers more design freedom and better SEO performance. We advise based on your catalog, budget and goals.",
+            "With a rented platform you pay a subscription that grows with revenue, a commission on every sale, and you're limited by the theme. With custom, you own the code, design and data, with no commission, and every feature is built around your business.",
         },
         {
-          question: "How much does an e-commerce site cost in Belgium?",
+          question: "Is the in-store POS really included?",
           answer:
-            "Custom Shopify from 3,500 EUR. Headless commerce from 8,000 EUR. Price depends on product count, integrations and customization level. Free estimate after a first conversation.",
+            "Yes. The same system runs web and store: cash, card or QR payment, receipt printing, discounts, barcode scanner and history. Your stock and sales are synced across both channels.",
         },
         {
-          question: "How quickly can my e-commerce go live?",
+          question: "How much does custom e-commerce cost?",
           answer:
-            "Shopify: 1 to 2 weeks. Headless commerce: 3 to 4 weeks. We define a precise timeline from the start.",
+            "From 8,000 EUR for a custom store. A full web + in-store POS foundation is quoted based on your needs. No platform subscription and no commission on your sales. Free estimate after a first conversation.",
         },
         {
-          question: "Is SEO included?",
+          question: "Do I really own everything?",
           answer:
-            "Yes. Page structure, meta tags, product schema, sitemap, loading speed. Every product page is optimized to appear in Google and Google Shopping.",
+            "Yes, 100%: the code, design, customer data and catalog are yours. You can evolve the store in any direction, on your own engine.",
         },
         {
-          question: "Can you migrate from WooCommerce or Wix?",
+          question: "Can you migrate from Shopify, WooCommerce or Wix?",
           answer:
-            "Yes. We migrate your products, customers, orders and URLs. 301 redirects included to preserve your existing SEO.",
+            "Yes. We migrate your products, customers, orders and URLs, with 301 redirects to preserve your existing SEO.",
         },
       ],
     },
 
     cta: {
-      heading: "Ready to sell online?",
+      heading: "Ready to own your business?",
       subtext:
-        "Describe your project. We'll propose a tailored e-commerce strategy within 24h.",
+        "Describe your project. We'll propose a custom e-commerce foundation tailored to your business within 24h.",
     },
   },
 } as const;

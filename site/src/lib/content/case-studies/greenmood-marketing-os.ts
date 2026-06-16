@@ -6,7 +6,7 @@ const content: Record<Locale, CaseStudy> = {
     slug: "greenmood-marketing-os",
     title: "Marketing OS",
     metaTitle:
-      "Marketing OS  - Plateforme Marketing IA | P-XEL",
+      "Marketing OS  - Plateforme Marketing IA",
     metaDescription:
       "Plateforme marketing IA sur mesure. Publication automatisée, gestion multi-marchés, workflows éditoriaux intelligents. 8 marchés, 6 plateformes, un seul dashboard.",
     tags: [
@@ -106,7 +106,7 @@ const content: Record<Locale, CaseStudy> = {
     slug: "greenmood-marketing-os",
     title: "Marketing OS",
     metaTitle:
-      "Marketing OS  - AI-Powered Marketing Platform | P-XEL",
+      "Marketing OS  - AI-Powered Marketing Platform",
     metaDescription:
       "Custom AI marketing operating system. Automated publishing, multi-market content management, and intelligent editorial workflows. 8 markets, 6 platforms, one dashboard.",
     tags: [

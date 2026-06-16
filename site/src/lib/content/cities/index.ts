@@ -6,8 +6,8 @@ export const CITIES: Record<string, CityMeta> = {
     name: { fr: "Liège", en: "Liege" },
     country: { fr: "Belgique", en: "Belgium" },
     metaTitle: {
-      fr: "Agence Web à Liège | P-XEL Studio",
-      en: "Web Agency in Liège | P-XEL Studio",
+      fr: "Agence Web à Liège",
+      en: "Web Agency in Liège",
     },
     metaDescription: {
       fr: "Studio digital basé à Liège. Sites web, applications, MVP, branding et UX/UI. Du concept au produit livré. 16+ ans d'expertise.",
@@ -19,8 +19,8 @@ export const CITIES: Record<string, CityMeta> = {
     name: { fr: "Bruxelles", en: "Brussels" },
     country: { fr: "Belgique", en: "Belgium" },
     metaTitle: {
-      fr: "Agence Web à Bruxelles | P-XEL Studio",
-      en: "Web Agency in Brussels | P-XEL Studio",
+      fr: "Agence Web à Bruxelles",
+      en: "Web Agency in Brussels",
     },
     metaDescription: {
       fr: "Studio produit digital pour Bruxelles. Sites web, applications, MVP, branding et UX/UI. Un interlocuteur senior, du concept au produit livré.",
@@ -32,8 +32,8 @@ export const CITIES: Record<string, CityMeta> = {
     name: { fr: "Luxembourg", en: "Luxembourg" },
     country: { fr: "Luxembourg", en: "Luxembourg" },
     metaTitle: {
-      fr: "Agence Web au Luxembourg | P-XEL Studio",
-      en: "Web Agency in Luxembourg | P-XEL Studio",
+      fr: "Agence Web au Luxembourg",
+      en: "Web Agency in Luxembourg",
     },
     metaDescription: {
       fr: "Studio produit digital pour le Luxembourg. Sites web, applications, MVP, branding et UX/UI. Basé à Liège, on intervient au Luxembourg.",
