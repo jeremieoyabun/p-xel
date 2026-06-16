@@ -10,7 +10,9 @@ interface StatBlockProps {
 }
 
 export function StatBlock({ value, suffix = "", label }: StatBlockProps) {
-  const [count, setCount] = useState(0);
+  // Initialize with the real value so the server-rendered HTML is crawlable
+  // (shows "16", not "0"). The count-up runs client-side when scrolled into view.
+  const [count, setCount] = useState(value);
   const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -33,6 +35,7 @@ export function StatBlock({ value, suffix = "", label }: StatBlockProps) {
         if (entry.isIntersecting && !hasAnimated) {
           setHasAnimated(true);
           observer.unobserve(el);
+          setCount(0);
 
           const duration = 800;
           const startTime = performance.now();
