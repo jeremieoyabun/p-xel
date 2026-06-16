@@ -65,6 +65,14 @@ export default async function ContactPage({
             heading={content.contactIntro.heading}
             subtext={content.contactIntro.subtext}
           />
+          <ul className={styles.reassurance}>
+            {content.reassurance.map((item) => (
+              <li key={item} className={styles.reassuranceItem}>
+                <span className={styles.reassuranceDot} aria-hidden="true" />
+                {item}
+              </li>
+            ))}
+          </ul>
         </FadeInUp>
         <FadeInUp>
           <div className={styles.paths}>

@@ -10,6 +10,7 @@ function getResend() {
 const contactSchema = z.object({
   nom: z.string().min(1, "Nom requis"),
   email: z.string().email("Email invalide"),
+  entreprise: z.string().optional(),
   projectType: z.string().min(1, "Type de projet requis"),
   budget: z.string().optional(),
   timeline: z.string().optional(),
@@ -34,7 +35,8 @@ export async function POST(request: Request) {
       );
     }
 
-    const { nom, email, projectType, budget, timeline, message } = result.data;
+    const { nom, email, entreprise, projectType, budget, timeline, message } =
+      result.data;
 
     await getResend().emails.send({
       from: "P-XEL Studio <noreply@p-xel.be>",
@@ -44,6 +46,7 @@ export async function POST(request: Request) {
       text: [
         `Nom: ${nom}`,
         `Email: ${email}`,
+        entreprise ? `Entreprise: ${entreprise}` : null,
         `Type de projet: ${projectType}`,
         budget ? `Budget: ${budget}` : null,
         timeline ? `Délai: ${timeline}` : null,
