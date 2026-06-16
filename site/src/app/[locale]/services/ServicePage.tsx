@@ -352,8 +352,14 @@ export function ServicePage({ service, locale = "fr" }: ServicePageProps) {
         <CTA
           heading={service.cta.heading}
           subtext={service.cta.subtext}
-          primaryLabel={isFr ? "Réserver un appel" : "Book a call"}
-          secondaryLabel={isFr ? "Lancer mon projet" : "Start my project"}
+          primaryLabel={
+            service.slug === "ai-studio"
+              ? isFr ? "Vérifier mon idée" : "Validate my idea"
+              : service.slug === "application-web-mvp"
+              ? isFr ? "Estimer mon MVP" : "Estimate my MVP"
+              : isFr ? "Discuter de mon projet" : "Discuss my project"
+          }
+          secondaryLabel={isFr ? "Recevoir un avis sur mon projet" : "Get feedback on my project"}
         />
       </Section>
     </>

@@ -200,8 +200,8 @@ export default async function LiegePage({
         <CTA
           heading={t.liegeCta.heading}
           subtext={t.liegeCta.subtext}
-          primaryLabel={locale === "fr" ? "Réserver un appel" : "Book a call"}
-          secondaryLabel={locale === "fr" ? "Lancer mon projet" : "Start my project"}
+          primaryLabel={locale === "fr" ? "Discuter de mon projet à Liège" : "Discuss my project in Liège"}
+          secondaryLabel={locale === "fr" ? "Recevoir un avis sur mon site" : "Get feedback on my site"}
         />
       </Section>
     </>
