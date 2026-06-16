@@ -59,6 +59,23 @@ const nextConfig: NextConfig = {
   },
 
   async redirects() {
+    // Articles previously lived at the root; they now live under /perspectives/.
+    const ARTICLE_SLUGS = [
+      "combien-coute-un-site-web",
+      "aides-digitalisation-belgique",
+      "no-code-vs-code",
+      "ia-creation-produit-digital",
+      "tendances-ux-ui-2026",
+      "refonte-site-web",
+      "lancer-mvp-rapidement",
+      "agence-web-vs-freelance",
+      "combien-coute-application-web",
+      "cheques-entreprises-wallonie",
+      "meilleures-agences-web-belgique",
+      "nextjs-vs-wordpress",
+      "lancer-saas-belgique",
+      "combien-coute-branding",
+    ];
     return [
       // p-xel.lu → p-xel.be (add in Vercel dashboard for domain-level redirect)
       // Redirect /fr/ prefix to root (French is default, no prefix needed)
@@ -95,6 +112,13 @@ const nextConfig: NextConfig = {
       { source: "/creative-content", destination: "/services/branding-identite", permanent: true },
       { source: "/services/expert-teams", destination: "/studio", permanent: true },
       { source: "/services/worldwide-client", destination: "/studio", permanent: true },
+      { source: "/home-landing", destination: "/", permanent: true },
+      // Recover articles indexed at the old root path.
+      ...ARTICLE_SLUGS.map((slug) => ({
+        source: `/${slug}`,
+        destination: `/perspectives/${slug}`,
+        permanent: true,
+      })),
     ];
   },
 };
