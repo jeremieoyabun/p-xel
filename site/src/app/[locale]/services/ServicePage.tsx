@@ -40,10 +40,12 @@ const CITY_SERVICE_SLUGS = [
   "ai-studio",
 ];
 
+// Only cities that have /[city]/[service] landing pages. Namur and Charleroi
+// are single hub pages (no per-service routes), so they are excluded here to
+// avoid linking to 404s.
 const CITIES = [
   { slug: "liege", fr: "Liège", en: "Liege" },
   { slug: "bruxelles", fr: "Bruxelles", en: "Brussels" },
-  { slug: "namur", fr: "Namur", en: "Namur" },
   { slug: "luxembourg", fr: "Luxembourg", en: "Luxembourg" },
 ];
 

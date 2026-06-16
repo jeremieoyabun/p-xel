@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { localePath } from "@/lib/i18n/get-path";
 import { SchemaScript } from "@/components/SchemaScript/SchemaScript";
 import { SITE_URL } from "@/lib/constants";
 import { SERVICE_LABELS } from "@/lib/service-labels";
@@ -109,7 +110,7 @@ export function ArticlePage({
       <SchemaScript schema={blogPostingSchema} />
 
       <div className={s.shell}>
-        <Link href={`/${locale}/perspectives`} className={s.backButton} aria-label={isFr ? "Retour aux articles" : "Back to articles"}>
+        <Link href={localePath(`/perspectives`, locale)} className={s.backButton} aria-label={isFr ? "Retour aux articles" : "Back to articles"}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M19 12H5" />
             <path d="M12 19l-7-7 7-7" />
@@ -167,7 +168,7 @@ export function ArticlePage({
                 return (
                   <Link
                     key={slug}
-                    href={`/${locale}/services/${slug}/`}
+                    href={localePath(`/services/${slug}/`, locale)}
                     className={s.serviceLink}
                   >
                     {labels ? labels[locale as "fr" | "en"] : slug}
@@ -186,7 +187,7 @@ export function ArticlePage({
               {relatedArticles.map((article) => (
                 <Link
                   key={article.slug}
-                  href={`/${locale}/perspectives/${article.slug}`}
+                  href={localePath(`/perspectives/${article.slug}`, locale)}
                   className={s.relatedCard}
                 >
                   <span className={s.relatedCategory}>{article.category}</span>

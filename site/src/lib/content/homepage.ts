@@ -119,7 +119,7 @@ const content = {
           description:
             "Identité de marque, e-commerce et campagnes digitales pour un gin bio ardennais. Branding, Shopify, Meta Ads.",
           result: "2 ans de CA en 2 mois",
-          href: "/work/arduenna/",
+          href: "/work/arduenna-gin/",
           image: "/images/case-studies/arduenna-hero.webp",
         },
         {
@@ -346,7 +346,7 @@ const content = {
           description:
             "Brand identity, e-commerce and digital campaigns for an organic Ardennes gin. Branding, Shopify, Meta Ads.",
           result: "2 years revenue in 2 months",
-          href: "/en/work/arduenna/",
+          href: "/en/work/arduenna-gin/",
           image: "/images/case-studies/arduenna-hero.webp",
         },
         {

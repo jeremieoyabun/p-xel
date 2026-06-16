@@ -1,6 +1,3 @@
-import type { Locale } from "./config";
-
-export function localePath(path: string, locale: Locale): string {
-  if (locale === "fr") return path;
-  return `/en${path}`;
+export function localePath(path: string, locale: string): string {
+  return locale === "en" ? `/en${path}` : path;
 }

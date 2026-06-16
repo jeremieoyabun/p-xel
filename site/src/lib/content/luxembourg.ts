@@ -26,12 +26,12 @@ const content = {
         {
           title: "Design d'interface (UX/UI)",
           body: "UX research, UI design, design systems, prototypage. Des interfaces pensées pour des utilisateurs exigeants dans un environnement international.",
-          href: "/services/design-ux-ui/",
+          href: "/services/ux-ui-design/",
         },
         {
           title: "Identité de marque",
           body: "Logo, direction artistique, systèmes visuels. Des marques qui tiennent la route face aux standards du marché luxembourgeois.",
-          href: "/services/branding/",
+          href: "/services/branding-identite/",
         },
       ],
     },
@@ -180,12 +180,12 @@ const content = {
         {
           title: "Interface design (UX/UI)",
           body: "UX research, UI design, design systems, prototyping. Interfaces built for demanding users in an international environment.",
-          href: "/en/services/design-ux-ui/",
+          href: "/en/services/ux-ui-design/",
         },
         {
           title: "Brand identity",
           body: "Logo, art direction, visual systems. Brands that hold up against Luxembourg market standards.",
-          href: "/en/services/branding/",
+          href: "/en/services/branding-identite/",
         },
       ],
     },

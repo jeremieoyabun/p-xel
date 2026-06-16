@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localePath } from "@/lib/i18n/get-path";
 import { buildAlternates, localizedPath } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
 import Image from "next/image";
@@ -78,8 +79,8 @@ function LuxembourgLandingFr() {
       <SchemaScript
         schema={[
           breadcrumbSchema([
-            { name: "Accueil", url: "/fr/" },
-            { name: "Luxembourg", url: "/fr/luxembourg/" },
+            { name: "Accueil", url: "/" },
+            { name: "Luxembourg", url: "/luxembourg/" },
           ]),
           localBusinessSchema(),
           faqSchema(c.faq.items),
@@ -267,7 +268,7 @@ function LuxembourgLandingFr() {
             </Button>
             <div className={lpStyles.finalCtaLinks}>
               {c.finalCta.secondaryLinks.map((link) => (
-                <Link key={link.href} href={`/fr${link.href}`}>
+                <Link key={link.href} href={link.href}>
                   {link.label}
                 </Link>
               ))}
@@ -309,7 +310,7 @@ function LuxembourgCityHub({ locale }: { locale: Locale }) {
           />
           <div className={liegeStyles.heroCta}>
             <CalendlyPopup label="Book a call" variant="dark" />
-            <Button variant="ghost" href={`/${locale}/work/`}>
+            <Button variant="ghost" href={localePath(`/work/`, locale)}>
               View our projects
             </Button>
           </div>
