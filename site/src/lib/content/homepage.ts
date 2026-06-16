@@ -59,6 +59,18 @@ const content = {
             "Logo, direction artistique, systèmes visuels. Des marques construites pour durer et pour scaler.",
           href: "/services/branding-identite/",
         },
+        {
+          title: "E-commerce sur mesure",
+          description:
+            "Boutiques 100% propriétaires, sans commission de plateforme. Web et caisse magasin réunis, conçus pour vendre.",
+          href: "/services/creation-e-commerce/",
+        },
+        {
+          title: "IA & automatisation",
+          description:
+            "Assistants, automatisations et fonctionnalités intelligentes intégrés à vos produits et à vos process.",
+          href: "/services/ai-studio/",
+        },
       ],
     },
     selectedWork: {
@@ -273,6 +285,18 @@ const content = {
           description:
             "Logo, art direction, visual systems. Brands built to last and scale.",
           href: "/en/services/branding-identite/",
+        },
+        {
+          title: "Custom e-commerce",
+          description:
+            "Stores you own 100%, with no platform commission. Web and in-store checkout unified, built to sell.",
+          href: "/en/services/creation-e-commerce/",
+        },
+        {
+          title: "AI & automation",
+          description:
+            "Assistants, automation and intelligent features built into your products and workflows.",
+          href: "/en/services/ai-studio/",
         },
       ],
     },
