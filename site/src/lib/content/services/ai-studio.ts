@@ -14,7 +14,7 @@ const content: Record<Locale, ServicePage> = {
       heading:
         "On conçoit et livre des produits avec l'IA intégrée. Pas des démos. Des produits qui tournent.",
       subheadline:
-        "Agents IA, interfaces intelligentes, automatisations, intégrations LLM. Ce qui prenait 3 semaines en agence classique, on le livre en 5 jours.",
+        "Agents IA, interfaces intelligentes, automatisations, intégrations LLM. L'IA accélère notre exécution, avec des versions concrètes dès les premiers jours.",
       video: "/images/P-xel_Cube-IA.webm",
       hideAccent: true,
     },
@@ -189,7 +189,7 @@ const content: Record<Locale, ServicePage> = {
       heading:
         "We design and ship products with built-in AI. Not demos. Products that run.",
       subheadline:
-        "AI agents, intelligent interfaces, automations, LLM integrations. What used to take 3 weeks at a traditional agency, we deliver in 5 days.",
+        "AI agents, intelligent interfaces, automations, LLM integrations. AI accelerates our execution, with concrete versions within the first days.",
       video: "/images/P-xel_Cube-IA.webm",
       hideAccent: true,
     },

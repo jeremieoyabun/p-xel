@@ -4,9 +4,9 @@ const content = {
   fr: {
     liegeIntro: {
       label: "Liège",
-      heading: "Votre studio digital. À Liège.",
+      heading: "Agence web à Liège pour sites performants, apps web et SaaS",
       subtext:
-        "P-XEL est un studio produit basé à Liège. On conçoit, construit et livre des produits digitaux premium. Sites web, applications, MVP, branding. Un seul interlocuteur, de la stratégie au déploiement.",
+        "P-XEL est un studio web basé à Liège. Nous aidons les PME, startups et indépendants ambitieux à concevoir, développer et lancer des sites internet, applications web et MVP SaaS rapides, modernes et prêts à convertir. Pilotage senior direct, de la stratégie au déploiement.",
     },
     liegeServices: {
       label: "Ce qu'on construit à Liège",
