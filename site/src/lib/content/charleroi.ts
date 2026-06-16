@@ -4,9 +4,9 @@ const content = {
   fr: {
     charleroiIntro: {
       label: "Charleroi",
-      heading: "Un studio produit pour Charleroi. Sans le overhead d'agence.",
+      heading: "Studio web & SaaS pour les entreprises carolos.",
       subtext:
-        "P-XEL est un studio produit basé à Liège qui accompagne les entreprises de Charleroi. Sites web, applications, MVP, branding. Un interlocuteur senior, de la stratégie au déploiement. Des tarifs de studio, pas de grande agence.",
+        "Charleroi se réinvente autour de l'innovation et du numérique. Nous accompagnons ses PME, startups et porteurs de projets pour concevoir et lancer des sites haute performance, des applications web et des MVP SaaS rapides et orientés résultats. Studio basé à Liège, un seul interlocuteur senior, des tarifs de studio.",
     },
     charleroiServices: {
       label: "Ce qu'on construit pour Charleroi",
@@ -164,9 +164,9 @@ const content = {
   en: {
     charleroiIntro: {
       label: "Charleroi",
-      heading: "A product studio for Charleroi. Without the agency overhead.",
+      heading: "Web & SaaS studio for Charleroi businesses.",
       subtext:
-        "P-XEL is a product studio based in Liege that works with Charleroi-based businesses. Websites, applications, MVPs, branding. One senior point of contact, from strategy to deployment. Studio pricing, not big agency rates.",
+        "Charleroi is reinventing itself around innovation and tech. We help its SMEs, startups and founders design and ship fast, results-driven websites, web applications and SaaS MVPs. Studio based in Liège, one senior point of contact, studio pricing.",
     },
     charleroiServices: {
       label: "What we build for Charleroi",

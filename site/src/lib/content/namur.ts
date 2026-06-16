@@ -4,9 +4,9 @@ const content = {
   fr: {
     namurIntro: {
       label: "Namur",
-      heading: "Un studio produit pour Namur. Sans le overhead d'agence.",
+      heading: "Sites web, applications et SaaS pour les PME namuroises.",
       subtext:
-        "P-XEL est un studio produit basé à Liège qui accompagne les entreprises namuroises. Sites web, applications, MVP, branding. Un interlocuteur senior, de la stratégie au déploiement. Des tarifs de studio, pas de grande agence.",
+        "Capitale de la Wallonie, Namur réunit PME, indépendants et institutions qui veulent un digital qui convertit vraiment. Nous concevons, développons et lançons sites haute performance, applications web et MVP SaaS, de la stratégie au déploiement. Un seul interlocuteur senior, des tarifs de studio.",
     },
     namurServices: {
       label: "Ce qu'on construit pour Namur",
@@ -164,9 +164,9 @@ const content = {
   en: {
     namurIntro: {
       label: "Namur",
-      heading: "A product studio for Namur. Without the agency overhead.",
+      heading: "Websites, web apps and SaaS for Namur SMEs.",
       subtext:
-        "P-XEL is a product studio based in Liege that works with Namur-based businesses. Websites, applications, MVPs, branding. One senior point of contact, from strategy to deployment. Studio pricing, not big agency rates.",
+        "As the capital of Wallonia, Namur brings together SMEs, freelancers and institutions that want digital that truly converts. We design, build and ship high-performance websites, web applications and SaaS MVPs, from strategy to deployment. One senior point of contact, studio pricing.",
     },
     namurServices: {
       label: "What we build for Namur",
