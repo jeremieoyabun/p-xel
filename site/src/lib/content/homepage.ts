@@ -13,7 +13,7 @@ const content = {
     proofStrip: [
       { value: 16, suffix: "+", label: "années d'expertise" },
       { value: 49, suffix: "+", label: "projets livrés" },
-      { value: 98, suffix: "%", label: "clients satisfaits" },
+      { value: 1, suffix: "", label: "interlocuteur senior" },
     ],
     clientLogos: [
       { name: "Greenmood", src: "/legacy-assets/logos/Logo_Greenmood.webp" },
@@ -228,7 +228,7 @@ const content = {
     proofStrip: [
       { value: 16, suffix: "+", label: "years of expertise" },
       { value: 49, suffix: "+", label: "projects shipped" },
-      { value: 98, suffix: "%", label: "satisfied clients" },
+      { value: 1, suffix: "", label: "senior point of contact" },
     ],
     clientLogos: [
       { name: "Greenmood", src: "/legacy-assets/logos/Logo_Greenmood.webp" },
