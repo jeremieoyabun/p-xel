@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import { buildAlternates } from "@/lib/seo";
 import Image from "next/image";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
-import { SITE_URL } from "@/lib/constants";
 import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
 
 export async function generateMetadata({
@@ -20,7 +20,7 @@ export async function generateMetadata({
     description: isFr
       ? "Refonte site web : les signes qu'il est temps, les erreurs à éviter et la méthode pour réussir votre redesign en 2026."
       : "Website redesign: the signs it's time, mistakes to avoid and the method to succeed in 2026.",
-    alternates: { canonical: `${SITE_URL}/${locale}/perspectives/refonte-site-web/` },
+    alternates: buildAlternates(locale, `/perspectives/refonte-site-web/`),
     openGraph: { images: [{ url: "/legacy-assets/images/Article-large_Web-design.webp", width: 1200, height: 630 }] },
   };
 }

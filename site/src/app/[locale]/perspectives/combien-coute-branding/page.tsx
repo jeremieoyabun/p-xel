@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import { buildAlternates } from "@/lib/seo";
 import Image from "next/image";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
-import { SITE_URL } from "@/lib/constants";
 import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
 
 export async function generateMetadata({
@@ -20,7 +20,7 @@ export async function generateMetadata({
     description: isFr
       ? "Prix branding en 2026 : logo, identité visuelle, charte graphique, design system. Fourchettes réalistes en Belgique et conseils pour investir au bon endroit."
       : "Branding pricing in 2026: logo, visual identity, brand guidelines, design system. Realistic ranges in Belgium and tips to invest wisely.",
-    alternates: { canonical: `${SITE_URL}/${locale}/perspectives/combien-coute-branding/` },
+    alternates: buildAlternates(locale, `/perspectives/combien-coute-branding/`),
     openGraph: { images: [{ url: "/legacy-assets/images/Article-large_Web-design.webp", width: 1200, height: 630 }] },
   };
 }

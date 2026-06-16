@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import { buildAlternates } from "@/lib/seo";
 import Image from "next/image";
 import { ArticlePage, Highlight } from "@/components/ArticlePage/ArticlePage";
-import { SITE_URL } from "@/lib/constants";
 import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
 
 export async function generateMetadata({
@@ -19,7 +19,7 @@ export async function generateMetadata({
     description: isFr
       ? "Agence web ou freelance ? Comparaison claire des modèles, forces, limites et critères pour choisir le bon prestataire web en Belgique."
       : "Web agency or freelancer? Clear comparison of models, strengths, limitations and criteria for choosing the right web provider in Belgium.",
-    alternates: { canonical: `${SITE_URL}/${locale}/perspectives/agence-web-vs-freelance/` },
+    alternates: buildAlternates(locale, `/perspectives/agence-web-vs-freelance/`),
     openGraph: { images: [{ url: "/legacy-assets/images/Article-large_Article_freelance.webp", width: 1200, height: 630 }] },
   };
 }

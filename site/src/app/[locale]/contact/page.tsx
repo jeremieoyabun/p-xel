@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildAlternates, localizedPath } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
 import { Section } from "@/components/Section/Section";
 import { Label } from "@/components/Label/Label";
@@ -25,13 +26,13 @@ export async function generateMetadata({
     description: isFr
       ? "Réservez un appel de 30 minutes ou décrivez votre projet. On répond sous 24h. P-XEL Studio, Liège, Belgique."
       : "Book a 30-minute call or describe your project. We reply within 24h. P-XEL Studio, Liège, Belgium.",
-    alternates: { canonical: `/${locale}/contact/` },
+    alternates: buildAlternates(locale, `/contact/`),
     openGraph: {
       title: "Contact | P-XEL Studio",
       description: isFr
         ? "Réservez un appel de 30 minutes ou décrivez votre projet. On répond sous 24h."
         : "Book a 30-minute call or describe your project. We reply within 24h.",
-      url: `/${locale}/contact/`,
+      url: localizedPath(locale, `/contact/`),
     },
   };
 }
@@ -49,8 +50,8 @@ export default async function ContactPage({
       <SchemaScript
         schema={[
           breadcrumbSchema([
-            { name: locale === "fr" ? "Accueil" : "Home", url: `/${locale}/` },
-            { name: "Contact", url: `/${locale}/contact/` },
+            { name: locale === "fr" ? "Accueil" : "Home", url: localizedPath(locale, `/`) },
+            { name: "Contact", url: localizedPath(locale, `/contact/`) },
           ]),
           localBusinessSchema(),
         ]}

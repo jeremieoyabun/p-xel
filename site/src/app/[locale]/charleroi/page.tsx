@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildAlternates, localizedPath } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
 import Link from "next/link";
 import { Section } from "@/components/Section/Section";
@@ -34,7 +35,7 @@ export async function generateMetadata({
     description: isFr
       ? "Studio produit digital pour Charleroi. Sites web, applications, MVP, branding et UX/UI. Un interlocuteur senior, du concept au produit livré."
       : "Digital product studio for Charleroi. Websites, applications, MVPs, branding and UX/UI. One senior contact, from concept to shipped product.",
-    alternates: { canonical: `/${locale}/charleroi/` },
+    alternates: buildAlternates(locale, `/charleroi/`),
     openGraph: {
       title: isFr
         ? "Agence Web à Charleroi | P-XEL Studio"
@@ -42,7 +43,7 @@ export async function generateMetadata({
       description: isFr
         ? "Studio produit digital pour Charleroi. Sites web, applications, MVP, branding et UX/UI."
         : "Digital product studio for Charleroi. Websites, applications, MVPs, branding and UX/UI.",
-      url: `/${locale}/charleroi/`,
+      url: localizedPath(locale, `/charleroi/`),
     },
   };
 }
@@ -60,10 +61,10 @@ export default async function CharleroiPage({
       <SchemaScript
         schema={[
           breadcrumbSchema([
-            { name: locale === "fr" ? "Accueil" : "Home", url: `/${locale}/` },
+            { name: locale === "fr" ? "Accueil" : "Home", url: localizedPath(locale, `/`) },
             {
               name: "Charleroi",
-              url: `/${locale}/charleroi/`,
+              url: localizedPath(locale, `/charleroi/`),
             },
           ]),
           localBusinessSchema(),

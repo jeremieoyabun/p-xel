@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import { buildAlternates } from "@/lib/seo";
 import Image from "next/image";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
-import { SITE_URL } from "@/lib/constants";
 import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
 
 export async function generateMetadata({
@@ -20,7 +20,7 @@ export async function generateMetadata({
     description: isFr
       ? "Chèques-entreprises Wallonie : jusqu'à 75 % de subsides pour votre site web, UX, stratégie digitale. Conditions, montants, démarches et conseils concrets."
       : "Wallonia Business Vouchers: up to 75% subsidies for your website, UX, digital strategy. Conditions, amounts, process and practical advice.",
-    alternates: { canonical: `${SITE_URL}/${locale}/perspectives/cheques-entreprises-wallonie/` },
+    alternates: buildAlternates(locale, `/perspectives/cheques-entreprises-wallonie/`),
     openGraph: { images: [{ url: "/images/perspectives/cheques-wallonie.webp", width: 1200, height: 630 }] },
   };
 }

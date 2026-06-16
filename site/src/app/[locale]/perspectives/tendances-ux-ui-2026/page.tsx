@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import { buildAlternates } from "@/lib/seo";
 import Image from "next/image";
 import { ArticlePage, Highlight } from "@/components/ArticlePage/ArticlePage";
-import { SITE_URL } from "@/lib/constants";
 import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
 
 export async function generateMetadata({
@@ -19,7 +19,7 @@ export async function generateMetadata({
     description: isFr
       ? "Tendances UX/UI 2026 : interfaces prédictives, IA intégrée, accessibilité, design durable. Les évolutions à anticiper pour votre prochain projet."
       : "UX/UI Trends 2026: predictive interfaces, integrated AI, accessibility, sustainable design. The evolutions to anticipate for your next project.",
-    alternates: { canonical: `${SITE_URL}/${locale}/perspectives/tendances-ux-ui-2026/` },
+    alternates: buildAlternates(locale, `/perspectives/tendances-ux-ui-2026/`),
     openGraph: { images: [{ url: "/legacy-assets/images/Article-large_UI.webp", width: 1200, height: 630 }] },
   };
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildAlternates, localizedPath } from "@/lib/seo";
 import { Section } from "@/components/Section/Section";
 import { Label } from "@/components/Label/Label";
 import { SectionHeading } from "@/components/SectionHeading/SectionHeading";
@@ -19,7 +20,7 @@ export async function generateMetadata({
     description: isFr
       ? "Politique de confidentialité de P-XEL Studio. Comment vos données sont collectées, utilisées et protégées."
       : "Privacy policy of P-XEL Studio. How your data is collected, used and protected.",
-    alternates: { canonical: `/${locale}/politique-confidentialite/` },
+    alternates: buildAlternates(locale, `/politique-confidentialite/`),
     robots: { index: true, follow: true },
   };
 }
@@ -37,10 +38,10 @@ export default async function PolitiqueConfidentialitePage({
       <SchemaScript
         schema={[
           breadcrumbSchema([
-            { name: isFr ? "Accueil" : "Home", url: `/${locale}/` },
+            { name: isFr ? "Accueil" : "Home", url: localizedPath(locale, `/`) },
             {
               name: isFr ? "Politique de confidentialité" : "Privacy Policy",
-              url: `/${locale}/politique-confidentialite/`,
+              url: localizedPath(locale, `/politique-confidentialite/`),
             },
           ]),
         ]}

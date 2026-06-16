@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import { buildAlternates } from "@/lib/seo";
 import Image from "next/image";
 import { ArticlePage } from "@/components/ArticlePage/ArticlePage";
 import articleStyles from "@/components/ArticlePage/ArticlePage.module.css";
-import { SITE_URL } from "@/lib/constants";
 import { getRelatedArticles, getRelatedServices } from "@/lib/articles";
 
 export async function generateMetadata({
@@ -20,7 +20,7 @@ export async function generateMetadata({
     description: isFr
       ? "Comparaison complète Next.js vs WordPress en 2026 : performance, SEO, sécurité, coût de maintenance et scalabilité. Le guide pour choisir la bonne technologie."
       : "Full Next.js vs WordPress comparison in 2026: performance, SEO, security, maintenance cost and scalability. The guide to choosing the right technology.",
-    alternates: { canonical: `${SITE_URL}/${locale}/perspectives/nextjs-vs-wordpress/` },
+    alternates: buildAlternates(locale, `/perspectives/nextjs-vs-wordpress/`),
     openGraph: { images: [{ url: "/legacy-assets/images/Articles-No-code.webp", width: 1200, height: 630 }] },
   };
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildAlternates, localizedPath } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
 import { notFound } from "next/navigation";
 import { CityServicePage } from "@/components/CityServicePage/CityServicePage";
@@ -26,11 +27,11 @@ export async function generateMetadata({
   return {
     title: cityContent.metaTitle,
     description: cityContent.metaDescription,
-    alternates: { canonical: `/${locale}/liege/${service}/` },
+    alternates: buildAlternates(locale, `/liege/${service}/`),
     openGraph: {
       title: cityContent.metaTitle,
       description: cityContent.metaDescription,
-      url: `/${locale}/liege/${service}/`,
+      url: localizedPath(locale, `/liege/${service}/`),
     },
   };
 }

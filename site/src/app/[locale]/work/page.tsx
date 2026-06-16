@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildAlternates, localizedPath } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { Section } from "@/components/Section/Section";
@@ -27,13 +28,13 @@ export async function generateMetadata({
     description: isFr
       ? "Applications web, plateformes SaaS, identités de marque. Six produits digitaux conçus, construits et livrés par P-XEL Studio à Liège. Voir les projets."
       : "Web applications, SaaS platforms, brand identities. Six digital products designed, built and shipped by P-XEL Studio in Liege, Belgium. View projects.",
-    alternates: { canonical: `/${locale}/work/` },
+    alternates: buildAlternates(locale, `/work/`),
     openGraph: {
       title: "Work | P-XEL Studio",
       description: isFr
         ? "Cinq produits digitaux conçus, construits et livrés par P-XEL Studio."
         : "Five digital products designed, built and shipped by P-XEL Studio.",
-      url: `/${locale}/work/`,
+      url: localizedPath(locale, `/work/`),
     },
   };
 }
@@ -51,8 +52,8 @@ export default async function WorkPage({
       <SchemaScript
         schema={[
           breadcrumbSchema([
-            { name: locale === "fr" ? "Accueil" : "Home", url: `/${locale}/` },
-            { name: "Work", url: `/${locale}/work/` },
+            { name: locale === "fr" ? "Accueil" : "Home", url: localizedPath(locale, `/`) },
+            { name: "Work", url: localizedPath(locale, `/work/`) },
           ]),
         ]}
       />
