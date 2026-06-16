@@ -7,13 +7,13 @@ const content = {
       headline: "On conçoit. On construit. On livre.",
       subheadline:
         "Produits digitaux premium. Sites, applications, identités de marque. De la stratégie au déploiement.",
-      ctaPrimary: { label: "Parler de mon projet", href: "https://calendly.com/p-xel" },
-      ctaSecondary: { label: "Voir les réalisations", href: "/work/" },
+      ctaPrimary: { label: "Recevoir un avis sur mon projet", href: "/contact/" },
+      ctaSecondary: { label: "Réserver un appel de 30 min", href: "https://calendly.com/p-xel" },
     },
     proofStrip: [
       { value: 16, suffix: "+", label: "années d'expertise" },
       { value: 49, suffix: "+", label: "projets livrés" },
-      { value: 1, suffix: "", label: "interlocuteur senior" },
+      { value: 1, suffix: "", label: "responsable senior" },
     ],
     clientLogos: [
       { name: "Greenmood", src: "/legacy-assets/logos/Logo_Greenmood.webp" },
@@ -145,13 +145,13 @@ const content = {
         },
         {
           number: "02",
-          title: "Un seul interlocuteur",
-          body: "Pas de compte manager. Pas de couche intermédiaire. Un studio senior qui travaille directement avec les décideurs. On comprend votre projet parce qu'on le porte du début à la fin.",
+          title: "Pilotage senior direct",
+          body: "Vous travaillez directement avec le senior qui comprend, conçoit et pilote votre projet de bout en bout. Pas d'account manager, pas de couche intermédiaire, pas de perte d'information.",
         },
         {
           number: "03",
           title: "Rapide et précis",
-          body: "On utilise l'IA comme levier d'exécution. Ce qui prend 3 semaines en agence classique, on le livre en 5 jours. 2 ans de CA en 2 mois pour Arduenna Gin. Un SaaS complet en production pour BillyCheck. On ne promet pas la vitesse. On la démontre.",
+          body: "On utilise l'IA comme levier d'exécution, sans jamais sacrifier la qualité. Cycles courts, versions concrètes visibles dès les premiers jours. 2 ans de CA en 2 mois pour Arduenna Gin. Un SaaS complet en production pour BillyCheck. On ne promet pas la vitesse. On la démontre.",
         },
       ],
     },
@@ -234,13 +234,13 @@ const content = {
       headline: "We design. We build. We ship.",
       subheadline:
         "Premium digital products. Websites, apps, brand identities. From strategy to deployment.",
-      ctaPrimary: { label: "Discuss my project", href: "https://calendly.com/p-xel" },
-      ctaSecondary: { label: "View our work", href: "/en/work/" },
+      ctaPrimary: { label: "Get feedback on my project", href: "/en/contact/" },
+      ctaSecondary: { label: "Book a 30-min call", href: "https://calendly.com/p-xel" },
     },
     proofStrip: [
       { value: 16, suffix: "+", label: "years of expertise" },
       { value: 49, suffix: "+", label: "projects shipped" },
-      { value: 1, suffix: "", label: "senior point of contact" },
+      { value: 1, suffix: "", label: "senior lead" },
     ],
     clientLogos: [
       { name: "Greenmood", src: "/legacy-assets/logos/Logo_Greenmood.webp" },
@@ -372,13 +372,13 @@ const content = {
         },
         {
           number: "02",
-          title: "One point of contact",
-          body: "No account manager. No middle layer. A senior studio working directly with decision-makers. We understand your project because we carry it from start to finish.",
+          title: "Senior-led, directly",
+          body: "You work directly with the senior who understands, designs and drives your project end to end. No account manager, no middle layer, no information lost.",
         },
         {
           number: "03",
           title: "Fast and precise",
-          body: "We use AI as an execution lever. What takes 3 weeks at a traditional agency, we deliver in 5 days. 2 years of revenue in 2 months for Arduenna Gin. A full SaaS in production for BillyCheck. We don't promise speed. We prove it.",
+          body: "We use AI as an execution lever, never at the expense of quality. Short cycles, concrete versions visible within the first days. 2 years of revenue in 2 months for Arduenna Gin. A full SaaS in production for BillyCheck. We don't promise speed. We prove it.",
         },
       ],
     },

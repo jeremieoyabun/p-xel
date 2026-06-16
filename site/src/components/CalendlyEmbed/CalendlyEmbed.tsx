@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useLocale } from "@/lib/i18n/locale-context";
 import styles from "./CalendlyEmbed.module.css";
 
 interface CalendlyEmbedProps {
@@ -8,6 +9,8 @@ interface CalendlyEmbedProps {
 }
 
 export function CalendlyEmbed({ url }: CalendlyEmbedProps) {
+  const locale = useLocale();
+  const isFr = locale === "fr";
   const containerRef = useRef<HTMLDivElement>(null);
   const [ready, setReady] = useState(false);
   const [visible, setVisible] = useState(false);
@@ -86,7 +89,7 @@ export function CalendlyEmbed({ url }: CalendlyEmbedProps) {
         {!ready && (
           <div className={styles.placeholder}>
             <span className={styles.placeholderText}>
-              Chargement du calendrier...
+              {isFr ? "Chargement du calendrier..." : "Loading the calendar..."}
             </span>
             <a
               href={url}
@@ -94,7 +97,7 @@ export function CalendlyEmbed({ url }: CalendlyEmbedProps) {
               rel="noopener noreferrer"
               className={styles.fallbackLink}
             >
-              Ouvrir Calendly
+              {isFr ? "Ouvrir Calendly" : "Open Calendly"}
             </a>
           </div>
         )}

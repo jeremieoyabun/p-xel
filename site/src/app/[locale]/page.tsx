@@ -77,11 +77,11 @@ export default async function HomePage({
   const heroSub = isFr
     ? [
         "Nous concevons, développons et lançons des sites haute performance, applications web et MVP SaaS en quelques semaines.",
-        "Liège · Belgique · Luxembourg. Un seul interlocuteur senior.",
+        "Liège · Belgique · Luxembourg. Pilotage senior, sans couche intermédiaire.",
       ]
     : [
         "We design, build and ship high-performance websites, web apps and SaaS MVPs in a matter of weeks.",
-        "Liège · Belgium · Luxembourg. One senior point of contact.",
+        "Liège · Belgium · Luxembourg. Senior-led, no middle layer.",
       ];
 
   const scrollText = isFr
@@ -145,10 +145,10 @@ export default async function HomePage({
             {heroSub[1]}
           </p>
           <div className={styles.heroActions}>
-            <CalendlyPopup label={t.hero.ctaPrimary.label} variant="light" />
-            <Button variant="secondaryLight" href={t.hero.ctaSecondary.href}>
-              {t.hero.ctaSecondary.label}
+            <Button variant="primary" href={t.hero.ctaPrimary.href}>
+              {t.hero.ctaPrimary.label}
             </Button>
+            <CalendlyPopup label={t.hero.ctaSecondary.label} variant="light" />
           </div>
         </div>
         <div className={styles.heroBottom}>
