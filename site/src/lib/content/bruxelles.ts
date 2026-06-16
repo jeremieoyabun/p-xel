@@ -4,9 +4,9 @@ const content = {
   fr: {
     bruxellesIntro: {
       label: "Bruxelles",
-      heading: "Un studio produit pour Bruxelles. Sans le overhead d'agence.",
+      heading: "Studio web & SaaS pour les entreprises bruxelloises.",
       subtext:
-        "P-XEL est un studio produit basé à Liège qui accompagne les entreprises bruxelloises. Sites web, applications, MVP, branding. Un interlocuteur senior, de la stratégie au déploiement. Des tarifs de studio, pas de grande agence.",
+        "Bruxelles concentre startups, scale-ups et organisations qui doivent avancer vite. Nous concevons et développons des sites haute performance, des applications web et des MVP SaaS premium, avec un seul interlocuteur senior du concept au déploiement. Studio basé à Liège, à moins d'une heure de Bruxelles, sans les coûts d'une grande agence.",
     },
     bruxellesServices: {
       label: "Ce qu'on construit pour Bruxelles",
@@ -164,9 +164,9 @@ const content = {
   en: {
     bruxellesIntro: {
       label: "Brussels",
-      heading: "A product studio for Brussels. Without the agency overhead.",
+      heading: "Web & SaaS studio for Brussels businesses.",
       subtext:
-        "P-XEL is a product studio based in Liege that works with Brussels-based businesses. Websites, applications, MVPs, branding. One senior point of contact, from strategy to deployment. Studio pricing, not big agency rates.",
+        "Brussels is packed with startups, scale-ups and organisations that need to move fast. We design and build high-performance websites, web applications and SaaS MVPs, with one senior point of contact from concept to deployment. Studio based in Liège, under an hour from Brussels, without big-agency costs.",
     },
     bruxellesServices: {
       label: "What we build for Brussels",
