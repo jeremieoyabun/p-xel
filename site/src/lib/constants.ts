@@ -13,4 +13,10 @@ export const CONTACT = {
 
 export const SOCIAL = {
   linkedin: "https://linkedin.com/company/p-xel",
+  linkedinFounder: "https://www.linkedin.com/in/jeremie-kuntzinger-090aa623/",
+} as const;
+
+export const FOUNDER = {
+  name: "Jérémie Kuntzinger",
+  jobTitle: "AI Product Designer",
 } as const;

@@ -4,7 +4,7 @@ import type { Locale } from "@/lib/i18n/config";
 const content: Record<Locale, ServicePage> = {
   fr: {
     slug: "ux-ui-design",
-    metaTitle: "UX UI Design & Product Design | P-XEL Studio - Belgique",
+    metaTitle: "UX UI Design & Product Design - Belgique",
     metaDescription:
       "Design d'interfaces, audit UX, design systems et prototypage Figma. 16+ ans d'expertise produit. Studio UX/UI à Liège. Réservez un appel.",
 
@@ -194,7 +194,7 @@ const content: Record<Locale, ServicePage> = {
 
   en: {
     slug: "ux-ui-design",
-    metaTitle: "UX UI Design & Product Design | P-XEL Studio - Belgium",
+    metaTitle: "UX UI Design & Product Design - Belgium",
     metaDescription:
       "Interface design, UX audit, design systems and Figma prototyping. 16+ years of product expertise. UX/UI studio in Liege, Belgium. Book a call.",
 

@@ -15,7 +15,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
      * creation-site-web
      * ---------------------------------------------------------------- */
     "creation-site-web": {
-      metaTitle: "Création de Site Web à Liège | P-XEL Studio",
+      metaTitle: "Création de Site Web à Liège",
       metaDescription:
         "Studio web basé à Liège. Sites vitrines, landing pages, e-commerce et SEO. Next.js, performance et conversion. Résultats mesurables.",
       hero: {
@@ -84,7 +84,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
      * application-web-mvp
      * ---------------------------------------------------------------- */
     "application-web-mvp": {
-      metaTitle: "Application Web & MVP à Liège | P-XEL Studio",
+      metaTitle: "Application Web & MVP à Liège",
       metaDescription:
         "Développement d'applications web et MVP à Liège. SaaS, outils métier, prototypes fonctionnels. Du concept au produit livré, vite.",
       hero: {
@@ -152,7 +152,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
      * ux-ui-design
      * ---------------------------------------------------------------- */
     "ux-ui-design": {
-      metaTitle: "UX/UI Design à Liège | P-XEL Studio",
+      metaTitle: "UX/UI Design à Liège",
       metaDescription:
         "Design UX/UI à Liège. Recherche utilisateur, interfaces, design systems et prototypage. Des produits beaux, utilisables et performants.",
       hero: {
@@ -220,7 +220,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
      * branding-identite
      * ---------------------------------------------------------------- */
     "branding-identite": {
-      metaTitle: "Branding & Identité Visuelle à Liège | P-XEL Studio",
+      metaTitle: "Branding & Identité Visuelle à Liège",
       metaDescription:
         "Branding et identité visuelle à Liège. Logo, direction artistique, systèmes visuels. Une marque premium qui vous distingue.",
       hero: {
@@ -288,7 +288,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
      * ai-studio
      * ---------------------------------------------------------------- */
     "ai-studio": {
-      metaTitle: "AI Studio à Liège | P-XEL Studio",
+      metaTitle: "AI Studio à Liège",
       metaDescription:
         "Intégration IA à Liège. Automatisation, workflows intelligents, IA intégrée à vos produits. Résultats concrets, pas du buzzword.",
       hero: {
@@ -361,7 +361,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
      * creation-site-web
      * ---------------------------------------------------------------- */
     "creation-site-web": {
-      metaTitle: "Web Design & Development in Liège | P-XEL Studio",
+      metaTitle: "Web Design & Development in Liège",
       metaDescription:
         "Web studio based in Liège. Websites, landing pages, e-commerce and SEO. Next.js, performance and conversion. Measurable results.",
       hero: {
@@ -430,7 +430,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
      * application-web-mvp
      * ---------------------------------------------------------------- */
     "application-web-mvp": {
-      metaTitle: "Web App & MVP Development in Liège | P-XEL Studio",
+      metaTitle: "Web App & MVP Development in Liège",
       metaDescription:
         "Web app and MVP development in Liège. SaaS, business tools, functional prototypes. From concept to shipped product, fast.",
       hero: {
@@ -498,7 +498,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
      * ux-ui-design
      * ---------------------------------------------------------------- */
     "ux-ui-design": {
-      metaTitle: "UX/UI Design in Liège | P-XEL Studio",
+      metaTitle: "UX/UI Design in Liège",
       metaDescription:
         "UX/UI design in Liège. User research, interfaces, design systems and prototyping. Beautiful, usable, performant products.",
       hero: {
@@ -566,7 +566,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
      * branding-identite
      * ---------------------------------------------------------------- */
     "branding-identite": {
-      metaTitle: "Branding & Visual Identity in Liège | P-XEL Studio",
+      metaTitle: "Branding & Visual Identity in Liège",
       metaDescription:
         "Branding and visual identity in Liège. Logo, art direction, visual systems. A premium brand that sets you apart.",
       hero: {
@@ -634,7 +634,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
      * ai-studio
      * ---------------------------------------------------------------- */
     "ai-studio": {
-      metaTitle: "AI Studio in Liège | P-XEL Studio",
+      metaTitle: "AI Studio in Liège",
       metaDescription:
         "AI integration in Liège. Automation, smart workflows, AI built into your products. Concrete results, not buzzwords.",
       hero: {

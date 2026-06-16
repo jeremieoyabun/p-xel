@@ -39,8 +39,8 @@ export async function generateMetadata({
   const isFr = locale === "fr";
   return {
     title: isFr
-      ? "P-XEL Studio | Design, Code & Lancement de Produits Digitaux"
-      : "P-XEL Studio | Design, Code & Digital Product Launch",
+      ? "P-XEL Studio | Studio web & SaaS IA à Liège, Belgique et Luxembourg"
+      : "P-XEL Studio | AI Web & SaaS Studio in Liège, Belgium and Luxembourg",
     description: isFr
       ? "Studio digital à Liège. On conçoit, construit et livre des produits digitaux premium. Sites, applications, MVP, branding. Réservez un appel."
       : "Digital studio in Liege. We design, build and ship premium digital products. Websites, apps, MVPs, branding. Book a call.",

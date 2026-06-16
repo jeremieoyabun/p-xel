@@ -4,7 +4,7 @@ import type { CityServiceContent, ServiceSlug } from "./types";
 const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
   fr: {
     "creation-site-web": {
-      metaTitle: "Création de site web au Luxembourg | P-XEL Studio",
+      metaTitle: "Création de site web au Luxembourg",
       metaDescription:
         "Sites web performants pour le marché luxembourgeois. Next.js, SEO, landing pages. Studio basé à Liège, interventions au Luxembourg.",
       hero: {
@@ -73,7 +73,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
     },
 
     "application-web-mvp": {
-      metaTitle: "Application web et MVP au Luxembourg | P-XEL Studio",
+      metaTitle: "Application web et MVP au Luxembourg",
       metaDescription:
         "Développement d'applications web et MVP pour startups et entreprises au Luxembourg. SaaS, outils métier, prototypage rapide.",
       hero: {
@@ -142,7 +142,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
     },
 
     "ux-ui-design": {
-      metaTitle: "UX/UI Design au Luxembourg | P-XEL Studio",
+      metaTitle: "UX/UI Design au Luxembourg",
       metaDescription:
         "Design UX/UI pour entreprises luxembourgeoises. Recherche utilisateur, design systems, prototypage. Studio senior basé à Liège.",
       hero: {
@@ -210,7 +210,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
     },
 
     "branding-identite": {
-      metaTitle: "Branding et identité visuelle au Luxembourg | P-XEL Studio",
+      metaTitle: "Branding et identité visuelle au Luxembourg",
       metaDescription:
         "Branding premium pour entreprises luxembourgeoises. Logo, identité visuelle, direction artistique. Studio créatif basé à Liège.",
       hero: {
@@ -278,7 +278,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
     },
 
     "ai-studio": {
-      metaTitle: "AI Studio au Luxembourg | P-XEL Studio",
+      metaTitle: "AI Studio au Luxembourg",
       metaDescription:
         "Intégration IA et automatisation pour entreprises luxembourgeoises. Workflows AI, outils sur mesure, produits augmentés. Studio à Liège.",
       hero: {
@@ -348,7 +348,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
 
   en: {
     "creation-site-web": {
-      metaTitle: "Website Creation in Luxembourg | P-XEL Studio",
+      metaTitle: "Website Creation in Luxembourg",
       metaDescription:
         "High-performance websites for the Luxembourg market. Next.js, SEO, landing pages. Studio based in Liege, serving Luxembourg.",
       hero: {
@@ -417,7 +417,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
     },
 
     "application-web-mvp": {
-      metaTitle: "Web Application & MVP in Luxembourg | P-XEL Studio",
+      metaTitle: "Web Application & MVP in Luxembourg",
       metaDescription:
         "Web app and MVP development for Luxembourg startups and companies. SaaS, business tools, rapid prototyping. Studio in Liege.",
       hero: {
@@ -486,7 +486,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
     },
 
     "ux-ui-design": {
-      metaTitle: "UX/UI Design in Luxembourg | P-XEL Studio",
+      metaTitle: "UX/UI Design in Luxembourg",
       metaDescription:
         "UX/UI design for Luxembourg companies. User research, design systems, prototyping. Senior studio based in Liege.",
       hero: {
@@ -553,7 +553,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
     },
 
     "branding-identite": {
-      metaTitle: "Branding & Visual Identity in Luxembourg | P-XEL Studio",
+      metaTitle: "Branding & Visual Identity in Luxembourg",
       metaDescription:
         "Premium branding for Luxembourg companies. Logo, visual identity, art direction. Creative studio based in Liege.",
       hero: {
@@ -620,7 +620,7 @@ const content: Record<Locale, Record<ServiceSlug, CityServiceContent>> = {
     },
 
     "ai-studio": {
-      metaTitle: "AI Studio in Luxembourg | P-XEL Studio",
+      metaTitle: "AI Studio in Luxembourg",
       metaDescription:
         "AI integration and automation for Luxembourg companies. AI workflows, custom tools, augmented products. Studio in Liege.",
       hero: {

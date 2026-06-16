@@ -1,0 +1,43 @@
+# P-XEL Studio
+
+> Studio web et SaaS accéléré par l'IA, basé à Liège (Belgique). Nous concevons, développons et lançons des sites web haute performance, des applications web, des MVP SaaS, de l'e-commerce sur mesure, du branding, de l'UX/UI et des automatisations IA pour les PME, startups et marques ambitieuses en Belgique et au Luxembourg.
+
+P-XEL Studio est un studio produit senior, pas une agence web classique. Nous combinons design, code, IA, SEO et déploiement, avec un seul interlocuteur senior du concept au produit livré. Fondé par Jérémie Kuntzinger, AI Product Designer (16+ ans d'expérience).
+
+## Informations clés
+- Nom : P-XEL Studio
+- Localisation : Liège, Belgique
+- Zone d'intervention : Liège, Wallonie, Bruxelles, Belgique, Luxembourg, et à distance
+- Langues : français (principal), anglais
+- Contact : hello@p-xel.be · +32 497 38 29 54
+- Réservation d'appel : https://calendly.com/p-xel-studio/30min
+- Stack : Next.js, TypeScript, Tailwind, Vercel, Figma, Medusa, PostgreSQL, Stripe, Meilisearch, Supabase, OpenAI, Claude
+
+## Services
+- [Création de site internet](https://www.p-xel.be/services/creation-site-web) : sites rapides, clairs et orientés conversion pour PME.
+- [Refonte de site web](https://www.p-xel.be/services/refonte-site-web) : modernisation, performance et SEO.
+- [Application web sur mesure](https://www.p-xel.be/services/application-web-mvp) : apps web et MVP SaaS.
+- [E-commerce sur mesure](https://www.p-xel.be/services/creation-e-commerce) : boutiques 100% propriétaires, sans commission de plateforme, web + POS magasin.
+- [UX/UI Design](https://www.p-xel.be/services/ux-ui-design) : product design, design systems, prototypage.
+- [Branding & identité](https://www.p-xel.be/services/branding-identite) : identité de marque produit.
+- [AI Studio](https://www.p-xel.be/services/ai-studio) : automatisations et intégrations IA.
+
+## Pages locales
+- [Agence web à Liège](https://www.p-xel.be/liege)
+- [Studio web à Bruxelles](https://www.p-xel.be/bruxelles)
+- [Studio web au Luxembourg](https://www.p-xel.be/luxembourg)
+
+## Réalisations
+- [BillyCheck](https://www.p-xel.be/work/billycheck) : SaaS de vérification automatique de factures, du concept au lancement en 6 semaines.
+- [Greenmood](https://www.p-xel.be/work/greenmood) : marque et produit digital.
+- [ChairSplit](https://www.p-xel.be/work/chairsplit) : application web.
+- [Arduenna Gin](https://www.p-xel.be/work/arduenna-gin) : branding produit.
+- [Oyabun](https://www.p-xel.be/work/oyabun) : jeu mobile web3.
+
+## Questions fréquentes
+- Qu'est-ce que P-XEL Studio ? Un studio belge de design produit, développement web et SaaS accéléré par l'IA, basé à Liège.
+- Où est basé P-XEL ? À Liège, en Belgique. Nous travaillons en Belgique, au Luxembourg et à distance.
+- Quels services propose P-XEL ? Sites web, applications web, MVP SaaS, e-commerce sur mesure, UX/UI, branding et automatisations IA.
+- P-XEL travaille-t-il avec des PME ? Oui, c'est notre cœur de cible, avec les startups et marques ambitieuses.
+- P-XEL travaille-t-il au Luxembourg ? Oui, y compris sur des projets éligibles au SME Package Digital (sous réserve d'éligibilité).
+- Comment contacter P-XEL ? Par e-mail (hello@p-xel.be) ou en réservant un appel de 30 min via Calendly.
