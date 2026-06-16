@@ -5,7 +5,7 @@ const content: Record<Locale, ServicePage> = {
   fr: {
     slug: "refonte-site-web",
     metaTitle:
-      "Refonte de Site Web | Moderniser votre site internet | P-XEL Studio",
+      "Refonte de Site Web | Moderniser votre site internet",
     metaDescription:
       "Refonte de site web en Belgique. Audit, redesign, migration et optimisation SEO. Modernisez votre site pour convertir plus. Studio à Liège.",
 
@@ -173,7 +173,7 @@ const content: Record<Locale, ServicePage> = {
   en: {
     slug: "refonte-site-web",
     metaTitle:
-      "Website Redesign | Modernize Your Website | P-XEL Studio",
+      "Website Redesign | Modernize Your Website",
     metaDescription:
       "Website redesign in Belgium. Audit, redesign, migration and SEO optimization. Modernize your site to convert more. Studio in Liege, Belgium.",
 

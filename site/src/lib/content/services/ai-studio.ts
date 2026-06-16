@@ -5,7 +5,7 @@ const content: Record<Locale, ServicePage> = {
   fr: {
     slug: "ai-studio",
     metaTitle:
-      "AI Product Design Studio | MVP IA & Produits Intelligents | P-XEL",
+      "AI Product Design Studio | MVP IA & Produits Intelligents",
     metaDescription:
       "On intègre l'IA dans vos produits digitaux. Prototypage IA, agents, automatisation, intégrations LLM. De l'idée au produit IA en production. Studio à Liège.",
 
@@ -180,7 +180,7 @@ const content: Record<Locale, ServicePage> = {
   en: {
     slug: "ai-studio",
     metaTitle:
-      "AI Product Design Studio | AI MVP & Intelligent Products | P-XEL",
+      "AI Product Design Studio | AI MVP & Intelligent Products",
     metaDescription:
       "We integrate AI into your digital products. AI prototyping, agents, automation, LLM integrations. From idea to AI product in production. Studio in Liege, Belgium.",
 
