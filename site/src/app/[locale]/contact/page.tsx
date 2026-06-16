@@ -62,6 +62,7 @@ export default async function ContactPage({
         <FadeInUp>
           <Label>{content.contactIntro.label}</Label>
           <SectionHeading
+            as="h1"
             heading={content.contactIntro.heading}
             subtext={content.contactIntro.subtext}
           />

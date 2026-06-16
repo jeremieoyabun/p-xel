@@ -62,6 +62,7 @@ export function CityServicePage({
         <FadeInUp>
           <Label>{cityContent.hero.label}</Label>
           <SectionHeading
+            as="h1"
             heading={cityContent.hero.heading}
             subtext={cityContent.hero.subtext}
           />

@@ -162,6 +162,7 @@ export default async function StudioPage({
         <FadeInUp>
           <Label>{t.studioIntro.label}</Label>
           <SectionHeading
+            as="h1"
             heading={t.studioIntro.heading}
             subtext={t.studioIntro.subtext}
           />

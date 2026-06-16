@@ -320,6 +320,7 @@ export default async function DispatchPage({
         <FadeInUp>
           <Label>{t.hero.label}</Label>
           <SectionHeading
+            as="h1"
             heading={t.hero.heading}
             subtext={t.hero.subheadline}
           />

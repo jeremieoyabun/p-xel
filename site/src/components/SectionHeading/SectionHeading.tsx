@@ -6,9 +6,12 @@ import styles from "./SectionHeading.module.css";
 interface SectionHeadingProps {
   heading: string;
   subtext?: string;
+  /** Heading level. Use "h1" for the page's main (hero) heading. Defaults to "h2". */
+  as?: "h1" | "h2";
 }
 
-export function SectionHeading({ heading, subtext }: SectionHeadingProps) {
+export function SectionHeading({ heading, subtext, as = "h2" }: SectionHeadingProps) {
+  const Heading = as;
   const ref = useRef<HTMLDivElement>(null);
   const [revealed, setRevealed] = useState(false);
 
@@ -37,9 +40,9 @@ export function SectionHeading({ heading, subtext }: SectionHeadingProps) {
   return (
     <div ref={ref} className={styles.wrapper}>
       <div className={styles.headingMask}>
-        <h2 className={[styles.heading, revealed ? styles.revealed : ""].join(" ")}>
+        <Heading className={[styles.heading, revealed ? styles.revealed : ""].join(" ")}>
           {heading}
-        </h2>
+        </Heading>
       </div>
       {subtext && (
         <p className={[styles.subtext, revealed ? styles.subtextRevealed : ""].join(" ")}>

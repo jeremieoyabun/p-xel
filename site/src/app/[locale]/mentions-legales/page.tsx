@@ -45,7 +45,7 @@ export default async function MentionsLegalesPage({
 
       <Section>
         <Label>Legal</Label>
-        <SectionHeading heading={locale === "fr" ? "Mentions légales" : "Legal Notice"} />
+        <SectionHeading as="h1" heading={locale === "fr" ? "Mentions légales" : "Legal Notice"} />
         <div className={styles.content}>
           <div className={styles.block}>
             <h2>{locale === "fr" ? "Éditeur du site" : "Site Publisher"}</h2>
