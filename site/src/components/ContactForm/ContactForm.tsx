@@ -54,6 +54,7 @@ export function ContactForm() {
         body: JSON.stringify({
           nom: form.get("nom"),
           email: form.get("email"),
+          entreprise: form.get("entreprise") || undefined,
           projectType: form.get("projectType"),
           budget: form.get("budget") || undefined,
           timeline: form.get("timeline") || undefined,
@@ -63,6 +64,15 @@ export function ContactForm() {
 
       if (res.ok) {
         setStatus("success");
+        // Tracking-ready: analytics can listen for this lead event.
+        window.dispatchEvent(
+          new CustomEvent("pxel:lead", {
+            detail: {
+              projectType: form.get("projectType"),
+              budget: form.get("budget") || null,
+            },
+          })
+        );
       } else {
         setStatus("error");
       }
@@ -122,6 +132,20 @@ export function ContactForm() {
       </div>
 
       <div className={styles.field}>
+        <label htmlFor="entreprise" className={styles.label}>
+          {isFr ? "Entreprise" : "Company"}
+        </label>
+        <input
+          type="text"
+          id="entreprise"
+          name="entreprise"
+          placeholder={isFr ? "Nom de votre entreprise" : "Your company name"}
+          className={styles.input}
+          autoComplete="organization"
+        />
+      </div>
+
+      <div className={styles.field}>
         <label htmlFor="projectType" className={styles.label}>
           {isFr ? "Type de projet" : "Project type"} <span className={styles.required}>*</span>
         </label>
@@ -133,7 +157,7 @@ export function ContactForm() {
           required
         >
           <option value="" disabled>
-            {isFr ? "Selectionnez" : "Select"}
+            {isFr ? "Sélectionnez" : "Select"}
           </option>
           {t.projectTypes.map((type) => (
             <option key={type} value={type}>
@@ -156,7 +180,7 @@ export function ContactForm() {
           className={styles.select}
           defaultValue=""
         >
-          <option value="">{isFr ? "Non precise" : "Not specified"}</option>
+          <option value="">{isFr ? "Non précisé" : "Not specified"}</option>
           {t.budgetRanges.map((range) => (
             <option key={range} value={range}>
               {range}
@@ -167,7 +191,7 @@ export function ContactForm() {
 
       <div className={styles.field}>
         <label htmlFor="timeline" className={styles.label}>
-          {isFr ? "Delai souhaite" : "Desired timeline"}
+          {isFr ? "Délai souhaité" : "Desired timeline"}
         </label>
         <select
           id="timeline"
@@ -175,7 +199,7 @@ export function ContactForm() {
           className={styles.select}
           defaultValue=""
         >
-          <option value="">{isFr ? "Non precise" : "Not specified"}</option>
+          <option value="">{isFr ? "Non précisé" : "Not specified"}</option>
           {t.timelineOptions.map((option) => (
             <option key={option} value={option}>
               {option}
@@ -191,7 +215,7 @@ export function ContactForm() {
         <textarea
           id="message"
           name="message"
-          placeholder={isFr ? "Decrivez votre projet, vos objectifs et vos contraintes principales." : "Describe your project, goals and main constraints."}
+          placeholder={isFr ? "Décrivez votre projet, vos objectifs et vos contraintes principales." : "Describe your project, goals and main constraints."}
           className={`${styles.textarea} ${errors.message ? styles.invalid : ""}`}
           required
         />
