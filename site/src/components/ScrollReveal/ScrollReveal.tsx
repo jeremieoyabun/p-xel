@@ -81,12 +81,14 @@ export function ScrollReveal({ text }: ScrollRevealProps) {
     };
   }, []);
 
-  // Split text into spans for per-character opacity control
-  const chars = text.split("");
+  // Split into whole words (keeping whitespace) so the text stays readable and
+  // indexable in the HTML (no letter-by-letter spans). The scroll reveal still
+  // animates opacity token by token.
+  const tokens = text.split(/(\s+)/);
 
   return (
     <p ref={containerRef} className={styles.text}>
-      {chars.map((char, i) => (
+      {tokens.map((token, i) => (
         <span
           key={i}
           ref={(el) => {
@@ -94,7 +96,7 @@ export function ScrollReveal({ text }: ScrollRevealProps) {
           }}
           style={{ color: "rgba(255,255,255,0.12)" }}
         >
-          {char}
+          {token}
         </span>
       ))}
     </p>
